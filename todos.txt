@@ -2,3 +2,4 @@
 - {DONE} setting up the frontend using create-react-app
 - {DONE} deploy the frontend in vercel
 - {DONE} set up Home page component
+- {DONE} create SitewideBanner component

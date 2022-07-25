@@ -13,7 +13,25 @@ const GlobalStyle = createGlobalStyle`
   }
   *, ::after, ::before {
     box-sizing: inherit;
-}
+    }
+    a {
+        background-color: transparent;
+        line-height: inherit;
+        color: #059;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    a img {
+        border: 0;
+    }
+    img {
+        border-style: none;
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 100%;
+        height: auto;
+        -ms-interpolation-mode: bicubic;
+    }
 `;
 
 export default GlobalStyle;
