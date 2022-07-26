@@ -1,5 +1,5 @@
 import React from "react";
-import { HamburgerMenu } from "../hamburgerMenu/HamburgerMenu";
+import { HamburgerMenu, Flag } from "../index";
 import { MainWrapper } from "./header.styles";
 
 export const Header = () => {
@@ -8,6 +8,9 @@ export const Header = () => {
       <div class="header-inner">
         <div class="grid-x">
           <HamburgerMenu />
+          <div class="cell country-switcher">
+            <Flag />
+          </div>
         </div>
       </div>
     </MainWrapper>
