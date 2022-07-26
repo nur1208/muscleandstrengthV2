@@ -1,5 +1,5 @@
 import React from "react";
-import { HamburgerMenu, Flag } from "../index";
+import { HamburgerMenu, Flag, WebsiteLogo } from "../index";
 import { MainWrapper } from "./header.styles";
 
 export const Header = () => {
@@ -10,6 +10,9 @@ export const Header = () => {
           <HamburgerMenu />
           <div class="cell country-switcher">
             <Flag />
+          </div>
+          <div class="cell website-logo">
+            <WebsiteLogo />
           </div>
         </div>
       </div>

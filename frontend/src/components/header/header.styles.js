@@ -21,7 +21,7 @@ export const MainWrapper = styled.header`
     min-width: 0;
     width: 100%;
   }
-  & .cell {
+  .cell {
     padding: 5px 0;
   }
   & label {
@@ -41,6 +41,13 @@ export const MainWrapper = styled.header`
   & .country-switcher .currency {
     display: block;
   }
+
+  & .website-logo {
+    order: 3;
+    width: 52%;
+    text-align: center;
+  }
+
   @media screen and (min-width: 46.25em) {
     & .cell {
       padding: 10px 0 0;
@@ -48,6 +55,10 @@ export const MainWrapper = styled.header`
     & .country-switcher {
       order: 4;
       width: 8%;
+    }
+    & .website-logo {
+      order: 2;
+      width: 15%;
     }
   }
 
@@ -58,6 +69,10 @@ export const MainWrapper = styled.header`
       width: 8%;
       text-align: center;
     }
+    & .website-logo {
+      order: 1;
+      width: 12%;
+    }
   }
   @media screen and (min-width: 75em) {
     padding: 5px 0;
@@ -65,6 +80,12 @@ export const MainWrapper = styled.header`
       order: 4;
       width: 6%;
       padding-top: 33px;
+    }
+
+    & .website-logo {
+      order: 1;
+      width: 10%;
+      text-align: left;
     }
   }
 `;
