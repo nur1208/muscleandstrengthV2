@@ -5,3 +5,4 @@
 - {DONE} create SitewideBanner component
 - {TODO} create Header component
     - {DONE} create HamburgerMenu sub-component
+- {DONE} make HamburgerMenu as component not as sub-component 

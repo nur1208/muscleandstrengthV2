@@ -1,5 +1,5 @@
 import React from "react";
-import { HamburgerMenu } from "./components/HamburgerMenu";
+import { HamburgerMenu } from "../hamburgerMenu/HamburgerMenu";
 import { MainWrapper } from "./header.styles";
 
 export const Header = () => {
