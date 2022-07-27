@@ -9,3 +9,8 @@
     - {DONE} create Flag component
     - {DONE} create WebsiteLogo component
     - {DONE} create Card component
+    - {DONE} create CustomerAccount component
+
+
+not important:
+- {TODO} create LaberWithSvg component and make it dynimc

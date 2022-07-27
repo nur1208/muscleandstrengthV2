@@ -54,6 +54,13 @@ export const MainWrapper = styled.header`
     text-align: right;
   }
 
+  .customer-account {
+    order: 5;
+    width: 12%;
+    text-align: right;
+    cursor: pointer;
+  }
+
   @media screen and (min-width: 46.25em) {
     & .cell {
       padding: 10px 0 0;
@@ -72,6 +79,18 @@ export const MainWrapper = styled.header`
       width: 8%;
       text-align: center;
     }
+
+    .customer-account {
+      order: 6;
+      width: 8%;
+      text-align: center;
+    }
+  }
+
+  @media screen and (min-width: 52.5em) {
+    label {
+      display: block;
+    }
   }
 
   @media screen and (min-width: 64em) {
@@ -87,6 +106,11 @@ export const MainWrapper = styled.header`
     }
     .shopping-cart {
       order: 4;
+      width: 8%;
+    }
+
+    .customer-account {
+      order: 5;
       width: 8%;
     }
   }
@@ -108,6 +132,12 @@ export const MainWrapper = styled.header`
       order: 5;
       width: 6%;
       padding-top: 15px;
+    }
+
+    .customer-account {
+      order: 6;
+      width: 6%;
+      padding-top: 18px;
     }
   }
 `;
