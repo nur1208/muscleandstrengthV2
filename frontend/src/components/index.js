@@ -5,3 +5,4 @@ export { Flag } from "./flag/Flag";
 export { WebsiteLogo } from "./websiteLogo/WebsiteLogo";
 export { Card } from "./card/Card";
 export { CustomerAccount } from "./customerAccount/CustomerAccount";
+export { SearchBar } from "./searchBar/SearchBar";

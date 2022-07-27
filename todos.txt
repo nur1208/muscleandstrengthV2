@@ -10,6 +10,8 @@
     - {DONE} create WebsiteLogo component
     - {DONE} create Card component
     - {DONE} create CustomerAccount component
+    - {DONE} create SearchBar component
+    - {TODO} create Navbar component
 
 
 not important:

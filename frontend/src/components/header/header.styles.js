@@ -61,6 +61,12 @@ export const MainWrapper = styled.header`
     cursor: pointer;
   }
 
+  .site-search {
+    order: 6;
+    width: 100%;
+    padding: 0;
+  }
+
   @media screen and (min-width: 46.25em) {
     & .cell {
       padding: 10px 0 0;
@@ -84,6 +90,12 @@ export const MainWrapper = styled.header`
       order: 6;
       width: 8%;
       text-align: center;
+    }
+
+    .site-search {
+      order: 3;
+      width: 55%;
+      padding: 10px 20px 0 10px;
     }
   }
 
@@ -113,6 +125,11 @@ export const MainWrapper = styled.header`
       order: 5;
       width: 8%;
     }
+
+    .site-search {
+      order: 2;
+      width: 64%;
+    }
   }
   @media screen and (min-width: 75em) {
     padding: 5px 0;
@@ -138,6 +155,11 @@ export const MainWrapper = styled.header`
       order: 6;
       width: 6%;
       padding-top: 18px;
+    }
+
+    .site-search {
+      order: 2;
+      width: 52%;
     }
   }
 `;
