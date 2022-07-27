@@ -48,6 +48,12 @@ export const MainWrapper = styled.header`
     text-align: center;
   }
 
+  .shopping-cart {
+    order: 4;
+    width: 12%;
+    text-align: right;
+  }
+
   @media screen and (min-width: 46.25em) {
     & .cell {
       padding: 10px 0 0;
@@ -59,6 +65,12 @@ export const MainWrapper = styled.header`
     & .website-logo {
       order: 2;
       width: 15%;
+    }
+
+    .shopping-cart {
+      order: 5;
+      width: 8%;
+      text-align: center;
     }
   }
 
@@ -73,6 +85,10 @@ export const MainWrapper = styled.header`
       order: 1;
       width: 12%;
     }
+    .shopping-cart {
+      order: 4;
+      width: 8%;
+    }
   }
   @media screen and (min-width: 75em) {
     padding: 5px 0;
@@ -86,6 +102,12 @@ export const MainWrapper = styled.header`
       order: 1;
       width: 10%;
       text-align: left;
+    }
+
+    .shopping-cart {
+      order: 5;
+      width: 6%;
+      padding-top: 15px;
     }
   }
 `;

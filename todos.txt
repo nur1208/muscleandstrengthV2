@@ -8,3 +8,4 @@
     - {DONE} make HamburgerMenu as component not as sub-component 
     - {DONE} create Flag component
     - {DONE} create WebsiteLogo component
+    - {DONE} create Card component
