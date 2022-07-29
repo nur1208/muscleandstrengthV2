@@ -11,8 +11,8 @@
     - {DONE} create Card component
     - {DONE} create CustomerAccount component
     - {DONE} create SearchBar component
-    - {TODO} create Navbar component
+    - {DONE} create Navbar, Submenu and SubSubmenu component utils and create scraping script for navbar data
 
 
 not important:
-- {TODO} create LaberWithSvg component and make it dynimc
+- {TODO} create LaberWithSvg component and make it dynamic

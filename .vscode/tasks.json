@@ -8,10 +8,16 @@
       "problemMatcher": [],
       "label": "npm: start - frontend",
       "detail": "react-scripts start",
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
+      "group": "build"
+    },
+    {
+      "type": "npm",
+      "script": "start",
+      "path": "scraping",
+      "problemMatcher": [],
+      "label": "npm: start - scraping",
+      "detail": "node index.js",
+      "group": "build"
     }
   ]
 }

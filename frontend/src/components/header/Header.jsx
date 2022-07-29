@@ -6,6 +6,7 @@ import {
   Card,
   CustomerAccount,
   SearchBar,
+  Navbar,
 } from "../index";
 import { MainWrapper } from "./header.styles";
 
@@ -29,6 +30,7 @@ export const Header = () => {
           </div>
           <div class="cell site-search">
             <SearchBar />
+            <Navbar />
           </div>
         </div>
       </div>

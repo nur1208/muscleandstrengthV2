@@ -1,0 +1,63 @@
+[
+  {
+    "navbarItemTitle": "Store",
+    "groups": [
+      { "hasSubmenu": true, "groupTitle": "Find Products" },
+      { "hasSubmenu": false, "groupTitle": "Deals & Rewards" },
+      { "hasSubmenu": false, "groupTitle": "Top Lists" }
+    ]
+  },
+  {
+    "navbarItemTitle": "Workouts",
+    "groups": [
+      {
+        "hasSubmenu": false,
+        "groupTitle": "Popular Workout Categories"
+      },
+      { "hasSubmenu": false, "groupTitle": "Top Workouts" }
+    ]
+  },
+  {
+    "navbarItemTitle": "Articles",
+    "groups": [
+      {
+        "hasSubmenu": false,
+        "groupTitle": "Popular Article Categories"
+      }
+    ]
+  },
+  {
+    "navbarItemTitle": "Diet Plans",
+    "groups": [
+      { "hasSubmenu": false, "groupTitle": "Popular Diet Plans" }
+    ]
+  },
+  {
+    "navbarItemTitle": "Exercises Library",
+    "groups": [
+      {
+        "hasSubmenu": false,
+        "groupTitle": "Exercises by Muscle Group"
+      },
+      {
+        "hasSubmenu": false,
+        "groupTitle": "Most Popular Exercises"
+      }
+    ]
+  },
+  {
+    "navbarItemTitle": "Recipes",
+    "groups": [
+      {
+        "hasSubmenu": false,
+        "groupTitle": "Popular Recipe Categories"
+      }
+    ]
+  },
+  {
+    "navbarItemTitle": "Tools",
+    "groups": [
+      { "hasSubmenu": false, "groupTitle": "Popular Tools" }
+    ]
+  }
+]
