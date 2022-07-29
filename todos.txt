@@ -12,6 +12,7 @@
     - {DONE} create CustomerAccount component
     - {DONE} create SearchBar component
     - {DONE} create Navbar, Submenu and SubSubmenu component utils and create scraping script for navbar data
+    - {TODO} fix show by brand data in the navbar
 
 
 not important:

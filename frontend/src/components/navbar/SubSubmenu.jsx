@@ -36,12 +36,35 @@ export const SubSubmenu = ({
             </button>
           </a>
         </div>
-        <ul class="link-list">
+        <ul
+          class={`link-list ${
+            subSubMainTitle === "Brands"
+              ? "link-list-top-brands"
+              : ""
+          }`}
+        >
           <div class="link-list-title">{subSubGroupTitle}</div>
           {itemsOfSubSubItem.map(
-            ({ suSubItemTitle, subSubItemHref }) => (
+            ({
+              suSubItemTitle,
+              subSubItemHref,
+              suSubItemImageUrl,
+            }) => (
               <li>
-                <a href={subSubItemHref}>{suSubItemTitle}</a>
+                <a href={subSubItemHref}>
+                  {subSubMainTitle === "Brands" ? (
+                    <img
+                      src={suSubItemImageUrl}
+                      alt={
+                        suSubItemImageUrl.split("/")[
+                          suSubItemImageUrl.split("/").length - 1
+                        ]
+                      }
+                    />
+                  ) : (
+                    suSubItemTitle
+                  )}
+                </a>
               </li>
             )
           )}

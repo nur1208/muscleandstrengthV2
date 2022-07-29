@@ -4,9 +4,11 @@ import fs from "fs";
 import { promisify } from "util";
 
 export const getTrailers = async () => {
-  const mainPageHtml = "trailersContainer.html";
+  const __dirname = path.dirname(__filename);
+  //   console.log("directory-name 👉️", __dirname);
+  const mainPageHtml = `${__dirname}/pageHtml.html`;
+  const mainDataJson = `${__dirname}/data.json`;
   const timeout = 1000 * 60;
-
   const browser = await puppeteer.launch({
     headless: false,
     executablePath:
@@ -16,7 +18,9 @@ export const getTrailers = async () => {
   await page.goto("https://www.imdb.com/trailers/", { timeout });
   await page.waitForSelector("div.ipc-poster-card", { timeout });
 
-  const html = await page.evaluate(() => document.body.innerHTML);
+  const html = await page.evaluate(
+    () => document.body.innerHTML
+  );
 
   fs.writeFile(mainPageHtml, html, function (err) {
     if (err) throw err;
@@ -28,6 +32,15 @@ export const getTrailers = async () => {
 
   let $ = cheerio.load(html.toString());
   console.log($);
+
+  // fs.writeFile(
+  //   mainDataJson,
+  //   JSON.stringify(navbarData),
+  //   function (err) {
+  //     if (err) throw err;
+  //     console.log("Saved!");
+  //   }
+  // );
 
   await browser.close();
 };

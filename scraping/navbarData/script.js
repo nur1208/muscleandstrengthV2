@@ -101,13 +101,14 @@ export const getNavbarData = async () => {
             $(subLi).html()
           ).attr("href");
 
-          subItem.subSubMainTitle = $(
+          const subSubMainTitle = $(
             "div.view-all-link",
             $(subLi).html()
           )
             .text()
             .split(" ")[0]
             .trim();
+          subItem.subSubMainTitle = subSubMainTitle;
 
           subItem.subSubMainHref = $(
             "div.view-all-link > a",
@@ -126,10 +127,19 @@ export const getNavbarData = async () => {
             index++
           ) {
             const subSubLi = subSubLis[index];
-            itemsOfSubSubItem.push({
-              suSubItemTitle: $("a", $(subSubLi)).text(),
-              subSubItemHref: $("a", $(subSubLi)).attr("href"),
-            });
+            if (subSubMainTitle === "Brands") {
+              itemsOfSubSubItem.push({
+                suSubItemImageUrl: $(
+                  "a > img",
+                  $(subSubLi)
+                ).attr("data-src"),
+                subSubItemHref: $("a", $(subSubLi)).attr("href"),
+              });
+            } else
+              itemsOfSubSubItem.push({
+                suSubItemTitle: $("a", $(subSubLi)).text(),
+                subSubItemHref: $("a", $(subSubLi)).attr("href"),
+              });
           }
         }
         //   itemsOfSubItem.push(
