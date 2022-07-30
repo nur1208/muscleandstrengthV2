@@ -16,6 +16,8 @@
     - {DONE} set up redux
     - {DONE} make HamburgerMenu open the side navbar and create menu-mask effect
     - {DONE} create MenuMask component and when click on it close the side navbar 
+    - {DONE} create getIconById function  and use it in the navbar
+        - {DONE} scrap icon ids
 
 
 

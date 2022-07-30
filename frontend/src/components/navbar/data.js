@@ -2,6 +2,7 @@ export const navbarData = [
   {
     navbarItemTitle: "Store",
     navbarItemHref: "/store",
+    navbarItemIconId: "icon-nav-store-white",
     hasSubmenu: true,
     groups: [
       {
@@ -250,6 +251,7 @@ export const navbarData = [
   {
     navbarItemTitle: "Workouts",
     navbarItemHref: "/workout-routines",
+    navbarItemIconId: "icon-nav-workouts-white",
     hasSubmenu: true,
     groups: [
       {
@@ -346,6 +348,7 @@ export const navbarData = [
   {
     navbarItemTitle: "Articles",
     navbarItemHref: "/articles",
+    navbarItemIconId: "icon-nav-expert-guides-white",
     hasSubmenu: true,
     groups: [
       {
@@ -407,6 +410,7 @@ export const navbarData = [
   {
     navbarItemTitle: "Diet Plans",
     navbarItemHref: "/diet-plans",
+    navbarItemIconId: "icon-nav-diet-plans-white",
     hasSubmenu: true,
     groups: [
       {
@@ -451,6 +455,7 @@ export const navbarData = [
   {
     navbarItemTitle: "Exercises Library",
     navbarItemHref: "/exercises",
+    navbarItemIconId: "icon-content-transformation-white",
     hasSubmenu: true,
     groups: [
       {
@@ -545,6 +550,7 @@ export const navbarData = [
   {
     navbarItemTitle: "Recipes",
     navbarItemHref: "/recipes",
+    navbarItemIconId: "icon-content-recipe",
     hasSubmenu: true,
     groups: [
       {
@@ -594,6 +600,7 @@ export const navbarData = [
   {
     navbarItemTitle: "Tools",
     navbarItemHref: "/tools",
+    navbarItemIconId: "icon-nav-tools-white",
     hasSubmenu: true,
     groups: [
       {

@@ -1,3 +1,4 @@
+export { getIconById } from "./getIconsById";
 export { IconUserLogin } from "./IconUserLogin";
 export { IconCloseX } from "./IconCloseX";
 export { IconSearchRightBold } from "./IconSearchRightBold";
@@ -8,3 +9,4 @@ export { IconNavDietPansWhite } from "./IconNavDietPansWhite";
 export { IconContentTransformationWhite } from "./IconContentTransformationWhite";
 export { IconContentRecipe } from "./IconContentRecipe";
 export { IconNavToolsWhite } from "./IconNavToolsWhite";
+export { IconQuestionMark } from "./IconQuestionMark";

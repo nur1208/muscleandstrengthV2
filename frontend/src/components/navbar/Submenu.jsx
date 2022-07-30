@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useHover, useReduxActions } from "../../hooks";
-import { IconNavStoreWhite } from "../../icons";
+import { getIconById, IconNavStoreWhite } from "../../icons";
 import { SubSubmenu } from "./SubSubmenu";
 
 export const Submenu = ({
@@ -8,6 +8,7 @@ export const Submenu = ({
   hasSubmenu,
   navbarItemHref,
   groups,
+  navbarItemIconId,
 }) => {
   const initStyle = `base-item ${hasSubmenu && "has-submenu"}`;
 
@@ -21,9 +22,13 @@ export const Submenu = ({
     >
       <a class="base-item-button" href={navbarItemHref}>
         <span class="icon">
-          <IconNavStoreWhite
+          {/* <IconNavStoreWhite
             style={{ width: "2em", height: "2em" }}
-          />
+          /> */}
+          {getIconById(navbarItemIconId, {
+            width: "2em",
+            height: "2em",
+          })}
         </span>
         {navbarItemTitle}
         <span class="caret">›</span>
