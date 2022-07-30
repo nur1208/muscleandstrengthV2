@@ -53,6 +53,13 @@ export const getNavbarData = async () => {
       .trim();
 
     item.navbarItemHref = $("a", $(ls).html()).attr("href");
+    item.navbarItemIconId = $(
+      "span.icon > svg > use",
+      $(ls).html()
+    )
+      .attr("href")
+      .split("#")[1]
+      .trim();
 
     item.hasSubmenu = $(ls).hasClass("has-submenu");
     const itemSections = $(
