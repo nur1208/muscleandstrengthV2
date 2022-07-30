@@ -1,7 +1,13 @@
-import React, { useEffect } from "react";
-import { useHover, useReduxActions } from "../../hooks";
+import React, { useEffect, useState } from "react";
+import {
+  useHover,
+  useOpenSubmenu,
+  useReduxActions,
+} from "../../hooks";
 import { getIconById, IconNavStoreWhite } from "../../icons";
 import { SubSubmenu } from "./SubSubmenu";
+import { useSelector } from "react-redux";
+import { OPENED_TYPES } from "../../redux/constants";
 
 export const Submenu = ({
   navbarItemTitle,
@@ -11,16 +17,27 @@ export const Submenu = ({
   navbarItemIconId,
 }) => {
   const initStyle = `base-item ${hasSubmenu && "has-submenu"}`;
-
-  const { updateIsOpen } = useReduxActions();
-  const [hoverRef, isHovered] = useHover(updateIsOpen);
+  const { openedType } = useSelector(
+    (state) => state.navbar_store
+  );
+  const [ref, isOpen, handleBack] = useOpenSubmenu();
 
   return (
     <li
-      ref={hoverRef}
-      class={isHovered ? `${initStyle} open-submenu` : initStyle}
+      ref={ref}
+      class={isOpen ? `${initStyle} open-submenu` : initStyle}
+      // onClick={() => console.log(navbarItemTitle)}
     >
-      <a class="base-item-button" href={navbarItemHref}>
+      <a
+        class="base-item-button"
+        href={
+          isOpen && openedType === OPENED_TYPES.SIDE_NAVBAR
+            ? "javascript:void(0)"
+            : navbarItemHref
+          // navbarItemHref
+          // "javascript:void(0)"
+        }
+      >
         <span class="icon">
           {/* <IconNavStoreWhite
             style={{ width: "2em", height: "2em" }}
@@ -34,7 +51,10 @@ export const Submenu = ({
         <span class="caret">›</span>
       </a>
       <div class="submenu">
-        <div class="nav-link nav-blue back-button back-caret">
+        <div
+          onClick={handleBack}
+          class="nav-link nav-blue back-button back-caret"
+        >
           Back
         </div>
         <div class="view-all-link">

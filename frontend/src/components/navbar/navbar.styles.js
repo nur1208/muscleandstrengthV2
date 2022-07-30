@@ -227,6 +227,18 @@ export const MainWrapper = styled.div`
     float: left;
     text-align: center;
   }
+  .nav-link {
+    padding: 0 20px;
+    line-height: 60px;
+    font-weight: 400;
+    cursor: pointer;
+  }
+
+  .back-caret:before {
+    content: "<";
+    display: inline-block;
+    margin-right: 16px;
+  }
 
   @media screen and (min-width: 30em) {
     .menu-sys {

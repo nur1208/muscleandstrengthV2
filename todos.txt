@@ -12,14 +12,16 @@
     - {DONE} create CustomerAccount component
     - {DONE} create SearchBar component
     - {DONE} create Navbar, Submenu and SubSubmenu component utils and create scraping script for navbar data
-    - {DONE} fix show by brand data in the navbar
-    - {DONE} set up redux
-    - {DONE} make HamburgerMenu open the side navbar and create menu-mask effect
-    - {DONE} create MenuMask component and when click on it close the side navbar 
-    - {DONE} create getIconById function  and use it in the navbar
-        - {DONE} scrap icon ids
+        - {DONE} fix show by brand data in the navbar
+        - {DONE} set up redux
+        - {DONE} make HamburgerMenu open the side navbar and create menu-mask effect
+        - {DONE} create MenuMask component and when click on it close the side navbar 
+        - {DONE} create getIconById function  and use it in the navbar
+            - {DONE} scrap icon ids
+        - {DONE} fix navigating to page instead of open submenu 
 
 
 
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
+- {TODO} make Submenu and SubSubmenu components as one component

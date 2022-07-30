@@ -1,5 +1,9 @@
 import React, { useEffect } from "react";
-import { useHover, useReduxActions } from "../../hooks";
+import {
+  useHover,
+  useOpenSubmenu,
+  useReduxActions,
+} from "../../hooks";
 
 export const SubSubmenu = ({
   subItemHref,
@@ -11,8 +15,7 @@ export const SubSubmenu = ({
 }) => {
   const initStyle = "has-sub-submenu";
 
-  const { updateIsOpen } = useReduxActions();
-  const [hoverRef, isHovered] = useHover(updateIsOpen);
+  const [ref, isOpen, handleBack] = useOpenSubmenu();
 
   // useEffect(() => {
   //   updateIsOpen(isHovered);
@@ -20,9 +23,9 @@ export const SubSubmenu = ({
 
   return (
     <li
-      ref={hoverRef}
+      ref={ref}
       class={
-        isHovered ? `${initStyle} open-sub-submenu` : initStyle
+        isOpen ? `${initStyle} open-sub-submenu` : initStyle
       }
     >
       <a class={"sub-submenu-button"} href={subItemHref}>
@@ -30,7 +33,10 @@ export const SubSubmenu = ({
       </a>
 
       <div class="sub-submenu">
-        <div class="nav-link nav-blue back-button back-caret">
+        <div
+          onClick={handleBack}
+          class="nav-link nav-blue back-button back-caret"
+        >
           Back
         </div>
         <div class="view-all-link">
