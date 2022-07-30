@@ -66,6 +66,14 @@ export const MainWrapper = styled.header`
     width: 100%;
     padding: 0;
   }
+  .menu-sys-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 98;
+    background: rgba(0, 0, 0, 0.5);
+    /* display: none; */
+  }
 
   @media screen and (min-width: 46.25em) {
     & .cell {
@@ -160,6 +168,10 @@ export const MainWrapper = styled.header`
     .site-search {
       order: 2;
       width: 52%;
+    }
+
+    .menu-sys-overlay {
+      margin: 5px 0;
     }
   }
 `;

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { OPENED_TYPES } from "../redux/constants";
 
 // Hook
 export function useHover(setReduxValue) {
@@ -6,13 +7,19 @@ export function useHover(setReduxValue) {
   const ref = useRef(null);
   const handleMouseOver = setReduxValue
     ? () => {
-        setReduxValue(true);
+        setReduxValue({
+          isOpen: true,
+          openedType: OPENED_TYPES.NAVBAR,
+        });
         setValue(true);
       }
     : () => setValue(true);
   const handleMouseOut = setReduxValue
     ? () => {
-        setReduxValue(false);
+        setReduxValue({
+          isOpen: false,
+          openedType: undefined,
+        });
         setValue(false);
       }
     : () => setValue(false);

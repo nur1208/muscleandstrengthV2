@@ -1,3 +1,8 @@
 export const NAVBAR_ACTIONS = {
   UPDATE_IS_OPEN: "UPDATE_IS_OPEN",
 };
+
+export const OPENED_TYPES = {
+  NAVBAR: "NAVBAR",
+  SIDE_NAVBAR: "SIDE_NAVBAR",
+};

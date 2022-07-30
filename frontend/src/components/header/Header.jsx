@@ -8,9 +8,16 @@ import {
   SearchBar,
   Navbar,
 } from "../index";
+
+import { useSelector } from "react-redux";
+
 import { MainWrapper } from "./header.styles";
+import { OPENED_TYPES } from "../../redux/constants";
 
 export const Header = () => {
+  const { isOpen, openedType } = useSelector(
+    (state) => state.navbar_store
+  );
   return (
     <MainWrapper>
       <div class="header-inner">
@@ -34,6 +41,9 @@ export const Header = () => {
           </div>
         </div>
       </div>
+      {isOpen && openedType === OPENED_TYPES.NAVBAR && (
+        <div class="menu-sys-overlay"></div>
+      )}
     </MainWrapper>
   );
 };
