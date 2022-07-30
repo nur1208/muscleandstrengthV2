@@ -1,5 +1,5 @@
-import React from "react";
-import { useHover } from "../../hooks";
+import React, { useEffect } from "react";
+import { useHover, useReduxActions } from "../../hooks";
 import { IconNavStoreWhite } from "../../icons";
 import { SubSubmenu } from "./SubSubmenu";
 
@@ -10,7 +10,9 @@ export const Submenu = ({
   groups,
 }) => {
   const initStyle = `base-item ${hasSubmenu && "has-submenu"}`;
-  const [hoverRef, isHovered] = useHover();
+
+  const { updateIsOpen } = useReduxActions();
+  const [hoverRef, isHovered] = useHover(updateIsOpen);
 
   return (
     <li

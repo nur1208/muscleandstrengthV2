@@ -1,5 +1,16 @@
 import styled from "styled-components";
 
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+  body {
+      transition: transform 10ms;
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      transform: translate(90%);
+  }
+`;
 export const MainWrapper = styled.div`
   .menu-sys {
     background-color: #059;

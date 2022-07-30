@@ -1,5 +1,5 @@
-import React from "react";
-import { useHover } from "../../hooks";
+import React, { useEffect } from "react";
+import { useHover, useReduxActions } from "../../hooks";
 
 export const SubSubmenu = ({
   subItemHref,
@@ -11,7 +11,12 @@ export const SubSubmenu = ({
 }) => {
   const initStyle = "has-sub-submenu";
 
-  const [hoverRef, isHovered] = useHover();
+  const { updateIsOpen } = useReduxActions();
+  const [hoverRef, isHovered] = useHover(updateIsOpen);
+
+  // useEffect(() => {
+  //   updateIsOpen(isHovered);
+  // }, [isHovered]);
 
   return (
     <li

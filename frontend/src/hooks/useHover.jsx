@@ -1,11 +1,22 @@
 import { useEffect, useRef, useState } from "react";
 
 // Hook
-export function useHover() {
+export function useHover(setReduxValue) {
   const [value, setValue] = useState(false);
   const ref = useRef(null);
-  const handleMouseOver = () => setValue(true);
-  const handleMouseOut = () => setValue(false);
+  const handleMouseOver = setReduxValue
+    ? () => {
+        setReduxValue(true);
+        setValue(true);
+      }
+    : () => setValue(true);
+  const handleMouseOut = setReduxValue
+    ? () => {
+        setReduxValue(false);
+        setValue(false);
+      }
+    : () => setValue(false);
+
   useEffect(
     () => {
       const node = ref.current;

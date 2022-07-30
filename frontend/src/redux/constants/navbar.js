@@ -1,0 +1,3 @@
+export const NAVBAR_ACTIONS = {
+  UPDATE_IS_OPEN: "UPDATE_IS_OPEN",
+};
