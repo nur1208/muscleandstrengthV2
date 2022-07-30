@@ -15,7 +15,7 @@
     - {DONE} fix show by brand data in the navbar
     - {DONE} set up redux
     - {DONE} make HamburgerMenu open the side navbar and create menu-mask effect
-    - {TODO} create MenuMask component and when click on it close the side navbar 
+    - {DONE} create MenuMask component and when click on it close the side navbar 
 
 
 
