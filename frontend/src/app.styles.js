@@ -157,6 +157,40 @@ li {
     text-shadow: 1px 1px 0 #004780;
     border: 1px solid #004a85;
 }
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: opensans-bold,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: inherit;
+    text-rendering: optimizeLegibility;
+}
+
+.h1, h1 {
+    font-size: 1.7777777778rem;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+@media print, screen and (min-width: 52.5em)
+{.h1, h1 {
+    font-size: 2.6666666667rem;
+}}
+
+
+h1 {
+    font-family: opensans-heavy;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: inherit;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+}
 `;
 
 export default GlobalStyle;

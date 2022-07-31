@@ -20,8 +20,11 @@
             - {DONE} scrap icon ids
         - {DONE} fix navigating to page instead of open submenu 
     - {DONE} create CustomerSupport component and done creating  Header component
+- {DONE} create FrontHero component
+
 
 
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
 - {TODO} make Submenu and SubSubmenu components as one component
+- {TODO} fix SitewideBanner typo
