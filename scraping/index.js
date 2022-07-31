@@ -1,8 +1,8 @@
-import { getInPageNavData } from "./InPageNav/script.js";
+import { getBannerData } from "./banner/script.js";
 
 const main = async () => {
   console.log("start scraping... ⌛");
-  await getInPageNavData();
+  await getBannerData();
   console.log("DONE scraping ✔");
 };
 

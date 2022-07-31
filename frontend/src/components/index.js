@@ -1,4 +1,4 @@
-export { SitewideBanner } from "./sitewideBanner/SitewideBanner";
+export { Banner } from "./banner/Banner";
 export { Header } from "./header/Header";
 export { HamburgerMenu } from "./hamburgerMenu/HamburgerMenu";
 export { Flag } from "./flag/Flag";

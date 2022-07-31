@@ -22,10 +22,11 @@
     - {DONE} create CustomerSupport component and done creating  Header component
 - {DONE} create FrontHero component
 - {DONE} create InPageNav component and scraping InPageNav data
-
+- {DONE} make SitewideBanner component dynamic and change it's name to Banner
 
 
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
 - {TODO} make Submenu and SubSubmenu components as one component
 - {TODO} fix SitewideBanner typo
+- {TODO} fix InPageNav component style when the device mobile S
