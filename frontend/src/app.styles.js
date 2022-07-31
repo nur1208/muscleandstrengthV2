@@ -191,6 +191,8 @@ p {
     line-height: 1.6;
     text-rendering: optimizeLegibility;
 }
+
+
 `;
 
 export default GlobalStyle;

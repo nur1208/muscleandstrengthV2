@@ -2,8 +2,12 @@ import puppeteer from "puppeteer";
 import cheerio from "cheerio";
 import fs from "fs";
 import { promisify } from "util";
+import path from "path";
+import { fileURLToPath } from "url";
 
 export const getTrailers = async () => {
+  const __filename = fileURLToPath(import.meta.url);
+
   const __dirname = path.dirname(__filename);
   //   console.log("directory-name 👉️", __dirname);
   const mainPageHtml = `${__dirname}/pageHtml.html`;

@@ -9,3 +9,4 @@ export { SearchBar } from "./searchBar/SearchBar";
 export { Navbar } from "./navbar/Navbar";
 export { CustomerSupport } from "./customerSupport/CustomerSupport";
 export { FrontHero } from "./frontHero/FrontHero";
+export { InPageNav } from "./inPageNav/InPageNav";

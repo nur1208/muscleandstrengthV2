@@ -1,9 +1,8 @@
-import { getNavbarData } from "./navbarData/script.js";
+import { getInPageNavData } from "./InPageNav/script.js";
 
 const main = async () => {
   console.log("start scraping... ⌛");
-  await getNavbarData();
-
+  await getInPageNavData();
   console.log("DONE scraping ✔");
 };
 

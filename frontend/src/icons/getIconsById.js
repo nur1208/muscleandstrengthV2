@@ -9,6 +9,12 @@ import {
   IconContentRecipe,
   IconInstaComments,
   IconSupportWhite,
+  IconNavStore,
+  IconNavWorkouts,
+  IconContentTransformation,
+  IconNavExpertGuides,
+  IconNavDietPlans,
+  IconNavTools,
 } from "./index";
 
 export const getIconById = (iconId, style) => {
@@ -33,6 +39,20 @@ export const getIconById = (iconId, style) => {
       return <IconInstaComments style={style} />;
     case "icon-support-white":
       return <IconSupportWhite style={style} />;
+    case "icon-nav-store":
+      return <IconNavStore style={style} />;
+    case "icon-nav-workouts":
+      return <IconNavWorkouts style={style} />;
+    case "icon-content-transformation":
+      return <IconContentTransformation style={style} />;
+    case "icon-nav-expert-guides":
+      return <IconNavExpertGuides style={style} />;
+
+    case "icon-nav-diet-plans":
+      return <IconNavDietPlans style={style} />;
+
+    case "icon-nav-tools":
+      return <IconNavTools style={style} />;
 
     default:
       return <IconQuestionMark style={style} />;

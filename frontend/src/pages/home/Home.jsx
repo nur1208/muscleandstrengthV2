@@ -4,6 +4,7 @@ import {
   Header,
   SitewideBanner,
   FrontHero,
+  InPageNav,
 } from "../../components";
 import { MainWrapper } from "./home.styles";
 import { MenuMask } from "./MenuMask";
@@ -16,6 +17,7 @@ export const Home = () => {
           <SitewideBanner />
           <Header />
           <FrontHero />
+          <InPageNav />
         </div>
         <MenuMask />
       </div>

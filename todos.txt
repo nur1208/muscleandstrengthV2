@@ -21,6 +21,7 @@
         - {DONE} fix navigating to page instead of open submenu 
     - {DONE} create CustomerSupport component and done creating  Header component
 - {DONE} create FrontHero component
+- {DONE} create InPageNav component and scraping InPageNav data
 
 
 
