@@ -51,7 +51,7 @@ export const MainWrapper = styled.div`
     margin: 0 2px;
     display: block;
     font-family: roboto-medium, sans-serif;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .menu-sys .base-item .base-item-button .icon {
@@ -105,6 +105,7 @@ export const MainWrapper = styled.div`
     line-height: 45px;
     text-transform: uppercase;
     font-family: roboto-medium, sans-serif;
+    font-size: 15px;
   }
 
   .menu-sys .submenu .view-all-link button {
@@ -276,7 +277,7 @@ export const MainWrapper = styled.div`
       width: auto;
       border-bottom: 0;
       padding: 10px;
-      font-size: 16px;
+      font-size: 15px;
     }
 
     .menu-sys .base-item .base-item-button .caret,

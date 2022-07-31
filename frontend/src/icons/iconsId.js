@@ -1,3 +1,4 @@
-export const iconsId = {
-    "icon-question-mark":
+export const ICONS_ID = {
+  IconInstaComments: "icon-insta-comments",
+  IconSupportWhite: "icon-support-white",
 };

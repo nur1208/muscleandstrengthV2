@@ -7,6 +7,7 @@ import {
   CustomerAccount,
   SearchBar,
   Navbar,
+  CustomerSupport,
 } from "../index";
 
 import { useSelector } from "react-redux";
@@ -38,6 +39,9 @@ export const Header = () => {
           <div class="cell site-search">
             <SearchBar />
             <Navbar />
+          </div>
+          <div class="cell customer-support">
+            <CustomerSupport />
           </div>
         </div>
       </div>

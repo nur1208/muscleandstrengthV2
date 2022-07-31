@@ -75,6 +75,15 @@ export const MainWrapper = styled.header`
     /* display: none; */
   }
 
+  .customer-support {
+    display: none;
+    padding: 18px 15px 0;
+    color: #fefefe;
+    font-size: 16px;
+    font-family: roboto-medium, sans-serif;
+    text-align: center;
+  }
+
   @media screen and (min-width: 46.25em) {
     & .cell {
       padding: 10px 0 0;
@@ -172,6 +181,12 @@ export const MainWrapper = styled.header`
 
     .menu-sys-overlay {
       margin: 5px 0;
+    }
+
+    .customer-support {
+      display: block;
+      order: 3;
+      width: 20%;
     }
   }
 `;

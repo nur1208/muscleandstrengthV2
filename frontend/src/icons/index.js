@@ -1,4 +1,5 @@
 export { getIconById } from "./getIconsById";
+export { ICONS_ID } from "./iconsId";
 export { IconUserLogin } from "./IconUserLogin";
 export { IconCloseX } from "./IconCloseX";
 export { IconSearchRightBold } from "./IconSearchRightBold";
@@ -10,3 +11,5 @@ export { IconContentTransformationWhite } from "./IconContentTransformationWhite
 export { IconContentRecipe } from "./IconContentRecipe";
 export { IconNavToolsWhite } from "./IconNavToolsWhite";
 export { IconQuestionMark } from "./IconQuestionMark";
+export { IconInstaComments } from "./IconInstaComments";
+export * from "./ReactIcons";

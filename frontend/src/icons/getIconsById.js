@@ -7,6 +7,8 @@ import {
   IconNavDietPansWhite,
   IconContentTransformationWhite,
   IconContentRecipe,
+  IconInstaComments,
+  IconSupportWhite,
 } from "./index";
 
 export const getIconById = (iconId, style) => {
@@ -27,6 +29,11 @@ export const getIconById = (iconId, style) => {
       return <IconContentRecipe style={style} />;
     case "icon-nav-tools-white":
       return <IconNavToolsWhite style={style} />;
+    case "icon-insta-comments":
+      return <IconInstaComments style={style} />;
+    case "icon-support-white":
+      return <IconSupportWhite style={style} />;
+
     default:
       return <IconQuestionMark style={style} />;
   }
