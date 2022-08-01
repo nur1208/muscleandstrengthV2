@@ -31,7 +31,12 @@ export const Article = ({
       <div class="node-short-summary">{shortSummary}</div>
 
       <div class="node-meta">
-        <span>{reads} Reads </span>
+        <span>
+          {Intl.NumberFormat("en", {
+            notation: "compact",
+          }).format(reads)}{" "}
+          Reads
+        </span>
         <span>{comments} Comments </span>
       </div>
 

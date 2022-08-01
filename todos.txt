@@ -23,8 +23,8 @@
 - {DONE} create FrontHero component
 - {DONE} create InPageNav component and scraping InPageNav data
 - {DONE} make SitewideBanner component dynamic and change it's name to Banner
-
-
+- {DONE} create Articles and Article components and scrap ArticlesData
+        - {DONE} fix scraping reads number with K and M      
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
 - {TODO} make Submenu and SubSubmenu components as one component

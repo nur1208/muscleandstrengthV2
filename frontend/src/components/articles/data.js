@@ -92,7 +92,7 @@ export const articlesData = [
         title: "Bane Workout: The Insane Bane Training Program",
         shortSummary:
           "The insane Bane training program. Get insane like Batman's nemesis Bane: add these unique lifts and intensity techniques to your next workout.",
-        reads: null,
+        reads: 1700000,
         comments: 217,
       },
       {
@@ -103,7 +103,7 @@ export const articlesData = [
         title: "12 Week Triple Header Triceps Workout Program",
         shortSummary:
           "Build big thick triceps that make your upper arms flex-worthy with this 12 week triple header tricep workout program. Read on to learn how to get started.",
-        reads: null,
+        reads: 50400,
         comments: 0,
       },
       {
@@ -116,7 +116,7 @@ export const articlesData = [
           "Pause Rep Workout Program for Serious Strength Gains",
         shortSummary:
           "Break through your current muscle building plateaus using pause reps! Get Coach Myers' full isometric contraction workout and put on some serious gains!",
-        reads: null,
+        reads: 64400,
         comments: 2,
       },
       {
@@ -127,7 +127,7 @@ export const articlesData = [
         title: "Big Arms Fast: 4 Week Specialization Workout",
         shortSummary:
           "This four week bicep and tricep building specialization routine from transformation expert Justin Woltering is designed to help you bring up your lagging arms, and fast.",
-        reads: null,
+        reads: 487700,
         comments: 40,
       },
       {
@@ -138,7 +138,7 @@ export const articlesData = [
         title: "Doug's 4 Day Mega Cutting Routine",
         shortSummary:
           "Doug's mega cutting workout routine is a 4 day split combining weights and cardio designed to lose fat while maintaining muscle mass.",
-        reads: null,
+        reads: 1200000,
         comments: 299,
       },
       {
@@ -151,7 +151,7 @@ export const articlesData = [
           "Bodybuilding Icons: George Hackenschmidt Inspired Workout",
         shortSummary:
           "George Hackenschmidt was the first-ever World Heavyweight Champion in professional wrestling and pushed his ability to build muscle to the natural limit.",
-        reads: null,
+        reads: 26200,
         comments: 3,
       },
     ],
@@ -167,7 +167,7 @@ export const articlesData = [
         title: "The Triple Progression Training Approach",
         shortSummary:
           "Standard progression focuses on the addition of weight. Triple progression has you adding reps, sets then weight.",
-        reads: null,
+        reads: 17100,
         comments: 2,
       },
       {
@@ -178,7 +178,7 @@ export const articlesData = [
         title: "12 Bodybuilding Lies That Won't Die",
         shortSummary:
           "We've each been given advice from well-meaning lifters that we later find out to be untrue. This article explores false muscle building beliefs that continue to be passed around.",
-        reads: null,
+        reads: 160800,
         comments: 49,
       },
       {
@@ -190,7 +190,7 @@ export const articlesData = [
           "Can Nutrition Actually Boost Your Testosterone Levels?",
         shortSummary:
           "Modern medicine isn't the only method for boosting test levels. Check out these scientifically backed methods to boost testosterone to healthy levels!",
-        reads: null,
+        reads: 33700,
         comments: 6,
       },
       {
@@ -201,7 +201,7 @@ export const articlesData = [
         title: "Pro Tip: How to Accomplish All of Your Goals",
         shortSummary:
           "Stop complaining. Stop coming up with lame excuses. But, most importantly, stop failing simply by making this quick mindset change. Read on to lean more!",
-        reads: null,
+        reads: 2800,
         comments: 1,
       },
       {
@@ -212,7 +212,7 @@ export const articlesData = [
         title: "Lean Bulk Diet Plan - 10 Pounds In 2 Months",
         shortSummary:
           "Afraid of getting fat but want to build muscle? After trying everything in the book, Ryan Munsey used this eating plan to pack on 10 pounds in 2 months.",
-        reads: null,
+        reads: 306000,
         comments: 38,
       },
       {
@@ -225,7 +225,7 @@ export const articlesData = [
           "5 Crazy But Effective Shoulder Building Exercises",
         shortSummary:
           "Brace yourself. These shoulder exercises might seem crazy, but they could be just what you need to develop big, wide boulder shoulders!",
-        reads: null,
+        reads: 51200,
         comments: 2,
       },
     ],
@@ -237,7 +237,7 @@ export const articlesData = [
         href: "/exercises/palm-rotational-row.html",
         title: "Palm Rotational Row",
         shortSummary: "",
-        reads: null,
+        reads: 58200,
         comments: 0,
       },
       {
@@ -247,7 +247,7 @@ export const articlesData = [
         imgAlt: "Dumbbell Twist Press",
         title: "Dumbbell Twist Press",
         shortSummary: "",
-        reads: null,
+        reads: 15800,
         comments: 0,
       },
       {
@@ -257,14 +257,14 @@ export const articlesData = [
         imgAlt: "Snatch Grip High Pull",
         title: "Snatch Grip High Pull",
         shortSummary: "",
-        reads: null,
+        reads: 6200,
         comments: 0,
       },
       {
         href: "/exercises/alternate-dumbbell-reverse-fly-on-incline-bench.html",
         title: "Alternate Dumbbell Reverse Fly On Incline Bench",
         shortSummary: "",
-        reads: null,
+        reads: 37300,
         comments: 3,
       },
       {
@@ -274,14 +274,14 @@ export const articlesData = [
         imgAlt: "Double Kettlebell Split Squat",
         title: "Double Kettlebell Split Squat",
         shortSummary: "",
-        reads: null,
+        reads: 8800,
         comments: 0,
       },
       {
         href: "/exercises/narrow-squat.html",
         title: "Narrow Squat",
         shortSummary: "",
-        reads: null,
+        reads: 39700,
         comments: 1,
       },
     ],
