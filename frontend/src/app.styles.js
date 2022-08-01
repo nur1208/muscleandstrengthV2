@@ -173,11 +173,12 @@ li {
     margin-bottom: 0.5rem;
 }
 
-@media print, screen and (min-width: 52.5em)
-{.h1, h1 {
-    font-size: 2.6666666667rem;
-}}
-
+.h2, h2 {
+    font-size: 1.5555555556rem;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
 
 h1 {
     font-family: opensans-heavy;
@@ -191,6 +192,16 @@ p {
     line-height: 1.6;
     text-rendering: optimizeLegibility;
 }
+
+@media print, screen and (min-width: 52.5em)
+{.h1, h1 {
+    font-size: 2.6666666667rem;
+}
+.h2, h2 {
+    font-size: 2.2222222222rem;
+}
+}
+
 
 
 `;

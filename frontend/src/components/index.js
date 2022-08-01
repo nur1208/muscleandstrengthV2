@@ -10,3 +10,5 @@ export { Navbar } from "./navbar/Navbar";
 export { CustomerSupport } from "./customerSupport/CustomerSupport";
 export { FrontHero } from "./frontHero/FrontHero";
 export { InPageNav } from "./inPageNav/InPageNav";
+export { Articles } from "./articles/Articles";
+export { Button } from "./button/Button";
