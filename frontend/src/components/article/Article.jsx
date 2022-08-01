@@ -9,6 +9,7 @@ export const Article = ({
   shortSummary,
   reads,
   comments,
+  type,
 }) => {
   return (
     <MainWrapper>
@@ -42,7 +43,7 @@ export const Article = ({
 
       <div class="view-content-button">
         <a href={href} alt={title} title={title}>
-          <Button text="View Workout" isBlue />
+          <Button text={`View ${type}`} isBlue />
         </a>
       </div>
     </MainWrapper>

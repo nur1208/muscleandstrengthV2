@@ -14,6 +14,7 @@ export const articlesData = [
           "This circuit-style workout will help you torch calories and feel stronger, in a short amount of time. Try this 3-day full body workout for efficient lean muscle gains!",
         reads: 0,
         comments: 2,
+        type: "Workout",
       },
       {
         href: "/workouts/15-minute-core-conditioning-workout",
@@ -27,6 +28,7 @@ export const articlesData = [
           "Train your abs effectively and efficiently! This versatile workout can be done with just your bodyweight and should be incorporated into your training plan 2-3 times per week.",
         reads: 0,
         comments: 0,
+        type: "Workout",
       },
       {
         href: "/articles/5-proven-benefits-of-Ashwagandha",
@@ -40,6 +42,7 @@ export const articlesData = [
           "Ashwagandha is growing in popularity and for good reason. In this article, you'll learn why it's beneficial for athletes and how it can improve your training.",
         reads: 0,
         comments: 0,
+        type: "Article",
       },
       {
         href: "/videos/sadik-what-it-takes",
@@ -53,6 +56,7 @@ export const articlesData = [
           "After taking a couple of years off from competing, IFBB Pro, Sadik Hadzovic is back to take you inside his journey and mindset to becoming a Champion.",
         reads: 0,
         comments: 0,
+        type: "Video",
       },
       {
         href: "/articles/5-steps-completing-murph-workout",
@@ -65,6 +69,7 @@ export const articlesData = [
           "Held on Memorial Day weekend, the Murph is an annual test of endurance, willpower, and commitment to pay tribute to United States Navy SEAL Michael Murphy.",
         reads: 20,
         comments: 0,
+        type: "Article",
       },
       {
         href: "/workouts/8-week-cannonball-delts",
@@ -78,6 +83,7 @@ export const articlesData = [
           "Are you ready to step up your shoulder training? This intermediate program can be completed once every 5-7 days for 8 weeks to help your delts reach their true potential.",
         reads: 0,
         comments: 0,
+        type: "Workout",
       },
     ],
   },
@@ -94,6 +100,7 @@ export const articlesData = [
           "The insane Bane training program. Get insane like Batman's nemesis Bane: add these unique lifts and intensity techniques to your next workout.",
         reads: 1700000,
         comments: 217,
+        type: "Workout",
       },
       {
         href: "/workouts/triple-header-tricep-workout",
@@ -105,6 +112,7 @@ export const articlesData = [
           "Build big thick triceps that make your upper arms flex-worthy with this 12 week triple header tricep workout program. Read on to learn how to get started.",
         reads: 50400,
         comments: 0,
+        type: "Workout",
       },
       {
         href: "/workouts/pause-reps",
@@ -118,6 +126,7 @@ export const articlesData = [
           "Break through your current muscle building plateaus using pause reps! Get Coach Myers' full isometric contraction workout and put on some serious gains!",
         reads: 64400,
         comments: 2,
+        type: "Workout",
       },
       {
         href: "/workouts/big-arms-fast-4-week-specialization-workout",
@@ -129,6 +138,7 @@ export const articlesData = [
           "This four week bicep and tricep building specialization routine from transformation expert Justin Woltering is designed to help you bring up your lagging arms, and fast.",
         reads: 487700,
         comments: 40,
+        type: "Workout",
       },
       {
         href: "/workouts/23-doug--s-mega-cutting-routine.html",
@@ -140,6 +150,7 @@ export const articlesData = [
           "Doug's mega cutting workout routine is a 4 day split combining weights and cardio designed to lose fat while maintaining muscle mass.",
         reads: 1200000,
         comments: 299,
+        type: "Workout",
       },
       {
         href: "/workouts/george-hackenschmidt-inspired-workout",
@@ -153,6 +164,7 @@ export const articlesData = [
           "George Hackenschmidt was the first-ever World Heavyweight Champion in professional wrestling and pushed his ability to build muscle to the natural limit.",
         reads: 26200,
         comments: 3,
+        type: "Workout",
       },
     ],
   },
@@ -169,6 +181,7 @@ export const articlesData = [
           "Standard progression focuses on the addition of weight. Triple progression has you adding reps, sets then weight.",
         reads: 17100,
         comments: 2,
+        type: "Article",
       },
       {
         href: "/articles/12-bodybuilding-lies-die",
@@ -180,6 +193,7 @@ export const articlesData = [
           "We've each been given advice from well-meaning lifters that we later find out to be untrue. This article explores false muscle building beliefs that continue to be passed around.",
         reads: 160800,
         comments: 49,
+        type: "Article",
       },
       {
         href: "/articles/nutrition-boosts-test-levels",
@@ -192,6 +206,7 @@ export const articlesData = [
           "Modern medicine isn't the only method for boosting test levels. Check out these scientifically backed methods to boost testosterone to healthy levels!",
         reads: 33700,
         comments: 6,
+        type: "Article",
       },
       {
         href: "/articles/how-to-accomplish-all-of-your-goals",
@@ -203,6 +218,7 @@ export const articlesData = [
           "Stop complaining. Stop coming up with lame excuses. But, most importantly, stop failing simply by making this quick mindset change. Read on to lean more!",
         reads: 2800,
         comments: 1,
+        type: "Article",
       },
       {
         href: "/articles/lean-bulk-diet-plan-10-pounds-2-months",
@@ -214,6 +230,7 @@ export const articlesData = [
           "Afraid of getting fat but want to build muscle? After trying everything in the book, Ryan Munsey used this eating plan to pack on 10 pounds in 2 months.",
         reads: 306000,
         comments: 38,
+        type: "Article",
       },
       {
         href: "/articles/5-crazy-shoulder-exercises",
@@ -227,6 +244,7 @@ export const articlesData = [
           "Brace yourself. These shoulder exercises might seem crazy, but they could be just what you need to develop big, wide boulder shoulders!",
         reads: 51200,
         comments: 2,
+        type: "Article",
       },
     ],
   },
@@ -239,6 +257,7 @@ export const articlesData = [
         shortSummary: "",
         reads: 58200,
         comments: 0,
+        type: "Exercise",
       },
       {
         href: "/exercises/dumbbell-twist-press",
@@ -249,6 +268,7 @@ export const articlesData = [
         shortSummary: "",
         reads: 15800,
         comments: 0,
+        type: "Exercise",
       },
       {
         href: "/exercises/snatch-grip-high-pull",
@@ -259,6 +279,7 @@ export const articlesData = [
         shortSummary: "",
         reads: 6200,
         comments: 0,
+        type: "Exercise",
       },
       {
         href: "/exercises/alternate-dumbbell-reverse-fly-on-incline-bench.html",
@@ -266,6 +287,7 @@ export const articlesData = [
         shortSummary: "",
         reads: 37300,
         comments: 3,
+        type: "Exercise",
       },
       {
         href: "/exercises/double-kettlebell-split-squat",
@@ -276,6 +298,7 @@ export const articlesData = [
         shortSummary: "",
         reads: 8800,
         comments: 0,
+        type: "Exercise",
       },
       {
         href: "/exercises/narrow-squat.html",
@@ -283,7 +306,9 @@ export const articlesData = [
         shortSummary: "",
         reads: 39700,
         comments: 1,
+        type: "Exercise",
       },
     ],
   },
 ];
+

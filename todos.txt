@@ -25,8 +25,12 @@
 - {DONE} make SitewideBanner component dynamic and change it's name to Banner
 - {DONE} create Articles and Article components and scrap ArticlesData
         - {DONE} fix scraping reads number with K and M      
+        - {DONE} scrap article type
+- {TODO} create EmailSignUp component   
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
 - {TODO} make Submenu and SubSubmenu components as one component
 - {TODO} fix SitewideBanner typo
 - {TODO} fix InPageNav component style when the device mobile S
+- {TODO} add voice assistant 
+        note - create it folder call voiceAssistant and add all the  voice assistant logic in it

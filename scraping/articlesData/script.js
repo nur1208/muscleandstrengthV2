@@ -113,6 +113,15 @@ export const getArticlesData = async () => {
           .trim()
           .split(" ")[0]
       );
+
+      article.type = $(
+        ".view-content-button button",
+        $(articleInnerWrapper)
+      )
+        .text()
+        .split(" ")[1]
+        .trim();
+
       articlesArray.push(article);
     }
     articleGroup.articles = articlesArray;
