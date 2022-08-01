@@ -13,3 +13,4 @@ export { InPageNav } from "./inPageNav/InPageNav";
 export { Articles } from "./articles/Articles";
 export { Button } from "./button/Button";
 export { EmailSignUp } from "./emailSignUp/EmailSignUp";
+export { Footer } from "./footer/Footer";

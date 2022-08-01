@@ -7,6 +7,7 @@ import {
   Banner,
   Articles,
   EmailSignUp,
+  Footer,
 } from "../../components";
 import {
   articlesData,
@@ -35,6 +36,7 @@ export const Home = () => {
           </main>
         </div>
         <EmailSignUp />
+        <Footer />
         <MenuMask />
       </div>
     </MainWrapper>

@@ -213,6 +213,19 @@ form input[name=contact_me_by_fax_only], form input[name=fields_lname] {
     box-sizing: border-box;
     padding: 0;
 }
+
+.h6, h6 {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+
+div, form, h1, h2, h3, h4, h5, h6, li, p, td, th, ul {
+    margin: 0;
+    padding: 0;
+}
 @media print, screen and (min-width: 52.5em)
 {.h1, h1 {
     font-size: 2.6666666667rem;
@@ -223,6 +236,9 @@ form input[name=contact_me_by_fax_only], form input[name=fields_lname] {
 
 .h4, h4 {
     font-size: 1.4444444444rem;
+}
+.h6, h6 {
+    font-size: 1rem;
 }
 }
 

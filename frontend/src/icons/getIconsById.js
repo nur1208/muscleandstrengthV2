@@ -1,6 +1,10 @@
 import {
+  IconTwitter,
+  IconFacebook,
+  IconInstagram,
   IconNavToolsWhite,
   IconNavWorkoutsWhite,
+  IconPinterest,
   IconQuestionMark,
   IconNavStoreWhite,
   IconNavExpertGuidesWhite,
@@ -16,6 +20,7 @@ import {
   IconNavDietPlans,
   IconNavTools,
   IconClose,
+  IconYoutube,
 } from "./index";
 
 export const getIconById = (iconId, style) => {
@@ -56,6 +61,20 @@ export const getIconById = (iconId, style) => {
       return <IconNavTools style={style} />;
     case "icon-close":
       return <IconClose style={style} />;
+    case "icon-youtube":
+      return <IconYoutube style={style} />;
+
+    case "icon-instagram":
+      return <IconInstagram style={style} />;
+
+    case "icon-pinterest":
+      return <IconPinterest style={style} />;
+
+    case "icon-facebook":
+      return <IconFacebook style={style} />;
+
+    case "icon-twitter":
+      return <IconTwitter style={style} />;
 
     default:
       return <IconQuestionMark style={style} />;
