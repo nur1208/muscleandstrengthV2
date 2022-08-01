@@ -19,6 +19,51 @@ export const MainWrapper = styled.button`
   width: auto;
   white-space: nowrap;
 
+  /* .css-loader-block {
+    position: absolute;
+    left: 0;
+  } */
+
+  @keyframes load8 {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .css-loader-block {
+    display: none;
+  }
+  .css-loader-block {
+    width: 22px;
+    height: 22px;
+    left: -44px;
+    right: 0;
+    margin: 0 auto;
+    top: 14%;
+    transform: translateY(-50%);
+    position: relative;
+    z-index: 10;
+  }
+
+  .css-loader {
+    box-sizing: content-box;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-left-color: #fff;
+    transform: translateZ(0);
+    animation: 1.1s linear infinite load8;
+  }
+
   ${({ isBlue }) =>
     isBlue &&
     `

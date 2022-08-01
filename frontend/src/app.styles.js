@@ -193,12 +193,36 @@ p {
     text-rendering: optimizeLegibility;
 }
 
+button {
+    color: #202020;
+}
+.h4, h4 {
+    font-size: 1.2222222222rem;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+form input[name=contact_me_by_fax_only], form input[name=fields_lname] {
+    display: none;
+}
+[type=checkbox], [type=file], [type=radio] {
+    margin: 0 0 0.8888888889rem;
+}
+[type=checkbox], [type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
 @media print, screen and (min-width: 52.5em)
 {.h1, h1 {
     font-size: 2.6666666667rem;
 }
 .h2, h2 {
     font-size: 2.2222222222rem;
+}
+
+.h4, h4 {
+    font-size: 1.4444444444rem;
 }
 }
 

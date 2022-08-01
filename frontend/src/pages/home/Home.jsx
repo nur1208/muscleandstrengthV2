@@ -6,19 +6,21 @@ import {
   InPageNav,
   Banner,
   Articles,
+  EmailSignUp,
 } from "../../components";
-import { articlesData } from "../../components/articles/data";
 import {
+  articlesData,
   BANNER_BLOCK_12,
   BANNER_BLOCK_19,
-} from "../../components/banner/data";
+} from "../../components/data";
+
 import { MainWrapper } from "./home.styles";
 import { MenuMask } from "./MenuMask";
 export const Home = () => {
   return (
-    <MainWrapper>
+    <MainWrapper id="page">
       <div>
-        <div>
+        <div id="screen">
           <Banner {...BANNER_BLOCK_12} />
           <Header />
           <FrontHero />
@@ -32,6 +34,7 @@ export const Home = () => {
             ))}
           </main>
         </div>
+        <EmailSignUp />
         <MenuMask />
       </div>
     </MainWrapper>

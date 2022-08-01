@@ -15,6 +15,7 @@ import {
   IconNavExpertGuides,
   IconNavDietPlans,
   IconNavTools,
+  IconClose,
 } from "./index";
 
 export const getIconById = (iconId, style) => {
@@ -53,6 +54,8 @@ export const getIconById = (iconId, style) => {
 
     case "icon-nav-tools":
       return <IconNavTools style={style} />;
+    case "icon-close":
+      return <IconClose style={style} />;
 
     default:
       return <IconQuestionMark style={style} />;

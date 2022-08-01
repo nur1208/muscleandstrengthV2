@@ -26,7 +26,7 @@
 - {DONE} create Articles and Article components and scrap ArticlesData
         - {DONE} fix scraping reads number with K and M      
         - {DONE} scrap article type
-- {TODO} create EmailSignUp component   
+- {DONE} create EmailSignUp component   
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
 - {TODO} make Submenu and SubSubmenu components as one component

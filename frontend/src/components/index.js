@@ -12,3 +12,4 @@ export { FrontHero } from "./frontHero/FrontHero";
 export { InPageNav } from "./inPageNav/InPageNav";
 export { Articles } from "./articles/Articles";
 export { Button } from "./button/Button";
+export { EmailSignUp } from "./emailSignUp/EmailSignUp";
