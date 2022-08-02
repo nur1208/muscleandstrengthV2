@@ -10,7 +10,7 @@ export const MainWrapper = styled.nav`
     margin: 0 auto;
     text-align: center;
     line-height: 32px;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .breadcrumb,

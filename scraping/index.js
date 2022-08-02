@@ -1,8 +1,8 @@
-import { getFooterData } from "./footerData/script.js";
+import { getStoreTopBannerData } from "./storeTopBanner/script.js";
 
 const main = async () => {
   console.log("start scraping... ⌛");
-  await getFooterData();
+  await getStoreTopBannerData();
   console.log("DONE scraping ✔");
 };
 

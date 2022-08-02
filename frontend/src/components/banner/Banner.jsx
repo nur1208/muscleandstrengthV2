@@ -13,6 +13,7 @@ export const Banner = ({
   isSale,
   backgroundColor,
   srcset,
+  noImageDownloaded,
 }) => {
   return (
     <MainWrapper>
@@ -29,13 +30,15 @@ export const Banner = ({
           <source
             width={widthSource}
             height={heightSource}
-            srcset={`./images/${srcset}`}
+            srcset={
+              noImageDownloaded ? srcset : `./images/${srcset}`
+            }
             media={media}
           />
           <img
             width={widthImg}
             height={heightImg}
-            src={`./images/${src}`}
+            src={noImageDownloaded ? src : `./images/${src}`}
             alt={alt}
           />
         </picture>

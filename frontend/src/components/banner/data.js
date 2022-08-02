@@ -20,3 +20,60 @@ export const BANNER_BLOCK_19 = {
   src: "mb_slider_desktop.jpg",
   alt: "Muscle Building Sale! Buy1 get 1 free deals and more on pre-workout, BCAAs, and muscle building essentials!",
 };
+
+export const STORE_TOP_BANNER = [
+  {
+    href: "/store/brands/stryve",
+    isSale: false,
+    srcset:
+      "https://cdn.muscleandstrength.com/store/media/wysiwyg/Home_Slider/2022/08/stryve_slider_mobile.jpg",
+    media: "(max-width: 739px)",
+    src: "https://cdn.muscleandstrength.com/store/media/wysiwyg/Home_Slider/2022/08/stryve_slider_desktop.jpg",
+    alt: "Stryve Now Available at M&S! Healthy snacking and on-the-go sports nutrition, simplified. On sale today!",
+  },
+  {
+    href: "/store/landing/aug1bigbrand",
+    isSale: false,
+    srcset:
+      "https://cdn.muscleandstrength.com/store/media/wysiwyg/Home_Slider/2022/08/bb_slider_mobile.jpg",
+    media: "(max-width: 739px)",
+    src: "https://cdn.muscleandstrength.com/store/media/wysiwyg/Home_Slider/2022/08/bb_slider_desktop.jpg",
+    alt: "The Big Brand Sale! The brands you love, the supps you trust - on sale now!",
+  },
+  {
+    href: "/store/landing/aug1u30",
+    isSale: false,
+    srcset:
+      "https://cdn.muscleandstrength.com/store/media/wysiwyg/Home_Slider/2022/08/u30_slider_mobile.jpg",
+    media: "(max-width: 739px)",
+    src: "https://cdn.muscleandstrength.com/store/media/wysiwyg/Home_Slider/2022/08/u30_slider_desktop.jpg",
+    alt: "$30 and Under Sale! Inflate your gains, not your budget. Huge savings all under $30! 200+ Deals!",
+  },
+  {
+    href: "/store/landing/aug1magnum",
+    isSale: false,
+    srcset:
+      "https://cdn.muscleandstrength.com/store/media/wysiwyg/Home_Slider/2022/08/mag_slider_mobile.jpg",
+    media: "(max-width: 739px)",
+    src: "https://cdn.muscleandstrength.com/store/media/wysiwyg/Home_Slider/2022/08/mag_slider_desktop.jpg",
+    alt: "Magnum Nutraceuticals 72 Hour Sale! BOGOs, price cuts, and more! Free shirt with Magnum orders over $49!",
+  },
+  {
+    href: "/store/brands/stryve",
+    isSale: false,
+    srcset:
+      "https://cdn.muscleandstrength.com/store/media/wysiwyg/Home_Slider/2022/08/stryve_slider_mobile.jpg",
+    media: "(max-width: 739px)",
+    src: "https://cdn.muscleandstrength.com/store/media/wysiwyg/Home_Slider/2022/08/stryve_slider_desktop.jpg",
+    alt: "Stryve Now Available at M&S! Healthy snacking and on-the-go sports nutrition, simplified. On sale today!",
+  },
+  {
+    href: "/store/landing/aug1bigbrand",
+    isSale: false,
+    srcset:
+      "https://cdn.muscleandstrength.com/store/media/wysiwyg/Home_Slider/2022/08/bb_slider_mobile.jpg",
+    media: "(max-width: 739px)",
+    src: "https://cdn.muscleandstrength.com/store/media/wysiwyg/Home_Slider/2022/08/bb_slider_desktop.jpg",
+    alt: "The Big Brand Sale! The brands you love, the supps you trust - on sale now!",
+  },
+];

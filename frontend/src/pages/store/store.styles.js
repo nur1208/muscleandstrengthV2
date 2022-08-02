@@ -11,4 +11,20 @@ export const MainWrapper = styled.div`
   * {
     outline: 0;
   }
+
+  #main-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+
+  section {
+    margin-bottom: 15px;
+  }
+
+  .content section {
+    background-color: #fff;
+  }
 `;

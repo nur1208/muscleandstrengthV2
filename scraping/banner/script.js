@@ -4,6 +4,7 @@ import fs from "fs";
 import { promisify } from "util";
 import path from "path";
 import { fileURLToPath } from "url";
+import { scrapBanner } from "./scrapBanner.js";
 
 export const getBannerData = async () => {
   const __filename = fileURLToPath(import.meta.url);
@@ -31,37 +32,10 @@ export const getBannerData = async () => {
   //     console.log("Saved!");
   //   });
 
-  const mainWrapper = "a";
-  const sourceSelector = "source";
-  const imgSelector = "img";
   // read the html body from the file system (this is very faster then reading it from the internet)
   const html = await promisify(fs.readFile)(mainPageHtml);
 
-  const bannerData = {};
-  let $ = cheerio.load(html.toString());
-  bannerData.href = $(mainWrapper).attr("href");
-  bannerData.isSale =
-    $(mainWrapper).attr("class")?.trim() === "sale-banner";
-  bannerData.backgroundColor = $(mainWrapper)
-    .attr("style")
-    ?.split(":")[1]
-    ?.trim();
-  bannerData.widthSource = $(sourceSelector).attr("width");
-  bannerData.heightSource = $(sourceSelector).attr("height");
-  const splittedSrcset = $(sourceSelector)
-    .attr("srcset")
-    .split("/");
-  bannerData.srcset =
-    splittedSrcset[splittedSrcset.length - 1].trim();
-  bannerData.media = $(sourceSelector).attr("media");
-
-  bannerData.widthImg = $(imgSelector).attr("width");
-  bannerData.heightImg = $(imgSelector).attr("height");
-
-  const splittedSrc = $(imgSelector).attr("src").split("/");
-  bannerData.src = splittedSrc[splittedSrc.length - 1].trim();
-  bannerData.alt = $(imgSelector).attr("alt");
-
+  const bannerData = scrapBanner(html.toString());
   fs.writeFile(
     mainDataJson,
     JSON.stringify(bannerData),
