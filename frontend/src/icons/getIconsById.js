@@ -1,4 +1,5 @@
 import {
+  IconAirplane,
   IconTwitter,
   IconFacebook,
   IconInstagram,
@@ -75,6 +76,9 @@ export const getIconById = (iconId, style) => {
 
     case "icon-twitter":
       return <IconTwitter style={style} />;
+
+    case "icon-airplane":
+      return <IconAirplane style={style} />;
 
     default:
       return <IconQuestionMark style={style} />;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-
-export const MainWrapper = styled.a`
+import { Link } from "react-router-dom";
+export const MainWrapper = styled(Link)`
   .visually-hidden {
     display: none;
   }

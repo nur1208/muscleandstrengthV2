@@ -30,10 +30,11 @@
 - {DONE} create Footer component   
 - {DONE} scrap Footer data and make footer component dynamic and create FooterItem component  
 - {DONE} set up Store page component
-- {TODO} create NavbarInfo component and use it in Header component dynamically
+- {DONE} create NavbarInfo component 
 - {TODO} create Slider component
         note: reference to your github: https://github.com/nur1208/muscleandstrength-clone-v1/blob/main/frontend/src/components/SliderV2.jsx
 - {TODO} create QuickNavBar component
+
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
 - {TODO} make Submenu and SubSubmenu components as one component

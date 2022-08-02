@@ -7,4 +7,5 @@ export const ICONS_ID = {
   IconPinterest: "icon-pinterest",
   IconFacebook: "icon-facebook",
   IconTwitter: "icon-twitter",
+  IconAirplane: "icon-airplane",
 };

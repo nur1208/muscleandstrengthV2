@@ -1,5 +1,6 @@
 import React from "react";
 import { getIconById } from "../../icons";
+import { capitalizeFirstLetter } from "../../utils";
 import { FOOTER_ITEM_TYPE } from "./data";
 
 export const FooterItem = ({
@@ -18,7 +19,8 @@ export const FooterItem = ({
             <li>
               <a rel="nofollow" href={href}>
                 <span class="visually-hidden">
-                  Subscribe to us on {iconId.split("-")[1]}
+                  Subscribe to us on{" "}
+                  {capitalizeFirstLetter(iconId.split("-")[1])}
                 </span>
                 {getIconById(iconId)}
               </a>

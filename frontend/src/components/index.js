@@ -14,3 +14,4 @@ export { Articles } from "./articles/Articles";
 export { Button } from "./button/Button";
 export { EmailSignUp } from "./emailSignUp/EmailSignUp";
 export { Footer } from "./footer/Footer";
+export { NavbarInfo } from "./navbarInfo/NavbarInfo";

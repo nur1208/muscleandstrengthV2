@@ -15,7 +15,7 @@ import { useSelector } from "react-redux";
 import { MainWrapper } from "./header.styles";
 import { OPENED_TYPES } from "../../redux/constants";
 
-export const Header = () => {
+export const Header = ({ hasNavbarInfo }) => {
   const { isOpen, openedType } = useSelector(
     (state) => state.navbar_store
   );

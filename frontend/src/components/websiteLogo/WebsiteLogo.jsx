@@ -3,7 +3,7 @@ import { MainWrapper } from "./websiteLogo.styles";
 
 export const WebsiteLogo = () => {
   return (
-    <MainWrapper href="/" alt="Muscle &amp; Strength">
+    <MainWrapper to="/" alt="Muscle &amp; Strength">
       <span class="visually-hidden">
         Muscle &amp; Strength Homepage
       </span>
