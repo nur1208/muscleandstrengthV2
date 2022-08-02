@@ -8,6 +8,7 @@ import { getIconById, IconNavStoreWhite } from "../../icons";
 import { SubSubmenu } from "./SubSubmenu";
 import { useSelector } from "react-redux";
 import { OPENED_TYPES } from "../../redux/constants";
+import { Link } from "react-router-dom";
 
 export const Submenu = ({
   navbarItemTitle,
@@ -28,11 +29,11 @@ export const Submenu = ({
       class={isOpen ? `${initStyle} open-submenu` : initStyle}
       // onClick={() => console.log(navbarItemTitle)}
     >
-      <a
+      <Link
         class="base-item-button"
-        href={
+        to={
           isOpen && openedType === OPENED_TYPES.SIDE_NAVBAR
-            ? "javascript:void(0)"
+            ? "#"
             : navbarItemHref
           // navbarItemHref
           // "javascript:void(0)"
@@ -49,7 +50,7 @@ export const Submenu = ({
         </span>
         {navbarItemTitle}
         <span class="caret">›</span>
-      </a>
+      </Link>
       <div class="submenu">
         <div
           onClick={handleBack}
@@ -59,11 +60,11 @@ export const Submenu = ({
         </div>
         <div class="view-all-link">
           {navbarItemTitle}{" "}
-          <a href={navbarItemHref}>
+          <Link to={navbarItemHref}>
             <button class="btn btn-blue">
               Go to {navbarItemTitle}
             </button>
-          </a>
+          </Link>
         </div>
         {groups.map(
           ({
@@ -98,7 +99,9 @@ export const Submenu = ({
                     />
                   ) : (
                     <li>
-                      <a href={subItemHref}>{subItemTitle}</a>
+                      <Link to={subItemHref}>
+                        {subItemTitle}
+                      </Link>
                     </li>
                   )
               )}

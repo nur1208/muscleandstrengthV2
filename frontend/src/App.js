@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import GlobalStyle from "./app.styles";
-import { Home } from "./pages";
+import { Home, Store } from "./pages";
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <GlobalStyle />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/store" element={<Store />} />
         <Route path="/login" element={<div>login</div>} />
       </Routes>
     </>
