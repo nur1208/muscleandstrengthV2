@@ -3,6 +3,7 @@ import {
   Banner,
   Header,
   NavbarInfo,
+  QuickNavBar,
   Slider,
 } from "../../components";
 import {
@@ -25,6 +26,9 @@ export const Store = () => {
                 <Banner noImageDownloaded {...bannerData} />
               ))}
             </Slider>
+          </section>
+          <section id="quick-nav">
+            <QuickNavBar />
           </section>
         </article>
       </main>
