@@ -1,5 +1,10 @@
 import React from "react";
-import { Banner, Header, NavbarInfo } from "../../components";
+import {
+  Banner,
+  Header,
+  NavbarInfo,
+  Slider,
+} from "../../components";
 import {
   BANNER_BLOCK_12,
   STORE_TOP_BANNER,
@@ -15,7 +20,11 @@ export const Store = () => {
       <main id="main-wrapper">
         <article className="content">
           <section id="top-banner">
-            <Banner noImageDownloaded {...STORE_TOP_BANNER[1]} />
+            <Slider>
+              {STORE_TOP_BANNER.map((bannerData) => (
+                <Banner noImageDownloaded {...bannerData} />
+              ))}
+            </Slider>
           </section>
         </article>
       </main>
