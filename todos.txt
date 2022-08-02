@@ -28,7 +28,7 @@
         - {DONE} scrap article type
 - {DONE} create EmailSignUp component   
 - {DONE} create Footer component   
-- {TODO} scrap Footer data and make footer component dynamic   
+- {DONE} scrap Footer data and make footer component dynamic and create FooterItem component  
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
 - {TODO} make Submenu and SubSubmenu components as one component
@@ -37,3 +37,4 @@ not important:
 - {TODO} add voice assistant 
         note - create it folder call voiceAssistant and add all the  voice assistant logic in it
 - {TODO} fix the btn extend when the loading icon appear
+- {TODO} create puppeteer script to demonstrate the website login buy products and so on.
