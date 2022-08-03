@@ -40,7 +40,7 @@
 - {DONE} create Product component
 - {DONE} create Products component
 - {DONE} scrap topDealProducts data and make Products, Product and StoreSectionSwiper components dynamic
-
+- {DONE} improve StoreSectionSwiper component
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
 - {TODO} make Submenu and SubSubmenu components as one component

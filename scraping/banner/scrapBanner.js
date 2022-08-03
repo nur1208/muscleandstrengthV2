@@ -21,16 +21,16 @@ export const scrapBanner = (html) => {
   //     .split("/");
   //   bannerData.srcset =
   //     splittedSrcset[splittedSrcset.length - 1].trim();
-  bannerData.srcset = $(sourceSelector).attr("srcset");
-  bannerData.media = $(sourceSelector).attr("media");
+  bannerData.srcset = $(sourceSelector).attr("srcset").trim();
+  bannerData.media = $(sourceSelector).attr("media").trim();
 
   bannerData.widthImg = $(imgSelector).attr("width");
   bannerData.heightImg = $(imgSelector).attr("height");
 
   //   const splittedSrc = $(imgSelector).attr("src").split("/");
   //   bannerData.src = splittedSrc[splittedSrc.length - 1].trim();
-  bannerData.src = $(imgSelector).attr("data-src");
-  bannerData.alt = $(imgSelector).attr("alt");
+  bannerData.src = $(imgSelector).attr("data-src").trim();
+  bannerData.alt = $(imgSelector).attr("alt").trim();
 
   return bannerData;
 };

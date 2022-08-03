@@ -15,7 +15,9 @@ export const Product = ({
       <div className="height-setter">
         <div
           className="dynamic-height"
-          style={{ paddingBottom: 106 }}
+          style={{
+            paddingBottom: title.length > 30 ? 106 : 125,
+          }}
         >
           <Link className="product-link" to={href || "#"}>
             <div className="image-wrap">

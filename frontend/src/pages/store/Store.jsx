@@ -11,6 +11,7 @@ import {
 } from "../../components";
 import {
   BANNER_BLOCK_12,
+  MERCH_BANNER,
   STORE_TOP_BANNER,
   topDealsProductsData,
 } from "../../components/data";
@@ -48,6 +49,12 @@ export const Store = () => {
             ) : (
               <Products {...topDealsProps} />
             )}
+          </section>
+          <section id="merch-banner">
+            <Banner noImageDownloaded {...MERCH_BANNER} />
+          </section>
+          <section id="top-rated-products">
+            <StoreSectionSwiper {...topDealsProps} />
           </section>
         </article>
       </main>

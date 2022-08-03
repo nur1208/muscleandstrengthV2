@@ -77,3 +77,13 @@ export const STORE_TOP_BANNER = [
     alt: "The Big Brand Sale! The brands you love, the supps you trust - on sale now!",
   },
 ];
+
+export const MERCH_BANNER = {
+  href: "/store/brands/primeval-labs",
+  isSale: false,
+  srcset:
+    "https://cdn.muscleandstrength.com/store/media/wysiwyg/Merchant_Banner/2022/05/pvl_slider_mobile.jpg",
+  media: "(max-width: 739px)",
+  src: "https://cdn.muscleandstrength.com/store/media/wysiwyg/Merchant_Banner/2022/05/pvl_slider_desktop.jpg",
+  alt: "Save Big on Primeval Labs - Deals so good you'll go Apesh*t!",
+};

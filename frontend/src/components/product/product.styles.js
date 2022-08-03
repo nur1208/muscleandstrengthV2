@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const MainWrapper = styled.div`
+  /* padding-bottom: 22px; */
+  height: 100%;
+
   .height-setter {
     height: 100%;
   }
@@ -27,7 +30,10 @@ export const MainWrapper = styled.div`
   }
 
   .product-name {
-    font-size: 16px;
+    list-style: none;
+    text-align: center;
+    line-height: 1.3;
+    font-size: 15px;
     display: block;
     line-height: 1.3;
     color: #303030;
