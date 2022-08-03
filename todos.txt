@@ -35,6 +35,7 @@
 - {DONE} create Slider component
         note: reference to your github: https://github.com/nur1208/muscleandstrength-clone-v1/blob/main/frontend/src/components/SliderV2.jsx
 - {DONE} create QuickNavBar component
+- {DONE} scrap QuickNavBar data and make QuickNavBar component dynamic
 
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic

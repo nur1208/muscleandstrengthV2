@@ -1,8 +1,8 @@
-import { getStoreTopBannerData } from "./storeTopBanner/script.js";
+import { getStoreQuickNavbarData } from "./storeQuickNavbar/script.js";
 
 const main = async () => {
   console.log("start scraping... ⌛");
-  await getStoreTopBannerData();
+  await getStoreQuickNavbarData();
   console.log("DONE scraping ✔");
 };
 
