@@ -3,6 +3,7 @@ import {
   Banner,
   Header,
   NavbarInfo,
+  Products,
   QuickNavBar,
   Slider,
   StoreSectionSwiper,
@@ -32,7 +33,8 @@ export const Store = () => {
             <QuickNavBar />
           </section>
           <section id="top-deals">
-            <StoreSectionSwiper />
+            {/* <StoreSectionSwiper /> */}
+            <Products />
           </section>
         </article>
       </main>

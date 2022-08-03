@@ -19,3 +19,4 @@ export { Slider } from "./slider/Slider";
 export { QuickNavBar } from "./quickNavBar/QuickNavBar";
 export { StoreSectionSwiper } from "./storeSectionSwiper/StoreSectionSwiper";
 export { Product } from "./product/Product";
+export { Products } from "./products/Products";

@@ -38,6 +38,7 @@
 - {DONE} scrap QuickNavBar data and make QuickNavBar component dynamic
 - {DONE} create StoreSectionSwiper component
 - {DONE} create Product component
+- {DONE} create Products component
 
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
