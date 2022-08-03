@@ -1,4 +1,5 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 import {
   Banner,
   Header,
@@ -11,10 +12,19 @@ import {
 import {
   BANNER_BLOCK_12,
   STORE_TOP_BANNER,
+  topDealsProductsData,
 } from "../../components/data";
 import { MainWrapper } from "./store.styles";
 
 export const Store = () => {
+  // const isDesktopOrLaptop = useMediaQuery({
+  //   query: "(min-width: 1224px)",
+  // });
+  const isNotPC = useMediaQuery({ maxWidth: 1028 });
+  const topDealsProps = {
+    title: "Top Rated Products",
+    products: topDealsProductsData,
+  };
   return (
     <MainWrapper>
       <Banner {...BANNER_BLOCK_12} />
@@ -33,8 +43,11 @@ export const Store = () => {
             <QuickNavBar />
           </section>
           <section id="top-deals">
-            {/* <StoreSectionSwiper /> */}
-            <Products />
+            {isNotPC ? (
+              <StoreSectionSwiper {...topDealsProps} />
+            ) : (
+              <Products {...topDealsProps} />
+            )}
           </section>
         </article>
       </main>

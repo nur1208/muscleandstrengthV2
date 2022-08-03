@@ -1,8 +1,8 @@
-import { getStoreQuickNavbarData } from "./storeQuickNavbar/script.js";
+import { getTopDealProductsData } from "./topDealProducts/script.js";
 
 const main = async () => {
   console.log("start scraping... ⌛");
-  await getStoreQuickNavbarData();
+  await getTopDealProductsData();
   console.log("DONE scraping ✔");
 };
 

@@ -39,6 +39,7 @@
 - {DONE} create StoreSectionSwiper component
 - {DONE} create Product component
 - {DONE} create Products component
+- {DONE} scrap topDealProducts data and make Products, Product and StoreSectionSwiper components dynamic
 
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
