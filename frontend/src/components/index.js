@@ -18,3 +18,4 @@ export { NavbarInfo } from "./navbarInfo/NavbarInfo";
 export { Slider } from "./slider/Slider";
 export { QuickNavBar } from "./quickNavBar/QuickNavBar";
 export { StoreSectionSwiper } from "./storeSectionSwiper/StoreSectionSwiper";
+export { Product } from "./product/Product";
