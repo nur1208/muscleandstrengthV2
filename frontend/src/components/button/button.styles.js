@@ -89,4 +89,19 @@ export const MainWrapper = styled.button`
         line-height: 60px;
     }
   `}
+
+    ${({ isSmall }) =>
+    isSmall &&
+    `
+    padding: 0 16px;
+    height: 39px;
+    line-height: 39px;
+    font-size: 13px;
+    
+    @media (min-width: 600px){
+      padding: 0 15px;
+      height: 35px;
+      line-height: 35px;
+    }
+  `}
 `;

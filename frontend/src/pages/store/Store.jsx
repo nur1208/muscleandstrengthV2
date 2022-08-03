@@ -5,6 +5,7 @@ import {
   NavbarInfo,
   QuickNavBar,
   Slider,
+  StoreSectionSwiper,
 } from "../../components";
 import {
   BANNER_BLOCK_12,
@@ -29,6 +30,9 @@ export const Store = () => {
           </section>
           <section id="quick-nav">
             <QuickNavBar />
+          </section>
+          <section id="top-deals">
+            <StoreSectionSwiper />
           </section>
         </article>
       </main>

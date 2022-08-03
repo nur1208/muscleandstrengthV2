@@ -17,3 +17,4 @@ export { Footer } from "./footer/Footer";
 export { NavbarInfo } from "./navbarInfo/NavbarInfo";
 export { Slider } from "./slider/Slider";
 export { QuickNavBar } from "./quickNavBar/QuickNavBar";
+export { StoreSectionSwiper } from "./storeSectionSwiper/StoreSectionSwiper";
