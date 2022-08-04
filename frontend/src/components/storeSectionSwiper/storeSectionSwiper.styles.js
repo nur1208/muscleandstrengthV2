@@ -22,6 +22,9 @@ export const MainWrapper = styled.div`
     text-transform: uppercase;
     text-align: left;
   }
+  .swiper-slide {
+    height: auto;
+  }
 
   .swiper-button-next,
   .swiper-button-prev {
@@ -53,14 +56,6 @@ export const MainWrapper = styled.div`
     background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAyNyA0NCc+PHBhdGggZD0nTTAsMjJMMjIsMGwyLjEsMi4xTDQuMiwyMmwxOS45LDE5LjlMMjIsNDRMMCwyMkwwLDIyTDAsMjJ6JyBmaWxsPScjMDAwMDAwJy8+PC9zdmc+);
   }
 
-  .swiper-button-next.swiper-button-disabled,
-  .swiper-button-prev.swiper-button-disabled {
-    opacity: 0.1;
-    cursor: auto;
-    pointer-events: none;
-    border-color: #ddd;
-  }
-
   .swiper-button-next,
   .swiper-button-prev {
     transition: opacity 0.3s ease-in-out;
@@ -73,10 +68,21 @@ export const MainWrapper = styled.div`
     background-size: 20px 40px;
   }
 
+  &:hover .swiper-button-next,
   .swiper-button-next:hover,
+  &:hover .swiper-button-prev,
   .swiper-button-prev:hover {
     opacity: 1;
   }
+
+  .swiper-button-next.swiper-button-disabled,
+  .swiper-button-prev.swiper-button-disabled {
+    opacity: 0.1;
+    cursor: auto;
+    pointer-events: none;
+    border-color: #ddd;
+  }
+
   @media (min-width: 840px) {
     .swiper-button-next {
       right: 1px;

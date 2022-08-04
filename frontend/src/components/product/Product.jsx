@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { MainWrapper } from "./product.styles";
 import { Button } from "../index";
 import { Link } from "react-router-dom";
@@ -16,7 +16,8 @@ export const Product = ({
         <div
           className="dynamic-height"
           style={{
-            paddingBottom: title.length > 30 ? 106 : 125,
+            // paddingBottom: title.length > 30 ? 106 : 125,
+            paddingBottom: 106,
           }}
         >
           <Link className="product-link" to={href || "#"}>

@@ -11,7 +11,6 @@ SwiperCore.use([Navigation]);
 
 export const StoreSectionSwiper = ({ title, products }) => {
   const isPC = useMediaQuery({ minWidth: 1028 });
-
   return (
     <MainWrapper>
       <h2 className="grey-stripe">
@@ -21,15 +20,15 @@ export const StoreSectionSwiper = ({ title, products }) => {
         id="main"
         className="mns-carousel"
         slidesPerView={2}
-        // slidesPerGroup={4}
         freeMode={true}
-        spaceBetween={4}
+        spaceBetween={2}
         navigation={{
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
         // enabled
         breakpoints={{
+          1028: { slidesPerView: 6, slidesPerGroup: 6 },
           950: { slidesPerView: 6 },
           850: { slidesPerView: 5 },
           650: { slidesPerView: 4 },
