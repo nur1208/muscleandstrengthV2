@@ -6,7 +6,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { scrapProduct } from "./scrapProduct.js";
 
-export const getTopDealProductsData = async () => {
+export const getStoreProductsData = async (type) => {
   const __filename = fileURLToPath(import.meta.url);
 
   const __dirname = path.dirname(__filename);
@@ -41,7 +41,7 @@ export const getTopDealProductsData = async () => {
 
   const topDealsProductsData = [];
 
-  const cells = $("#top-deals .cell").toArray();
+  const cells = $(`#${type} .cell`).toArray();
   for (let index = 0; index < cells.length; index++) {
     const cell = cells[index];
     const item = scrapProduct(cell);

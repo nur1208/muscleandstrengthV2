@@ -42,6 +42,17 @@
 - {DONE} scrap topDealProducts data and make Products, Product and StoreSectionSwiper components dynamic
 - {DONE} improve StoreSectionSwiper component
 - {DONE} improve StoreSectionSwiper component again
+- {TODO} scrap topRatedProducts data
+- {TODO} scrap tradingProducts data
+- {TODO} scrap MERCH_BANNER_2 data
+- {TODO} create Brands component
+- {TODO} scrap Brands data
+- {TODO} scrap MERCH_BANNER_3 data
+- {TODO} create MoreOn component
+- {TODO} scrap MoreOn data
+- {TODO} create PerksFooter component
+- {TODO} scrap PerksFooter data
+
 
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic

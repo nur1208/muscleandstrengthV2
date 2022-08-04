@@ -35,6 +35,7 @@ export const Home = () => {
             ))}
           </main>
         </div>
+
         <EmailSignUp />
         <Footer />
         <MenuMask />

@@ -22,6 +22,13 @@ export const MainWrapper = styled.div`
     text-transform: uppercase;
     text-align: left;
   }
+
+  .mns-carousel {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1300px;
+    padding: 12px 81px 12px 30px;
+  }
   .swiper-slide {
     height: auto;
   }
@@ -86,6 +93,13 @@ export const MainWrapper = styled.div`
   @media (min-width: 840px) {
     .swiper-button-next {
       right: 1px;
+    }
+
+    .swiper-button-prev {
+      left: 1px;
+    }
+    .mns-carousel {
+      padding: 15px 19px;
     }
   }
   /* @media print, screen and (min-width: 52.5em) {
