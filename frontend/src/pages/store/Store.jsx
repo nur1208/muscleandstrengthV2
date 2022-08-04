@@ -12,6 +12,7 @@ import {
 import {
   BANNER_BLOCK_12,
   MERCH_BANNER,
+  MERCH_BANNER_2,
   STORE_TOP_BANNER,
 } from "../../components/data";
 import { MainWrapper } from "./store.styles";
@@ -55,6 +56,9 @@ export const Store = () => {
           </section>
           <section id="trending-products">
             <StoreSectionSwiper {...trendingProps} />
+          </section>
+          <section id="mns-merch-banner-2">
+            <Banner noImageDownloaded {...MERCH_BANNER_2} />
           </section>
         </article>
       </main>
