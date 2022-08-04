@@ -14,6 +14,7 @@ import {
   BANNER_BLOCK_12,
   MERCH_BANNER,
   MERCH_BANNER_2,
+  MERCH_BANNER_3,
   STORE_TOP_BANNER,
 } from "../../components/data";
 import { MainWrapper } from "./store.styles";
@@ -66,6 +67,9 @@ export const Store = () => {
             class="top-brands-block grid-container"
           >
             <Brands />
+          </section>
+          <section id="mns-merch-banner">
+            <Banner noImageDownloaded {...MERCH_BANNER_3} />
           </section>
         </article>
       </main>

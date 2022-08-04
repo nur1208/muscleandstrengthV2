@@ -97,3 +97,13 @@ export const MERCH_BANNER_2 = {
   src: "https://cdn.muscleandstrength.com/store/media/wysiwyg/Home_Slider/2022/05/r1_slider_desktop.jpg",
   alt: "Purity. Potency. Performance. Exclusive savings on Rule 1 Top Sellers.",
 };
+
+export const MERCH_BANNER_3 = {
+  href: "/store/rewards",
+  isSale: false,
+  srcset:
+    "https://cdn.muscleandstrength.com/store/media/wysiwyg/Home_Slider/reward-mobile-slider.jpg",
+  media: "(max-width: 739px)",
+  src: "https://cdn.muscleandstrength.com/store/media/wysiwyg/Home_Slider/2018/10/rewards_banner_desktop.jpg",
+  alt: "Muscle & Strength Rewards program banner",
+};

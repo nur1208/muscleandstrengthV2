@@ -1,8 +1,8 @@
-import { getBrandsData } from "./Brands/script.js";
+import { getBannerData } from "./banner/script.js";
 
 const main = async () => {
   console.log("start scraping... ⌛");
-  await getBrandsData();
+  await getBannerData();
   console.log("DONE scraping ✔");
 };
 
