@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const MainWrapper = styled.div`
+  .transparent {
+    background-color: transparent !important;
+  }
   outline: 0;
   background-color: #f5f5f5;
   line-height: 1.3;

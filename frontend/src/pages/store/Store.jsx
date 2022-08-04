@@ -4,6 +4,7 @@ import {
   Banner,
   Brands,
   Header,
+  MoreOn,
   NavbarInfo,
   Products,
   QuickNavBar,
@@ -70,6 +71,12 @@ export const Store = () => {
           </section>
           <section id="mns-merch-banner">
             <Banner noImageDownloaded {...MERCH_BANNER_3} />
+          </section>
+          <section
+            id="content-block"
+            class="transparent margin-bottom-none"
+          >
+            <MoreOn />
           </section>
         </article>
       </main>

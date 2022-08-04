@@ -21,3 +21,4 @@ export { StoreSectionSwiper } from "./storeSectionSwiper/StoreSectionSwiper";
 export { Product } from "./product/Product";
 export { Products } from "./products/Products";
 export { Brands } from "./brands/Brands";
+export { MoreOn } from "./moreOn/MoreOn";

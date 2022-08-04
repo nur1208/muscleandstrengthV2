@@ -48,9 +48,9 @@
 - {DONE} create Brands component
 - {DONE} add pageHtml.html file to .gitignore
 - {DONE} scrap Brands data
-- {TODO} scrap MERCH_BANNER_3 data
-- {TODO} create MoreOn component
-- {TODO} scrap MoreOn data
+- {DONE} scrap MERCH_BANNER_3 data
+- {DONE} create MoreOn component
+- {DONE} scrap MoreOn data and make MoreOn component dynamic
 - {TODO} create PerksFooter component
 - {TODO} scrap PerksFooter data
 
