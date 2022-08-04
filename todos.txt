@@ -46,6 +46,7 @@
 - {DONE} scrap tradingProducts data
 - {DONE} scrap MERCH_BANNER_2 data
 - {DONE} create Brands component
+- {DONE} add pageHtml.html file to .gitignore
 - {TODO} scrap Brands data
 - {TODO} scrap MERCH_BANNER_3 data
 - {TODO} create MoreOn component
@@ -64,3 +65,4 @@ not important:
         note - create it folder call voiceAssistant and add all the  voice assistant logic in it
 - {TODO} fix the btn extend when the loading icon appear
 - {TODO} create puppeteer script to demonstrate the website login buy products and so on.
+- {TODO} fix your repo show html instead of javascript
