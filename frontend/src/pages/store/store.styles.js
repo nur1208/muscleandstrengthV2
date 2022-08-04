@@ -27,4 +27,19 @@ export const MainWrapper = styled.div`
   .content section {
     background-color: #fff;
   }
+
+  .grid-container {
+    padding-right: 0.3125rem;
+    padding-left: 0.3125rem;
+    max-width: 81.25rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media print, screen and (min-width: 52.5em) {
+    .grid-container {
+      padding-right: 0.46875rem;
+      padding-left: 0.46875rem;
+    }
+  }
 `;

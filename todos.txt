@@ -44,8 +44,8 @@
 - {DONE} improve StoreSectionSwiper component again
 - {DONE} scrap topRatedProducts data
 - {DONE} scrap tradingProducts data
-- {TODO} scrap MERCH_BANNER_2 data
-- {TODO} create Brands component
+- {DONE} scrap MERCH_BANNER_2 data
+- {DONE} create Brands component
 - {TODO} scrap Brands data
 - {TODO} scrap MERCH_BANNER_3 data
 - {TODO} create MoreOn component

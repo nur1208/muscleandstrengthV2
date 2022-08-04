@@ -2,6 +2,7 @@ import React from "react";
 import { useMediaQuery } from "react-responsive";
 import {
   Banner,
+  Brands,
   Header,
   NavbarInfo,
   Products,
@@ -59,6 +60,12 @@ export const Store = () => {
           </section>
           <section id="mns-merch-banner-2">
             <Banner noImageDownloaded {...MERCH_BANNER_2} />
+          </section>
+          <section
+            id="top-brands"
+            class="top-brands-block grid-container"
+          >
+            <Brands />
           </section>
         </article>
       </main>
