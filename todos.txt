@@ -47,7 +47,7 @@
 - {DONE} scrap MERCH_BANNER_2 data
 - {DONE} create Brands component
 - {DONE} add pageHtml.html file to .gitignore
-- {TODO} scrap Brands data
+- {DONE} scrap Brands data
 - {TODO} scrap MERCH_BANNER_3 data
 - {TODO} create MoreOn component
 - {TODO} scrap MoreOn data
