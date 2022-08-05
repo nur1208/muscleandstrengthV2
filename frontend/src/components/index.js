@@ -22,3 +22,4 @@ export { Product } from "./product/Product";
 export { Products } from "./products/Products";
 export { Brands } from "./brands/Brands";
 export { MoreOn } from "./moreOn/MoreOn";
+export { PerksFooter } from "./perksFooter/PerksFooter";

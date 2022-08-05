@@ -51,7 +51,7 @@
 - {DONE} scrap MERCH_BANNER_3 data
 - {DONE} create MoreOn component
 - {DONE} scrap MoreOn data and make MoreOn component dynamic
-- {TODO} create PerksFooter component
+- {DONE} create PerksFooter component
 - {TODO} scrap PerksFooter data
 
 

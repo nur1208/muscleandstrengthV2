@@ -1,4 +1,9 @@
 import {
+  IconCustomerSupport,
+  IconLike,
+  IconMnsRewards,
+  IconDeal,
+  IconLogoBlue,
   IconAirplane,
   IconTwitter,
   IconFacebook,
@@ -79,6 +84,21 @@ export const getIconById = (iconId, style) => {
 
     case "icon-airplane":
       return <IconAirplane style={style} />;
+
+    case "icon-logo-blue":
+      return <IconLogoBlue style={style} />;
+
+    case "icon-deal":
+      return <IconDeal style={style} />;
+
+    case "icon-mns-rewards":
+      return <IconMnsRewards style={style} />;
+
+    case "icon-like":
+      return <IconLike style={style} />;
+
+    case "icon-customer-support":
+      return <IconCustomerSupport style={style} />;
 
     default:
       return <IconQuestionMark style={style} />;

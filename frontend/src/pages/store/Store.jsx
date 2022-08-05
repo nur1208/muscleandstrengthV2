@@ -6,6 +6,7 @@ import {
   Header,
   MoreOn,
   NavbarInfo,
+  PerksFooter,
   Products,
   QuickNavBar,
   Slider,
@@ -80,6 +81,7 @@ export const Store = () => {
           </section>
         </article>
       </main>
+      <PerksFooter />
     </MainWrapper>
   );
 };

@@ -8,4 +8,9 @@ export const ICONS_ID = {
   IconFacebook: "icon-facebook",
   IconTwitter: "icon-twitter",
   IconAirplane: "icon-airplane",
+  IconLogoBlue: "icon-logo-blue",
+  IconDeal: "icon-deal",
+  IconMnsRewards: "icon-mns-rewards",
+  IconLike: "icon-like",
+  IconCustomerSupport: "icon-customer-support",
 };
