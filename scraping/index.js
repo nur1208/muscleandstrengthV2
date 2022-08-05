@@ -1,8 +1,8 @@
-import { getPerksFooterData } from "./perksFooter/script.js";
+import { getLoginData } from "./loginData/script.js";
 
 const main = async () => {
   console.log("start scraping... ⌛");
-  await getPerksFooterData();
+  await getLoginData();
   console.log("DONE scraping ✔");
 };
 

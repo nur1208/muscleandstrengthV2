@@ -58,6 +58,7 @@
 - {DONE} fix navbar component problem
 - {DONE} improve EmailSignUp component's isSticky state
 - {DONE} create Login page component
+- {DONE} create Field component and scrap login fields
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
 - {TODO} make Submenu and SubSubmenu components as one component

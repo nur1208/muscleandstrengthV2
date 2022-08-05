@@ -1,5 +1,7 @@
 import React from "react";
 import { Button } from "../button/Button";
+import { loginFields } from "./data";
+import { Field } from "./Field";
 import { MainWrapper } from "./form.styles";
 import { Messages } from "./Messages";
 import { RightLoginInfo } from "./RightLoginInfo";
@@ -27,25 +29,9 @@ export const Form = () => {
                 value="6dO6dYf0HXqCs6KS"
               />
               <div class="row">
-                <input
-                  placeholder="Email Address"
-                  name="login[username]"
-                  value=""
-                  id="email"
-                  type="email"
-                  class="input-text required-entry"
-                  title="Email Address"
-                  required=""
-                />
-                <input
-                  placeholder="Password"
-                  name="login[password]"
-                  type="password"
-                  class="input-text required-entry validate-password"
-                  id="pass"
-                  title="Password"
-                  required=""
-                />
+                {loginFields.map((data) => (
+                  <Field {...data} />
+                ))}
               </div>
               <div class="button-wrap">
                 <Button
