@@ -16,7 +16,6 @@ import {
 } from "../../components/data";
 
 import { MainWrapper } from "./home.styles";
-import { MenuMask } from "./MenuMask";
 export const Home = () => {
   return (
     <MainWrapper id="page">
@@ -38,7 +37,6 @@ export const Home = () => {
 
         <EmailSignUp />
         <Footer />
-        <MenuMask />
       </div>
     </MainWrapper>
   );

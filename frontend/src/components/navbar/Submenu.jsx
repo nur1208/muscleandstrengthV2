@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from "react";
-import {
-  useHover,
-  useOpenSubmenu,
-  useReduxActions,
-} from "../../hooks";
-import { getIconById, IconNavStoreWhite } from "../../icons";
+import { useSubmenu } from "../../hooks";
+import { getIconById } from "../../icons";
 import { SubSubmenu } from "./SubSubmenu";
 import { useSelector } from "react-redux";
-import { OPENED_TYPES } from "../../redux/constants";
 import { Link } from "react-router-dom";
 
 export const Submenu = ({
@@ -18,31 +13,25 @@ export const Submenu = ({
   navbarItemIconId,
 }) => {
   const initStyle = `base-item ${hasSubmenu && "has-submenu"}`;
-  const { openedType } = useSelector(
-    (state) => state.navbar_store
-  );
-  const [ref, isOpen, handleBack] = useOpenSubmenu();
+
+  const [
+    ref,
+    isOpen,
+    handleBack,
+    handleClickItemBtn,
+    handleClickGoTo,
+  ] = useSubmenu();
 
   return (
     <li
       ref={ref}
       class={isOpen ? `${initStyle} open-submenu` : initStyle}
-      // onClick={() => console.log(navbarItemTitle)}
     >
-      <Link
+      <span
         class="base-item-button"
-        to={
-          isOpen && openedType === OPENED_TYPES.SIDE_NAVBAR
-            ? "#"
-            : navbarItemHref
-          // navbarItemHref
-          // "javascript:void(0)"
-        }
+        onClick={() => handleClickItemBtn(navbarItemHref)}
       >
         <span class="icon">
-          {/* <IconNavStoreWhite
-            style={{ width: "2em", height: "2em" }}
-          /> */}
           {getIconById(navbarItemIconId, {
             width: "2em",
             height: "2em",
@@ -50,7 +39,7 @@ export const Submenu = ({
         </span>
         {navbarItemTitle}
         <span class="caret">›</span>
-      </Link>
+      </span>
       <div class="submenu">
         <div
           onClick={handleBack}
@@ -60,11 +49,11 @@ export const Submenu = ({
         </div>
         <div class="view-all-link">
           {navbarItemTitle}{" "}
-          <Link to={navbarItemHref}>
+          <span onClick={() => handleClickGoTo(navbarItemHref)}>
             <button class="btn btn-blue">
               Go to {navbarItemTitle}
             </button>
-          </Link>
+          </span>
         </div>
         {groups.map(
           ({

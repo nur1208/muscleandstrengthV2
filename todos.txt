@@ -55,7 +55,7 @@
 - {DONE} scrap PerksFooter data, make PerksFooter component dynamic and finish create Store page
 - {DONE} test if removing MoreOn component fix Store page responsive problem
 - {DONE}  fix Store page responsive problem
-
+- {DONE} fix navbar component problem
 
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic

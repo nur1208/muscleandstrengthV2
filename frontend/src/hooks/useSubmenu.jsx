@@ -2,9 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { OPENED_TYPES } from "../redux/constants";
 import { useReduxActions } from "./useReduxActions";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 // Hook
-export function useOpenSubmenu() {
+export function useSubmenu() {
   const { updateIsOpen } = useReduxActions();
   const { isOpen, openedType } = useSelector(
     (state) => state.navbar_store
@@ -64,5 +65,22 @@ export function useOpenSubmenu() {
     },
     [ref.current, isOpen, openedType] // Recall only if ref changes
   );
-  return [ref, value, handleBack];
+
+  const navigate = useNavigate();
+  const handleClickItemBtn = (href) => {
+    if (isOpen && openedType === OPENED_TYPES.NAVBAR)
+      navigate(href);
+  };
+
+  const handleClickGoTo = (href) => {
+    updateIsOpen({ isOpen: false });
+    navigate(href);
+  };
+  return [
+    ref,
+    value,
+    handleBack,
+    handleClickItemBtn,
+    handleClickGoTo,
+  ];
 }

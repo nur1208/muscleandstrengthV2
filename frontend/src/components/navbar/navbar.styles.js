@@ -10,6 +10,15 @@ export const GlobalStyle = createGlobalStyle`
       position: fixed;
       transform: translate(90%);
   }
+
+
+  @media (min-width: 480px){
+
+    body {
+      transform: translate(60%);
+    }
+
+  }
 `;
 export const MainWrapper = styled.div`
   .menu-sys {

@@ -14,6 +14,7 @@ import { useSelector } from "react-redux";
 
 import { MainWrapper } from "./header.styles";
 import { OPENED_TYPES } from "../../redux/constants";
+import { MenuMask } from "../menuMask/MenuMask";
 
 export const Header = ({ hasNavbarInfo }) => {
   const { isOpen, openedType } = useSelector(
@@ -48,6 +49,7 @@ export const Header = ({ hasNavbarInfo }) => {
       {isOpen && openedType === OPENED_TYPES.NAVBAR && (
         <div class="menu-sys-overlay"></div>
       )}
+      <MenuMask />
     </MainWrapper>
   );
 };

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import {
   useHover,
-  useOpenSubmenu,
+  useSubmenu,
   useReduxActions,
 } from "../../hooks";
 
@@ -15,7 +15,7 @@ export const SubSubmenu = ({
 }) => {
   const initStyle = "has-sub-submenu";
 
-  const [ref, isOpen, handleBack] = useOpenSubmenu();
+  const [ref, isOpen, handleBack] = useSubmenu();
 
   // useEffect(() => {
   //   updateIsOpen(isHovered);

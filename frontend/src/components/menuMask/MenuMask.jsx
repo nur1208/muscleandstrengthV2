@@ -2,6 +2,7 @@ import React from "react";
 import { OPENED_TYPES } from "../../redux/constants";
 import { useSelector } from "react-redux";
 import { useReduxActions } from "../../hooks";
+import { MainWrapper } from "./menuMask.styles";
 
 export const MenuMask = () => {
   const { isOpen, openedType } = useSelector(
@@ -10,10 +11,10 @@ export const MenuMask = () => {
   const { updateIsOpen } = useReduxActions();
 
   return isOpen && openedType === OPENED_TYPES.SIDE_NAVBAR ? (
-    <div
+    <MainWrapper
       onClick={() => updateIsOpen({ isOpen: false })}
       class="menu-mask"
-    ></div>
+    />
   ) : (
     <></>
   );
