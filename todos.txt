@@ -52,7 +52,7 @@
 - {DONE} create MoreOn component
 - {DONE} scrap MoreOn data and make MoreOn component dynamic
 - {DONE} create PerksFooter component
-- {TODO} scrap PerksFooter data
+- {DONE} scrap PerksFooter data, make PerksFooter component dynamic and finish create Store page
 
 
 not important:

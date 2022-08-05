@@ -1,8 +1,8 @@
-import { getMoreOnData } from "./moreOn/script.js";
+import { getPerksFooterData } from "./perksFooter/script.js";
 
 const main = async () => {
   console.log("start scraping... ⌛");
-  await getMoreOnData();
+  await getPerksFooterData();
   console.log("DONE scraping ✔");
 };
 

@@ -3,6 +3,8 @@ import { useMediaQuery } from "react-responsive";
 import {
   Banner,
   Brands,
+  EmailSignUp,
+  Footer,
   Header,
   MoreOn,
   NavbarInfo,
@@ -82,6 +84,8 @@ export const Store = () => {
         </article>
       </main>
       <PerksFooter />
+      <EmailSignUp />
+      <Footer />
     </MainWrapper>
   );
 };

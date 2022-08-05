@@ -71,6 +71,8 @@ export const MainWrapper = styled.div`
     font-family: nimbusnovus-bold, sans-serif;
     margin: 0 2% 8% 4%;
     text-transform: uppercase;
+    line-height: 1.1rem;
+    font-weight: 700;
   }
 
   .text-block .text {
@@ -209,4 +211,11 @@ export const MainWrapper = styled.div`
       padding-right: 0;
     }
   }
+`;
+
+export const IconWrapper = styled.span`
+  ${({ styleChild }) => {
+    console.log({ styleChild });
+    return `svg {${styleChild}}`;
+  }}
 `;
