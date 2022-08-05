@@ -19,7 +19,8 @@ export const MainWrapper = styled.div`
     background-color: #059;
   }
 
-  .grid-x {
+  .grid-x,
+  .grid-v2 {
     display: flex;
     flex-flow: row wrap;
   }
@@ -34,10 +35,12 @@ export const MainWrapper = styled.div`
   }
 
   .content .cell,
+  .content .cell-v2,
   .content section {
     background-color: #fff;
   }
-  .cell {
+  .cell,
+  .cell-v2 {
     flex: 0 0 auto;
     min-height: 0;
     min-width: 0;
@@ -52,7 +55,7 @@ export const MainWrapper = styled.div`
     width: 100%;
   }
   .grid-margin-x > .cell {
-    width: calc(100% - 0.625rem);
+    width: calc(100% - 0.325rem);
     margin-left: 0.3125rem;
     margin-right: 0.3125rem;
   }
@@ -111,7 +114,7 @@ export const MainWrapper = styled.div`
     }
 
     .grid-margin-x > .bp740-6 {
-      width: calc(50% - 0.625rem);
+      width: calc(50% - 0.325rem);
     }
   }
 
@@ -126,22 +129,28 @@ export const MainWrapper = styled.div`
     }
 
     .grid-margin-x > .cell {
-      width: calc(100% - 0.9375rem);
+      width: calc(100% - 0.6375rem);
       margin-left: 0.46875rem;
       margin-right: 0.46875rem;
     }
 
     .grid-margin-x > .small-12 {
-      width: calc(100% - 0.9375rem);
+      width: calc(100% - 0.6375rem);
     }
 
     .grid-margin-x > .bp740-6 {
-      width: calc(50% - 0.9375rem);
+      width: calc(50% - 0.6375rem);
     }
   }
   @media print, screen and (min-width: 64em) {
     .grid-x > .large-3 {
       flex: 0 0 auto;
+    }
+    .grid-v2 {
+      gap: 10px;
+    }
+    .cell-v2 {
+      flex: calc(25% - 10px);
     }
 
     .grid-x > .large-3 {

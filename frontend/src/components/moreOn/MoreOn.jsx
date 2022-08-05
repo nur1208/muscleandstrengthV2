@@ -7,10 +7,10 @@ export const MoreOn = () => {
     <MainWrapper>
       <h2 class="blue-stripe">More On M&amp;S</h2>
 
-      <div class="grid-x grid-margin-x">
+      <div class="grid-v2">
         {moreOnData.map(
           ({ href, imgAlt, imgUrl, title, content }) => (
-            <a href={href} class="cell small-12 bp740-6 large-3">
+            <a href={href} class="cell-v2">
               <div class="intrinsic-wrapper">
                 <img
                   alt={imgAlt}
