@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { IconUserLogin } from "../../icons";
 import { MainWrapper } from "./customerAccount.styles";
 
@@ -7,15 +8,17 @@ export const CustomerAccount = () => {
     <MainWrapper>
       <>
         <div class="user-account-link">
-          <a href="/store/customer/account">
+          <Link to="/store/customer/account/create">
             <IconUserLogin />
             <label>Account</label>
-          </a>
+          </Link>
         </div>
 
         <div class="user-login-link">
-          <IconUserLogin />
-          <label>Login</label>
+          <Link to="/store/customer/account/login">
+            <IconUserLogin />
+            <label>Login</label>
+          </Link>
         </div>
       </>
     </MainWrapper>

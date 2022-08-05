@@ -31,14 +31,14 @@ export const Banner = ({
             width={widthSource}
             height={heightSource}
             srcset={
-              noImageDownloaded ? srcset : `./images/${srcset}`
+              noImageDownloaded ? srcset : `/images/${srcset}`
             }
             media={media}
           />
           <img
             width={widthImg}
             height={heightImg}
-            src={noImageDownloaded ? src : `./images/${src}`}
+            src={noImageDownloaded ? src : `/images/${src}`}
             alt={alt}
           />
         </picture>

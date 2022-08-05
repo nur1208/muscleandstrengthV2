@@ -104,4 +104,21 @@ export const MainWrapper = styled.button`
       line-height: 35px;
     }
   `}
+  ${({ isExpanded }) =>
+    isExpanded &&
+    `
+    width: 100%;
+  `}
+
+
+${({ isGreen }) =>
+    isGreen &&
+    `
+    background-color: #079c3a;
+    background-image: linear-gradient(#08b443, #068431);
+    color: #fff;
+    text-shadow: 1px 1px 0 #068431;
+    border: 1px solid #068833;
+
+  `}
 `;
