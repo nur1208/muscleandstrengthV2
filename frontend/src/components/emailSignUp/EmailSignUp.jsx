@@ -1,19 +1,31 @@
 import React, { useState } from "react";
 import { getIconById, ICONS_ID } from "../../icons";
+import {
+  COOKIES_CONSTANTS,
+  getCookie,
+  setCookie,
+} from "../../utils";
 import { Button } from "../button/Button";
 import { MainWrapper } from "./emailSignUp.styles";
 
 export const EmailSignUp = () => {
-  const [isSticky, setIsSticky] = useState(true);
+  const cookieIsStack = getCookie(
+    COOKIES_CONSTANTS.IS_STICK,
+    true
+  );
+  const [isSticky, setIsSticky] = useState(
+    cookieIsStack === "" ? true : cookieIsStack
+  );
+  const handleClick = () => {
+    setIsSticky(false);
+    setCookie(COOKIES_CONSTANTS.IS_STICK, false, 7);
+  };
   return (
     <MainWrapper isSticky={isSticky}>
       <div class="footer-email-signup--inner">
         <div class="grid-x grid-margin-x">
           <div class="cell small-12 medium-6">
-            <span
-              class="close"
-              onClick={() => setIsSticky(false)}
-            >
+            <span class="close" onClick={handleClick}>
               <span class="visually-hidden">Close Form</span>
 
               {getIconById(ICONS_ID.IconClose)}

@@ -1,0 +1,1 @@
+export const COOKIES_CONSTANTS = { IS_STICK: "IS_STICK" };

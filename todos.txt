@@ -56,6 +56,7 @@
 - {DONE} test if removing MoreOn component fix Store page responsive problem
 - {DONE}  fix Store page responsive problem
 - {DONE} fix navbar component problem
+- {DONE} improve EmailSignUp component's isSticky state
 
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
