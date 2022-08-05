@@ -79,7 +79,7 @@ export const Store = () => {
             id="content-block"
             class="transparent margin-bottom-none"
           >
-            <MoreOn />
+            {/* <MoreOn /> */}
           </section>
         </article>
       </main>

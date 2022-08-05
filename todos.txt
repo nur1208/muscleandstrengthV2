@@ -53,6 +53,7 @@
 - {DONE} scrap MoreOn data and make MoreOn component dynamic
 - {DONE} create PerksFooter component
 - {DONE} scrap PerksFooter data, make PerksFooter component dynamic and finish create Store page
+- {DONE} test if removing MoreOn component fix Store page responsive problem
 
 
 not important:

@@ -58,7 +58,7 @@ export const MainWrapper = styled.div`
   }
 
   .grid-margin-x > .small-12 {
-    width: calc(100% - 0.625rem);
+    width: calc(100% - 0.325rem);
   }
 
   .cell {
