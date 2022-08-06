@@ -1,4 +1,6 @@
 import {
+  IconBodyTransformWhite,
+  IconMnsRewardsWhite,
   IconCustomerSupport,
   IconLike,
   IconMnsRewards,
@@ -27,6 +29,7 @@ import {
   IconNavTools,
   IconClose,
   IconYoutube,
+  IconDealWhite,
 } from "./index";
 
 export const getIconById = (iconId, style) => {
@@ -99,6 +102,15 @@ export const getIconById = (iconId, style) => {
 
     case "icon-customer-support":
       return <IconCustomerSupport style={style} />;
+
+    case "icon-mns-rewards-white":
+      return <IconMnsRewardsWhite style={style} />;
+
+    case "icon-deal-white":
+      return <IconDealWhite style={style} />;
+
+    case "icon-body-transform-white":
+      return <IconBodyTransformWhite style={style} />;
 
     default:
       return <IconQuestionMark style={style} />;

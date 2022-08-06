@@ -62,7 +62,8 @@
 - {DONE} add required sign to field component
 - {DONE} make field component render input element or select element
 - {DONE} scrap sign up fields 
-- {TODO} create RightSignUpInfo component       
+- {DONE} create RightSignUpInfo component       
+- {TODO} scrap SignUpBenefits data
 - {TODO} make Form component more dynamic
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic

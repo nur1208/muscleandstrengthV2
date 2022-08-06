@@ -95,12 +95,24 @@ export const MainWrapper = styled.div`
     flex-flow: row wrap;
   }
 
-  .font-s-small {
+  .font-s-small,
+  .text {
     font-size: 13px;
   }
 
   .login-wrapper .customer-login .forgot-pass {
     margin-top: 10px;
+  }
+
+  .create-account .member-benefits .benefit {
+    margin-bottom: 25px;
+  }
+  .benefit {
+    text-align: center;
+  }
+  .benefit svg {
+    width: 50px;
+    height: 50px;
   }
   .login-wrapper .new-customer-create-account h3 {
     margin-bottom: 15px;

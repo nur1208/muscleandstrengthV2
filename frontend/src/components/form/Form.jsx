@@ -5,6 +5,7 @@ import { Field } from "./Field";
 import { MainWrapper } from "./form.styles";
 import { Messages } from "./Messages";
 import { RightLoginInfo } from "./RightLoginInfo";
+import { RightSignUpInfo } from "./RightSignUpInfo";
 
 export const Form = () => {
   return (
@@ -67,7 +68,8 @@ export const Form = () => {
           </div>
           <div class="cell bp740-4 new-customer-create-account">
             <h3>Don't Have an Account?</h3>
-            <RightLoginInfo />
+            {/* <RightLoginInfo /> */}
+            <RightSignUpInfo />
           </div>
         </div>
       </div>
