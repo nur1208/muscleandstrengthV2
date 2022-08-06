@@ -128,6 +128,25 @@ export const MainWrapper = styled.div`
   .login-wrapper .new-customer-create-account button {
     margin-top: 5px;
   }
+
+  .filed-warper {
+    position: relative;
+  }
+
+  .is-required:before {
+    opacity: 1;
+    content: "*";
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #d41313;
+    transition: 0.2s ease-in-out;
+    padding: 6px 0 0;
+    z-index: 1;
+  }
   @media (min-width: 400px) {
     ul.messages .error-msg {
       font-size: 13px;
