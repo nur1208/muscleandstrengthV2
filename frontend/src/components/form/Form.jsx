@@ -4,6 +4,7 @@ import { FORM_TYPES, loginFields } from "./data";
 import { Field } from "./Field";
 import { ForgotPassword } from "./ForgotPassword";
 import { MainWrapper } from "./form.styles";
+import { GetNotified } from "./GetNotified";
 import { Messages } from "./Messages";
 import { RightLoginInfo } from "./RightLoginInfo";
 import { RightSignUpInfo } from "./RightSignUpInfo";
@@ -27,6 +28,8 @@ export const Form = ({ fields, title, type, sideInfoTitle }) => {
                   <Field {...data} />
                 ))}
               </div>
+              {type === FORM_TYPES.SIGN_UP && <GetNotified />}
+
               <div class="button-wrap">
                 <Button
                   text="Login"

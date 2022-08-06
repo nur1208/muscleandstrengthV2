@@ -215,7 +215,6 @@ export const MainWrapper = styled.div`
 
 export const IconWrapper = styled.span`
   ${({ styleChild }) => {
-    console.log({ styleChild });
     return `svg {${styleChild}}`;
   }}
 `;
