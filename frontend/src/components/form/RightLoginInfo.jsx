@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "../button/Button";
 
 export const RightLoginInfo = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <p class="font-s-regular">
@@ -19,6 +22,9 @@ export const RightLoginInfo = () => {
       </ul>
       <div>
         <Button
+          onClick={() =>
+            navigate("/store/customer/account/create")
+          }
           text="Create an Account"
           isGreen
           isExpanded

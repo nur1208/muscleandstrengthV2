@@ -65,7 +65,7 @@
 - {DONE} create RightSignUpInfo component       
 - {DONE} scrap SignUpBenefits data
 - {DONE} make Form component more dynamic
-- {TODO} create SignUp page component
+- {DONE} create SignUp page component
 
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
