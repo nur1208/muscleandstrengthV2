@@ -61,7 +61,7 @@
 - {DONE} create Field component and scrap login fields
 - {DONE} add required sign to field component
 - {DONE} make field component render input element or select element
-- {TODO} scrap sign up fields 
+- {DONE} scrap sign up fields 
 - {TODO} create RightSignUpInfo component       
 - {TODO} make Form component more dynamic
 not important:
