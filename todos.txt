@@ -67,6 +67,8 @@
 - {DONE} make Form component more dynamic
 - {DONE} create SignUp page component
 - {DONE} create GetNotified component
+- {DONE} set up Product page component
+
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
 - {TODO} make Submenu and SubSubmenu components as one component

@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import GlobalStyle from "./app.styles";
-import { Home, Login, SignUp, Store } from "./pages";
+import { Home, Login, Product, SignUp, Store } from "./pages";
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/store">
           <Route index element={<Store />} />
+          <Route path="product" element={<Product />} />
           <Route path="customer/account">
             <Route path="login" element={<Login />} />
             <Route path="create" element={<SignUp />} />
