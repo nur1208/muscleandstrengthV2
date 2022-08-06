@@ -5,6 +5,7 @@ export const loginFields = [
     name: "login[username]",
     type: "email",
     required: true,
+    fieldType: "INPUT",
   },
   {
     placeholder: "Password",
@@ -12,5 +13,6 @@ export const loginFields = [
     name: "login[password]",
     type: "password",
     required: true,
+    fieldType: "INPUT",
   },
 ];

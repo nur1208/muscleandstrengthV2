@@ -147,6 +147,101 @@ export const MainWrapper = styled.div`
     padding: 6px 0 0;
     z-index: 1;
   }
+
+  label {
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    top: -12px;
+    left: 0;
+    font-size: 12px;
+    line-height: 1;
+    color: #aaa;
+    border-radius: 0 0 0 2px;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+  }
+
+  label {
+    top: 1px;
+    left: 10px;
+    background-color: transparent;
+    padding: 12px 3px;
+  }
+
+  label:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 19px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #fff;
+    z-index: -1;
+  }
+
+  label:after {
+    clear: both;
+  }
+
+  select {
+    box-sizing: border-box;
+    width: 100%;
+    height: 2.5625rem;
+    margin: 0 0 0.625rem;
+    padding: 0 0.9375rem 0 0.625rem;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    background-color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2.625;
+    color: #303030;
+    background-image: url(data:image/svg+xml;utf8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjMyIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMzIgMjQiPjxwb2x5Z29uIHBvaW50cz0iMCwwIDMyLDAgMTYsMjQiIHN0eWxlPSJmaWxsOiByZ2IoMjIxLCAyMjEsIDIyMSkiPjwvcG9seWdvbj48L3N2Zz4=);
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: 9px 6px;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+    background-position: right center;
+  }
+
+  select:not([multiple]) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  select {
+    width: 100%;
+    outline: 0;
+    font-size: 16px;
+    background-color: #fff;
+    transition: 0.2s ease-in-out;
+    margin-bottom: 10px;
+  }
+
+  select {
+    color: #aaa;
+    position: relative;
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+  select {
+    height: 3rem;
+    line-height: 3rem;
+  }
+
+  select option {
+    color: #303030;
+  }
+
+  option[value=""][disabled] {
+    display: none;
+  }
   @media (min-width: 400px) {
     ul.messages .error-msg {
       font-size: 13px;
@@ -160,6 +255,11 @@ export const MainWrapper = styled.div`
     .login-wrapper .customer-login {
       padding: 50px 80px;
       margin-bottom: 0;
+    }
+
+    select {
+      height: 2.625rem;
+      line-height: 2.625rem;
     }
   }
 
