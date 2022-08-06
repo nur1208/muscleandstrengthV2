@@ -1,9 +1,5 @@
 import React from "react";
-
-const FIELD_TYPES = {
-  INPUT: "INPUT",
-  SELECT: "SELECT",
-};
+import { FIELD_TYPES } from "./data";
 
 export const Field = ({
   placeholder,

@@ -125,3 +125,13 @@ export const benefits = [
     text: "Free workouts, fitness tools, videos, diet plans, expert guides and motivational content",
   },
 ];
+
+export const FORM_TYPES = {
+  LOGIN: "LOGIN",
+  SIGN_UP: "SIGN_UP",
+};
+
+export const FIELD_TYPES = {
+  INPUT: "INPUT",
+  SELECT: "SELECT",
+};

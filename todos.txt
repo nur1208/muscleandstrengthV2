@@ -64,7 +64,7 @@
 - {DONE} scrap sign up fields 
 - {DONE} create RightSignUpInfo component       
 - {DONE} scrap SignUpBenefits data
-- {TODO} make Form component more dynamic
+- {DONE} make Form component more dynamic
 - {TODO} create SignUp page component
 
 not important:

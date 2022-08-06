@@ -8,10 +8,20 @@ import {
   NavbarInfo,
   PerksFooter,
 } from "../../components";
-import { BANNER_BLOCK_12 } from "../../components/data";
+import {
+  BANNER_BLOCK_12,
+  FORM_TYPES,
+  loginFields,
+} from "../../components/data";
 import { MainWrapper } from "./login.styles";
 
 export const Login = () => {
+  const formProps = {
+    title: "Login to Your Account",
+    type: FORM_TYPES.LOGIN,
+    sideInfoTitle: "Don't Have an Account?",
+    fields: loginFields,
+  };
   return (
     <MainWrapper>
       <Banner {...BANNER_BLOCK_12} />
@@ -19,7 +29,7 @@ export const Login = () => {
       <NavbarInfo />
       <main id="main-wrapper">
         <article class="content">
-          <Form />
+          <Form {...formProps} />
         </article>
       </main>
       <PerksFooter />
