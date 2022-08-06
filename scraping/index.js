@@ -1,8 +1,8 @@
-import { getSignUpData } from "./signUpData/script.js";
+import { getSignUpBenefitData } from "./SignUpBenefits/script.js";
 
 const main = async () => {
   console.log("start scraping... ⌛");
-  await getSignUpData();
+  await getSignUpBenefitData();
   console.log("DONE scraping ✔");
 };
 

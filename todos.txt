@@ -63,8 +63,10 @@
 - {DONE} make field component render input element or select element
 - {DONE} scrap sign up fields 
 - {DONE} create RightSignUpInfo component       
-- {TODO} scrap SignUpBenefits data
+- {DONE} scrap SignUpBenefits data
 - {TODO} make Form component more dynamic
+- {TODO} create SignUp page component
+
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
 - {TODO} make Submenu and SubSubmenu components as one component
