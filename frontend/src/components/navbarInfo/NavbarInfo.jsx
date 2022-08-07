@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import { getIconById, ICONS_ID } from "../../icons";
 import { capitalizeFirstLetter } from "../../utils";
@@ -6,6 +7,10 @@ import { MainWrapper } from "./navbarInfo.styles";
 
 export const NavbarInfo = () => {
   const { pathname } = useLocation();
+  const { customNavInfo } = useSelector(
+    (state) => state.navbar_store
+  );
+
   return (
     <MainWrapper>
       <div class="nav-block--inner">
@@ -18,10 +23,14 @@ export const NavbarInfo = () => {
           >
             Home
           </Link>{" "}
-          {pathname
-            .split("/")
-            .slice(1)
-            .map((path) => `> ${capitalizeFirstLetter(path)} `)}
+          {customNavInfo
+            ? customNavInfo
+            : pathname
+                .split("/")
+                .slice(1)
+                .map(
+                  (path) => `> ${capitalizeFirstLetter(path)} `
+                )}
         </div>
         <div class="free-shipping-block">
           <div class="international">

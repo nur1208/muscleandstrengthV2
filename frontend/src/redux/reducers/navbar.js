@@ -2,6 +2,7 @@ import { NAVBAR_ACTIONS } from "../constants";
 
 const initialState = {
   isOpen: false,
+  customNavInfo: null,
 };
 
 export const navbarReducer = (state = initialState, action) => {
@@ -11,6 +12,12 @@ export const navbarReducer = (state = initialState, action) => {
         ...state,
         isOpen: action.payload.isOpen,
         openedType: action.payload.openedType,
+      };
+
+    case NAVBAR_ACTIONS.UPDATE_CUSTOM_NAV_INFO:
+      return {
+        ...state,
+        customNavInfo: action.payload,
       };
 
     default:

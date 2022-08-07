@@ -4,7 +4,10 @@
     "600": "https://cdn.muscleandstrength.com/store/media/catalog/product/cache/all/image/600x600/602f0fa2c1f0d1ba5e241f914e856ff9/a/p/apex_whey_5lbs_chocolate_ice_cream_1.jpg 600w",
     "700": "https://cdn.muscleandstrength.com/store/media/catalog/product/cache/all/image/700x700/602f0fa2c1f0d1ba5e241f914e856ff9/a/p/apex_whey_5lbs_chocolate_ice_cream_1.jpg"
   },
-  "brand": "Perfect Sports",
+  "brand": {
+    "title": "Perfect Sports",
+    "href": "/store/brands/perfect-sports"
+  },
   "name": "Apex Grass-Fed Whey Protein",
   "tagline": "Great-Tasting 100% Pure Grass-Fed Whey Protein",
   "features": [

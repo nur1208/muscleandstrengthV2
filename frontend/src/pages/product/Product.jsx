@@ -8,7 +8,10 @@ import {
   PerksFooter,
   ProductHeader,
 } from "../../components";
-import { BANNER_BLOCK_12 } from "../../components/data";
+import {
+  BANNER_BLOCK_12,
+  PRODUCT_DATA,
+} from "../../components/data";
 import { MainWrapper } from "./product.styles";
 
 export const Product = () => {
@@ -20,7 +23,7 @@ export const Product = () => {
         <NavbarInfo />
         <div id="main-wrap">
           <div className="main-content">
-            <ProductHeader />
+            <ProductHeader {...PRODUCT_DATA} />
           </div>
         </div>
       </div>

@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useReduxActions } from "../../hooks";
 import { getIconById, ICONS_ID } from "../../icons";
 import { RatingBox } from "../ratingBox/RatingBox";
 import { MainWrapper } from "./productHeader.styles";
 
-export const ProductHeader = () => {
+export const ProductHeader = ({
+  imgUrl,
+  brand,
+  name,
+  tagline,
+  features,
+  ratingPercentage,
+  reviews,
+}) => {
+  const { updateCustomNavInfo } = useReduxActions();
+  useEffect(() => {
+    updateCustomNavInfo(`> Store > ${name}`);
+
+    return () => {
+      updateCustomNavInfo(null);
+    };
+  }, [name]);
+
   return (
     <MainWrapper>
       <div class="ship-to-block tooltip tooltipstered">
@@ -17,13 +35,13 @@ export const ProductHeader = () => {
           <source
             width="400"
             height="400"
-            srcset="https://cdn.muscleandstrength.com/store/media/catalog/product/cache/all/image/400x400/602f0fa2c1f0d1ba5e241f914e856ff9/a/p/apex_whey_5lbs_chocolate_ice_cream_1.jpg 400w"
+            srcset={imgUrl["400"]}
             media="(max-width: 400px)"
           />
           <source
             width="600"
             height="600"
-            srcset="https://cdn.muscleandstrength.com/store/media/catalog/product/cache/all/image/600x600/602f0fa2c1f0d1ba5e241f914e856ff9/a/p/apex_whey_5lbs_chocolate_ice_cream_1.jpg 600w"
+            srcset={imgUrl["600"]}
             media="(max-width: 1080px)"
           />
           <img
@@ -31,15 +49,15 @@ export const ProductHeader = () => {
             id="image"
             width="700"
             height="700"
-            src="https://cdn.muscleandstrength.com/store/media/catalog/product/cache/all/image/700x700/602f0fa2c1f0d1ba5e241f914e856ff9/a/p/apex_whey_5lbs_chocolate_ice_cream_1.jpg"
-            alt="Apex Grass-Fed Whey Protein"
-            title="Apex Grass-Fed Whey Protein"
+            src={imgUrl["700"]}
+            alt={name}
+            title={name}
           />
         </picture>
       </div>
       <div class="product-title-wrap">
         <h1 class="product-title" itemprop="name">
-          Perfect Sports Apex Grass-Fed Whey Protein{" "}
+          {brand.title} {name}
         </h1>
       </div>
       <div class="product-info">
@@ -50,20 +68,16 @@ export const ProductHeader = () => {
           itemtype="http://schema.org/Brand"
         >
           A{" "}
-          <a itemprop="url" href="/store/brands/muscletech">
-            <span itemprop="name">MuscleTech</span>
+          <a itemprop="url" href={brand.href}>
+            <span itemprop="name">{brand.title}</span>
           </a>{" "}
           Product{" "}
         </span>
-        <div class="tagline">
-          Fuels Muscles Quickly So You Can Continue To Perform at
-          a High Level
-        </div>
+        <div class="tagline">{tagline}</div>
         <ul class="product-features">
-          <li>24g of ultra-premium, clean protein</li>
-          <li>Microfiltered for less carbs and fat</li>
-          <li>5.5g of BCAAs and 4g of glutamine</li>
-          <li>Gluten free, easy-to-mix delicious flavors</li>
+          {features.map((feature) => (
+            <li>{feature}</li>
+          ))}
         </ul>
       </div>
       <div class="product-data">
@@ -75,9 +89,10 @@ export const ProductHeader = () => {
           itemscope=""
           itemtype="http://schema.org/AggregateRating"
         >
-          <RatingBox width={91} />
+          <RatingBox width={ratingPercentage} />
           <span class="button-text">
-            179 <span class="button-text-label">Reviews</span>
+            {reviews}{" "}
+            <span class="button-text-label">Reviews</span>
           </span>
         </a>
         <div

@@ -20,7 +20,8 @@ export const Product = ({
             paddingBottom: 106,
           }}
         >
-          <Link className="product-link" to={href || "#"}>
+          {/* <Link className="product-link" to={href || "#"}> */}
+          <Link className="product-link" to={"product"}>
             <div className="image-wrap">
               <img
                 className="product-image lazyloaded"

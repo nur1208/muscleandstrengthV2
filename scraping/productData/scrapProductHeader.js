@@ -15,7 +15,9 @@ export const scrapProductHeader = (mainDivHtml) => {
   imgUrl[700] = $(imgSelector).attr("src").trim();
   item.imgUrl = imgUrl;
   const brand = $(".brand a").text().trim();
-  item.brand = brand;
+  item.brand = {};
+  item.brand.title = brand;
+  item.brand.href = $(".brand a").attr("href").trim();
   item.name = $(".product-title")
     .text()
     .replace(brand, "")
