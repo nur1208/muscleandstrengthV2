@@ -69,6 +69,7 @@
 - {DONE} create GetNotified component
 - {DONE} set up Product page component
 - {DONE} create ProductHeader component
+- {DONE}  fix Product page responsive problem for tablets screen
 - {TODO} scrap ProductHeader data
 - {TODO} create FeaturesList component
 - {TODO} scrap FeaturesList data
