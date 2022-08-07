@@ -74,7 +74,7 @@
 - {DONE} scrap ProductHeader data
 - {DONE} make ProductHeader component more dynamic
 - {DONE} create FeaturesList component
-- {TODO} scrap FeaturesList data
+- {DONE} scrap FeaturesList data
 - {TODO} create Modal component
 - {TODO} create FeatherLight component
 not important:
