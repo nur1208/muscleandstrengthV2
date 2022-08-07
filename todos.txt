@@ -73,7 +73,7 @@
 - {DONE}  fix Product page responsive problem for tablets screen part 2
 - {DONE} scrap ProductHeader data
 - {DONE} make ProductHeader component more dynamic
-- {TODO} create FeaturesList component
+- {DONE} create FeaturesList component
 - {TODO} scrap FeaturesList data
 - {TODO} create Modal component
 - {TODO} create FeatherLight component

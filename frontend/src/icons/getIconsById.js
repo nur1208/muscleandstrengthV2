@@ -1,4 +1,6 @@
 import {
+  IconSavedCards,
+  IconTruck,
   IconShare,
   IconBodyTransformWhite,
   IconMnsRewardsWhite,
@@ -115,6 +117,12 @@ export const getIconById = (iconId, style) => {
 
     case "icon-share":
       return <IconShare style={style} />;
+
+    case "icon-truck":
+      return <IconTruck style={style} />;
+
+    case "icon-saved-cards":
+      return <IconSavedCards style={style} />;
 
     default:
       return <IconQuestionMark style={style} />;

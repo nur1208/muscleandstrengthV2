@@ -15,4 +15,6 @@ export const ICONS_ID = {
   IconCustomerSupport: "icon-customer-support",
   IconMnsRewardsWhite: "icon-mns-rewards-white",
   IconShare: "icon-share",
+  IconTruck: "icon-truck",
+  IconSavedCards: "icon-saved-cards",
 };

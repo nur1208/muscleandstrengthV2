@@ -2,6 +2,7 @@ import React from "react";
 import {
   Banner,
   EmailSignUp,
+  FeaturesList,
   Footer,
   Header,
   NavbarInfo,
@@ -24,6 +25,7 @@ export const Product = () => {
         <div id="main-wrap">
           <div className="main-content">
             <ProductHeader {...PRODUCT_DATA} />
+            <FeaturesList />
           </div>
         </div>
       </div>
