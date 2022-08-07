@@ -24,3 +24,4 @@ export { Brands } from "./brands/Brands";
 export { MoreOn } from "./moreOn/MoreOn";
 export { PerksFooter } from "./perksFooter/PerksFooter";
 export { Form } from "./form/Form";
+export { ProductHeader } from "./productHeader/ProductHeader";

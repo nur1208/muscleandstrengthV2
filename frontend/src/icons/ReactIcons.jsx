@@ -355,3 +355,22 @@ export const IconBodyTransformWhite = ({ style }) => {
     </svg>
   );
 };
+
+export const IconShare = ({ style }) => {
+  return (
+    <svg
+      style={style}
+      id="icon-share"
+      version="1.1"
+      x="0px"
+      y="0px"
+      viewBox="0 0 16 16"
+      enable-background="new 0 0 16 16"
+    >
+      <path
+        fill="#005599"
+        d="M9.9,4.6V0l6.7,7.1l-6.7,7.1V9.5c0,0-4.5-0.7-9.8,4.7C-0.5,14.7,0.9,5.3,9.9,4.6z"
+      ></path>
+    </svg>
+  );
+};

@@ -1,4 +1,5 @@
 import {
+  IconShare,
   IconBodyTransformWhite,
   IconMnsRewardsWhite,
   IconCustomerSupport,
@@ -111,6 +112,9 @@ export const getIconById = (iconId, style) => {
 
     case "icon-body-transform-white":
       return <IconBodyTransformWhite style={style} />;
+
+    case "icon-share":
+      return <IconShare style={style} />;
 
     default:
       return <IconQuestionMark style={style} />;

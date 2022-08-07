@@ -9,6 +9,6 @@ export const MainWrapper = styled.div`
     height: 20px;
     background: url(data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==)
       center no-repeat;
-    background-image: url("./images/hk.svg");
+    background-image: url("/images/hk.svg");
   }
 `;
