@@ -190,7 +190,10 @@ export const MainWrapper = styled.div`
   }
   @media (min-width: 740px) {
     #main-wrap {
-      /* margin: 2%; */
+      /* margin:
+       2%; */
+      margin-top: 2%;
+
       padding-top: 0;
       position: relative;
     }

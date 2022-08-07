@@ -70,6 +70,7 @@
 - {DONE} set up Product page component
 - {DONE} create ProductHeader component
 - {DONE}  fix Product page responsive problem for tablets screen
+- {DONE}  fix Product page responsive problem for tablets screen part 2
 - {TODO} scrap ProductHeader data
 - {TODO} create FeaturesList component
 - {TODO} scrap FeaturesList data

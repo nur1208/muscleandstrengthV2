@@ -23,10 +23,10 @@ export const Product = () => {
             <ProductHeader />
           </div>
         </div>
-        <PerksFooter />
-        <EmailSignUp />
-        <Footer />
       </div>
+      <PerksFooter />
+      <EmailSignUp />
+      <Footer />
     </MainWrapper>
   );
 };
