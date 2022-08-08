@@ -6,6 +6,7 @@ export const featuresListData = [
       imgUrl:
         "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/popup-boxes/rewards.png",
       title: "Muscle &\nStrength Rewards",
+      btnTitle: "Learn More",
       p: [
         "Earn 2 points for every dollar you spend at Muscle &\nStrength! Spend your points on order discounts, fitness\ngear and exclusive products.",
       ],
@@ -18,6 +19,7 @@ export const featuresListData = [
       imgUrl:
         "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/popup-boxes/sample.png",
       title: "Unbeatable Deals",
+      btnTitle: "View All Deals",
       p: [
         "We run the best deals and discounts on the biggest nutrition and fitness brands!",
       ],
@@ -30,6 +32,7 @@ export const featuresListData = [
       imgUrl:
         "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/popup-boxes/shipping.png",
       title: "Free Shipping on $99+ Orders*",
+      btnTitle: "Learn\nMore",
       p: [
         "Spend $99 to get FREE shipping in addition to our unbeatable deals! Plus, 100% money-back guarantee on every product we sell.",
         "*USA Only. Excludes: AK, HI, orders above 25lbs and bulk orders.",
@@ -43,6 +46,7 @@ export const featuresListData = [
       imgUrl:
         "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/popup-boxes/money.png",
       title: "60 Day Guarantee",
+      btnTitle: "Learn\nMore",
       p: [
         "Not happy with your purchase? No problem. Simply return\nit to us within 60 days and we'll replace it, credit\nyour account, or give you a full refund.",
       ],

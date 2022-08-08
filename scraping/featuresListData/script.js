@@ -55,6 +55,10 @@ export const getFeaturesListData = async (url) => {
         .text()
         .trim();
 
+      content.btnTitle = $(".btn", $(contentSelector))
+        .text()
+        .trim();
+
       content.p = $("p", $(contentSelector))
         .toArray()
         .map((p) => $(p).text().trim());

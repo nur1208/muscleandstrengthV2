@@ -57,7 +57,11 @@ export const FeatherLight = () => {
               >
                 Learn More
               </a> */}
-                <Button text="Learn More" isBlue isExpanded />
+                <Button
+                  text={content?.btnTitle}
+                  isBlue
+                  isExpanded
+                />
               </div>
             </div>
           </div>
