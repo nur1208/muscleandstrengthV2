@@ -13,3 +13,4 @@ export { IconNavToolsWhite } from "./IconNavToolsWhite";
 export { IconQuestionMark } from "./IconQuestionMark";
 export { IconInstaComments } from "./IconInstaComments";
 export * from "./ReactIcons";
+export * from "./SvgWrapper";

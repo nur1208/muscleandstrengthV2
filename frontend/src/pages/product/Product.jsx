@@ -1,7 +1,7 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import {
   Banner,
+  Deals,
   EmailSignUp,
   FeatherLight,
   FeaturesList,
@@ -15,9 +15,6 @@ import {
   BANNER_BLOCK_12,
   PRODUCT_DATA,
 } from "../../components/data";
-import { MenuMask } from "../../components/menuMask/MenuMask";
-import { useReduxActions } from "../../hooks";
-import { MODAL_TYPES } from "../../redux/constants/modal";
 import { MainWrapper } from "./product.styles";
 
 export const Product = () => {
@@ -32,12 +29,13 @@ export const Product = () => {
             <div className="main-content">
               <ProductHeader {...PRODUCT_DATA} />
               <FeaturesList />
+              <Deals />
             </div>
           </div>
         </div>
-        <PerksFooter />
+        {/* <PerksFooter />
         <EmailSignUp />
-        <Footer />
+        <Footer /> */}
       </MainWrapper>
       <FeatherLight />
     </>

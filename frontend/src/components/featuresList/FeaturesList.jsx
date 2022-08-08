@@ -1,9 +1,9 @@
 import React from "react";
 import { useReduxActions } from "../../hooks";
-import { getIconById } from "../../icons";
+import { getIconById, SvgWrapper } from "../../icons";
 import { MODAL_TYPES } from "../../redux/constants/modal";
 import { featuresListData } from "./data";
-import { MainWrapper, SvgWrapper } from "./featuresList.styles";
+import { MainWrapper } from "./featuresList.styles";
 
 export const FeaturesList = () => {
   const { updateModalState } = useReduxActions();

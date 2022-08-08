@@ -67,10 +67,3 @@ export const MainWrapper = styled.div`
     }
   }
 `;
-
-export const SvgWrapper = styled.span`
-  ${({ childStyle }) => `svg{${childStyle}}`}
-  svg {
-    margin-bottom: 0;
-  }
-`;

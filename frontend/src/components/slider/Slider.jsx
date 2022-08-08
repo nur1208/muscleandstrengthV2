@@ -2,10 +2,10 @@ import React from "react";
 import { MainWrapper } from "./slider.styles";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Autoplay } from "swiper";
+import SwiperCore, { Autoplay, Navigation } from "swiper";
 
-SwiperCore.use([Pagination, Autoplay]);
-export const Slider = ({ children }) => {
+SwiperCore.use([Autoplay, Navigation]);
+export const Slider = ({ loop, children, hasNextBtn }) => {
   return (
     <MainWrapper>
       <Swiper
@@ -13,8 +13,10 @@ export const Slider = ({ children }) => {
         // tag="section"
         // className={sliderStyle}
         wrapperTag="ul"
-        pagination={{ clickable: true }}
-        loop={true}
+        navigation={{
+          nextEl: hasNextBtn && ".swiper-button-next",
+        }}
+        loop={loop !== undefined ? loop : true}
         speed={800}
         autoplay={{
           delay: 5000,
@@ -25,6 +27,9 @@ export const Slider = ({ children }) => {
             {child}
           </SwiperSlide>
         ))}
+        {/* {hasNextBtn && (
+          <div class="deals-next arrow-next arrow-btn">›</div>
+        )} */}
         {/* {slides.map((slide) => slide)} */}
       </Swiper>
     </MainWrapper>

@@ -27,3 +27,4 @@ export { Form } from "./form/Form";
 export { ProductHeader } from "./productHeader/ProductHeader";
 export { FeaturesList } from "./featuresList/FeaturesList";
 export * from "./modal";
+export { Deals } from "./deals/Deals";
