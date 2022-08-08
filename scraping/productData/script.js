@@ -6,6 +6,7 @@ import { fileURLToPath } from "url";
 import { getHtml } from "../utils/index.js";
 import { scrapFiled } from "../loginData/scrapFiled.js";
 import { scrapProductHeader } from "./scrapProductHeader.js";
+import { scrapDeals } from "./scrapDeals.js";
 
 export const getProductData = async (url) => {
   const __filename = fileURLToPath(import.meta.url);
@@ -38,6 +39,9 @@ export const getProductData = async (url) => {
   );
   productData = { ...productData, ...headerData };
 
+  const mainSelectorDeals = " #main-wrap .deals-coupons-section";
+  const deals = scrapDeals($(mainSelectorDeals).toString());
+  productData.deals = deals;
   fs.writeFile(
     mainDataJson,
     JSON.stringify(productData),

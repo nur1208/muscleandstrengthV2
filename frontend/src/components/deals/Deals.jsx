@@ -4,7 +4,7 @@ import { Slider } from "../slider/Slider";
 import { MainWrapper } from "./deals.styles";
 
 export const Deals = () => {
-  const silds = Array(1)
+  const silds = Array(4)
     .fill(true)
     .map((_, INDEX) => (
       <>

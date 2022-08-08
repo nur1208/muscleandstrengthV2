@@ -18,4 +18,12 @@ export const PRODUCT_DATA = {
   ],
   ratingPercentage: 91,
   reviews: 179,
+  deals: [
+    {
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/media/mnsresized/catalog/product/a/p/e7aba0/98/98/apex_whey_5lbs_chocolate_ice_cream.jpg",
+      label: "LIMITED TIME PRICE CUT",
+      desc: "Buy 1 PERFECT Sports APEX Grass-Fed 100% Pure Whey Protein for only $49.99! Limited time only.",
+    },
+  ],
 };

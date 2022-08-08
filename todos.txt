@@ -80,7 +80,7 @@
 - {DONE} scrap btnTitle for FeaturesList data
 - {DONE} fix FeaturesList component responsive problem
 - {DONE} create Deals component
-- {TODO} scrap Deals component data
+- {DONE} scrap Deals component data
 
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
