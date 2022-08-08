@@ -1,17 +1,28 @@
 import React from "react";
+import { useReduxActions } from "../../hooks";
 import { getIconById } from "../../icons";
+import { MODAL_TYPES } from "../../redux/constants/modal";
 import { featuresListData } from "./data";
 import { MainWrapper, SvgWrapper } from "./featuresList.styles";
 
 export const FeaturesList = () => {
+  const { updateModalState } = useReduxActions();
+  const handleClick = (content) => {
+    updateModalState({
+      isOpen: true,
+      type: MODAL_TYPES.FEATHER_LIGHT,
+      content,
+    });
+  };
   return (
     <MainWrapper>
       <ul class="features-list">
         {featuresListData.map(
           ({ title, iconID, content }, index) => (
             <li key={`index-${index}`}>
-              <a
-                href="#"
+              <span
+                onClick={() => handleClick(content)}
+                class="click-span"
                 data-featherlight="#features-list-rewards"
                 data-featherlight-variant="fancy"
               >
@@ -25,7 +36,7 @@ export const FeaturesList = () => {
                 </span>
                 {title[0]}{" "}
                 <span class="new-line">{title[1]}</span>
-              </a>
+              </span>
             </li>
           )
         )}

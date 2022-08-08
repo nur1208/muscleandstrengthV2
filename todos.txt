@@ -76,8 +76,9 @@
 - {DONE} create FeaturesList component
 - {DONE} scrap FeaturesList data
 - {DONE} make FeaturesList component more dynamic
-- {TODO} create Modal component
-- {TODO} create FeatherLight component
+- {DONE} create FeatherLight Modal component
+- {TODO} scrap btnTitle for FeaturesList data
+- {TODO} fix FeaturesList component responsive problem  
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
 - {TODO} make Submenu and SubSubmenu components as one component

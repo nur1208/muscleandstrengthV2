@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const MainWrapper = styled.div`
-  position: absolute;
+  position: ${({ position }) =>
+    position ? position : "absolute"};
   background-color: #202020;
   box-shadow: 0 0 10px rgb(0 0 0 / 50%);
   z-index: 90;

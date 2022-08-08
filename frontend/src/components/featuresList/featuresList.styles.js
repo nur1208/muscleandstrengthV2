@@ -21,11 +21,17 @@ export const MainWrapper = styled.div`
     flex: 0 0 25%;
   }
 
-  .features-list li a {
+  .features-list li span.click-span {
     padding: 1em 0;
     text-align: center;
     -webkit-tap-highlight-color: transparent;
     display: block;
+    background-color: transparent;
+    line-height: inherit;
+    color: #059;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    cursor: pointer;
   }
 
   .features-list li .inner-icon {
