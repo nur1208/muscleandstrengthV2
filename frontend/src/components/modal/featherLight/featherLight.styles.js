@@ -43,6 +43,15 @@ export const MainWrapper = styled.div`
     cursor: auto;
     white-space: normal;
   }
+  @media only screen and (max-width: 1024px) {
+    .featherlight-content {
+      margin-left: 0;
+      margin-right: 0;
+      max-height: 98%;
+      padding: 10px 10px 0;
+      border-bottom: 10px solid transparent;
+    }
+  }
 
   .featherlight-content {
     -webkit-tap-highlight-color: transparent;

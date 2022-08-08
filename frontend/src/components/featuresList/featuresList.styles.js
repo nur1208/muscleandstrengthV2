@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const MainWrapper = styled.div`
   border-top: 1em solid #f5f5f5;
   background: #fff;
-  font-size: 13px;
+  font-size: 12px;
   margin-bottom: 1em;
   .features-list {
     list-style: none;
