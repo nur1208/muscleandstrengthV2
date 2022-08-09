@@ -387,7 +387,6 @@ export const IconTruck = ({ style }) => {
     </svg>
   );
 };
-
 export const IconSavedCards = ({ style }) => {
   return (
     <svg
@@ -399,6 +398,16 @@ export const IconSavedCards = ({ style }) => {
         fill="#005699"
         d="M83.4 19.2H16.6c-4.2 0-7.7 3.5-7.7 7.7v46.3c0 4.2 3.5 7.7 7.7 7.7h66.8c4.2 0 7.7-3.5 7.7-7.7V26.9c0-4.3-3.5-7.7-7.7-7.7zm-66.8 5.1h66.8c1.4 0 2.6 1.2 2.6 2.6v7.7H14v-7.7c0-1.4 1.2-2.6 2.6-2.6zm66.8 51.4H16.6c-1.4 0-2.6-1.2-2.6-2.6V50h72v23.1c0 1.4-1.2 2.6-2.6 2.6zM19.2 60.3h5.1v10.3h-5.1V60.3zm10.2 0h5.1v10.3h-5.1V60.3zm10.3 0h5.1v10.3h-5.1V60.3z"
       />
+    </svg>
+  );
+};
+
+export const IconPadlock = ({ style }) => {
+  return (
+    <svg style={style} id="icon-padlock" viewBox="0 0 71 100">
+      <g fill="#005599">
+        <path d="m65.5 45v-15c0-16.542-13.458-30-30-30s-30 13.458-30 30v15h-5.5v55h71v-55h-5.5zm-52-15c0-12.131 9.869-22 22-22s22 9.869 22 22v15h-44v-15z" />
+      </g>
     </svg>
   );
 };

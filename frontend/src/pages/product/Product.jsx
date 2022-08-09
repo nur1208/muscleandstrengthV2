@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Banner,
+  BuyingOptions,
   Deals,
   EmailSignUp,
   FeatherLight,
@@ -30,6 +31,9 @@ export const Product = () => {
               <ProductHeader {...PRODUCT_DATA} />
               <FeaturesList />
               <Deals deals={PRODUCT_DATA.deals} />
+            </div>
+            <div class="aside aside-after">
+              <BuyingOptions />
             </div>
           </div>
         </div>

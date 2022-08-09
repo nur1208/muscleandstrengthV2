@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MainWrapper = styled.div`
   background-color: #f5f5f5;
-
+  font-size: 16px;
   #page {
     background-color: #f5f5f5;
     position: relative;
@@ -139,6 +139,24 @@ export const MainWrapper = styled.div`
   div.atclear {
     clear: both;
   }
+
+  .aside {
+    border-radius: 2px;
+    z-index: 0;
+    display: none;
+  }
+
+  .aside.aside-after {
+    width: 100%;
+    display: block;
+    background-color: transparent;
+    float: left;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+  }
+
   @media (min-width: 320px) {
     .product-data {
       font-size: 0.87em;
@@ -254,6 +272,19 @@ export const MainWrapper = styled.div`
     .product-share-btn .button-text {
       line-height: 41px;
     }
+    .aside {
+      float: right;
+      width: 30%;
+      display: block;
+    }
+
+    .aside.aside-after {
+      float: right;
+      width: 33%;
+      padding-left: 0;
+      padding-right: 0;
+      display: block;
+    }
   }
   @media (min-width: 1280px) {
     #main-wrap {
@@ -284,6 +315,14 @@ export const MainWrapper = styled.div`
     .product-share-btn {
       margin-top: 0;
       margin-left: 1em;
+    }
+
+    .aside.aside-after {
+      float: right;
+      width: 28.5%;
+      padding-left: 0;
+      padding-right: 0;
+      display: block;
     }
   }
 `;

@@ -1,4 +1,5 @@
 import {
+  IconPadlock,
   IconSavedCards,
   IconTruck,
   IconShare,
@@ -123,6 +124,9 @@ export const getIconById = (iconId, style) => {
 
     case "icon-saved-cards":
       return <IconSavedCards style={style} />;
+
+    case "icon-padlock":
+      return <IconPadlock style={style} />;
 
     default:
       return <IconQuestionMark style={style} />;
