@@ -29,7 +29,7 @@ export const Product = () => {
             <div className="main-content">
               <ProductHeader {...PRODUCT_DATA} />
               <FeaturesList />
-              <Deals />
+              <Deals deals={PRODUCT_DATA.deals} />
             </div>
           </div>
         </div>

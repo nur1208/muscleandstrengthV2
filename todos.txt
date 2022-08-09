@@ -81,6 +81,17 @@
 - {DONE} fix FeaturesList component responsive problem
 - {DONE} create Deals component
 - {DONE} scrap Deals component data
+- {DONE} make Deals component more dynamic
+- {TODO} create BuyingOptions component
+- {TODO} scrap BuyingOptions data
+- {TODO} make BuyingOptions component more dynamic
+- {TODO} create Nutrition component
+- {TODO} scrap Nutrition data
+- {TODO} make Nutrition component more dynamic
+- {TODO} create ProductInfo component
+- {TODO} scrap productInfo data
+- {TODO} make ProductInfo component more dynamic
+
 
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
