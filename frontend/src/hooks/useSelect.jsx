@@ -50,8 +50,10 @@ export const useSelect = (initOptions) => {
   const handleOptionHover = (index) =>
     updateOption(index, { isActive: true });
 
-  const handleOptionClick = (index) =>
+  const handleOptionClick = (index) => {
     updateOption(index, { isSelected: true });
+    setIsOpen(false);
+  };
 
   const handleKeyDown = (e) => {
     if (!isOpen) return;
