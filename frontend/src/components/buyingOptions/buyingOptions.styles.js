@@ -215,7 +215,8 @@ export const MainWrapper = styled.div`
     height: 15px;
     margin-right: 7px;
   }
-  .secure-transaction-notice span {
+  .secure-transaction-notice span,
+  span.points-label {
     background-color: transparent;
     color: #059;
     text-decoration: none;

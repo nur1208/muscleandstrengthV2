@@ -1,6 +1,9 @@
 import React from "react";
+import { useReduxActions } from "../../hooks";
 import { getIconById, ICONS_ID, SvgWrapper } from "../../icons";
+import { MODAL_TYPES } from "../../redux/constants/modal";
 import { Button } from "../button/Button";
+import { featuresListData } from "../featuresList/data";
 import { SectionTitle } from "../sectionTitle/SectionTitle";
 import { Selector } from "../selector/Selector";
 import { MainWrapper } from "./buyingOptions.styles";
@@ -14,6 +17,15 @@ const selectorStyle = `
 
 `;
 export const BuyingOptions = () => {
+  const { updateModalState } = useReduxActions();
+  const handleClick = () => {
+    updateModalState({
+      isOpen: true,
+      type: MODAL_TYPES.FEATHER_LIGHT,
+      content: featuresListData[0].content,
+    });
+  };
+
   return (
     <MainWrapper>
       <SectionTitle title="Buying Options" />
@@ -94,8 +106,9 @@ export const BuyingOptions = () => {
         </div>
         <div class="section-inner-wrap reward-points-section">
           <div class="reward-points-wrap">
-            <a
+            <span
               href="#"
+              onClick={handleClick}
               data-featherlight="#features-list-rewards"
               data-featherlight-variant="fancy"
               class="points-label"
@@ -104,7 +117,7 @@ export const BuyingOptions = () => {
               <SvgWrapper childStyle="width: 1.3em; height: 1.3em; margin-bottom: -.3em!important;">
                 {getIconById(ICONS_ID.IconQuestionMark)}
               </SvgWrapper>
-            </a>
+            </span>
             <div class="points-earned">
               <span class="points">0</span> Points
             </div>

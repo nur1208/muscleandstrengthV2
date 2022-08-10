@@ -85,8 +85,8 @@
 - {DONE} create Select component and useSelect hook
 - {DONE} create BuyingOptions component
 - {DONE} close the options after a user selected a option
+- {DONE} make 'Reward Points Earned' button open FEATHER_LIGHT modal
 - {TODO} create secureTransaction modal
-- {TODO} make 'Reward Points Earned' button open FEATHER_LIGHT modal
 - {TODO} scrap BuyingOptions data
 - {TODO} make BuyingOptions component more dynamic
 - {TODO} create Nutrition component
