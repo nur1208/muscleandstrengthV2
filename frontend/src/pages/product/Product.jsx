@@ -9,6 +9,7 @@ import {
   Footer,
   Header,
   NavbarInfo,
+  Nutrition,
   PerksFooter,
   ProductHeader,
   SecureTransaction,
@@ -38,6 +39,8 @@ export const Product = () => {
               <BuyingOptions
                 options={PRODUCT_DATA_2.buyingOptions}
               />
+              <div class="product-aside"></div>
+              <Nutrition />
             </div>
           </div>
         </div>

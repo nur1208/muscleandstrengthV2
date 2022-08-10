@@ -29,3 +29,4 @@ export { FeaturesList } from "./featuresList/FeaturesList";
 export * from "./modal";
 export { Deals } from "./deals/Deals";
 export { BuyingOptions } from "./buyingOptions/BuyingOptions";
+export { Nutrition } from "./nutrition/Nutrition";
