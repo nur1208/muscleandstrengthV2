@@ -116,6 +116,13 @@ export const MainWrapper = styled.div`
 
   ${({ customStyle }) => (customStyle ? customStyle : "")}
 
+  .sod_option {
+    font-size: 13px;
+  }
+
+  .sod_label {
+    font-size: 14px;
+  }
   ${({ isOpen }) =>
     isOpen &&
     `

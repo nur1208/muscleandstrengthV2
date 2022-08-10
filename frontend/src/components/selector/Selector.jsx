@@ -2,7 +2,11 @@ import React from "react";
 import { useSelect } from "../../hooks";
 import { MainWrapper } from "./selector.styles";
 
-export const Selector = ({ label, ...others }) => {
+export const Selector = ({
+  options: initOptions,
+  label,
+  ...others
+}) => {
   const [
     { isOpen, options, selectedValue, listRef },
     {
@@ -13,11 +17,12 @@ export const Selector = ({ label, ...others }) => {
       handleKeyDown,
     },
   ] = useSelect(
-    Array(7)
-      .fill({ title: "option" })
-      .map(({ title }, index) => ({
-        title: `${index}-${title}`,
-      }))
+    initOptions ||
+      Array(7)
+        .fill({ title: "option" })
+        .map(({ title }, index) => ({
+          title: `${index}-${title}`,
+        }))
   );
   return (
     <MainWrapper

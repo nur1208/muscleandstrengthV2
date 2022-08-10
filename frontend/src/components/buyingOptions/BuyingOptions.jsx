@@ -16,7 +16,7 @@ const selectorStyle = `
     }    
 
 `;
-export const BuyingOptions = () => {
+export const BuyingOptions = ({ options: buyingOptions }) => {
   const { updateModalState } = useReduxActions();
   const handleClick = () => {
     updateModalState({
@@ -37,48 +37,67 @@ export const BuyingOptions = () => {
       <div>
         <div class="section-inner-wrap">
           <div class="group-wrap">
-            <div class="group">
-              <div class="group-header">
-                <div class="cost">
-                  <div class="before-discount">
-                    <span class="price">$64.99</span>{" "}
-                  </div>
-                  <span class="calc">
-                    <span
-                      class="regular-price"
-                      id="product-price-38914"
-                    >
-                      <span class="price">$49.99</span>{" "}
-                    </span>
-                    <span class="points-per-unit">49.9900</span>
-                  </span>
-                </div>
-                <div class="title">5lbs</div>
-                <div class="serving-info">
-                  49 Servings | $1.02 Per Serving
-                </div>{" "}
-                <div class="deal">
-                  <span class="mns-label lbl-deal">
-                    LIMITED TIME PRICE CUT{" "}
-                  </span>
-                </div>
-              </div>
-              <div class="fields">
-                <div class="row">
-                  <div class="option-field field">
-                    <Selector
-                      customStyle={selectorStyle}
-                      label="Pick a Flavor"
-                      isBlue
-                    />
-                  </div>
+            {buyingOptions.map(
+              ({ cost, serving, title, deal, options }) => (
+                <div class="group">
+                  <div class="group-header">
+                    <div class="cost">
+                      {cost.beforeDiscount && (
+                        <div class="before-discount">
+                          <span class="price">
+                            ${cost.beforeDiscount}
+                          </span>{" "}
+                        </div>
+                      )}
 
-                  <div class="qty-field field">
-                    <Qty />
+                      <span class="calc">
+                        <span
+                          class="regular-price"
+                          id="product-price-38914"
+                        >
+                          <span class="price">
+                            ${cost.regularPrice}
+                          </span>{" "}
+                        </span>
+                        <span class="points-per-unit">
+                          {cost.regularPrice + "00"}
+                        </span>
+                      </span>
+                    </div>
+                    <div class="title">{title}</div>
+                    <div class="serving-info">
+                      {serving} Servings | $
+                      {Math.floor(
+                        (cost.regularPrice / serving) * 100
+                      ) / 100}{" "}
+                      Per Serving
+                    </div>{" "}
+                    <div class="deal">
+                      <span class="mns-label lbl-deal">
+                        {deal}{" "}
+                      </span>
+                    </div>
+                  </div>
+                  <div class="fields">
+                    <div class="row">
+                      <div class="option-field field">
+                        <Selector
+                          customStyle={selectorStyle}
+                          label="Pick a Flavor"
+                          isBlue
+                          options={options}
+                        />
+                      </div>
+
+                      <div class="qty-field field">
+                        <Qty />
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              )
+            )}
+
             <div class="space-break">&nbsp;</div>
           </div>
         </div>

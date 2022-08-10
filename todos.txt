@@ -87,8 +87,8 @@
 - {DONE} close the options after a user selected a option
 - {DONE} make 'Reward Points Earned' button open FEATHER_LIGHT modal
 - {DONE} create SecureTransaction modal
-- {TODO} scrap BuyingOptions data
-- {TODO} make BuyingOptions component more dynamic
+- {DONE} scrap BuyingOptions data
+- {DONE} make BuyingOptions component more dynamic
 - {TODO} create Nutrition component
 - {TODO} scrap Nutrition data
 - {TODO} make Nutrition component more dynamic

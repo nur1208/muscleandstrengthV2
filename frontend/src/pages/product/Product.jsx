@@ -34,7 +34,9 @@ export const Product = () => {
               <Deals deals={PRODUCT_DATA.deals} />
             </div>
             <div class="aside aside-after">
-              <BuyingOptions />
+              <BuyingOptions
+                options={PRODUCT_DATA.buyingOptions}
+              />
             </div>
           </div>
         </div>

@@ -26,4 +26,20 @@ export const PRODUCT_DATA = {
       desc: "Buy 1 PERFECT Sports APEX Grass-Fed 100% Pure Whey Protein for only $49.99! Limited time only.",
     },
   ],
+  buyingOptions: [
+    {
+      cost: { beforeDiscount: 64.99, regularPrice: 49.99 },
+      title: "5lbs",
+      serving: 49,
+      deal: "LIMITED TIME PRICE CUT",
+      options: [
+        { title: "Pick a Flavor" },
+        { title: "Chocolate Ice Cream" },
+        { title: "Chocolate Peanut Butter Ice Cream" },
+        { title: "Cookies 'n Cream Ice Cream" },
+        { title: "Strawberry Ice Cream" },
+        { title: "Vanilla Ice Cream" },
+      ],
+    },
+  ],
 };
