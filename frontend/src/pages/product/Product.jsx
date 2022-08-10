@@ -11,6 +11,7 @@ import {
   NavbarInfo,
   PerksFooter,
   ProductHeader,
+  SecureTransaction,
 } from "../../components";
 import {
   BANNER_BLOCK_12,
@@ -42,6 +43,7 @@ export const Product = () => {
         <Footer /> */}
       </MainWrapper>
       <FeatherLight />
+      <SecureTransaction />
     </>
   );
 };

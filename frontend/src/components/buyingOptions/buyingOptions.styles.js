@@ -223,6 +223,11 @@ export const MainWrapper = styled.div`
     cursor: pointer;
   }
 
+  .secure-transaction-notice span:hover,
+  span.points-label:hover {
+    color: #0687e6;
+  }
+
   .reward-points-section {
     padding: 0 1em 1em;
   }

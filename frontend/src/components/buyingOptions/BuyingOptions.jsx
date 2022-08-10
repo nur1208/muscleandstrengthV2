@@ -26,6 +26,11 @@ export const BuyingOptions = () => {
     });
   };
 
+  const handleClickSecure = () =>
+    updateModalState({
+      isOpen: true,
+      type: MODAL_TYPES.SECURE_TRANSACTION,
+    });
   return (
     <MainWrapper>
       <SectionTitle title="Buying Options" />
@@ -99,7 +104,10 @@ export const BuyingOptions = () => {
           </div>
         </div>
         <div class="secure-transaction-notice">
-          <span class="secure-transaction-link">
+          <span
+            class="secure-transaction-link"
+            onClick={handleClickSecure}
+          >
             {getIconById(ICONS_ID.IconPadlock)}
             Secure Transaction
           </span>

@@ -226,6 +226,9 @@ div, form, h1, h2, h3, h4, h5, h6, li, p, td, th, ul {
     margin: 0;
     padding: 0;
 }
+a:hover {
+    color: #0687e6;
+}
 @media print, screen and (min-width: 52.5em)
 {.h1, h1 {
     font-size: 2.6666666667rem;
