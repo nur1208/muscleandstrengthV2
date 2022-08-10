@@ -21,7 +21,7 @@ export const Qty = () => {
         id="super_group_38915"
         role="spinbutton"
         class="number"
-        type="number"
+        // type="number"
         min={0}
         max={20}
         value={qty}

@@ -89,6 +89,7 @@
 - {DONE} create SecureTransaction modal
 - {DONE} scrap BuyingOptions data
 - {DONE} make BuyingOptions component more dynamic
+- {DONE} create BuyingOption component and make it dynamic and fix scrap productData scripts
 - {TODO} create Nutrition component
 - {TODO} scrap Nutrition data
 - {TODO} make Nutrition component more dynamic
@@ -108,3 +109,4 @@ not important:
 - {TODO} fix the btn extend when the loading icon appear
 - {TODO} create puppeteer script to demonstrate the website login buy products and so on.
 - {TODO} fix your repo show html instead of javascript
+- {TODO} add , for reviews in Product page if it is bigger than 1000

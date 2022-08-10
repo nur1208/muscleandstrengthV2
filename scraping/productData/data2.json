@@ -1,0 +1,68 @@
+{
+  "imgUrl": {
+    "400": "https://cdn.muscleandstrength.com/store/media/catalog/product/cache/all/image/400x400/602f0fa2c1f0d1ba5e241f914e856ff9/o/m/omega_3_200_softgels.jpg 400w",
+    "600": "https://cdn.muscleandstrength.com/store/media/catalog/product/cache/all/image/600x600/602f0fa2c1f0d1ba5e241f914e856ff9/o/m/omega_3_200_softgels.jpg 600w",
+    "700": "https://cdn.muscleandstrength.com/store/media/catalog/product/cache/all/image/700x700/602f0fa2c1f0d1ba5e241f914e856ff9/o/m/omega_3_200_softgels.jpg"
+  },
+  "brand": { "title": "NOW Foods", "href": "/store/brands/now" },
+  "name": "Omega-3",
+  "tagline": "Molecularly Distilled Fish Oil to Support Cardio!*",
+  "features": [
+    "1,000mg Fish Oil per softgel",
+    "180 EPA / 120 DHA per softgel",
+    "Easy to Swallow Softgels",
+    "Cardio Support*"
+  ],
+  "ratingPercentage": 97,
+  "reviews": 1109,
+  "deals": [
+    {
+      "imgUrl": "https://cdn.muscleandstrength.com/store/media/mnsresized/promos/f67674/98/98/omega_3_100_softgels_4.jpg",
+      "label": "Buy 1 Get 1 FREE",
+      "desc": "Buy 1 NOW Foods Omega-3, 100ct and get 1 absolutely FREE! Limited time only."
+    },
+    {
+      "imgUrl": "https://cdn.muscleandstrength.com/store/media/mnsresized/catalog/product/n/o/b1dcf0/98/98/now_omega-3_1_3.jpg",
+      "label": "LIMITED TIME PRICE CUT",
+      "desc": "Buy 1 NOW Foods Omega-3 500ct for only $17.99! Limited time only."
+    },
+    {
+      "imgUrl": "https://cdn.muscleandstrength.com/store/media/mnsresized/promos/b1dcf0/98/98/now_omega-3_1_2.jpg",
+      "label": "Buy 1 Get 1 FREE",
+      "desc": "Buy 1 NOW Foods Omega-3 200 Softgels and get 1 absolutely FREE! Limited time only."
+    },
+    {
+      "imgUrl": "https://cdn.muscleandstrength.com/store/media/mnsresized/promos/f67674/98/98/omega_3_100_softgels_4.jpg",
+      "label": "Buy 1 Get 1 FREE",
+      "desc": "Buy 1 NOW Foods Omega-3, 100ct and get 1 absolutely FREE! Limited time only."
+    },
+    {
+      "imgUrl": "https://cdn.muscleandstrength.com/store/media/mnsresized/catalog/product/n/o/b1dcf0/98/98/now_omega-3_1_3.jpg",
+      "label": "LIMITED TIME PRICE CUT",
+      "desc": "Buy 1 NOW Foods Omega-3 500ct for only $17.99! Limited time only."
+    }
+  ],
+  "buyingOptions": [
+    {
+      "cost": { "beforeDiscount": false, "regularPrice": 9.99 },
+      "title": "100 Softgels",
+      "serving": 50,
+      "deal": "Buy 1 Get 1 FREE",
+      "options": []
+    },
+    {
+      "cost": { "beforeDiscount": false, "regularPrice": 17.99 },
+      "title": "200 Softgels",
+      "serving": 100,
+      "deal": "Buy 1 Get 1 FREE",
+      "options": []
+    },
+    {
+      "cost": { "beforeDiscount": 39.99, "regularPrice": 16.99 },
+      "title": "500 Softgels",
+      "serving": 250,
+      "deal": "LIMITED TIME PRICE CUT",
+      "options": []
+    }
+  ]
+}

@@ -35,7 +35,11 @@ export const scrapProductHeader = (mainDivHtml) => {
       .trim()
   );
   item.reviews = Number(
-    $(reviewsSelector).text().split(" ")[0].trim()
+    $(reviewsSelector)
+      .text()
+      .split(" ")[0]
+      .replace(",", "")
+      .trim()
   );
   return item;
 };

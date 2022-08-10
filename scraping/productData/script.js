@@ -32,7 +32,7 @@ export const getProductData = async (url) => {
   // });
 
   // read the html body from the file system (this is very faster then reading it from the internet)
-  const html = await promisify(fs.readFile)(mainPageHtml);
+  const html = await promisify(fs.readFile)(mainPageHtml2);
 
   let $ = cheerio.load(html.toString());
 
@@ -60,7 +60,7 @@ export const getProductData = async (url) => {
   // console.log(productData);
 
   fs.writeFile(
-    mainDataJson,
+    mainDataJson2,
     JSON.stringify(productData),
     function (err) {
       if (err) throw err;

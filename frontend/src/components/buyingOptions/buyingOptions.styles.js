@@ -242,6 +242,32 @@ export const MainWrapper = styled.div`
   .reward-points-section .reward-points-wrap .points-earned {
     float: right;
   }
+  .group.no-options {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .group.no-options .group-header {
+    margin-bottom: 0;
+  }
+  .group.no-options .cost {
+    float: none;
+  }
+
+  .group.no-options .deal {
+    padding: 5px 0 0;
+  }
+  .group.no-options:nth-child(1) .fields {
+    padding-top: 0;
+  }
+  input[type="number"],
+  input[type="text"] {
+    -webkit-appearance: none;
+  }
+  .group.no-options .before-discount {
+    float: left;
+  }
   @media (min-width: 600px) {
     .title {
       max-width: 51%;
