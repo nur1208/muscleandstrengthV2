@@ -91,7 +91,8 @@
 - {DONE} make BuyingOptions component more dynamic
 - {DONE} create BuyingOption component and make it dynamic and fix scrap productData scripts
 - {DONE} create Nutrition component
-- {DONE} scrap Nutrition data
+- {DONE} scrap Nutrition data 
+- {DONE} scrap Nutrition data part 2
 - {TODO} make Nutrition component more dynamic
 - {TODO} create ProductInfo component
 - {TODO} scrap productInfo data

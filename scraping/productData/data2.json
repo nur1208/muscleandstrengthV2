@@ -248,7 +248,11 @@
             }
           ]
         }
-      ]
+      ],
+      "ingredients": "Other Ingredients: Softgel Capsule (Gelatin, Glycerin, Water) and Vitamin E (as Natural d-Alpha Tochopherol).",
+      "allergenWarning": "Contains fish (sardines, anchovies, mackerel). Vitamin E from soy.",
+      "directions": "As a dietary supplement, take 2 softgels twice daily with food.",
+      "warning": "For adults only. Consult physician if pregnant/nursing, taking medication, or have a medical condition. Keep out of reach of children."
     },
     {
       "title": "200 Softgels",
@@ -456,7 +460,11 @@
             }
           ]
         }
-      ]
+      ],
+      "ingredients": "Other Ingredients: Softgel Capsule (Gelatin, Glycerin, Water) and Vitamin E (as Natural d-Alpha Tochopherol).",
+      "allergenWarning": "Contains fish (sardines, anchovies, mackerel). Vitamin E from soy.",
+      "directions": "As a dietary supplement, take 2 softgels 1 to 3 times daily with food.",
+      "warning": "For adults only. Consult physician if pregnant/nursing, taking medication, or have a medical condition. Keep out of reach of children."
     },
     {
       "title": "500 Softgels",
@@ -664,7 +672,11 @@
             }
           ]
         }
-      ]
+      ],
+      "ingredients": "Other Ingredients: Softgel Capsule (Gelatin, Glycerin, Water) and Vitamin E (as Natural d-Alpha Tochopherol).",
+      "allergenWarning": "Contains fish (sardines, anchovies, mackerel). Vitamin E from soy.",
+      "directions": "As a dietary supplement, take 2 softgels 1 to 3 times daily with food.",
+      "warning": "For adults only. Consult physician if pregnant/nursing, taking medication, or have a medical condition. Keep out of reach of children."
     }
   ]
 }

@@ -72,7 +72,33 @@ export const scrapNutrition = (mainDivHtml) => {
           item.cols = cols;
           return item;
         });
+      item.ingredients = $(
+        ".nutrition-panel > div:nth-child(3)",
+        $(option)
+      )
+        .text()
+        .trim();
 
+      item.allergenWarning = $(
+        ".nutrition-panel > div:nth-child(5)",
+        $(option)
+      )
+        .text()
+        .trim();
+
+      item.directions = $(
+        ".nutrition-panel > span:nth-child(6)",
+        $(option)
+      )
+        .text()
+        .trim();
+
+      item.warning = $(
+        ".nutrition-panel > span:nth-child(7)",
+        $(option)
+      )
+        .text()
+        .trim();
       return item;
     });
 };
