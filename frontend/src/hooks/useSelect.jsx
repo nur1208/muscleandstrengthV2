@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export const useSelect = (initOptions) => {
+export const useSelect = (initOptions, getSelectedValue) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const [options, setOptions] = useState(initOptions);
@@ -22,6 +22,11 @@ export const useSelect = (initOptions) => {
     setSelectedValue(
       newOptions.find((option) => option.isSelected)?.title
     );
+    getSelectedValue({
+      value: newOptions.find((option) => option.isSelected)
+        ?.title,
+      index: newOptions.findIndex((option) => option.isSelected),
+    });
     setOptions(newOptions);
   };
 

@@ -8,6 +8,18 @@ export const scrapNutrition = (mainDivHtml) => {
     .map((option, index) => {
       const item = {};
       item.title = $("h4", $(option)).text().trim();
+      item.servingSize = Number(
+        $(".serving", $(option))
+          .text()
+          .split(":")[1]
+          .trim()
+          .split(" ")[0]
+          .trim()
+      );
+
+      item.servingsPerContainer = Number(
+        $(".serving", $(option)).text().split(":")[2].trim()
+      );
 
       item.infoTable = $("#nutrition-info-table .row", $(option))
         .children()

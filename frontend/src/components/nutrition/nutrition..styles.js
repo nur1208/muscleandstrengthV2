@@ -145,6 +145,10 @@ export const MainWrapper = styled.div`
   .no-display {
     display: none;
   }
+  .indent {
+    margin-left: 5%;
+    display: block;
+  }
   @media (min-width: 840px) {
     margin: 0 0 1em;
 

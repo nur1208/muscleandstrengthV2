@@ -93,7 +93,7 @@
 - {DONE} create Nutrition component
 - {DONE} scrap Nutrition data 
 - {DONE} scrap Nutrition data part 2
-- {TODO} make Nutrition component more dynamic
+- {DONE} make Nutrition component more dynamic and scrap servingSize and servingsPerContainer params and update Selector and useSelect
 - {TODO} create ProductInfo component
 - {TODO} scrap productInfo data
 - {TODO} make ProductInfo component more dynamic
@@ -111,3 +111,4 @@ not important:
 - {TODO} create puppeteer script to demonstrate the website login buy products and so on.
 - {TODO} fix your repo show html instead of javascript
 - {TODO} add , for reviews in Product page if it is bigger than 1000
+- {TODO} make Nutrition component more readable

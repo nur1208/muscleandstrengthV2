@@ -119,6 +119,8 @@ export const PRODUCT_DATA_2 = {
   nutrition: [
     {
       title: "100 Softgels",
+      servingSize: 2,
+      servingsPerContainer: 50,
       infoTable: [
         {
           mainStyle: "item hairline",
@@ -309,6 +311,8 @@ export const PRODUCT_DATA_2 = {
     },
     {
       title: "200 Softgels",
+      servingSize: 2,
+      servingsPerContainer: 100,
       infoTable: [
         {
           mainStyle: "item hairline",
@@ -523,6 +527,8 @@ export const PRODUCT_DATA_2 = {
     },
     {
       title: "500 Softgels",
+      servingSize: 2,
+      servingsPerContainer: 250,
       infoTable: [
         {
           mainStyle: "item hairline",

@@ -5,6 +5,7 @@ import { MainWrapper } from "./selector.styles";
 export const Selector = ({
   options: initOptions,
   label,
+  getSelectedValue,
   ...others
 }) => {
   const [
@@ -22,7 +23,8 @@ export const Selector = ({
         .fill({ title: "option" })
         .map(({ title }, index) => ({
           title: `${index}-${title}`,
-        }))
+        })),
+    getSelectedValue
   );
   return (
     <MainWrapper

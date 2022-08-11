@@ -40,7 +40,7 @@ export const Product = () => {
                 options={PRODUCT_DATA_2.buyingOptions}
               />
               <div class="product-aside"></div>
-              <Nutrition />
+              <Nutrition nutrition={PRODUCT_DATA_2.nutrition} />
             </div>
           </div>
         </div>
