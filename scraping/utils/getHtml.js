@@ -1,6 +1,11 @@
 import puppeteer from "puppeteer";
 
-export const getHtml = async (url, waitForSelector, timeout) => {
+export const getHtml = async (
+  url,
+  waitForSelector,
+  timeout,
+  customAdditional
+) => {
   const browser = await puppeteer.launch({
     headless: false,
     executablePath:
@@ -11,6 +16,8 @@ export const getHtml = async (url, waitForSelector, timeout) => {
     timeout,
   });
   await page.waitForSelector(waitForSelector, { timeout });
+  
+  customAdditional && (await customAdditional(page));
   const html = await page.evaluate(
     () => document.body.innerHTML
   );

@@ -17,6 +17,11 @@
   "reviews": 1109,
   "deals": [
     {
+      "imgUrl": "https://cdn.muscleandstrength.com/store/media/mnsresized/promos/b1dcf0/98/98/now_omega-3_1_2.jpg",
+      "label": "Buy 1 Get 1 FREE",
+      "desc": "Buy 1 NOW Foods Omega-3 200 Softgels and get 1 absolutely FREE! Limited time only."
+    },
+    {
       "imgUrl": "https://cdn.muscleandstrength.com/store/media/mnsresized/promos/f67674/98/98/omega_3_100_softgels_4.jpg",
       "label": "Buy 1 Get 1 FREE",
       "desc": "Buy 1 NOW Foods Omega-3, 100ct and get 1 absolutely FREE! Limited time only."
@@ -35,11 +40,6 @@
       "imgUrl": "https://cdn.muscleandstrength.com/store/media/mnsresized/promos/f67674/98/98/omega_3_100_softgels_4.jpg",
       "label": "Buy 1 Get 1 FREE",
       "desc": "Buy 1 NOW Foods Omega-3, 100ct and get 1 absolutely FREE! Limited time only."
-    },
-    {
-      "imgUrl": "https://cdn.muscleandstrength.com/store/media/mnsresized/catalog/product/n/o/b1dcf0/98/98/now_omega-3_1_3.jpg",
-      "label": "LIMITED TIME PRICE CUT",
-      "desc": "Buy 1 NOW Foods Omega-3 500ct for only $17.99! Limited time only."
     }
   ],
   "buyingOptions": [
@@ -63,6 +63,608 @@
       "serving": 250,
       "deal": "LIMITED TIME PRICE CUT",
       "options": []
+    }
+  ],
+  "nutrition": [
+    {
+      "title": "100 Softgels",
+      "infoTable": [
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            { "hasChildren": false, "text": "Calories" },
+            { "hasChildren": false, "text": "20" },
+            { "hasChildren": false, "text": "" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                {
+                  "style": "indent",
+                  "text": "Calories from Fat"
+                }
+              ]
+            },
+            { "hasChildren": false, "text": "20" },
+            { "hasChildren": false, "text": "" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            { "hasChildren": false, "text": "Total Fat" },
+            { "hasChildren": false, "text": "2g" },
+            { "hasChildren": false, "text": "3%*" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                { "style": "indent", "text": "Saturated Fat" }
+              ]
+            },
+            { "hasChildren": false, "text": "0.5g" },
+            { "hasChildren": false, "text": "3%*" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                { "style": "indent", "text": "Trans Fat" }
+              ]
+            },
+            { "hasChildren": false, "text": "0g" },
+            { "hasChildren": false, "text": "†" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                {
+                  "style": "indent",
+                  "text": "Polyunsaturated Fat"
+                }
+              ]
+            },
+            { "hasChildren": false, "text": "1g" },
+            { "hasChildren": false, "text": "†" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                {
+                  "style": "indent",
+                  "text": "Monounsaturated Fat"
+                }
+              ]
+            },
+            { "hasChildren": false, "text": "0.5g" },
+            { "hasChildren": false, "text": "†" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            { "hasChildren": false, "text": "Cholesterol" },
+            { "hasChildren": false, "text": "0mg" },
+            { "hasChildren": false, "text": "0%" }
+          ]
+        },
+        {
+          "mainStyle": "thickline-top",
+          "innerIs3Cols": false,
+          "cols": [
+            {
+              "hasChildren": true,
+              "style": "item hairline",
+              "children": [
+                {
+                  "text": "Natural Fish Oil Concentrate",
+                  "style": "col-1"
+                },
+                { "text": "2.0g", "style": "col-2" },
+                { "text": "†", "style": "col-3" }
+              ]
+            }
+          ]
+        },
+        {
+          "mainStyle": "thinline-top",
+          "innerIs3Cols": false,
+          "cols": [
+            {
+              "hasChildren": false,
+              "text": "Omega-3 Fatty Acids:",
+              "style": "item hairline"
+            }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                {
+                  "style": "indent",
+                  "text": "Eicosapentaenoic Acid (EPA)"
+                }
+              ]
+            },
+            { "hasChildren": false, "text": "360mg" },
+            { "hasChildren": false, "text": "†" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                {
+                  "style": "indent",
+                  "text": "Docosahexaenoic Acid (DHA)"
+                }
+              ]
+            },
+            { "hasChildren": false, "text": "240mg" },
+            { "hasChildren": false, "text": "†" }
+          ]
+        },
+        {
+          "mainStyle": "item thickline-top",
+          "innerIs3Cols": false,
+          "cols": [
+            {
+              "hasChildren": false,
+              "text": "* % Daily Value is based on a 2,000 calorie diet. Your daily values may be\n                                        higher or lower based on your calorie needs.\n                                        † Daily Value (DV) not established."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "200 Softgels",
+      "infoTable": [
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            { "hasChildren": false, "text": "Calories" },
+            { "hasChildren": false, "text": "20" },
+            { "hasChildren": false, "text": "" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                {
+                  "style": "indent",
+                  "text": "Calories from Fat"
+                }
+              ]
+            },
+            { "hasChildren": false, "text": "20" },
+            { "hasChildren": false, "text": "" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            { "hasChildren": false, "text": "Total Fat" },
+            { "hasChildren": false, "text": "2g" },
+            { "hasChildren": false, "text": "3%*" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                { "style": "indent", "text": "Saturated Fat" }
+              ]
+            },
+            { "hasChildren": false, "text": "0.5g" },
+            { "hasChildren": false, "text": "3%*" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                { "style": "indent", "text": "Trans Fat" }
+              ]
+            },
+            { "hasChildren": false, "text": "0g" },
+            { "hasChildren": false, "text": "†" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                {
+                  "style": "indent",
+                  "text": "Polyunsaturated Fat"
+                }
+              ]
+            },
+            { "hasChildren": false, "text": "1g" },
+            { "hasChildren": false, "text": "†" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                {
+                  "style": "indent",
+                  "text": "Monounsaturated Fat"
+                }
+              ]
+            },
+            { "hasChildren": false, "text": "0.5g" },
+            { "hasChildren": false, "text": "†" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            { "hasChildren": false, "text": "Cholesterol" },
+            { "hasChildren": false, "text": "0mg" },
+            { "hasChildren": false, "text": "0%" }
+          ]
+        },
+        {
+          "mainStyle": "thickline-top",
+          "innerIs3Cols": false,
+          "cols": [
+            {
+              "hasChildren": true,
+              "style": "item hairline",
+              "children": [
+                {
+                  "text": "Natural Fish Oil Concentrate",
+                  "style": "col-1"
+                },
+                { "text": "2.0g", "style": "col-2" },
+                { "text": "†", "style": "col-3" }
+              ]
+            }
+          ]
+        },
+        {
+          "mainStyle": "thinline-top",
+          "innerIs3Cols": false,
+          "cols": [
+            {
+              "hasChildren": true,
+              "style": "item hairline",
+              "children": [
+                {
+                  "text": "Omega-3 Fatty Acids",
+                  "style": "col-1"
+                },
+                { "text": "680mg", "style": "col-2" },
+                { "text": "†", "style": "col-3" }
+              ]
+            }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                {
+                  "style": "indent",
+                  "text": "Eicosapentaenoic Acid (EPA)"
+                }
+              ]
+            },
+            { "hasChildren": false, "text": "360mg" },
+            { "hasChildren": false, "text": "†" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                {
+                  "style": "indent",
+                  "text": "Docosahexaenoic Acid (DHA)"
+                }
+              ]
+            },
+            { "hasChildren": false, "text": "240mg" },
+            { "hasChildren": false, "text": "†" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                {
+                  "style": "indent",
+                  "text": "Other Omega-3 Fatty Acids"
+                }
+              ]
+            },
+            { "hasChildren": false, "text": "80mg" },
+            { "hasChildren": false, "text": "†" }
+          ]
+        },
+        {
+          "mainStyle": "item thickline-top",
+          "innerIs3Cols": false,
+          "cols": [
+            {
+              "hasChildren": false,
+              "text": "* % Daily Value is based on a 2,000 calorie diet. Your daily values may be\n                                        higher or lower based on your calorie needs.\n                                        † Daily Value (DV) not established."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "500 Softgels",
+      "infoTable": [
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            { "hasChildren": false, "text": "Calories" },
+            { "hasChildren": false, "text": "20" },
+            { "hasChildren": false, "text": "" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                {
+                  "style": "indent",
+                  "text": "Calories from Fat"
+                }
+              ]
+            },
+            { "hasChildren": false, "text": "20" },
+            { "hasChildren": false, "text": "" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            { "hasChildren": false, "text": "Total Fat" },
+            { "hasChildren": false, "text": "2g" },
+            { "hasChildren": false, "text": "3%*" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                { "style": "indent", "text": "Saturated Fat" }
+              ]
+            },
+            { "hasChildren": false, "text": "0.5g" },
+            { "hasChildren": false, "text": "3%*" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                { "style": "indent", "text": "Trans Fat" }
+              ]
+            },
+            { "hasChildren": false, "text": "0g" },
+            { "hasChildren": false, "text": "†" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                {
+                  "style": "indent",
+                  "text": "Polyunsaturated Fat"
+                }
+              ]
+            },
+            { "hasChildren": false, "text": "1g" },
+            { "hasChildren": false, "text": "†" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                {
+                  "style": "indent",
+                  "text": "Monounsaturated Fat"
+                }
+              ]
+            },
+            { "hasChildren": false, "text": "0.5g" },
+            { "hasChildren": false, "text": "†" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            { "hasChildren": false, "text": "Cholesterol" },
+            { "hasChildren": false, "text": "0mg" },
+            { "hasChildren": false, "text": "0%" }
+          ]
+        },
+        {
+          "mainStyle": "thickline-top",
+          "innerIs3Cols": false,
+          "cols": [
+            {
+              "hasChildren": true,
+              "style": "item hairline",
+              "children": [
+                {
+                  "text": "Natural Fish Oil Concentrate",
+                  "style": "col-1"
+                },
+                { "text": "2.0g", "style": "col-2" },
+                { "text": "†", "style": "col-3" }
+              ]
+            }
+          ]
+        },
+        {
+          "mainStyle": "thinline-top",
+          "innerIs3Cols": false,
+          "cols": [
+            {
+              "hasChildren": true,
+              "style": "item hairline",
+              "children": [
+                {
+                  "text": "Omega-3 Fatty Acids",
+                  "style": "col-1"
+                },
+                { "text": "680mg", "style": "col-2" },
+                { "text": "†", "style": "col-3" }
+              ]
+            }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                {
+                  "style": "indent",
+                  "text": "Eicosapentaenoic Acid (EPA)"
+                }
+              ]
+            },
+            { "hasChildren": false, "text": "360mg" },
+            { "hasChildren": false, "text": "†" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                {
+                  "style": "indent",
+                  "text": "Docosahexaenoic Acid (DHA)"
+                }
+              ]
+            },
+            { "hasChildren": false, "text": "240mg" },
+            { "hasChildren": false, "text": "†" }
+          ]
+        },
+        {
+          "mainStyle": "item hairline",
+          "innerIs3Cols": true,
+          "cols": [
+            {
+              "hasChildren": true,
+              "children": [
+                {
+                  "style": "indent",
+                  "text": "Other Omega-3 Fatty Acids"
+                }
+              ]
+            },
+            { "hasChildren": false, "text": "80mg" },
+            { "hasChildren": false, "text": "†" }
+          ]
+        },
+        {
+          "mainStyle": "item thickline-top",
+          "innerIs3Cols": false,
+          "cols": [
+            {
+              "hasChildren": false,
+              "text": "* % Daily Value is based on a 2,000 calorie diet. Your daily values may be\n                                        higher or lower based on your calorie needs.\n                                        † Daily Value (DV) not established."
+            }
+          ]
+        }
+      ]
     }
   ]
 }

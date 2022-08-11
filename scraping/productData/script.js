@@ -8,6 +8,33 @@ import { scrapFiled } from "../loginData/scrapFiled.js";
 import { scrapProductHeader } from "./scrapProductHeader.js";
 import { scrapDeals } from "./scrapDeals.js";
 import { scrapBuyingOptions } from "./scrapBuyingOptions.js";
+import { scrapNutrition } from "./scrapNutrition.js";
+
+const mainSelectorNutrition =
+  "#main-wrap .aside .product-nutrition";
+const closeModalSelector =
+  " body > div.ui-dialog.shipping-modal.ui-widget.ui-widget-content.ui-front.ui-draggable.ui-resizable > div.ui-dialog-titlebar.ui-corner-all.ui-widget-header.ui-helper-clearfix.ui-draggable-handle > button";
+const customAdditional = async (page) => {
+  await page.waitForTimeout(1000 * 10);
+  try {
+    await page.click(closeModalSelector);
+  } catch (error) {
+    console.log("modal didn't open");
+  }
+
+  await page.waitForTimeout(1000 * 3);
+  await page.click(`${mainSelectorNutrition} .sod_select`);
+  await page.waitForTimeout(1000 * 3);
+  try {
+    await page.click(
+      `${mainSelectorNutrition} .sod_select .sod_list span:nth-child(2)`
+    );
+  } catch (error) {
+    console.log("doesn't have more than one option");
+  }
+
+  await page.waitForTimeout(1000 * 10);
+};
 
 export const getProductData = async (url) => {
   const __filename = fileURLToPath(import.meta.url);
@@ -24,7 +51,12 @@ export const getProductData = async (url) => {
 
   const waitForSelector = "#main-wrap";
 
-  // const html = await getHtml(url, waitForSelector, timeout);
+  // const html = await getHtml(
+  //   url,
+  //   waitForSelector,
+  //   timeout,
+  //   customAdditional
+  // );
 
   // fs.writeFile(mainPageHtml2, html, function (err) {
   //   if (err) throw err;
@@ -56,6 +88,12 @@ export const getProductData = async (url) => {
   );
 
   productData.buyingOptions = buyingOptions;
+
+  const nutrition = scrapNutrition(
+    $(mainSelectorNutrition).toString()
+  );
+
+  productData.nutrition = nutrition;
 
   // console.log(productData);
 
