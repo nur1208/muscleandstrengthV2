@@ -12,6 +12,7 @@ import {
   Nutrition,
   PerksFooter,
   ProductHeader,
+  ProductInfo,
   SecureTransaction,
 } from "../../components";
 import {
@@ -41,6 +42,9 @@ export const Product = () => {
               />
               <div class="product-aside"></div>
               <Nutrition nutrition={PRODUCT_DATA.nutrition} />
+            </div>
+            <div class="main-content continued">
+              <ProductInfo />
             </div>
           </div>
         </div>

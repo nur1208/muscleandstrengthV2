@@ -30,3 +30,4 @@ export * from "./modal";
 export { Deals } from "./deals/Deals";
 export { BuyingOptions } from "./buyingOptions/BuyingOptions";
 export { Nutrition } from "./nutrition/Nutrition";
+export { ProductInfo } from "./productInfo/ProductInfo";

@@ -96,7 +96,7 @@
 - {DONE} make Nutrition component more dynamic and scrap servingSize and servingsPerContainer params and update Selector and useSelect
 - {DONE} test Nutrition component and scraping script
         - {DONE} fix getSelectedValue not function error 
-- {TODO} create ProductInfo component
+- {DONE} create ProductInfo component
 - {TODO} scrap productInfo data
 - {TODO} make ProductInfo component more dynamic
 
