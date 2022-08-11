@@ -97,7 +97,7 @@
 - {DONE} test Nutrition component and scraping script
         - {DONE} fix getSelectedValue not function error 
 - {DONE} create ProductInfo component
-- {TODO} scrap productInfo data
+- {DONE} scrap productInfo data
 - {TODO} make ProductInfo component more dynamic
 
 

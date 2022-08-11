@@ -39,6 +39,7 @@ export const MainWrapper = styled.div`
     margin: 0 -15px;
   }
 
+  .section-inner-wrap h4,
   .section-inner-wrap h3 {
     line-height: 1.3em;
     margin: 0;
@@ -47,6 +48,10 @@ export const MainWrapper = styled.div`
 
   .section-inner-wrap h3 {
     font-size: 2.25em;
+  }
+
+  .section-inner-wrap h4 {
+    font-size: 1.5em;
   }
   @media (min-width: 600px) {
     .section-inner-wrap img.full-width-mobile {

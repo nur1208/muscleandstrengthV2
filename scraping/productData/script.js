@@ -9,6 +9,7 @@ import { scrapProductHeader } from "./scrapProductHeader.js";
 import { scrapDeals } from "./scrapDeals.js";
 import { scrapBuyingOptions } from "./scrapBuyingOptions.js";
 import { scrapNutrition } from "./scrapNutrition.js";
+import { scrapProductInfo } from "./scrapProductInfo.js";
 
 const mainSelectorNutrition =
   "#main-wrap .aside .product-nutrition";
@@ -51,20 +52,20 @@ export const getProductData = async (url) => {
 
   const waitForSelector = "#main-wrap";
 
-  const html = await getHtml(
-    url,
-    waitForSelector,
-    timeout,
-    customAdditional
-  );
+  // const html = await getHtml(
+  //   url,
+  //   waitForSelector,
+  //   timeout,
+  //   customAdditional
+  // );
 
-  fs.writeFile(mainPageHtml2, html, function (err) {
-    if (err) throw err;
-    console.log("Saved!");
-  });
+  // fs.writeFile(mainPageHtml2, html, function (err) {
+  //   if (err) throw err;
+  //   console.log("Saved!");
+  // });
 
   // read the html body from the file system (this is very faster then reading it from the internet)
-  // const html = await promisify(fs.readFile)(mainPageHtml2);
+  const html = await promisify(fs.readFile)(mainPageHtml2);
 
   let $ = cheerio.load(html.toString());
 
@@ -95,7 +96,13 @@ export const getProductData = async (url) => {
 
   productData.nutrition = nutrition;
 
-  // console.log(productData);
+  const mainSelectorProductInfo =
+    "#main-wrap .main-content.continued .std";
+
+  const productInfo = scrapProductInfo(
+    $(mainSelectorProductInfo).toString()
+  );
+  productData.productInfo = productInfo;
 
   fs.writeFile(
     mainDataJson2,
