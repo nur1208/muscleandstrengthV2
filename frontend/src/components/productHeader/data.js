@@ -17,7 +17,7 @@ export const PRODUCT_DATA = {
     "KETO-Approved whey protein",
   ],
   ratingPercentage: 91,
-  reviews: 179,
+  reviews: 181,
   deals: [
     {
       imgUrl:
@@ -40,6 +40,843 @@ export const PRODUCT_DATA = {
         { title: "Strawberry Ice Cream" },
         { title: "Vanilla Ice Cream" },
       ],
+    },
+  ],
+  nutrition: [
+    {
+      title: "5lbs Chocolate Ice Cream",
+      servingSize: 1,
+      servingsPerContainer: 49,
+      infoTable: [
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Calories" },
+            { hasChildren: false, text: "210" },
+            { hasChildren: false, text: "" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Total Fat" },
+            { hasChildren: false, text: "9g" },
+            { hasChildren: false, text: "13%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: true,
+              children: [
+                { style: "indent", text: "Saturated Fat" },
+              ],
+            },
+            { hasChildren: false, text: "4g" },
+            { hasChildren: false, text: "13%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: true,
+              children: [{ style: "indent", text: "Trans Fat" }],
+            },
+            { hasChildren: false, text: "0g" },
+            { hasChildren: false, text: "0%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Cholesterol" },
+            { hasChildren: false, text: "225mg" },
+            { hasChildren: false, text: "75%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Sodium" },
+            { hasChildren: false, text: "150mg" },
+            { hasChildren: false, text: "6%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: false,
+              text: "Total Carbohydrates",
+            },
+            { hasChildren: false, text: "3g" },
+            { hasChildren: false, text: "1%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: true,
+              children: [
+                { style: "indent", text: "Dietary Fiber" },
+              ],
+            },
+            { hasChildren: false, text: "0.5g" },
+            { hasChildren: false, text: "2%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: true,
+              children: [{ style: "indent", text: "Sugars" }],
+            },
+            { hasChildren: false, text: "2g" },
+            { hasChildren: false, text: "0%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Protein" },
+            { hasChildren: false, text: "30g" },
+            { hasChildren: false, text: "60%" },
+          ],
+        },
+        {
+          mainStyle: "thickline-top",
+          innerIs3Cols: false,
+          cols: [
+            {
+              hasChildren: true,
+              style: "item hairline",
+              children: [
+                { text: "Calcium", style: "col-1" },
+                { text: "150mg", style: "col-2" },
+                { text: "14%", style: "col-3" },
+              ],
+            },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Iron" },
+            { hasChildren: false, text: "0.8mg" },
+            { hasChildren: false, text: "6%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Potassium" },
+            { hasChildren: false, text: "175mg" },
+            { hasChildren: false, text: "5%" },
+          ],
+        },
+        {
+          mainStyle: "item thickline-top",
+          innerIs3Cols: false,
+          cols: [
+            {
+              hasChildren: false,
+              text: "* % Daily Value is based on a 2,000 calorie diet. Your daily values may be\n                                        higher or lower based on your calorie needs.\n                                        † Daily Value (DV) not established.",
+            },
+          ],
+        },
+      ],
+      ingredients:
+        "Whey Protein Concentrate, Cocoa, Natural Flavor, Sodium Citrate, Sunflower Oil, Sucralose, Cellulose Gum.",
+      allergenWarning:
+        "Whey (Milk). Produced in a facility that also handles Sesame and Lecithin (Soybean).",
+      directions:
+        "Mix or shake 46 g‡ (~1 scoop) of APEX in 8 fl. oz. (1 cup) of cold water or your favorite beverage. Adjust amount of liquid to suit taste, but less is more!",
+      warning:
+        "Consult a healthcare practitioner prior to use if you are pregnant or breastfeeding. Ensure to drink enough fluid before, during and after exercise. Use this product as a food supplement only. Do not use for weight reduction. KEEP OUT OF REACH OF CHILDREN.",
+    },
+    {
+      title: "5lbs Chocolate Peanut Butter Ice Cream",
+      servingSize: 1,
+      servingsPerContainer: 49,
+      infoTable: [
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Calories" },
+            { hasChildren: false, text: "210" },
+            { hasChildren: false, text: "" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Total Fat" },
+            { hasChildren: false, text: "9g" },
+            { hasChildren: false, text: "13%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: true,
+              children: [
+                { style: "indent", text: "Saturated Fat" },
+              ],
+            },
+            { hasChildren: false, text: "4g" },
+            { hasChildren: false, text: "21%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: true,
+              children: [{ style: "indent", text: "Trans Fat" }],
+            },
+            { hasChildren: false, text: "0g" },
+            { hasChildren: false, text: "0%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Cholesterol" },
+            { hasChildren: false, text: "225mg" },
+            { hasChildren: false, text: "75%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Sodium" },
+            { hasChildren: false, text: "150mg" },
+            { hasChildren: false, text: "6%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: false,
+              text: "Total Carbohydrates",
+            },
+            { hasChildren: false, text: "3g" },
+            { hasChildren: false, text: "1%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: true,
+              children: [
+                { style: "indent", text: "Dietary Fiber" },
+              ],
+            },
+            { hasChildren: false, text: "0.5g" },
+            { hasChildren: false, text: "2%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: true,
+              children: [{ style: "indent", text: "Sugars" }],
+            },
+            { hasChildren: false, text: "2g" },
+            { hasChildren: false, text: "0%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Protein" },
+            { hasChildren: false, text: "30g" },
+            { hasChildren: false, text: "60%" },
+          ],
+        },
+        {
+          mainStyle: "thickline-top",
+          innerIs3Cols: false,
+          cols: [
+            {
+              hasChildren: true,
+              style: "item hairline",
+              children: [
+                { text: "Calcium", style: "col-1" },
+                { text: "150mg", style: "col-2" },
+                { text: "14%", style: "col-3" },
+              ],
+            },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Iron" },
+            { hasChildren: false, text: "0.8mg" },
+            { hasChildren: false, text: "6%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Potassium" },
+            { hasChildren: false, text: "175mg" },
+            { hasChildren: false, text: "5%" },
+          ],
+        },
+        {
+          mainStyle: "item thickline-top",
+          innerIs3Cols: false,
+          cols: [
+            {
+              hasChildren: false,
+              text: "* % Daily Value is based on a 2,000 calorie diet. Your daily values may be\n                                        higher or lower based on your calorie needs.\n                                        † Daily Value (DV) not established.",
+            },
+          ],
+        },
+      ],
+      ingredients:
+        "Whey Protein Concentrate, Cocoa, Natural and Artificial Flavor, Sodium Citrate, Sunflower Oil, Sucralose, Cellulose Gum.",
+      allergenWarning:
+        "Whey (Milk). Produced in a facility that also handles Sesame and Lecithin (Soybean).",
+      directions:
+        "Mix or shake 46 g‡ (~1 scoop) of APEX in 8 fl. oz. (1 cup) of cold water or your favorite beverage. Adjust amount of liquid to suit taste, but less is more!",
+      warning:
+        "Consult a healthcare practitioner prior to use if you are pregnant or breastfeeding. Ensure to drink enough fluid before, during and after exercise. Use this product as a food supplement only. Do not use for weight reduction. KEEP OUT OF REACH OF CHILDREN.",
+    },
+    {
+      title: "5lbs Cookies 'n Cream Ice Cream",
+      servingSize: 1,
+      servingsPerContainer: 49,
+      infoTable: [
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Calories" },
+            { hasChildren: false, text: "210" },
+            { hasChildren: false, text: "" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Total Fat" },
+            { hasChildren: false, text: "9g" },
+            { hasChildren: false, text: "13%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: true,
+              children: [
+                { style: "indent", text: "Saturated Fat" },
+              ],
+            },
+            { hasChildren: false, text: "4g" },
+            { hasChildren: false, text: "21%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: true,
+              children: [{ style: "indent", text: "Trans Fat" }],
+            },
+            { hasChildren: false, text: "0g" },
+            { hasChildren: false, text: "0%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Cholesterol" },
+            { hasChildren: false, text: "225mg" },
+            { hasChildren: false, text: "75%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Sodium" },
+            { hasChildren: false, text: "150mg" },
+            { hasChildren: false, text: "6%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: false,
+              text: "Total Carbohydrates",
+            },
+            { hasChildren: false, text: "2g" },
+            { hasChildren: false, text: "1%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: true,
+              children: [
+                { style: "indent", text: "Dietary Fiber" },
+              ],
+            },
+            { hasChildren: false, text: "0g" },
+            { hasChildren: false, text: "0%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: true,
+              children: [{ style: "indent", text: "Sugars" }],
+            },
+            { hasChildren: false, text: "2g" },
+            { hasChildren: false, text: "0%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Protein" },
+            { hasChildren: false, text: "30g" },
+            { hasChildren: false, text: "60%" },
+          ],
+        },
+        {
+          mainStyle: "thickline-top",
+          innerIs3Cols: false,
+          cols: [
+            {
+              hasChildren: true,
+              style: "item hairline",
+              children: [
+                { text: "Calcium", style: "col-1" },
+                { text: "150mg", style: "col-2" },
+                { text: "14%", style: "col-3" },
+              ],
+            },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Iron" },
+            { hasChildren: false, text: "0mg" },
+            { hasChildren: false, text: "0%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Potassium" },
+            { hasChildren: false, text: "160mg" },
+            { hasChildren: false, text: "5%" },
+          ],
+        },
+        {
+          mainStyle: "item thickline-top",
+          innerIs3Cols: false,
+          cols: [
+            {
+              hasChildren: false,
+              text: "* % Daily Value is based on a 2,000 calorie diet. Your daily values may be\n                                        higher or lower based on your calorie needs.\n                                        † Daily Value (DV) not established.",
+            },
+          ],
+        },
+      ],
+      ingredients:
+        "Whey Protein Concentrate, Natural and Artiﬁcial Flavor, Cocoa, Sunflower Oil, Sodium Citrate, Sucralose, Cellulose Gum.",
+      allergenWarning:
+        "Whey (Milk). Produced in a facility that also handles Sesame and Lecithin (Soybean).",
+      directions:
+        "Mix or shake 46 g‡ (~1 scoop) of APEX in 8 fl. oz. (1 cup) of cold water or your favorite beverage. Adjust amount of liquid to suit taste, but less is more!",
+      warning:
+        "Consult a healthcare practitioner prior to use if you are pregnant or breastfeeding. Ensure to drink enough fluid before, during and after exercise. Use this product as a food supplement only. Do not use for weight reduction. KEEP OUT OF REACH OF CHILDREN.",
+    },
+    {
+      title: "5lbs Strawberry Ice Cream",
+      servingSize: 1,
+      servingsPerContainer: 49,
+      infoTable: [
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Calories" },
+            { hasChildren: false, text: "210" },
+            { hasChildren: false, text: "" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Total Fat" },
+            { hasChildren: false, text: "9g" },
+            { hasChildren: false, text: "13%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: true,
+              children: [
+                { style: "indent", text: "Saturated Fat" },
+              ],
+            },
+            { hasChildren: false, text: "4g" },
+            { hasChildren: false, text: "21%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: true,
+              children: [{ style: "indent", text: "Trans Fat" }],
+            },
+            { hasChildren: false, text: "0g" },
+            { hasChildren: false, text: "0%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Cholesterol" },
+            { hasChildren: false, text: "225mg" },
+            { hasChildren: false, text: "75%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Sodium" },
+            { hasChildren: false, text: "150mg" },
+            { hasChildren: false, text: "6%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: false,
+              text: "Total Carbohydrates",
+            },
+            { hasChildren: false, text: "2g" },
+            { hasChildren: false, text: "1%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: true,
+              children: [
+                { style: "indent", text: "Dietary Fiber" },
+              ],
+            },
+            { hasChildren: false, text: "0g" },
+            { hasChildren: false, text: "0%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: true,
+              children: [{ style: "indent", text: "Sugars" }],
+            },
+            { hasChildren: false, text: "2g" },
+            { hasChildren: false, text: "0%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Protein" },
+            { hasChildren: false, text: "30g" },
+            { hasChildren: false, text: "60%" },
+          ],
+        },
+        {
+          mainStyle: "thickline-top",
+          innerIs3Cols: false,
+          cols: [
+            {
+              hasChildren: true,
+              style: "item hairline",
+              children: [
+                { text: "Calcium", style: "col-1" },
+                { text: "150mg", style: "col-2" },
+                { text: "14%", style: "col-3" },
+              ],
+            },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Iron" },
+            { hasChildren: false, text: "0mg" },
+            { hasChildren: false, text: "0%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Potassium" },
+            { hasChildren: false, text: "160mg" },
+            { hasChildren: false, text: "5%" },
+          ],
+        },
+        {
+          mainStyle: "item thickline-top",
+          innerIs3Cols: false,
+          cols: [
+            {
+              hasChildren: false,
+              text: "* % Daily Value is based on a 2,000 calorie diet. Your daily values may be\n                                        higher or lower based on your calorie needs.\n                                        † Daily Value (DV) not established.",
+            },
+          ],
+        },
+      ],
+      ingredients:
+        "Whey Protein Concentrate, Natural Flavor, Citric Acid, Beet Powder (Natural Flavor), Sunflower Oil, Cellulose Gum, Sucralose.",
+      allergenWarning:
+        "Whey (Milk). Produced in a facility that also handles Sesame and Lecithin (Soybean).",
+      directions:
+        "Mix or shake 46 g (~1 scoop) of APEX in 8 fl. oz. (1 cup) of cold water or your favorite beverage. Adjust amount of liquid to suit taste, but less is more!",
+      warning:
+        "Consult a healthcare practitioner prior to use if you are pregnant or breastfeeding. Ensure to drink enough fluid before, during and after exercise. Use this product as a food supplement only. Do not use for weight reduction. KEEP OUT OF REACH OF CHILDREN.",
+    },
+    {
+      title: "5lbs Vanilla Ice Cream",
+      servingSize: 1,
+      servingsPerContainer: 49,
+      infoTable: [
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Calories" },
+            { hasChildren: false, text: "210" },
+            { hasChildren: false, text: "" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Total Fat" },
+            { hasChildren: false, text: "9g" },
+            { hasChildren: false, text: "13%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: true,
+              children: [
+                { style: "indent", text: "Saturated Fat" },
+              ],
+            },
+            { hasChildren: false, text: "4g" },
+            { hasChildren: false, text: "21%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: true,
+              children: [{ style: "indent", text: "Trans Fat" }],
+            },
+            { hasChildren: false, text: "0g" },
+            { hasChildren: false, text: "0%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Cholesterol" },
+            { hasChildren: false, text: "225mg" },
+            { hasChildren: false, text: "75%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Sodium" },
+            { hasChildren: false, text: "150mg" },
+            { hasChildren: false, text: "6%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: false,
+              text: "Total Carbohydrates",
+            },
+            { hasChildren: false, text: "2g" },
+            { hasChildren: false, text: "1%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: true,
+              children: [
+                { style: "indent", text: "Dietary Fiber" },
+              ],
+            },
+            { hasChildren: false, text: "0g" },
+            { hasChildren: false, text: "0%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            {
+              hasChildren: true,
+              children: [{ style: "indent", text: "Sugars" }],
+            },
+            { hasChildren: false, text: "2g" },
+            { hasChildren: false, text: "0%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Protein" },
+            { hasChildren: false, text: "30g" },
+            { hasChildren: false, text: "60%" },
+          ],
+        },
+        {
+          mainStyle: "thickline-top",
+          innerIs3Cols: false,
+          cols: [
+            {
+              hasChildren: true,
+              style: "item hairline",
+              children: [
+                { text: "Calcium", style: "col-1" },
+                { text: "150mg", style: "col-2" },
+                { text: "14%", style: "col-3" },
+              ],
+            },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Iron" },
+            { hasChildren: false, text: "0mg" },
+            { hasChildren: false, text: "0%" },
+          ],
+        },
+        {
+          mainStyle: "item hairline",
+          innerIs3Cols: true,
+          cols: [
+            { hasChildren: false, text: "Potassium" },
+            { hasChildren: false, text: "160mg" },
+            { hasChildren: false, text: "5%" },
+          ],
+        },
+        {
+          mainStyle: "item thickline-top",
+          innerIs3Cols: false,
+          cols: [
+            {
+              hasChildren: false,
+              text: "* % Daily Value is based on a 2,000 calorie diet. Your daily values may be\n                                        higher or lower based on your calorie needs.\n                                        † Daily Value (DV) not established.",
+            },
+          ],
+        },
+      ],
+      ingredients:
+        "Whey Protein Concentrate, Natural and Artiﬁcial Flavor, Sunflower Oil, Sodium Citrate, Sucralose, Cellulose Gum.",
+      allergenWarning:
+        "Whey (Milk). Produced in a facility that also handles Sesame and Lecithin (Soybean).",
+      directions:
+        "Mix or shake 46 g‡ (~1 scoop) of APEX in 8 fl. oz. (1 cup) of cold water or your favorite beverage. Adjust amount of liquid to suit taste, but less is more!",
+      warning:
+        "Consult a healthcare practitioner prior to use if you are pregnant or breastfeeding. Ensure to drink enough fluid before, during and after exercise. Use this product as a food supplement only. Do not use for weight reduction. KEEP OUT OF REACH OF CHILDREN.",
     },
   ],
 };

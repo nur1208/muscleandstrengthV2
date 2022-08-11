@@ -22,11 +22,14 @@ export const useSelect = (initOptions, getSelectedValue) => {
     setSelectedValue(
       newOptions.find((option) => option.isSelected)?.title
     );
-    getSelectedValue({
-      value: newOptions.find((option) => option.isSelected)
-        ?.title,
-      index: newOptions.findIndex((option) => option.isSelected),
-    });
+    getSelectedValue &&
+      getSelectedValue({
+        value: newOptions.find((option) => option.isSelected)
+          ?.title,
+        index: newOptions.findIndex(
+          (option) => option.isSelected
+        ),
+      });
     setOptions(newOptions);
   };
 

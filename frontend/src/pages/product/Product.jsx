@@ -31,16 +31,16 @@ export const Product = () => {
           <NavbarInfo />
           <div id="main-wrap">
             <div className="main-content">
-              <ProductHeader {...PRODUCT_DATA_2} />
+              <ProductHeader {...PRODUCT_DATA} />
               <FeaturesList />
-              <Deals deals={PRODUCT_DATA_2.deals} />
+              <Deals deals={PRODUCT_DATA.deals} />
             </div>
             <div class="aside aside-after">
               <BuyingOptions
-                options={PRODUCT_DATA_2.buyingOptions}
+                options={PRODUCT_DATA.buyingOptions}
               />
               <div class="product-aside"></div>
-              <Nutrition nutrition={PRODUCT_DATA_2.nutrition} />
+              <Nutrition nutrition={PRODUCT_DATA.nutrition} />
             </div>
           </div>
         </div>
