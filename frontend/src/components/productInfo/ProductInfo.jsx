@@ -1,5 +1,6 @@
 import React from "react";
 import { SectionTitle } from "../sectionTitle/SectionTitle";
+import { YoutubeVideo } from "../youtubeVideo/YoutubeVideo";
 import { MainWrapper } from "./productInfo.styles";
 
 export const ProductInfo = ({ productInfo }) => {
@@ -8,6 +9,7 @@ export const ProductInfo = ({ productInfo }) => {
       <SectionTitle title="Product Information" />
       <div class="section-inner-wrap">
         <div class="std">
+          <YoutubeVideo videoId="KR4HfFBCqiQ" />
           {productInfo.map(
             ({ type, hasChildren, text, child }) =>
               type === "p" ? (
