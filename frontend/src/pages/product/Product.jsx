@@ -44,7 +44,9 @@ export const Product = () => {
               <Nutrition nutrition={PRODUCT_DATA.nutrition} />
             </div>
             <div class="main-content continued">
-              <ProductInfo />
+              <ProductInfo
+                productInfo={PRODUCT_DATA.productInfo}
+              />
             </div>
           </div>
         </div>

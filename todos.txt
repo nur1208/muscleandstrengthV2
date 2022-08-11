@@ -98,8 +98,10 @@
         - {DONE} fix getSelectedValue not function error 
 - {DONE} create ProductInfo component
 - {DONE} scrap productInfo data
-- {TODO} make ProductInfo component more dynamic
-
+- {DONE} make ProductInfo component more dynamic
+- {TODO} create YoutubeVideo component
+- {TODO} scrap productInfo data part 2
+- {TODO} make ProductInfo component more dynamic part 2
 
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
