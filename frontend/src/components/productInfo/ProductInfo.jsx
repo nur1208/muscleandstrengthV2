@@ -4,16 +4,28 @@ import { YoutubeVideo } from "../youtubeVideo/YoutubeVideo";
 import { MainWrapper } from "./productInfo.styles";
 
 export const ProductInfo = ({ productInfo }) => {
+  const setMainStyle = (mainStyle) =>
+    mainStyle ? mainStyle : undefined;
   return (
-    <MainWrapper>
+    <MainWrapper
+      additionalStyle={
+        productInfo[0].type === "style" && productInfo[0].style
+      }
+    >
       <SectionTitle title="Product Information" />
       <div class="section-inner-wrap">
         <div class="std">
-          <YoutubeVideo videoId="KR4HfFBCqiQ" />
           {productInfo.map(
-            ({ type, hasChildren, text, child }) =>
+            ({
+              type,
+              hasChildren,
+              text,
+              child,
+              mainStyle,
+              videId,
+            }) =>
               type === "p" ? (
-                <p>
+                <p class={setMainStyle(mainStyle)}>
                   {hasChildren && child.type === "img" ? (
                     <img
                       class={`${
@@ -28,10 +40,18 @@ export const ProductInfo = ({ productInfo }) => {
                     text
                   )}
                 </p>
+              ) : type === "ul" ? (
+                <ul class={setMainStyle(mainStyle)}>
+                  {hasChildren && child.type === "li"
+                    ? child.lis.map((li) => <li>{li}</li>)
+                    : text}
+                </ul>
               ) : type === "h3" ? (
-                <h3>{text}</h3>
+                <h3 class={setMainStyle(mainStyle)}>{text}</h3>
               ) : type === "h4" ? (
-                <h4>{text}</h4>
+                <h4 class={setMainStyle(mainStyle)}>{text}</h4>
+              ) : type === "video" ? (
+                <YoutubeVideo videoId={videId} />
               ) : (
                 <></>
               )

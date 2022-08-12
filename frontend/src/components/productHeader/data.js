@@ -1020,8 +1020,14 @@ export const PRODUCT_DATA_2 = {
     "Cardio Support*",
   ],
   ratingPercentage: 97,
-  reviews: 1109,
+  reviews: 1110,
   deals: [
+    {
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/media/mnsresized/catalog/product/n/o/b1dcf0/98/98/now_omega-3_1_3.jpg",
+      label: "LIMITED TIME PRICE CUT",
+      desc: "Buy 1 NOW Foods Omega-3 500ct for only $17.99! Limited time only.",
+    },
     {
       imgUrl:
         "https://cdn.muscleandstrength.com/store/media/mnsresized/promos/b1dcf0/98/98/now_omega-3_1_2.jpg",
@@ -1045,12 +1051,6 @@ export const PRODUCT_DATA_2 = {
         "https://cdn.muscleandstrength.com/store/media/mnsresized/promos/b1dcf0/98/98/now_omega-3_1_2.jpg",
       label: "Buy 1 Get 1 FREE",
       desc: "Buy 1 NOW Foods Omega-3 200 Softgels and get 1 absolutely FREE! Limited time only.",
-    },
-    {
-      imgUrl:
-        "https://cdn.muscleandstrength.com/store/media/mnsresized/promos/f67674/98/98/omega_3_100_softgels_4.jpg",
-      label: "Buy 1 Get 1 FREE",
-      desc: "Buy 1 NOW Foods Omega-3, 100ct and get 1 absolutely FREE! Limited time only.",
     },
   ],
   buyingOptions: [
@@ -1700,6 +1700,90 @@ export const PRODUCT_DATA_2 = {
         "As a dietary supplement, take 2 softgels 1 to 3 times daily with food.",
       warning:
         "For adults only. Consult physician if pregnant/nursing, taking medication, or have a medical condition. Keep out of reach of children.",
+    },
+  ],
+  productInfo: [
+    { type: "style", style: ".noworange {color:#eb6f29;}" },
+    { type: "video", videId: "KR4HfFBCqiQ" },
+    {
+      type: "h3",
+      mainStyle: "hf hf--bold noworange",
+      hasChildren: false,
+      text: "Molecularly Distilled Omega-3 180 EPA/120 DHA Fish Oil",
+    },
+    {
+      type: "ul",
+      hasChildren: true,
+      child: {
+        type: "li",
+        lis: [
+          "CARDIO SUPPORT*: Take 2 NOW® Omega-3 1,000 mg softgels a day to help support health.*",
+          "1,000 mg FISH OIL (180 EPA/120 DHA) PER SOFTGEL: Made of natural fish oil concentrate manufactured under strict quality control standards.",
+          "CERTIFICATIONS/CLASSIFICATIONS: Non-GMO, Quality GMP Assured, Kosher (contains gelatin)",
+          "GMP Quality Assured: NPA A-rated GMP certification means that every aspect of the NOW® manufacturing process has been examined, including our laboratory/testing methods (for stability, potency, and product formulation).",
+          "Packaged in the USA by a family owned and operated company since 1968.",
+        ],
+      },
+    },
+    {
+      type: "p",
+      hasChildren: true,
+      child: {
+        type: "img",
+        imgUrl:
+          "https://cdn.muscleandstrength.com/store/media/wysiwyg/Brands/N/Omega-3_Header_Banner_1.jpg",
+        alt: "1 bottle CoQ10, 1 bottle Omega 3, 1 bottle Ultra Omega 3 with Capsules by NOW FOODS",
+        isFullWidthMobile: false,
+      },
+    },
+    {
+      type: "p",
+      hasChildren: false,
+      text: "NOW® Omega-3 1,000 mg softgels are made of natural fish oil concentrate manufactured under strict quality control standards. This supplement is tested to be free of potentially harmful levels of contaminants such as PCBs, dioxins, mercury, and other heavy metals. Take 2 softgels twice daily with food.*",
+    },
+    {
+      type: "p",
+      hasChildren: true,
+      child: {
+        type: "img",
+        imgUrl:
+          "https://cdn.muscleandstrength.com/store/media/wysiwyg/Brands/N/Happy_Healthy_Now.jpg",
+        alt: "LIve Happy Healthy NOW with NOW FOODS Brand Logo and flying capsules and Tablets",
+        isFullWidthMobile: false,
+      },
+    },
+    {
+      type: "p",
+      hasChildren: true,
+      child: {
+        type: "img",
+        imgUrl:
+          "https://cdn.muscleandstrength.com/store/media/wysiwyg/Brands/N/Family_Footer.jpg",
+        alt: "Image showing 6 members family with NOW's Nutritional supplements benefits",
+        isFullWidthMobile: false,
+      },
+    },
+    {
+      type: "p",
+      hasChildren: true,
+      child: {
+        type: "img",
+        imgUrl:
+          "https://cdn.muscleandstrength.com/store/media/wysiwyg/Brands/N/NOW_Mission_Statement.jpg",
+        alt: "NOW FOODS LOGO : LIVE HAPPY, LIVE HEALTHY, LIVE NOW with NOW FOODS COMPANY History and mission description",
+        isFullWidthMobile: false,
+      },
+    },
+    {
+      type: "p",
+      hasChildren: true,
+      child: {
+        type: "img",
+        imgUrl:
+          "https://cdn.muscleandstrength.com/store/media/wysiwyg/Brands/N/NOW_Core_Values.jpg",
+        alt: "NOW's Core values: Quality, Family Owned and Operated, Sustainability, Charitable Giving",
+        isFullWidthMobile: false,
+      },
     },
   ],
 };

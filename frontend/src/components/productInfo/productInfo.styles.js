@@ -53,6 +53,12 @@ export const MainWrapper = styled.div`
   .section-inner-wrap h4 {
     font-size: 1.5em;
   }
+
+  h3.hf {
+    margin: 0;
+    padding: 0;
+  }
+
   @media (min-width: 600px) {
     .section-inner-wrap img.full-width-mobile {
       max-width: 100%;
@@ -64,4 +70,6 @@ export const MainWrapper = styled.div`
       padding: 25px;
     }
   }
+
+  ${({ additionalStyle }) => additionalStyle}
 `;
