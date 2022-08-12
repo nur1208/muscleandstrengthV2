@@ -10,6 +10,7 @@ import { scrapDeals } from "./scrapDeals.js";
 import { scrapBuyingOptions } from "./scrapBuyingOptions.js";
 import { scrapNutrition } from "./scrapNutrition.js";
 import { scrapProductInfo } from "./scrapProductInfo.js";
+import { scrapReviewsOverall } from "./scrapReviewsOverall.js";
 
 const mainSelectorNutrition =
   "#main-wrap .aside .product-nutrition";
@@ -103,6 +104,14 @@ export const getProductData = async (url) => {
     $(mainSelectorProductInfo).toString()
   );
   productData.productInfo = productInfo;
+
+  const mainSelectorRO =
+    "#main-wrap .main-content.continued .product-reviews-section";
+
+  const reviewsOverall = scrapReviewsOverall(
+    $(mainSelectorRO).toString()
+  );
+  productData.reviewsOverall = reviewsOverall;
 
   fs.writeFile(
     mainDataJson2,
