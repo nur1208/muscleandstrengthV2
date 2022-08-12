@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button } from "../button/Button";
 import { SectionTitle } from "../sectionTitle/SectionTitle";
 import { Selector } from "../selector/Selector";
 import { MainWrapper } from "./nutrition..styles";
@@ -8,8 +9,9 @@ export const Nutrition = ({ nutrition }) => {
     index: 0,
     value: "",
   });
+  const [isShowAll, setIsShowAll] = useState(false);
   return (
-    <MainWrapper>
+    <MainWrapper isShowAll={isShowAll}>
       <SectionTitle title="Nutrition Info" />
       <div class="section-inner-wrap">
         <div id="nutrinfo-selector">
@@ -197,6 +199,17 @@ export const Nutrition = ({ nutrition }) => {
               </div>
             </div>
           </div>
+        </div>
+        <div class="expand-wrap">
+          <Button
+            text="Expand Info"
+            isBlue
+            isSmall
+            onClick={() => setIsShowAll(true)}
+          />
+          {/* <div class="expand-btn btn-blue btn btn-sm">
+            Expand Info
+          </div> */}
         </div>
       </div>
     </MainWrapper>

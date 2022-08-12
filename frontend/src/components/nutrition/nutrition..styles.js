@@ -23,11 +23,6 @@ export const MainWrapper = styled.div`
     position: relative;
   }
 
-  .show-all .panel-wrap {
-    height: auto;
-    overflow: visible;
-  }
-
   .show-more-mask {
     position: absolute;
     bottom: 0;
@@ -41,11 +36,23 @@ export const MainWrapper = styled.div`
     padding: 10em 0 1em;
     text-align: center;
   }
-  .show-all .expand-btn,
-  .show-all .panel-wrap .show-more-mask {
-    display: none;
-  }
 
+  ${({ isShowAll }) =>
+    isShowAll &&
+    `
+    .panel-wrap {
+      height: auto;
+      overflow: visible;
+    }
+
+
+    button,
+    .panel-wrap .show-more-mask {
+      display: none;
+    }
+
+  
+  `}
   .nutrition-panel {
     font-size: 11px;
     line-height: 1.7em;
@@ -149,6 +156,22 @@ export const MainWrapper = styled.div`
     margin-left: 5%;
     display: block;
   }
+
+  .expand-wrap {
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    clear: both;
+    position: absolute;
+    z-index: 0;
+    padding: 0;
+    left: 0;
+    bottom: -1em;
+    text-align: center;
+  }
+  button {
+    float: none;
+  }
   @media (min-width: 840px) {
     margin: 0 0 1em;
 
@@ -159,6 +182,10 @@ export const MainWrapper = styled.div`
 
     .expand-btn,
     .show-more-mask {
+      display: none;
+    }
+
+    button {
       display: none;
     }
   }

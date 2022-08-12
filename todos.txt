@@ -102,7 +102,7 @@
 - {DONE} create YoutubeVideo component
 - {DONE} scrap productInfo data part 2
 - {DONE} make ProductInfo component more dynamic part 2
-- {TODO} create .show-all functionality for Nutrition component when it is small screen
+- {DONE} create show-all functionality for Nutrition component when it is small screen
 
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
