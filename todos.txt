@@ -100,7 +100,7 @@
 - {DONE} scrap productInfo data
 - {DONE} make ProductInfo component more dynamic
 - {DONE} create YoutubeVideo component
-- {TODO} scrap productInfo data part 2
+- {DONE} scrap productInfo data part 2
 - {TODO} make ProductInfo component more dynamic part 2
 - {TODO} create .show-all functionality for Nutrition component when it is small screen
 

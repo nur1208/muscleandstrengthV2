@@ -9,7 +9,26 @@ export const scrapProductInfo = (mainDivHtml) => {
     .map((child) => {
       const item = {};
       item.type = child.name;
+      if (item.type === "style") {
+        item.style = $(child).text().trim();
+        return item;
+      }
+
+      if (
+        item.type === "div" &&
+        $(child).hasClass("video-wrapper")
+      ) {
+        item.type = "video";
+        item.videId = $("iframe", $(child))
+          .attr("src")
+          .split("embed/")[1]
+          .trim();
+        return item;
+      }
+
+      item.mainStyle = $(child).attr("class")?.trim();
       item.hasChildren = $(child).children().length !== 0;
+
       if (!item.hasChildren) item.text = $(child).text().trim();
 
       if (item.hasChildren) {
@@ -24,6 +43,12 @@ export const scrapProductInfo = (mainDivHtml) => {
           );
         }
 
+        if (childHolder.type === "li") {
+          childHolder.lis = $(child)
+            .children()
+            .toArray()
+            .map((li) => $(li).text().trim());
+        }
         item.child = childHolder;
       }
       return item;
