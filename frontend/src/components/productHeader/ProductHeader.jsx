@@ -89,7 +89,7 @@ export const ProductHeader = ({
           itemscope=""
           itemtype="http://schema.org/AggregateRating"
         >
-          <RatingBox width={ratingPercentage} />
+          <RatingBox width={ratingPercentage} hasGrayBg />
           <span class="button-text">
             {reviews}{" "}
             <span class="button-text-label">Reviews</span>

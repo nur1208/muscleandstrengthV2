@@ -20,4 +20,7 @@ export const ICONS_ID = {
   IconDealWhite: "icon-deal-white",
   IconPadlock: "icon-padlock",
   IconQuestionMark: "icon-question-mark",
+  IconCreateBlue: "icon-create-blue",
+  IconCreate: "icon-create",
+  IconVerifiedBuyer: "icon-verified-buyer",
 };

@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
 export const MainWrapper = styled.div`
-  padding: 0.3em 0.5em 0.4em;
-  background-color: #eee;
-  float: left;
-  border-right: 1px solid #ddd;
-  font-size: 19px;
+  ${({ hasGrayBg }) =>
+    hasGrayBg &&
+    `
+    padding: 0.3em 0.5em 0.4em;
+    background-color: #eee;
+    float: left;
+    border-right: 1px solid #ddd;
+    font-size: 19px;
+`}
 
   .rating-box {
     position: relative;

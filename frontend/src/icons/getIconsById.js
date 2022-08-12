@@ -1,4 +1,7 @@
 import {
+  IconCreate,
+  IconVerifiedBuyer,
+  IconCreateBlue,
   IconPadlock,
   IconSavedCards,
   IconTruck,
@@ -127,6 +130,15 @@ export const getIconById = (iconId, style) => {
 
     case "icon-padlock":
       return <IconPadlock style={style} />;
+
+    case "icon-create-blue":
+      return <IconCreateBlue style={style} />;
+
+    case "icon-create":
+      return <IconCreate style={style} />;
+
+    case "icon-verified-buyer":
+      return <IconVerifiedBuyer style={style} />;
 
     default:
       return <IconQuestionMark style={style} />;

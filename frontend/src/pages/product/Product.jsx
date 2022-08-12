@@ -13,6 +13,7 @@ import {
   PerksFooter,
   ProductHeader,
   ProductInfo,
+  ReviewsOverall,
   SecureTransaction,
 } from "../../components";
 import {
@@ -47,6 +48,7 @@ export const Product = () => {
               <ProductInfo
                 productInfo={PRODUCT_DATA.productInfo}
               />
+              <ReviewsOverall />
             </div>
           </div>
         </div>

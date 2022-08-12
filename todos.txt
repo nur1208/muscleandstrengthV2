@@ -103,6 +103,14 @@
 - {DONE} scrap productInfo data part 2
 - {DONE} make ProductInfo component more dynamic part 2
 - {DONE} create show-all functionality for Nutrition component when it is small screen
+- {DONE} create ReviewsOverall component
+- {TODO} scrap ReviewsOverall data 
+- {TODO} make ReviewsOverall component more dynamic
+- {TODO} create Reviews component
+- {TODO} create Review component
+- {TODO} scrap Reviews data 
+- {TODO} make Reviews and Review components more dynamic
+
 
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
