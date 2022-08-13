@@ -38,7 +38,7 @@ export const MainWrapper = styled.div`
   .rating-wrap .rating-label-wrap .rating-label {
     background: #fff;
     padding: 0 0.5em;
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .overall.rating-wrap .rate-stars {
@@ -112,10 +112,6 @@ export const MainWrapper = styled.div`
   }
   .user-badge-wrap {
     text-align: center;
-  }
-
-  .user-badge-wrap {
-    text-align: left;
   }
 
   .user-badge-wrap .user-badge {
@@ -323,6 +319,10 @@ export const MainWrapper = styled.div`
       border-top: 0;
       border-right: 1px solid #ddd;
       margin-bottom: 1.5em;
+    }
+
+    .user-badge-wrap {
+      text-align: left;
     }
   }
 `;

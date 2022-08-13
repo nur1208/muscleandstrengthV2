@@ -109,6 +109,7 @@
 - {DONE} create Reviews component
 - {DONE} create Review component
 - {DONE} scrap Reviews data 
+- {DONE} fix responsive problems for Reviews and Review components
 - {TODO} make Reviews and Review components more dynamic
         - {TODO} add more then one badge 
 
