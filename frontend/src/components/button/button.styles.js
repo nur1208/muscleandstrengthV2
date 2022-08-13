@@ -111,6 +111,15 @@ export const MainWrapper = styled.button`
   `}
 
 
+  ${({ isEllipsis }) =>
+    isEllipsis &&
+    `
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  `}
+
+
 ${({ isGreen }) =>
     isGreen &&
     `

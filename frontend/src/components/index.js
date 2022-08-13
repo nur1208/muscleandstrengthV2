@@ -32,3 +32,4 @@ export { BuyingOptions } from "./buyingOptions/BuyingOptions";
 export { Nutrition } from "./nutrition/Nutrition";
 export { ProductInfo } from "./productInfo/ProductInfo";
 export { ReviewsOverall } from "./reviewsOverall/ReviewsOverall";
+export { Reviews } from "./reviews/Reviews";

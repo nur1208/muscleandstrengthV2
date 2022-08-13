@@ -106,7 +106,7 @@
 - {DONE} create ReviewsOverall component
 - {DONE} scrap ReviewsOverall data 
 - {DONE} make ReviewsOverall component more dynamic
-- {TODO} create Reviews component
+- {DONE} create Reviews component
 - {TODO} create Review component
 - {TODO} scrap Reviews data 
 - {TODO} make Reviews and Review components more dynamic
