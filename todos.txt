@@ -108,8 +108,9 @@
 - {DONE} make ReviewsOverall component more dynamic
 - {DONE} create Reviews component
 - {DONE} create Review component
-- {TODO} scrap Reviews data 
+- {DONE} scrap Reviews data 
 - {TODO} make Reviews and Review components more dynamic
+        - {TODO} add more then one badge 
 
 
 not important:

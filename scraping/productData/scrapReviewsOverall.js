@@ -1,4 +1,5 @@
 import cheerio from "cheerio";
+import { getRating } from "./utils.js";
 
 const getNumber = (element) =>
   Number(
@@ -10,8 +11,6 @@ const getNumber = (element) =>
       .trim()
   );
 
-const getRating = (element) =>
-  Number(element.attr("style").split(":")[1].replace("%;", ""));
 export const scrapReviewsOverall = (mainDivHtml) => {
   let $ = cheerio.load(mainDivHtml);
 
