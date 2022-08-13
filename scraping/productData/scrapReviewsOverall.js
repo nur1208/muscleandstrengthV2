@@ -56,7 +56,5 @@ export const scrapReviewsOverall = (mainDivHtml) => {
       percentage: Number(getRating($(".rating", $(li)))),
     }));
 
-  console.log({ itemdgraphBar: item.ratedFlavors });
-
   return item;
 };

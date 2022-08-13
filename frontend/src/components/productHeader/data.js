@@ -17,7 +17,7 @@ export const PRODUCT_DATA = {
     "KETO-Approved whey protein",
   ],
   ratingPercentage: 91,
-  reviews: 181,
+  reviews: 182,
   deals: [
     {
       imgUrl:
@@ -1002,6 +1002,40 @@ export const PRODUCT_DATA = {
       },
     },
   ],
+  reviewsOverall: {
+    overallRating: { width: 91, parentage: 4.6 },
+    reviews: 182,
+    verifiedBuyers: 180,
+    graphBar: [
+      { title: "5", percentage: 69 },
+      { title: "4", percentage: 25 },
+      { title: "3", percentage: 5 },
+      { title: "2", percentage: 1 },
+      { title: "1", percentage: 0 },
+    ],
+    ratedFlavors: [
+      {
+        title: "Vanilla Ice Cream (4.7/5 )",
+        percentage: 94,
+      },
+      {
+        title: "Chocolate Peanut Butter Ice Cream (4.5/5 )",
+        percentage: 90,
+      },
+      {
+        title: "Chocolate Ice Cream (4.5/5 )",
+        percentage: 89,
+      },
+      {
+        title: "Cookies 'n Cream Ice Cream (4.5/5 )",
+        percentage: 89,
+      },
+      {
+        title: "Strawberry Ice Cream (4.4/5 )",
+        percentage: 87,
+      },
+    ],
+  },
 };
 
 export const PRODUCT_DATA_2 = {
@@ -1020,19 +1054,19 @@ export const PRODUCT_DATA_2 = {
     "Cardio Support*",
   ],
   ratingPercentage: 97,
-  reviews: 1110,
+  reviews: 1109,
   deals: [
-    {
-      imgUrl:
-        "https://cdn.muscleandstrength.com/store/media/mnsresized/catalog/product/n/o/b1dcf0/98/98/now_omega-3_1_3.jpg",
-      label: "LIMITED TIME PRICE CUT",
-      desc: "Buy 1 NOW Foods Omega-3 500ct for only $17.99! Limited time only.",
-    },
     {
       imgUrl:
         "https://cdn.muscleandstrength.com/store/media/mnsresized/promos/b1dcf0/98/98/now_omega-3_1_2.jpg",
       label: "Buy 1 Get 1 FREE",
       desc: "Buy 1 NOW Foods Omega-3 200 Softgels and get 1 absolutely FREE! Limited time only.",
+    },
+    {
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/media/mnsresized/catalog/product/n/o/b1dcf0/98/98/now_omega-3_1_3.jpg",
+      label: "LIMITED TIME PRICE CUT",
+      desc: "Buy 1 NOW Foods Omega-3 500ct for only $17.99! Limited time only.",
     },
     {
       imgUrl:
@@ -1042,15 +1076,15 @@ export const PRODUCT_DATA_2 = {
     },
     {
       imgUrl:
-        "https://cdn.muscleandstrength.com/store/media/mnsresized/catalog/product/n/o/b1dcf0/98/98/now_omega-3_1_3.jpg",
-      label: "LIMITED TIME PRICE CUT",
-      desc: "Buy 1 NOW Foods Omega-3 500ct for only $17.99! Limited time only.",
-    },
-    {
-      imgUrl:
         "https://cdn.muscleandstrength.com/store/media/mnsresized/promos/b1dcf0/98/98/now_omega-3_1_2.jpg",
       label: "Buy 1 Get 1 FREE",
       desc: "Buy 1 NOW Foods Omega-3 200 Softgels and get 1 absolutely FREE! Limited time only.",
+    },
+    {
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/media/mnsresized/catalog/product/n/o/b1dcf0/98/98/now_omega-3_1_3.jpg",
+      label: "LIMITED TIME PRICE CUT",
+      desc: "Buy 1 NOW Foods Omega-3 500ct for only $17.99! Limited time only.",
     },
   ],
   buyingOptions: [
@@ -1786,4 +1820,17 @@ export const PRODUCT_DATA_2 = {
       },
     },
   ],
+  reviewsOverall: {
+    overallRating: { width: 97, parentage: 4.9 },
+    reviews: 1109,
+    verifiedBuyers: 1099,
+    graphBar: [
+      { title: "5", percentage: 85 },
+      { title: "4", percentage: 13 },
+      { title: "3", percentage: 1 },
+      { title: "2", percentage: 0 },
+      { title: "1", percentage: 1 },
+    ],
+    ratedFlavors: [],
+  },
 };

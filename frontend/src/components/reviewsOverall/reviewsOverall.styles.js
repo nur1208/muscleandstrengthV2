@@ -173,6 +173,9 @@ export const MainWrapper = styled.div`
     list-style: none;
   }
 
+  .slist-on li {
+    display: none;
+  }
   .slist-on li:nth-child(-n + 3) {
     display: block;
   }
