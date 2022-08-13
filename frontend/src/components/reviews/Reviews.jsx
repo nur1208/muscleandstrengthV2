@@ -1,11 +1,14 @@
 import React from "react";
 import { Button } from "../button/Button";
+import { Review } from "../review/Review";
 import { MainWrapper } from "./reviews.styles";
 
 export const Reviews = () => {
   return (
     <MainWrapper>
-      <div class="review-wrapper">review</div>
+      <div class="review-wrapper">
+        <Review />
+      </div>
       <div
         class="viewmore-loadingmessage"
         id="viewmore-loadingmessage"
