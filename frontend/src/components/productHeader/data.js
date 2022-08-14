@@ -1845,7 +1845,9 @@ export const PRODUCT_DATA_2 = {
           label: "Verified Buyer",
         },
       ],
-      content: "0 of 0 found this helpful",
+      content:
+        "Happy with the product:. Seems legit, but how can you tell. *",
+      helpful: "0 of 0 found this helpful",
       dateOfCreation: "2022-08-08 20:39:48Z",
     },
     {
@@ -1863,7 +1865,9 @@ export const PRODUCT_DATA_2 = {
           label: "Verified Buyer",
         },
       ],
-      content: "0 of 0 found this helpful",
+      content:
+        "Very healthy fish oil . Take daily for health and recovery. *",
+      helpful: "0 of 0 found this helpful",
       dateOfCreation: "2022-08-07 05:30:35Z",
     },
     {
@@ -1877,7 +1881,9 @@ export const PRODUCT_DATA_2 = {
           label: "Verified Buyer",
         },
       ],
-      content: "0 of 0 found this helpful",
+      content:
+        "A good option for omega, I use it every day 2 times a day !!!*",
+      helpful: "0 of 0 found this helpful",
       dateOfCreation: "2022-08-04 14:47:42Z",
     },
     {
@@ -1891,7 +1897,9 @@ export const PRODUCT_DATA_2 = {
           label: "Verified Buyer",
         },
       ],
-      content: "0 of 0 found this helpful",
+      content:
+        "Good fish oil great value to price and great quality omega 3*",
+      helpful: "0 of 0 found this helpful",
       dateOfCreation: "2022-07-30 20:35:05Z",
     },
     {
@@ -1906,7 +1914,9 @@ export const PRODUCT_DATA_2 = {
           label: "Verified Buyer",
         },
       ],
-      content: "0 of 0 found this helpful",
+      content:
+        "Very good product, never can go wrong with NOW supplements.*",
+      helpful: "0 of 0 found this helpful",
       dateOfCreation: "2022-07-30 16:15:13Z",
     },
     {
@@ -1924,7 +1934,9 @@ export const PRODUCT_DATA_2 = {
           label: "Verified Buyer",
         },
       ],
-      content: "0 of 0 found this helpful",
+      content:
+        "I like this product. There is no fishey after taste. Will but again*",
+      helpful: "0 of 0 found this helpful",
       dateOfCreation: "2022-07-29 23:27:22Z",
     },
     {
@@ -1938,7 +1950,9 @@ export const PRODUCT_DATA_2 = {
           label: "Verified Buyer",
         },
       ],
-      content: "0 of 0 found this helpful",
+      content:
+        "very good product....................................................*",
+      helpful: "0 of 0 found this helpful",
       dateOfCreation: "2022-07-28 16:53:38Z",
     },
     {
@@ -1952,7 +1966,9 @@ export const PRODUCT_DATA_2 = {
           label: "Verified Buyer",
         },
       ],
-      content: "0 of 0 found this helpful",
+      content:
+        "Essential for good health! Always a must to take with daily vitamins *",
+      helpful: "0 of 0 found this helpful",
       dateOfCreation: "2022-07-28 16:48:49Z",
     },
     {
@@ -1966,7 +1982,9 @@ export const PRODUCT_DATA_2 = {
           label: "Verified Buyer",
         },
       ],
-      content: "0 of 0 found this helpful",
+      content:
+        "It have a good amount of omega 3 by the price, get this product in a promo, this brand never disapoint me*",
+      helpful: "0 of 0 found this helpful",
       dateOfCreation: "2022-07-28 16:28:24Z",
     },
     {
@@ -1980,7 +1998,9 @@ export const PRODUCT_DATA_2 = {
           label: "Verified Buyer",
         },
       ],
-      content: "0 of 0 found this helpful",
+      content:
+        "Easy to swallow. No fishy after burps. Since pills are smaller, need to take 2 twice a day.*",
+      helpful: "0 of 0 found this helpful",
       dateOfCreation: "2022-07-27 18:05:10Z",
     },
   ],

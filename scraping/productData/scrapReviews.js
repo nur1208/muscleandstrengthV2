@@ -33,6 +33,10 @@ export const scrapReviews = (mainDivHtml) => {
         }));
 
       item.content = getText(
+        $(".review-content-wrap .user-review", $(review))
+      );
+
+      item.helpful = getText(
         $(".helpful-wrap .helpful-data", $(review))
       );
 

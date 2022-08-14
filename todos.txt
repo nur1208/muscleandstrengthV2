@@ -111,8 +111,9 @@
 - {DONE} scrap Reviews data 
 - {DONE} fix responsive problems for Reviews and Review components
 - {TODO} make Reviews and Review components more dynamic
-        - {TODO} add more then one badge 
         - {DONE} fix reviews parameter in product data
+        - {DONE} fix reviews[num].content parameter in product data
+        - {TODO} add more then one badge 
 
 
 not important:
