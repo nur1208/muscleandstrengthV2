@@ -3,11 +3,13 @@ import { Button } from "../button/Button";
 import { Review } from "../review/Review";
 import { MainWrapper } from "./reviews.styles";
 
-export const Reviews = () => {
+export const Reviews = ({ reviews }) => {
   return (
     <MainWrapper>
       <div class="review-wrapper">
-        <Review />
+        {reviews.map((review) => (
+          <Review {...review} />
+        ))}
       </div>
       <div
         class="viewmore-loadingmessage"

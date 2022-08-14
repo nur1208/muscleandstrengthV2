@@ -52,7 +52,7 @@ export const Product = () => {
               <ReviewsOverall
                 {...PRODUCT_DATA_2.reviewsOverall}
               />
-              <Reviews />
+              <Reviews reviews={PRODUCT_DATA_2.reviews} />
             </div>
           </div>
         </div>

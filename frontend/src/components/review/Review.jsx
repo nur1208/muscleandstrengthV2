@@ -1,9 +1,18 @@
 import React from "react";
-import { getIconById, ICONS_ID, SvgWrapper } from "../../icons";
+import { getIconById, SvgWrapper } from "../../icons";
+import { addDays, subtractDays, timeSince } from "../../utils";
 import { RatingBox } from "../ratingBox/RatingBox";
 import { MainWrapper } from "./review.styles";
 
-export const Review = () => {
+export const Review = ({
+  rating,
+  imgUrl,
+  name,
+  badges,
+  content,
+  helpful,
+  dateOfCreation,
+}) => {
   return (
     <MainWrapper>
       <div class="review-rating-wrap">
@@ -12,7 +21,7 @@ export const Review = () => {
             <span class="rating-label">Overall Rating</span>
           </div>
           <div class="rate-stars">
-            <RatingBox width={80} />
+            <RatingBox width={rating} />
           </div>
         </div>
         <ul class="rating-item-wrap slist-on slist-3count ">
@@ -26,27 +35,27 @@ export const Review = () => {
             width="300"
             height="300"
             class=" ls-is-cached lazyloaded"
-            data-src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg"
             alt="User sImage"
-            src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg"
+            src={imgUrl}
           />
         </div>
-        <div class="user-name">Mark K</div>
+        <div class="user-name">{name}</div>
         <div class="user-badge-wrap">
-          <div class="user-badge">
-            <div class="badge-icon">
-              <SvgWrapper childStyle="width:1.5em;height:1.5em; margin-bottom: -0.3em!important;  ">
-                {getIconById(ICONS_ID.IconVerifiedBuyer)}
-              </SvgWrapper>
+          {badges.map(({ iconId, label }) => (
+            <div class="user-badge">
+              <div class="badge-icon">
+                <SvgWrapper childStyle="width:1.5em;height:1.5em; margin-bottom: -0.3em!important;  ">
+                  {getIconById(iconId)}
+                </SvgWrapper>
+              </div>
+              <div class="badge-label">{label}</div>
             </div>
-            <div class="badge-label">Verified Buyer</div>
-          </div>
+          ))}
         </div>
       </div>
       <div class="review-content-wrap">
         <div class="user-review">
-          Happy with the product:. Seems legit, but how can you
-          tell.&nbsp;<a href="#results-disclaimer">*</a>
+          {content}&nbsp;<a href="#results-disclaimer">*</a>
         </div>
       </div>
       <div class="helpful-wrap" id="review-helpful-301198">
@@ -78,11 +87,14 @@ export const Review = () => {
             Undo
           </span>
         </div>
-        <div class="helpful-data">0 of 0 found this helpful</div>
+        <div class="helpful-data">{helpful}</div>
       </div>
       <div class="review-meta-wrap">
-        <abbr class="date timeago" title="2022-08-08 20:39:48Z">
-          5 days ago
+        <abbr class="date timeago" title={dateOfCreation}>
+          {new Date(dateOfCreation) >=
+          subtractDays(new Date(), 30)
+            ? timeSince(new Date(dateOfCreation))
+            : dateOfCreation}
         </abbr>
         <div class="meta-button-wrap">
           <button

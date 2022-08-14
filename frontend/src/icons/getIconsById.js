@@ -1,4 +1,7 @@
 import {
+  IconGoalHealthyLifestyle,
+  IconGoalBuildMuscle,
+  IconGoalBurnFat,
   IconCreate,
   IconVerifiedBuyer,
   IconCreateBlue,
@@ -139,6 +142,15 @@ export const getIconById = (iconId, style) => {
 
     case "icon-verified-buyer":
       return <IconVerifiedBuyer style={style} />;
+
+    case "icon-goal-burn-fat":
+      return <IconGoalBurnFat style={style} />;
+
+    case "icon-goal-build-muscle":
+      return <IconGoalBuildMuscle style={style} />;
+
+    case "icon-goal-healthy-lifestyle":
+      return <IconGoalHealthyLifestyle style={style} />;
 
     default:
       return <IconQuestionMark style={style} />;
