@@ -59,6 +59,17 @@ export const MainWrapper = styled.div`
     padding: 0;
   }
 
+  .section-inner-wrap ul {
+    margin-bottom: 1.5em;
+    padding-left: 1.1em;
+    list-style: disc;
+    margin-top: 0;
+  }
+
+  .section-inner-wrap li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
   @media (min-width: 600px) {
     .section-inner-wrap img.full-width-mobile {
       max-width: 100%;

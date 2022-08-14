@@ -34,7 +34,7 @@ export const scrapProductHeader = (mainDivHtml) => {
       .replace("%;", "")
       .trim()
   );
-  item.reviews = Number(
+  item.reviewsNum = Number(
     $(reviewsSelector)
       .text()
       .split(" ")[0]

@@ -11,7 +11,7 @@ export const ProductHeader = ({
   tagline,
   features,
   ratingPercentage,
-  reviews,
+  reviewsNum,
 }) => {
   const { updateCustomNavInfo } = useReduxActions();
   useEffect(() => {
@@ -91,7 +91,7 @@ export const ProductHeader = ({
         >
           <RatingBox width={ratingPercentage} hasGrayBg />
           <span class="button-text">
-            {reviews}{" "}
+            {reviewsNum}{" "}
             <span class="button-text-label">Reviews</span>
           </span>
         </a>

@@ -29,7 +29,7 @@ export const MainWrapper = styled.div`
 
   .rating-wrap .rating-label-wrap {
     position: absolute;
-    top: -0.6em;
+    top: -0.7em;
     width: 100%;
     text-align: center;
     left: 0;

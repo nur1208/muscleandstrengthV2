@@ -1054,7 +1054,7 @@ export const PRODUCT_DATA_2 = {
     "Cardio Support*",
   ],
   ratingPercentage: 97,
-  reviews: 1109,
+  reviewsNum: 1109,
   deals: [
     {
       imgUrl:
@@ -1833,4 +1833,155 @@ export const PRODUCT_DATA_2 = {
     ],
     ratedFlavors: [],
   },
+  reviews: [
+    {
+      rating: 80,
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg",
+      name: "Mark K",
+      badges: [
+        {
+          iconId: "icon-verified-buyer",
+          label: "Verified Buyer",
+        },
+      ],
+      content: "0 of 0 found this helpful",
+      dateOfCreation: "2022-08-08 20:39:48Z",
+    },
+    {
+      rating: 100,
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg",
+      name: "Mark B",
+      badges: [
+        {
+          iconId: "icon-goal-build-muscle",
+          label: "Build Muscle",
+        },
+        {
+          iconId: "icon-verified-buyer",
+          label: "Verified Buyer",
+        },
+      ],
+      content: "0 of 0 found this helpful",
+      dateOfCreation: "2022-08-07 05:30:35Z",
+    },
+    {
+      rating: 100,
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg",
+      name: "TDRF",
+      badges: [
+        {
+          iconId: "icon-verified-buyer",
+          label: "Verified Buyer",
+        },
+      ],
+      content: "0 of 0 found this helpful",
+      dateOfCreation: "2022-08-04 14:47:42Z",
+    },
+    {
+      rating: 100,
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg",
+      name: "Hazz fitness",
+      badges: [
+        {
+          iconId: "icon-verified-buyer",
+          label: "Verified Buyer",
+        },
+      ],
+      content: "0 of 0 found this helpful",
+      dateOfCreation: "2022-07-30 20:35:05Z",
+    },
+    {
+      rating: 100,
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg",
+      name: "Javan C",
+      badges: [
+        { iconId: "icon-goal-burn-fat", label: "Burn Fat" },
+        {
+          iconId: "icon-verified-buyer",
+          label: "Verified Buyer",
+        },
+      ],
+      content: "0 of 0 found this helpful",
+      dateOfCreation: "2022-07-30 16:15:13Z",
+    },
+    {
+      rating: 100,
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg",
+      name: "Brandon Q",
+      badges: [
+        {
+          iconId: "icon-goal-healthy-lifestyle",
+          label: "Healthy Lifestyle",
+        },
+        {
+          iconId: "icon-verified-buyer",
+          label: "Verified Buyer",
+        },
+      ],
+      content: "0 of 0 found this helpful",
+      dateOfCreation: "2022-07-29 23:27:22Z",
+    },
+    {
+      rating: 80,
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg",
+      name: "akhmetov J",
+      badges: [
+        {
+          iconId: "icon-verified-buyer",
+          label: "Verified Buyer",
+        },
+      ],
+      content: "0 of 0 found this helpful",
+      dateOfCreation: "2022-07-28 16:53:38Z",
+    },
+    {
+      rating: 100,
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg",
+      name: "Eric C",
+      badges: [
+        {
+          iconId: "icon-verified-buyer",
+          label: "Verified Buyer",
+        },
+      ],
+      content: "0 of 0 found this helpful",
+      dateOfCreation: "2022-07-28 16:48:49Z",
+    },
+    {
+      rating: 100,
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg",
+      name: "Carlos C",
+      badges: [
+        {
+          iconId: "icon-verified-buyer",
+          label: "Verified Buyer",
+        },
+      ],
+      content: "0 of 0 found this helpful",
+      dateOfCreation: "2022-07-28 16:28:24Z",
+    },
+    {
+      rating: 80,
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg",
+      name: "Kenneth b",
+      badges: [
+        {
+          iconId: "icon-verified-buyer",
+          label: "Verified Buyer",
+        },
+      ],
+      content: "0 of 0 found this helpful",
+      dateOfCreation: "2022-07-27 18:05:10Z",
+    },
+  ],
 };
