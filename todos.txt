@@ -121,6 +121,8 @@
 - {DONE} create database design for product resource
 - {DONE} create Product database model and Product post api route
 - {DONE} set up global Error Handler for the backend
+- {DONE} add productDetail parameter to Product model 
+- {DONE} create getProduct and getProducts routes for Product resource
 - {TODO} make Product page more dynamic
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
