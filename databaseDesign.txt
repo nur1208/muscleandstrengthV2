@@ -1,0 +1,83 @@
+product {
+    imgUlr: {
+        400:String
+        600:String
+        700:String
+    },
+    brand:{
+        title: String,
+        id: Brand.id
+    },
+    name:String,
+    tagline:String,
+    features: [String],
+    ratingPercentage:Number, this field is temporary
+    reviewsNum:Number, this field is temporary
+    deals:[{
+        imgUlr:String,
+        label: String,
+        des:String
+    }]
+}
+
+productDetail {
+    buyingOptions: [{
+        cost: {beforeDiscount: Number, regularPrice: Number}
+        title: String,
+        serving: Number,
+        deal:String,
+        options:[{title: String}]
+    }],
+    nutrition:[{
+        title:String,
+        servingSize: Number,
+        servingsPerContainer: Number,
+        infoTable:[{
+            mainStyle:String,
+            innerIs3Cols:Boolean
+            cols:[{
+                hasChildren: Boolean,
+                text:String,
+                children:[{
+                    style:String, 
+                    text:String
+                }]
+            }]
+        }],
+        ingredients:String,
+        allergenWarning:String,
+        directions:String,
+        warning:String
+    }],
+    productInfo: [{
+        type:String,
+        hasChildren:Boolean,
+        child:{
+            type:String,
+            imgUrl:String,
+            alt:String,
+            isFullWidthMobile:Boolean
+            lis:[String]
+        }
+    }],
+    reviewsOverall:{ this field is temporary
+        overallRating:{width: Number, parentage: Number},
+        reviews: Number,
+        verifiedBuyers:Number,
+        graphBar: [{
+            title: String, percentage:Number
+        }],
+        ratedFlavors:[{title:String, percentage:Number}]
+    }   
+}
+
+reviews {
+    rating: Number,
+    ratingItems: [{rating: Number, label: String}],
+    imgUrl: String, this field is temporary
+    name: String, this field is temporary
+    badges:[{iconId: String, label: String}], this field is temporary
+    content: String,
+    helpful: String, this field is temporary
+    dateOfCreation: "2022-08-12 02:45:54Z",
+}

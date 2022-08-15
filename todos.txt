@@ -117,7 +117,8 @@
 - {DONE} scrap ratingItems fro product data and use it in Review component
 - {DONE} finish setting up product page
 - {DONE} set up the backend
-- {TODO} deploy the backend in vercel
+- {DONE} deploy the backend in vercel
+- {TODO} create database design for product resource
 - {TODO} make Product page more dynamic
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
