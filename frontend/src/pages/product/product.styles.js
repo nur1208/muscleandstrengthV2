@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const MainWrapper = styled.div`
-  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5 !important;
   font-size: 16px;
   #page {
     background-color: #f5f5f5;
@@ -155,6 +157,30 @@ export const MainWrapper = styled.div`
     margin-right: 0;
     margin-left: 0;
     padding: 0;
+  }
+
+  #results-disclaimer {
+    font-size: 13px;
+    line-height: 1.5em;
+    padding-top: 1.5em;
+    margin-top: 1em;
+    padding-left: 5%;
+    padding-right: 5%;
+    clear: both;
+    display: block;
+    overflow: hidden;
+  }
+
+  .font-s-small {
+    font-size: 13px;
+  }
+  .fdaWarning {
+    font-size: 13px;
+    line-height: 1.5em;
+    padding: 1.5em 5%;
+    clear: both;
+    display: block;
+    overflow: hidden;
   }
 
   @media (min-width: 320px) {

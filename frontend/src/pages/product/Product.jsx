@@ -51,13 +51,31 @@ export const Product = () => {
               />
               <ReviewsOverall {...PRODUCT_DATA.reviewsOverall} />
               <Reviews reviews={PRODUCT_DATA.reviews} />
+              <div id="results-disclaimer">
+                {" "}
+                * Muscle &amp; Strength does not imply any
+                medical claims from this review. There are no
+                guarantees of specific results and results may
+                vary.
+              </div>
+            </div>
+            <div class="main-content end">
+              <div class="fdaWarning font-s-small">
+                * These statements have not been evaluated by the
+                Food and Drug Administration. This product is not
+                intended to diagnose, treat, cure, or prevent any
+                disease.
+              </div>
             </div>
           </div>
         </div>
-        {/* <PerksFooter />
-        <EmailSignUp />
-        <Footer /> */}
+        <div>
+          <PerksFooter />
+          <EmailSignUp />
+          <Footer />
+        </div>
       </MainWrapper>
+
       <FeatherLight />
       <SecureTransaction />
     </>
