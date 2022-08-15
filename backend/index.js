@@ -5,6 +5,9 @@ import mongoose from "mongoose";
 import cors from "cors";
 import { router } from "./routes/home.js";
 import productRouter from "./routes/product.js";
+import globalErrorHandler, {
+  handleWrongURL,
+} from "./controllers/error.js";
 
 dotenv.config();
 
@@ -34,7 +37,9 @@ const main = async () => {
     app.use(router);
     app.use("/api/v1/products", productRouter);
 
-    // app.use(globalErrorHandler);
+    // global error handlers
+    app.all("*", handleWrongURL);
+    app.use(globalErrorHandler);
     app.listen(port, () => {
       console.log(
         `express app listening at http://localhost:${port}`
