@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import {
   Banner,
   BuyingOptions,
@@ -25,6 +26,10 @@ import {
 import { MainWrapper } from "./product.styles";
 
 export const Product = () => {
+  const {
+    state: { productData },
+  } = useLocation();
+
   return (
     <>
       <MainWrapper>
@@ -34,23 +39,23 @@ export const Product = () => {
           <NavbarInfo />
           <div id="main-wrap">
             <div className="main-content">
-              <ProductHeader {...PRODUCT_DATA} />
+              <ProductHeader {...productData} />
               <FeaturesList />
-              <Deals deals={PRODUCT_DATA.deals} />
+              <Deals deals={productData.deals} />
             </div>
             <div class="aside aside-after">
               <BuyingOptions
-                options={PRODUCT_DATA.buyingOptions}
+                options={productData.buyingOptions}
               />
               <div class="product-aside"></div>
-              <Nutrition nutrition={PRODUCT_DATA.nutrition} />
+              <Nutrition nutrition={productData.nutrition} />
             </div>
             <div class="main-content continued">
               <ProductInfo
-                productInfo={PRODUCT_DATA.productInfo}
+                productInfo={productData.productInfo}
               />
-              <ReviewsOverall {...PRODUCT_DATA.reviewsOverall} />
-              <Reviews reviews={PRODUCT_DATA.reviews} />
+              <ReviewsOverall {...productData.reviewsOverall} />
+              <Reviews reviews={productData.reviews} />
               <div id="results-disclaimer">
                 {" "}
                 * Muscle &amp; Strength does not imply any

@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { MainWrapper } from "./product.styles";
 import { Button } from "../index";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { PRODUCT_DATA } from "../data";
 
 export const Product = ({
   href,
@@ -10,6 +11,13 @@ export const Product = ({
   deal,
   price,
 }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`product/${title.replaceAll(" ", "-")}`, {
+      state: { productData: PRODUCT_DATA },
+    });
+  };
   return (
     <MainWrapper>
       <div className="height-setter">
@@ -21,7 +29,7 @@ export const Product = ({
           }}
         >
           {/* <Link className="product-link" to={href || "#"}> */}
-          <Link className="product-link" to={"product"}>
+          <span className="product-link" onClick={handleClick}>
             <div className="image-wrap">
               <img
                 className="product-image lazyloaded"
@@ -30,7 +38,7 @@ export const Product = ({
               />
             </div>
             <div className="product-name">{title}</div>
-          </Link>
+          </span>
         </div>
         <div className="product-info">
           <span className="mns-label lbl-deal">{deal}</span>

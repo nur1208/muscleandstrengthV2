@@ -21,8 +21,25 @@ export const MainWrapper = styled.div`
     margin-right: auto;
   }
 
+  .product-link {
+    background-color: transparent;
+
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .product-link:hover {
+    color: #0687e6;
+  }
   .product-image {
     max-width: 120px;
+  }
+
+  .product-link:hover .icon,
+  .product-link:hover img,
+  .product-link:hover p {
+    opacity: 0.9;
+    transition: opacity 0.3s ease-in-out;
   }
 
   .image-wrap img {

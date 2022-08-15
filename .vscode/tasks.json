@@ -18,6 +18,15 @@
       "label": "npm: start - scraping",
       "detail": "node index.js",
       "group": "build"
+    },
+    {
+      "type": "npm",
+      "script": "start-dev",
+      "path": "backend",
+      "problemMatcher": [],
+      "label": "npm: start-dev - backend",
+      "detail": "set NODE_ENV=development&&nodemon index.js",
+      "group": "build"
     }
   ]
 }
