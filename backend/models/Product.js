@@ -25,6 +25,82 @@ const schema = new mongoose.Schema(
       },
     ],
     type: String,
+    productDetail: {
+      buyingOptions: [
+        {
+          cost: {
+            beforeDiscount: { type: Number },
+            regularPrice: { type: Number },
+          },
+          title: { type: String },
+          serving: { type: Number },
+          deal: { type: String },
+          options: [{ title: { type: String } }],
+        },
+      ],
+      nutrition: [
+        {
+          title: { type: String },
+          servingSize: { type: Number },
+          servingsPerContainer: { type: Number },
+          infoTable: [
+            {
+              mainStyle: { type: String },
+              innerIs3Cols: { type: Boolean },
+              cols: [
+                {
+                  hasChildren: { type: Boolean },
+                  text: { type: String },
+                  children: [
+                    {
+                      style: { type: String },
+                      text: { type: String },
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+          ingredients: { type: String },
+          allergenWarning: { type: String },
+          directions: { type: String },
+          warning: { type: String },
+        },
+      ],
+      productInfo: [
+        {
+          type: { type: String },
+          hasChildren: { type: Boolean },
+          child: {
+            type: { type: String },
+            imgUrl: { type: String },
+            alt: { type: String },
+            isFullWidthMobile: { type: Boolean },
+            lis: { type: [String] },
+          },
+        },
+      ],
+      reviewsOverall: {
+        overallRating: {
+          width: { type: Number },
+          parentage: { type: Number },
+        },
+        reviews: { type: Number },
+        verifiedBuyers: { type: Number },
+        graphBar: [
+          {
+            title: { type: String },
+            percentage: { type: Number },
+          },
+        ],
+        ratedFlavors: [
+          {
+            title: { type: String },
+            percentage: { type: Number },
+          },
+        ],
+      },
+    },
   },
   {
     timestamps: true,
