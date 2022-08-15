@@ -118,7 +118,8 @@
 - {DONE} finish setting up product page
 - {DONE} set up the backend
 - {DONE} deploy the backend in vercel
-- {TODO} create database design for product resource
+- {DONE} create database design for product resource
+- {DONE} create Product database model and Product post api route
 - {TODO} make Product page more dynamic
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic

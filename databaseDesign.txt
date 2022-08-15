@@ -21,6 +21,7 @@ product {
 }
 
 productDetail {
+    productId: Product.id,
     buyingOptions: [{
         cost: {beforeDiscount: Number, regularPrice: Number}
         title: String,
