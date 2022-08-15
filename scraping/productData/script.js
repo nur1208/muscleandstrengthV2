@@ -54,20 +54,20 @@ export const getProductData = async (url) => {
 
   const waitForSelector = "#main-wrap";
 
-  // const html = await getHtml(
-  //   url,
-  //   waitForSelector,
-  //   timeout,
-  //   customAdditional
-  // );
+  const html = await getHtml(
+    url,
+    waitForSelector,
+    timeout,
+    customAdditional
+  );
 
-  // fs.writeFile(mainPageHtml2, html, function (err) {
-  //   if (err) throw err;
-  //   console.log("Saved!");
-  // });
+  fs.writeFile(mainPageHtml2, html, function (err) {
+    if (err) throw err;
+    console.log("Saved!");
+  });
 
   // read the html body from the file system (this is very faster then reading it from the internet)
-  const html = await promisify(fs.readFile)(mainPageHtml2);
+  // const html = await promisify(fs.readFile)(mainPageHtml2);
 
   let $ = cheerio.load(html.toString());
 

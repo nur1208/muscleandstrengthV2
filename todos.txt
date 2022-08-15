@@ -114,7 +114,7 @@
         - {DONE} fix reviews parameter in product data
         - {DONE} fix reviews[num].content parameter in product data
         - {DONE} add more then one badge 
-
+- {DONE} scrap ratingItems fro product data and use it in Review component
 
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic

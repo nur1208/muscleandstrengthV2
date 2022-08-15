@@ -15,7 +15,12 @@ export const scrapReviews = (mainDivHtml) => {
       const item = {};
 
       item.rating = getRating($(".overall .rating", $(review)));
-      $(".review-user-wrap img", $(review));
+      item.ratingItems = $(".review-rating-wrap li", $(review))
+        .toArray()
+        .map((li) => ({
+          rating: getRating($(".rating", $(li))),
+          label: getText($(".option-label", $(li))),
+        }));
 
       item.imgUrl = getImgUrl(
         $(".review-user-wrap img", $(review))
@@ -33,7 +38,8 @@ export const scrapReviews = (mainDivHtml) => {
         }));
 
       item.content = getText(
-        $(".review-content-wrap .user-review", $(review))
+        $(".review-content-wrap .user-review", $(review)),
+        "*"
       );
 
       item.helpful = getText(

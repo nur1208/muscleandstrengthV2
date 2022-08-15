@@ -17,7 +17,7 @@ export const PRODUCT_DATA = {
     "KETO-Approved whey protein",
   ],
   ratingPercentage: 91,
-  reviews: 182,
+  reviewsNum: 182,
   deals: [
     {
       imgUrl:
@@ -1036,6 +1036,210 @@ export const PRODUCT_DATA = {
       },
     ],
   },
+  reviews: [
+    {
+      rating: 100,
+      ratingItems: [
+        {
+          rating: 100,
+          label: "Chocolate Peanut Butter Ice Cream",
+        },
+      ],
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg",
+      name: "Tasandra R",
+      badges: [
+        {
+          iconId: "icon-verified-buyer",
+          label: "Verified Buyer",
+        },
+      ],
+      content:
+        "This is the best tasting protein I've ever had. The flavor are great",
+      helpful: "0 of 0 found this helpful",
+      dateOfCreation: "2022-08-12 02:45:54Z",
+    },
+    {
+      rating: 100,
+      ratingItems: [
+        { rating: 100, label: "Strawberry Ice Cream" },
+        { rating: 100, label: "Vanilla Ice Cream" },
+      ],
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg",
+      name: "Colin H",
+      badges: [
+        {
+          iconId: "icon-verified-buyer",
+          label: "Verified Buyer",
+        },
+      ],
+      content:
+        "Good taste very creamy texture only started using a week or so ago but so far it good will buy again",
+      helpful: "0 of 0 found this helpful",
+      dateOfCreation: "2022-08-10 17:36:01Z",
+    },
+    {
+      rating: 40,
+      ratingItems: [
+        { rating: 40, label: "Strawberry Ice Cream" },
+      ],
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg",
+      name: "Jim P",
+      badges: [
+        {
+          iconId: "icon-verified-buyer",
+          label: "Verified Buyer",
+        },
+      ],
+      content:
+        "Tastes like Windex. Leaves a bad, chemical aftertaste. Would not order again.",
+      helpful: "0 of 0 found this helpful",
+      dateOfCreation: "2022-08-09 13:54:55Z",
+    },
+    {
+      rating: 100,
+      ratingItems: [
+        { rating: 100, label: "Chocolate Ice Cream" },
+        { rating: 60, label: "Cookies 'n Cream Ice Cream" },
+      ],
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg",
+      name: "Dakota A",
+      badges: [
+        {
+          iconId: "icon-verified-buyer",
+          label: "Verified Buyer",
+        },
+      ],
+      content:
+        "Great Product for a good lean bulk! 220 cals for 30g protein is excellent!\nI am not a huge fan of the Cookies and Cream but the Chocolate is spot on!",
+      helpful: "0 of 0 found this helpful",
+      dateOfCreation: "2022-08-06 13:57:37Z",
+    },
+    {
+      rating: 100,
+      ratingItems: [{ rating: 100, label: "Vanilla Ice Cream" }],
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg",
+      name: "David D",
+      badges: [
+        {
+          iconId: "icon-verified-buyer",
+          label: "Verified Buyer",
+        },
+      ],
+      content:
+        "This vanilla flavor definitely has a creamy taste to it. Also, it has more fat than many whey proteins.",
+      helpful: "0 of 0 found this helpful",
+      dateOfCreation: "2022-08-04 17:23:18Z",
+    },
+    {
+      rating: 100,
+      ratingItems: [
+        { rating: 100, label: "Chocolate Ice Cream" },
+        { rating: 100, label: "Vanilla Ice Cream" },
+      ],
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg",
+      name: "Jamie C",
+      badges: [
+        {
+          iconId: "icon-verified-buyer",
+          label: "Verified Buyer",
+        },
+      ],
+      content:
+        "A very clean and great tasting protein. Grass-fed is a big selling point.",
+      helpful: "0 of 0 found this helpful",
+      dateOfCreation: "2022-08-02 08:04:54Z",
+    },
+    {
+      rating: 80,
+      ratingItems: [
+        { rating: 100, label: "Chocolate Ice Cream" },
+      ],
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg",
+      name: "Kyle M",
+      badges: [
+        {
+          iconId: "icon-goal-build-muscle",
+          label: "Build Muscle",
+        },
+        {
+          iconId: "icon-verified-buyer",
+          label: "Verified Buyer",
+        },
+      ],
+      content:
+        "flavor is good, does not mix that well, definitely recommend a blender if using more than 1 scoop",
+      helpful: "0 of 0 found this helpful",
+      dateOfCreation: "2022-08-01 13:38:37Z",
+    },
+    {
+      rating: 100,
+      ratingItems: [
+        { rating: 100, label: "Strawberry Ice Cream" },
+      ],
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg",
+      name: "Adrian R",
+      badges: [
+        {
+          iconId: "icon-verified-buyer",
+          label: "Verified Buyer",
+        },
+      ],
+      content:
+        "I like this protein, am  lactose intolerant, but this protein don’t give any problems easy to digest, great with my stomach.",
+      helpful: "0 of 0 found this helpful",
+      dateOfCreation: "2022-07-19 03:04:45Z",
+    },
+    {
+      rating: 60,
+      ratingItems: [
+        { rating: 80, label: "Chocolate Ice Cream" },
+      ],
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg",
+      name: "Anthimos G",
+      badges: [
+        {
+          iconId: "icon-goal-healthy-lifestyle",
+          label: "Healthy Lifestyle",
+        },
+        {
+          iconId: "icon-verified-buyer",
+          label: "Verified Buyer",
+        },
+      ],
+      content:
+        "To many calories, it has too much of fat and calories but the flavor it’s great",
+      helpful: "0 of 0 found this helpful",
+      dateOfCreation: "2022-07-18 13:55:19Z",
+    },
+    {
+      rating: 60,
+      ratingItems: [
+        { rating: 60, label: "Chocolate Ice Cream" },
+      ],
+      imgUrl:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg",
+      name: "Jason K",
+      badges: [
+        {
+          iconId: "icon-verified-buyer",
+          label: "Verified Buyer",
+        },
+      ],
+      content:
+        "1st Grass-fed whey that I have tried. The flavor isn't that good.",
+      helpful: "0 of 0 found this helpful",
+      dateOfCreation: "2022-07-14 19:40:28Z",
+    },
+  ],
 };
 
 export const PRODUCT_DATA_2 = {

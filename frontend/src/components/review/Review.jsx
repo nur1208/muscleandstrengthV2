@@ -12,6 +12,7 @@ export const Review = ({
   content,
   helpful,
   dateOfCreation,
+  ratingItems,
 }) => {
   return (
     <MainWrapper>
@@ -25,6 +26,16 @@ export const Review = ({
           </div>
         </div>
         <ul class="rating-item-wrap slist-on slist-3count ">
+          {ratingItems &&
+            ratingItems.map(({ rating, label }) => (
+              <li class="item">
+                <div class="rate-stars">
+                  <RatingBox width={rating} />
+                </div>
+                <span class="option-label">{label}</span>
+              </li>
+            ))}
+
           <div class="slist-more">Show More +</div>
           <div class="slist-less">Show Less -</div>
         </ul>

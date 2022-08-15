@@ -34,25 +34,23 @@ export const Product = () => {
           <NavbarInfo />
           <div id="main-wrap">
             <div className="main-content">
-              <ProductHeader {...PRODUCT_DATA_2} />
+              <ProductHeader {...PRODUCT_DATA} />
               <FeaturesList />
-              <Deals deals={PRODUCT_DATA_2.deals} />
+              <Deals deals={PRODUCT_DATA.deals} />
             </div>
             <div class="aside aside-after">
               <BuyingOptions
-                options={PRODUCT_DATA_2.buyingOptions}
+                options={PRODUCT_DATA.buyingOptions}
               />
               <div class="product-aside"></div>
-              <Nutrition nutrition={PRODUCT_DATA_2.nutrition} />
+              <Nutrition nutrition={PRODUCT_DATA.nutrition} />
             </div>
             <div class="main-content continued">
               <ProductInfo
-                productInfo={PRODUCT_DATA_2.productInfo}
+                productInfo={PRODUCT_DATA.productInfo}
               />
-              <ReviewsOverall
-                {...PRODUCT_DATA_2.reviewsOverall}
-              />
-              <Reviews reviews={PRODUCT_DATA_2.reviews} />
+              <ReviewsOverall {...PRODUCT_DATA.reviewsOverall} />
+              <Reviews reviews={PRODUCT_DATA.reviews} />
             </div>
           </div>
         </div>

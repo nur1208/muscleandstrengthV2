@@ -239,6 +239,22 @@ export const MainWrapper = styled.div`
     color: #059;
     padding: 0 1.5em;
   }
+
+  .rating-item-wrap .item {
+    padding: 1em 0;
+    border-top: 1px solid #eee;
+    list-style: none;
+  }
+
+  .slist-on li:nth-child(-n + 3) {
+    display: block;
+  }
+
+  .rating-item-wrap .item .rate-stars {
+    float: right;
+    margin-top: -0.4em;
+    margin-left: 0.5em;
+  }
   @media (min-width: 600px) {
     .helpful-wrap {
       font-size: 13px;
@@ -266,6 +282,9 @@ export const MainWrapper = styled.div`
       padding-left: 1em;
       float: left;
       display: block;
+    }
+    .rating-item-wrap .item .rate-stars {
+      margin-top: -0.2em;
     }
   }
   @media (min-width: 1232px) {
