@@ -1,0 +1,30 @@
+import mongoose from "mongoose";
+
+const schema = new mongoose.Schema(
+  {
+    productId: { type: mongoose.Types.ObjectId, ref: "Product" },
+    rating: Number,
+    ratingItems: [
+      {
+        rating: Number,
+        label: String,
+      },
+    ],
+    imgUlr: String,
+    name: String,
+    badges: [
+      {
+        iconId: String,
+        label: String,
+      },
+    ],
+    content: String,
+    helpful: String,
+    dateOfCreation: Date,
+  },
+  {
+    timestamps: true,
+  }
+);
+const ReviewModel = mongoose.model(`Review`, schema);
+export default ReviewModel;

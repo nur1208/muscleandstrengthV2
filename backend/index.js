@@ -8,6 +8,7 @@ import productRouter from "./routes/product.js";
 import globalErrorHandler, {
   handleWrongURL,
 } from "./controllers/error.js";
+import reviewRouter from "./routes/review.js";
 
 dotenv.config();
 
@@ -36,6 +37,7 @@ const main = async () => {
     // Routing
     app.use(router);
     app.use("/api/v1/products", productRouter);
+    app.use("/api/v1/reviews", reviewRouter);
 
     // global error handlers
     app.all("*", handleWrongURL);

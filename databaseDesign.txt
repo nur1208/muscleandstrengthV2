@@ -73,6 +73,7 @@ productDetail {
 }
 
 reviews {
+    productId: Product.id
     rating: Number,
     ratingItems: [{rating: Number, label: String}],
     imgUrl: String, this field is temporary
