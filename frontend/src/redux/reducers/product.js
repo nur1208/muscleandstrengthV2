@@ -2,7 +2,7 @@ import { PRODUCT_ACTIONS } from "../constants";
 
 const initialState = {
   loading: false,
-  data: { topProducts: [] },
+  data: { topProducts: [], productSingle: {} },
   error: null,
 };
 
@@ -12,12 +12,19 @@ export const productReducer = (
 ) => {
   switch (action.type) {
     case PRODUCT_ACTIONS.PRODUCT_FETCH_STORE.LOADING:
+    case PRODUCT_ACTIONS.PRODUCT_FETCH_SINGLE.LOADING:
       return { ...state, ...initialState, loading: true };
 
     case PRODUCT_ACTIONS.PRODUCT_FETCH_STORE.SUCCESS:
-      return { ...state, ...initialState, data: action.payload };
+    case PRODUCT_ACTIONS.PRODUCT_FETCH_SINGLE.SUCCESS:
+      return {
+        ...state,
+        ...initialState,
+        data: { ...state.data, ...action.payload },
+      };
 
     case PRODUCT_ACTIONS.PRODUCT_FETCH_STORE.FAIL:
+    case PRODUCT_ACTIONS.PRODUCT_FETCH_SINGLE.FAIL:
       return {
         ...state,
         ...initialState,

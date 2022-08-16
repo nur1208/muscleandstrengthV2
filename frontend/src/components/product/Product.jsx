@@ -13,12 +13,13 @@ export const Product = ({
   name,
   brand,
   buyingOptions,
+  _id,
 }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`product/${title.replaceAll(" ", "-")}`, {
-      state: { productData: PRODUCT_DATA },
+    navigate(`product/${name.replaceAll(" ", "-")}`, {
+      state: { id: _id },
     });
   };
   const buyOption =

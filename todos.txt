@@ -133,8 +133,10 @@
 - {DONE} update Product model parameters
 - {DONE} update product scraping script and re-scrap all TOP DEALS products detail
 - {DONE} use top deals products that in database in the frontend
-
-- {TODO} make Product page more dynamic
+- {DONE} make Product page more dynamic 
+- {TODO} add productInfo.text and productInfo.style to Product model
+- {TODO} don't show loading in Product page just show the available data and then fetch the rest data
+        make product page faster to load
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
 - {TODO} make Submenu and SubSubmenu components as one component

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import {
   Banner,
@@ -23,12 +24,26 @@ import {
   PRODUCT_DATA,
   PRODUCT_DATA_2,
 } from "../../components/data";
+import { useReduxActions } from "../../hooks";
 import { MainWrapper } from "./product.styles";
 
 export const Product = () => {
   const {
-    state: { productData },
+    state: { id },
   } = useLocation();
+
+  const {
+    data: { productSingle },
+    loading,
+  } = useSelector((state) => state.product_store);
+
+  const { fetchStoreSingleProduct } = useReduxActions();
+  useEffect(() => {
+    fetchStoreSingleProduct(id);
+  }, [id]);
+
+  if (loading || !productSingle.imgUrl)
+    return <div>loading...</div>;
 
   return (
     <>
@@ -39,23 +54,33 @@ export const Product = () => {
           <NavbarInfo />
           <div id="main-wrap">
             <div className="main-content">
-              <ProductHeader {...productData} />
+              <ProductHeader {...productSingle} />
               <FeaturesList />
-              <Deals deals={productData.deals} />
+              <Deals
+                deals={productSingle?.productDetail?.deals}
+              />
             </div>
             <div class="aside aside-after">
               <BuyingOptions
-                options={productData.buyingOptions}
+                options={productSingle.buyingOptions}
               />
               <div class="product-aside"></div>
-              <Nutrition nutrition={productData.nutrition} />
+              <Nutrition
+                nutrition={
+                  productSingle?.productDetail?.nutrition
+                }
+              />
             </div>
             <div class="main-content continued">
               <ProductInfo
-                productInfo={productData.productInfo}
+                productInfo={
+                  productSingle?.productDetail?.productInfo
+                }
               />
-              <ReviewsOverall {...productData.reviewsOverall} />
-              <Reviews reviews={productData.reviews} />
+              <ReviewsOverall
+                {...productSingle?.productDetail?.reviewsOverall}
+              />
+              {/* <Reviews reviews={productSingle.reviews} /> */}
               <div id="results-disclaimer">
                 {" "}
                 * Muscle &amp; Strength does not imply any

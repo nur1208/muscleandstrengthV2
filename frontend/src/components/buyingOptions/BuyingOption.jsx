@@ -22,11 +22,11 @@ export const BuyingOption = ({
     >
       <div class="group-header">
         <div class="cost">
-          {cost.beforeDiscount && (
+          {cost.beforeDiscount ? (
             <div class="before-discount">
               <span class="price">${cost.beforeDiscount}</span>{" "}
             </div>
-          )}
+          ) : undefined}
 
           <span class="calc">
             <span class="regular-price" id="product-price-38914">
