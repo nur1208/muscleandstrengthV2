@@ -127,6 +127,7 @@
         GET clear message for pro
 - {DONE} add product Data to mongodb after scraping
 - {DONE} create Review database model and createReview api route
+- {DONE} createReviews api route
 
 - {TODO} make Product page more dynamic
 not important:

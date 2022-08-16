@@ -18,6 +18,22 @@ export const createOne = (Model, moreLogic) =>
     });
   });
 
+export const createMany = (Model, moreLogic) =>
+  catchAsync(async (req, res, next) => {
+    let newDocs = await Model.insertMany(req.body);
+
+    if (moreLogic) {
+      newDocs = moreLogic(newDocs);
+    }
+
+    res.status(201).json({
+      status: "success",
+      data: {
+        newDoc: newDocs,
+      },
+    });
+  });
+
 export const getAll = (Model) =>
   catchAsync(async (req, res, next) => {
     // let filter = {};
