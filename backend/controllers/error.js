@@ -108,6 +108,7 @@ const globalErrorHandler = (err, req, res, next) => {
   // status , default is error
   err.status = err.status || "error";
 
+  debugger;
   // send long more detailed error to the developer.
   if (process.env.NODE_ENV === "development") {
     sendErrorDev(err, res);
@@ -116,6 +117,7 @@ const globalErrorHandler = (err, req, res, next) => {
     // it's good practice not to modify function's parameters
     let error = { ...err };
     error.message = err.message;
+    error.name = err.name;
 
     // handling mongoose CastError
     // that will happened when a wrong document's _id passed to the model

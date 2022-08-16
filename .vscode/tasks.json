@@ -27,6 +27,24 @@
       "label": "npm: start-dev - backend",
       "detail": "set NODE_ENV=development&&nodemon index.js",
       "group": "build"
+    },
+    {
+      "type": "npm",
+      "script": "start-pro",
+      "path": "backend",
+      "problemMatcher": [],
+      "label": "npm: start-pro - backend",
+      "detail": "set NODE_ENV=production&&nodemon index.js",
+      "group": "build"
+    },
+    {
+      "type": "npm",
+      "script": "debug-pro",
+      "path": "backend",
+      "problemMatcher": [],
+      "label": "npm: debug-pro - backend",
+      "detail": "set NODE_ENV=production&&nodemon --exec ndb --experimental-modules index.js",
+      "group": "build"
     }
   ]
 }

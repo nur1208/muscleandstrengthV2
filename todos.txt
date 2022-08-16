@@ -123,6 +123,8 @@
 - {DONE} set up global Error Handler for the backend
 - {DONE} add productDetail parameter to Product model 
 - {DONE} create getProduct and getProducts routes for Product resource
+- {DONE} fix Cast to ObjectId failed error message  for production
+        GET clear message for pro
 - {TODO} make Product page more dynamic
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
