@@ -10,6 +10,9 @@ export const Product = ({
   title,
   deal,
   price,
+  name,
+  brand,
+  buyingOptions,
 }) => {
   const navigate = useNavigate();
 
@@ -18,6 +21,8 @@ export const Product = ({
       state: { productData: PRODUCT_DATA },
     });
   };
+  const buyOption =
+    buyingOptions && buyingOptions[buyingOptions.length - 1];
   return (
     <MainWrapper>
       <div className="height-setter">
@@ -33,17 +38,30 @@ export const Product = ({
             <div className="image-wrap">
               <img
                 className="product-image lazyloaded"
-                src={imgUrl}
+                src={imgUrl[400]?.split(" ")[0]}
                 alt={title}
               />
             </div>
-            <div className="product-name">{title}</div>
+            <div className="product-name">{`${
+              brand?.name
+            } ${name}, ${
+              buyOption ? buyOption.title : ""
+            }`}</div>
           </span>
         </div>
         <div className="product-info">
-          <span className="mns-label lbl-deal">{deal}</span>
+          <span className="mns-label lbl-deal">
+            {buyOption ? buyOption.deal : deal}
+          </span>
           <div className="price-box">
-            <span className="price">${price}</span>
+            <span className="price">
+              $
+              {buyOption
+                ? buyOption.cost.beforeDiscount
+                  ? buyOption.cost.beforeDiscount
+                  : buyOption.cost.regularPrice
+                : price}
+            </span>
           </div>
           <div className="button-wrap">
             <Button text="View Product" isBlue isSmall />

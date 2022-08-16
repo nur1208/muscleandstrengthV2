@@ -130,6 +130,9 @@
 - {DONE} createReviews api route
 - {DONE} add review Data to mongodb after scraping
 - {DONE} scrap all THIS WEEK'S TOP DEALS products detail data and save them in database
+- {DONE} update Product model parameters
+- {DONE} update product scraping script and re-scrap all TOP DEALS products detail
+- {DONE} use top deals products that in database in the frontend
 
 - {TODO} make Product page more dynamic
 not important:

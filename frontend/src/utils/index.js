@@ -5,3 +5,4 @@ export { COOKIES_CONSTANTS } from "./cookiesConstants";
 export { timeSince } from "./timeSince";
 export { addDays } from "./addDays";
 export { subtractDays } from "./subtractDays";
+export { fetchData } from "./fetchData";

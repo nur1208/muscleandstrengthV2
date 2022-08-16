@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import {
   Banner,
@@ -21,15 +21,25 @@ import {
   MERCH_BANNER_3,
   STORE_TOP_BANNER,
 } from "../../components/data";
+import { useFetch, useReduxActions } from "../../hooks";
 import { MainWrapper } from "./store.styles";
 import {
-  topDealsProps,
   topRatedProps,
   trendingProps,
+  useStorProps,
 } from "./utils";
 
 export const Store = () => {
   const isNotPC = useMediaQuery({ maxWidth: 1028 });
+  const { fetchStoreProducts } = useReduxActions();
+  const { topDealsProps, loading } = useStorProps();
+  useEffect(() => {
+    fetchStoreProducts();
+  }, []);
+
+  // if (loading) {
+  //   return <div>loading...</div>;
+  // }
   return (
     <MainWrapper>
       <Banner {...BANNER_BLOCK_12} />
