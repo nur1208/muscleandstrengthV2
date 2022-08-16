@@ -12,13 +12,13 @@ export const scrapNutrition = (mainDivHtml) => {
         $(".serving", $(option))
           .text()
           .split(":")[1]
-          .trim()
+          ?.trim()
           .split(" ")[0]
-          .trim()
+          ?.trim()
       );
 
       item.servingsPerContainer = Number(
-        $(".serving", $(option)).text().split(":")[2].trim()
+        $(".serving", $(option)).text().split(":")[2]?.trim()
       );
 
       item.infoTable = $("#nutrition-info-table .row", $(option))

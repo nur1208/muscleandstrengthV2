@@ -40,7 +40,7 @@ const customAdditional = async (page) => {
   await page.waitForTimeout(1000 * 10);
 };
 
-export const getProductData = async (url) => {
+export const getProductData = async (url, type) => {
   const __filename = fileURLToPath(import.meta.url);
 
   const __dirname = path.dirname(__filename);
@@ -51,24 +51,24 @@ export const getProductData = async (url) => {
   const mainPageHtml2 = `${__dirname}/pageHtml2.html`;
   const mainDataJson2 = `${__dirname}/data2.json`;
 
-  const timeout = 1000 * 60;
+  const timeout = 1000 * 60 * 3;
 
   const waitForSelector = "#main-wrap";
 
-  // const html = await getHtml(
-  //   url,
-  //   waitForSelector,
-  //   timeout,
-  //   customAdditional
-  // );
+  const html = await getHtml(
+    url,
+    waitForSelector,
+    timeout,
+    customAdditional
+  );
 
-  // fs.writeFile(mainPageHtml2, html, function (err) {
-  //   if (err) throw err;
-  //   console.log("Saved!");
-  // });
+  fs.writeFile(mainPageHtml2, html, function (err) {
+    if (err) throw err;
+    console.log("Saved!");
+  });
 
   // read the html body from the file system (this is very faster then reading it from the internet)
-  const html = await promisify(fs.readFile)(mainPageHtml2);
+  // const html = await promisify(fs.readFile)(mainPageHtml2);
 
   let $ = cheerio.load(html.toString());
 
@@ -83,7 +83,7 @@ export const getProductData = async (url) => {
   const mainSelectorDeals = " #main-wrap .deals-coupons-section";
   const deals = scrapDeals($(mainSelectorDeals).toString());
   productData.deals = deals;
-
+  productData.type = type;
   const mainSelectorBuyingOptions =
     "#main-wrap .aside .product-shop .group-wrap";
 
