@@ -82,7 +82,9 @@ export const getProductData = async (url, type) => {
 
   const mainSelectorDeals = " #main-wrap .deals-coupons-section";
   const deals = scrapDeals($(mainSelectorDeals).toString());
-  productData.deals = deals;
+  productData.productDetail = {};
+
+  productData.productDetail.deals = deals;
   productData.type = type;
   const mainSelectorBuyingOptions =
     "#main-wrap .aside .product-shop .group-wrap";
@@ -91,8 +93,7 @@ export const getProductData = async (url, type) => {
     $(mainSelectorBuyingOptions).toString()
   );
 
-  productData.productDetail = {};
-  productData.productDetail.buyingOptions = buyingOptions;
+  productData.buyingOptions = buyingOptions;
 
   const nutrition = scrapNutrition(
     $(mainSelectorNutrition).toString()

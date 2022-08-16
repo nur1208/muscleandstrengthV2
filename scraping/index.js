@@ -8,7 +8,7 @@ const main = async () => {
     // "https://www.muscleandstrength.com/store/omega-3.html";
     "https://www.muscleandstrength.com/store/perfect-sports-apex-grass-fed-whey-protein.html";
   for (
-    let index = 10;
+    let index = 0;
     index < topDealsProductsData.length;
     index++
   ) {
