@@ -12,6 +12,7 @@ import { scrapNutrition } from "./scrapNutrition.js";
 import { scrapProductInfo } from "./scrapProductInfo.js";
 import { scrapReviewsOverall } from "./scrapReviewsOverall.js";
 import { scrapReviews } from "./scrapReviews.js";
+import GenericEndpoints from "../services/generic.js";
 
 const mainSelectorNutrition =
   "#main-wrap .aside .product-nutrition";
@@ -54,20 +55,20 @@ export const getProductData = async (url) => {
 
   const waitForSelector = "#main-wrap";
 
-  const html = await getHtml(
-    url,
-    waitForSelector,
-    timeout,
-    customAdditional
-  );
+  // const html = await getHtml(
+  //   url,
+  //   waitForSelector,
+  //   timeout,
+  //   customAdditional
+  // );
 
-  fs.writeFile(mainPageHtml2, html, function (err) {
-    if (err) throw err;
-    console.log("Saved!");
-  });
+  // fs.writeFile(mainPageHtml2, html, function (err) {
+  //   if (err) throw err;
+  //   console.log("Saved!");
+  // });
 
   // read the html body from the file system (this is very faster then reading it from the internet)
-  // const html = await promisify(fs.readFile)(mainPageHtml2);
+  const html = await promisify(fs.readFile)(mainPageHtml2);
 
   let $ = cheerio.load(html.toString());
 
@@ -90,13 +91,14 @@ export const getProductData = async (url) => {
     $(mainSelectorBuyingOptions).toString()
   );
 
-  productData.buyingOptions = buyingOptions;
+  productData.productDetail = {};
+  productData.productDetail.buyingOptions = buyingOptions;
 
   const nutrition = scrapNutrition(
     $(mainSelectorNutrition).toString()
   );
 
-  productData.nutrition = nutrition;
+  productData.productDetail.nutrition = nutrition;
 
   const mainSelectorProductInfo =
     "#main-wrap .main-content.continued .std";
@@ -104,7 +106,7 @@ export const getProductData = async (url) => {
   const productInfo = scrapProductInfo(
     $(mainSelectorProductInfo).toString()
   );
-  productData.productInfo = productInfo;
+  productData.productDetail.productInfo = productInfo;
 
   const mainSelectorRO =
     "#main-wrap .main-content.continued .product-reviews-section";
@@ -112,7 +114,7 @@ export const getProductData = async (url) => {
   const reviewsOverall = scrapReviewsOverall(
     $(mainSelectorRO).toString()
   );
-  productData.reviewsOverall = reviewsOverall;
+  productData.productDetail.reviewsOverall = reviewsOverall;
 
   const mainSelectorReviews =
     "#main-wrap .main-content.continued .allReviews .review-wrapper";
@@ -122,12 +124,21 @@ export const getProductData = async (url) => {
   );
 
   productData.reviews = reviews;
-  fs.writeFile(
-    mainDataJson2,
-    JSON.stringify(productData),
-    function (err) {
-      if (err) throw err;
-      console.log("Saved!");
-    }
-  );
+  try {
+    console.log("Saving the product...⌛");
+
+    await GenericEndpoints.post("products", productData);
+    console.log("Product Saved in DB successfully ✔");
+  } catch (error) {
+    console.log("There was an error while saving a product ❌");
+    console.error(error);
+  }
+  // fs.writeFile(
+  //   mainDataJson2,
+  //   JSON.stringify(productData),
+  //   function (err) {
+  //     if (err) throw err;
+  //     console.log("Saved!");
+  //   }
+  // );
 };

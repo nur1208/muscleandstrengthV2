@@ -125,6 +125,7 @@
 - {DONE} create getProduct and getProducts routes for Product resource
 - {DONE} fix Cast to ObjectId failed error message  for production
         GET clear message for pro
+- {TODO} add product Data to mongodb after scraping
 - {TODO} make Product page more dynamic
 not important:
 - {TODO} create LaberWithSvg component and make it dynamic
