@@ -119,15 +119,24 @@ export const getProductData = async (url) => {
   const mainSelectorReviews =
     "#main-wrap .main-content.continued .allReviews .review-wrapper";
 
-  const reviews = scrapReviews(
-    $(mainSelectorReviews).toString()
-  );
+  let reviews = scrapReviews($(mainSelectorReviews).toString());
 
   productData.reviews = reviews;
   try {
     console.log("Saving the product...⌛");
 
-    await GenericEndpoints.post("products", productData);
+    const {
+      data: {
+        data: { newDoc },
+      },
+    } = await GenericEndpoints.post("products", productData);
+
+    reviews = reviews.map((review) => ({
+      ...review,
+      productId: newDoc._id,
+    }));
+    await GenericEndpoints.post("reviews/many", reviews);
+
     console.log("Product Saved in DB successfully ✔");
   } catch (error) {
     console.log("There was an error while saving a product ❌");
