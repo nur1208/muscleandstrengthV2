@@ -17,25 +17,25 @@ const schema = new mongoose.Schema(
     features: [String],
     ratingPercentage: Number, //this field is temporary
     reviewsNum: Number, //this field is temporary
-    deals: [
+    buyingOptions: [
       {
-        imgUrl: { type: String },
-        label: { type: String },
-        desc: { type: String },
+        cost: {
+          beforeDiscount: { type: Number },
+          regularPrice: { type: Number },
+        },
+        title: { type: String },
+        serving: { type: Number },
+        deal: { type: String },
+        options: [{ title: { type: String } }],
       },
     ],
     type: String,
     productDetail: {
-      buyingOptions: [
+      deals: [
         {
-          cost: {
-            beforeDiscount: { type: Number },
-            regularPrice: { type: Number },
-          },
-          title: { type: String },
-          serving: { type: Number },
-          deal: { type: String },
-          options: [{ title: { type: String } }],
+          imgUrl: { type: String },
+          label: { type: String },
+          desc: { type: String },
         },
       ],
       nutrition: [
