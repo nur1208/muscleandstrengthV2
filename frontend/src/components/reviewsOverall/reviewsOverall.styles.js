@@ -176,9 +176,24 @@ export const MainWrapper = styled.div`
   .slist-on li {
     display: none;
   }
-  .slist-on li:nth-child(-n + 3) {
-    display: block;
-  }
+
+  ${({ isShowMore }) =>
+    isShowMore
+      ? `
+    .slist-on li {
+      display: block;
+    }
+
+  
+  `
+      : `
+      
+      
+    .slist-on li:nth-child(-n + 3) {
+      display: block;
+    }
+
+      `}
 
   .rating-item-wrap .item:nth-child(1) {
     border-top: 0;

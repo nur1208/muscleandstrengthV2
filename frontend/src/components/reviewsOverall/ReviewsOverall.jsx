@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { getIconById, ICONS_ID, SvgWrapper } from "../../icons";
 import { Button } from "../button/Button";
 import { RatingBox } from "../ratingBox/RatingBox";
@@ -12,8 +12,9 @@ export const ReviewsOverall = ({
   graphBar,
   ratedFlavors,
 }) => {
+  const [isShowMore, setIsShowMore] = useState(false);
   return (
-    <MainWrapper>
+    <MainWrapper isShowMore={isShowMore}>
       <SectionTitle title="Reviews" />
       <div class="section-inner-wrap">
         <div class="overall-rating-subsection">
@@ -21,10 +22,6 @@ export const ReviewsOverall = ({
             <div class="subsection-title">Overall Rating</div>
             <div class="rate-stars">
               <RatingBox width={overallRating.width} />
-              {/* <div class="rating-box">
-                <div class="star-overlay"></div>
-                <div class="rating" style="width:91%;"></div>
-              </div> */}
               <span class="overall-rating-label">
                 {overallRating.parentage} out of 5 stars
               </span>
@@ -88,8 +85,13 @@ export const ReviewsOverall = ({
                   </li>
                 ))}
 
-                <div class="slist-more">Show More +</div>
-                <div class="slist-less">Show Less -</div>
+                <div
+                  class="slist-more"
+                  onClick={() => setIsShowMore(!isShowMore)}
+                >
+                  {isShowMore ? "Show Less -" : "Show More +"}
+                </div>
+                {/* <div class="slist-less">Show Less -</div> */}
               </ul>
             </div>
           </div>
