@@ -27,7 +27,11 @@ const customAdditional = async (page) => {
   }
 
   await page.waitForTimeout(1000 * 3);
-  await page.click(`${mainSelectorNutrition} .sod_select`);
+  try {
+    await page.click(`${mainSelectorNutrition} .sod_select`);
+  } catch (error) {
+    console.log("doesn't have nutrition");
+  }
   await page.waitForTimeout(1000 * 3);
   try {
     await page.click(
@@ -95,11 +99,17 @@ export const getProductData = async (url, type) => {
 
   productData.buyingOptions = buyingOptions;
 
-  const nutrition = scrapNutrition(
-    $(mainSelectorNutrition).toString()
-  );
+  if (
+    $("#main-wrap .aside").html().includes("product-nutrition")
+  ) {
+    const nutrition = scrapNutrition(
+      $(mainSelectorNutrition).toString()
+    );
 
-  productData.productDetail.nutrition = nutrition;
+    productData.productDetail.nutrition = nutrition;
+  } else {
+    console.log("skip scrap nutrition");
+  }
 
   const mainSelectorProductInfo =
     "#main-wrap .main-content.continued .std";
