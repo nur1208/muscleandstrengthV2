@@ -135,11 +135,14 @@
 - {DONE} use top deals products that in database in the frontend
 - {DONE} make Product page more dynamic
 - {DONE} add productInfo.text, productInfo.videId, productInfo.mainStyle and productInfo.style to Product model and re-scrap
-- {TODO} improve scrapProductInfo scraping script and ProductInfo component
+- {DONE} improve scrapProductInfo scraping script and ProductInfo component
+- {DONE} create 'get Reviews by id' api route
 - {TODO} fetch Product reviews and show it in Product page 
 - {TODO} don't show loading in Product page just show the available data and then fetch the rest data
         make product page faster to load
+- {TODO} add show more functionality for TOP RATED FLAVORS in Product page       
 not important:
+- {TODO} fix Selector up down keys when there are long list
 - {TODO} create LaberWithSvg component and make it dynamic
 - {TODO} make Submenu and SubSubmenu components as one component
 - {TODO} fix SitewideBanner typo

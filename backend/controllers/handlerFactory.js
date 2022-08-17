@@ -36,13 +36,15 @@ export const createMany = (Model, moreLogic) =>
 
 export const getAll = (Model) =>
   catchAsync(async (req, res, next) => {
-    // let filter = {};
+    let filter = {};
     // if (req.params.tourId) filter = { tour: req.params.tourId };
+
+    if (req.customFilter) filter = req.customFilter;
 
     // build the query
     const features = new APIFeatures(
-      //   Model.find(filter),
-      Model.find(),
+      Model.find(filter),
+      // Model.find({}),
       req.query
     )
       .filter()
