@@ -28,5 +28,19 @@ export const useStorProps = () => {
     products: data?.topProducts,
   };
 
-  return { topDealsProps, loading };
+  const topRatedProps = {
+    title: "Top Rated Products",
+    products: data?.topRatedProducts,
+  };
+  const trendingProps = {
+    title: "Trending Products",
+    products: data?.trendingProducts,
+  };
+
+  return {
+    topDealsProps,
+    topRatedProps,
+    trendingProps,
+    loading,
+  };
 };

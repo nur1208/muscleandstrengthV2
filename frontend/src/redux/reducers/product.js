@@ -2,7 +2,12 @@ import { PRODUCT_ACTIONS } from "../constants";
 
 const initialState = {
   loading: false,
-  data: { topProducts: [], productSingle: {} },
+  data: {
+    topProducts: [],
+    productSingle: {},
+    topRatedProducts: [],
+    trendingProducts: [],
+  },
   error: null,
 };
 

@@ -23,16 +23,13 @@ import {
 } from "../../components/data";
 import { useFetch, useReduxActions } from "../../hooks";
 import { MainWrapper } from "./store.styles";
-import {
-  topRatedProps,
-  trendingProps,
-  useStorProps,
-} from "./utils";
+import { useStorProps } from "./utils";
 
 export const Store = () => {
   const isNotPC = useMediaQuery({ maxWidth: 1028 });
   const { fetchStoreProducts } = useReduxActions();
-  const { topDealsProps, loading } = useStorProps();
+  const { topDealsProps, topRatedProps, trendingProps } =
+    useStorProps();
   useEffect(() => {
     fetchStoreProducts();
   }, []);

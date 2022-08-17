@@ -142,11 +142,14 @@
 - {DONE} don't show loading in Product page just show the available data and then fetch the rest data
         make product page faster to load
 - {DONE} add show more functionality for TOP RATED FLAVORS in Product page
-- {TODO} scrap TOP RATED PRODUCTS and TRENDING PRODUCTS products detail data
+- {DONE} fix scrap product that doesn't have nutrition
+- {DONE} scrap TOP RATED PRODUCTS and TRENDING PRODUCTS products detail data and fetch them in the frontend
 - {TODO} scrap more Reviews for a product
 - {TODO} add 'view 10 more reviews' functionality in Product page
 - {TODO} create Review page       
 not important:
+- {TODO} don't have duplicate products in database
+        note: use scrapedDataUrl as primary key
 - {TODO} fix Selector up down keys when there are long list
 - {TODO} create LaberWithSvg component and make it dynamic
 - {TODO} make Submenu and SubSubmenu components as one component
