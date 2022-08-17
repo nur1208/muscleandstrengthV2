@@ -133,8 +133,9 @@
 - {DONE} update Product model parameters
 - {DONE} update product scraping script and re-scrap all TOP DEALS products detail
 - {DONE} use top deals products that in database in the frontend
-- {DONE} make Product page more dynamic 
-- {TODO} add productInfo.text and productInfo.style to Product model
+- {DONE} make Product page more dynamic
+- {DONE} add productInfo.text, productInfo.videId, productInfo.mainStyle and productInfo.style to Product model and re-scrap
+- {TODO} fetch Product reviews and show it in Product page 
 - {TODO} don't show loading in Product page just show the available data and then fetch the rest data
         make product page faster to load
 not important:

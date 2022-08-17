@@ -70,6 +70,10 @@ const schema = new mongoose.Schema(
       productInfo: [
         {
           type: { type: String },
+          text: { type: String },
+          style: { type: String },
+          mainStyle: { type: String },
+          videId: { type: String },
           hasChildren: { type: Boolean },
           child: {
             type: { type: String },
