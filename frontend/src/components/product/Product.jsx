@@ -4,22 +4,24 @@ import { Button } from "../index";
 import { Link, useNavigate } from "react-router-dom";
 import { PRODUCT_DATA } from "../data";
 
-export const Product = ({
-  href,
-  imgUrl,
-  title,
-  deal,
-  price,
-  name,
-  brand,
-  buyingOptions,
-  _id,
-}) => {
+export const Product = (props) => {
   const navigate = useNavigate();
+
+  const {
+    href,
+    imgUrl,
+    title,
+    deal,
+    price,
+    name,
+    brand,
+    buyingOptions,
+    _id,
+  } = props;
 
   const handleClick = () => {
     navigate(`product/${name.replaceAll(" ", "-")}`, {
-      state: { id: _id },
+      state: { id: _id, productData: props },
     });
   };
   const buyOption =

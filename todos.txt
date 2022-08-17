@@ -138,10 +138,13 @@
 - {DONE} improve scrapProductInfo scraping script and ProductInfo component
 - {DONE} create 'get Reviews by id' api route
 - {DONE} fix imgUrl parameter in Review model
-- {TODO} fetch Product reviews and show it in Product page 
-- {TODO} don't show loading in Product page just show the available data and then fetch the rest data
+- {DONE} fetch Product reviews and show it in Product page 
+- {DONE} don't show loading in Product page just show the available data and then fetch the rest data
         make product page faster to load
-- {TODO} add show more functionality for TOP RATED FLAVORS in Product page       
+- {TODO} add show more functionality for TOP RATED FLAVORS in Product page
+- {TODO} scrap more Reviews for a product
+- {TODO} add 'view 10 more reviews' functionality in Product page
+- {TODO} create Review page       
 not important:
 - {TODO} fix Selector up down keys when there are long list
 - {TODO} create LaberWithSvg component and make it dynamic

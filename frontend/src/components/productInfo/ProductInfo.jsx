@@ -19,7 +19,7 @@ export const ProductInfo = ({ productInfo }) => {
   return (
     <MainWrapper
       additionalStyle={
-        productInfo[0].type === "style" && productInfo[0].style
+        productInfo[0]?.type === "style" && productInfo[0]?.style
       }
     >
       <SectionTitle title="Product Information" />
