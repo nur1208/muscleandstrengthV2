@@ -75,6 +75,9 @@ const schema = new mongoose.Schema(
           mainStyle: { type: String },
           videId: { type: String },
           hasChildren: { type: Boolean },
+          imgUrl: { type: String },
+          alt: { type: String },
+          isFullWidthMobile: { type: Boolean },
           child: {
             type: { type: String },
             imgUrl: { type: String },

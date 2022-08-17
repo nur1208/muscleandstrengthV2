@@ -26,6 +26,16 @@ export const scrapProductInfo = (mainDivHtml) => {
         return item;
       }
 
+      if (item.type === "img") {
+        item.imgUrl = $(child).attr("data-src");
+        item.alt = $(child).attr("alt");
+        item.isFullWidthMobile = $(child).hasClass(
+          "full-width-mobile"
+        );
+
+        return item;
+      }
+
       item.mainStyle = $(child).attr("class")?.trim();
       item.hasChildren = $(child).children().length !== 0;
 

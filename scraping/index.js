@@ -7,20 +7,30 @@ const main = async () => {
   const url =
     // "https://www.muscleandstrength.com/store/omega-3.html";
     "https://www.muscleandstrength.com/store/perfect-sports-apex-grass-fed-whey-protein.html";
-  for (
-    let index = 11;
-    index < topDealsProductsData.length;
-    index++
-  ) {
-    const { href } = topDealsProductsData[index];
+  // for (
+  //   let index = 11;
+  //   index < topDealsProductsData.length;
+  //   index++
+  // ) {
+  //   const { href } = topDealsProductsData[index];
 
-    await getProductData(
-      `https://www.muscleandstrength.com${href}`,
-      "topDeals"
-    );
-    console.log({ index });
-  }
+  //   await getProductData(
+  //     `https://www.muscleandstrength.com${href}`,
+  //     "topDeals"
+  //   );
+  //   console.log({ index });
+  // }
   // await getFeaturesListData();
+
+  const element = topDealsProductsData.find(
+    ({ title }) => title === "JNX Sports The Ripper, 30 Servings"
+  );
+
+  await getProductData(
+    `https://www.muscleandstrength.com${element.href}`,
+    "topDeals"
+  );
+
   console.log("DONE scraping ✔");
 };
 

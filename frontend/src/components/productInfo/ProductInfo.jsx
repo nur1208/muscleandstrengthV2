@@ -6,6 +6,16 @@ import { MainWrapper } from "./productInfo.styles";
 export const ProductInfo = ({ productInfo }) => {
   const setMainStyle = (mainStyle) =>
     mainStyle ? mainStyle : undefined;
+
+  const getImgElement = (child) => (
+    <img
+      class={`${
+        child.isFullWidthMobile ? "full-width-mobile " : ""
+      }lazyloaded`}
+      alt={child.alt}
+      src={child.imgUrl}
+    />
+  );
   return (
     <MainWrapper
       additionalStyle={
@@ -23,22 +33,15 @@ export const ProductInfo = ({ productInfo }) => {
               child,
               mainStyle,
               videId,
+              imgUrl,
+              alt,
+              isFullWidthMobile,
             }) =>
               type === "p" ? (
                 <p class={setMainStyle(mainStyle)}>
-                  {hasChildren && child.type === "img" ? (
-                    <img
-                      class={`${
-                        child.isFullWidthMobile
-                          ? "full-width-mobile "
-                          : ""
-                      }lazyloaded`}
-                      alt={child.alt}
-                      src={child.imgUrl}
-                    />
-                  ) : (
-                    text
-                  )}
+                  {hasChildren && child.type === "img"
+                    ? getImgElement(child)
+                    : text}
                 </p>
               ) : type === "ul" ? (
                 <ul class={setMainStyle(mainStyle)}>
@@ -52,6 +55,8 @@ export const ProductInfo = ({ productInfo }) => {
                 <h4 class={setMainStyle(mainStyle)}>{text}</h4>
               ) : type === "video" ? (
                 <YoutubeVideo videoId={videId} />
+              ) : type === "img" ? (
+                getImgElement({ imgUrl, alt, isFullWidthMobile })
               ) : (
                 <></>
               )
