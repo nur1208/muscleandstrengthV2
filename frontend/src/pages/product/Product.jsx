@@ -33,13 +33,21 @@ export const Product = () => {
   } = useLocation();
 
   const {
-    data: { productSingle },
-    loading,
-  } = useSelector((state) => state.product_store);
+    product_store: {
+      data: { productSingle },
+      loading,
+    },
+    review_store: {
+      data: { reviews },
+    },
+  } = useSelector((state) => state);
 
-  const { fetchStoreSingleProduct } = useReduxActions();
+  const { fetchStoreSingleProduct, fetchReviews } =
+    useReduxActions();
+
   useEffect(() => {
     fetchStoreSingleProduct(id);
+    fetchReviews(id);
   }, [id]);
 
   if (loading || !productSingle.imgUrl)
@@ -80,7 +88,7 @@ export const Product = () => {
               <ReviewsOverall
                 {...productSingle?.productDetail?.reviewsOverall}
               />
-              {/* <Reviews reviews={productSingle.reviews} /> */}
+              <Reviews reviews={reviews} />
               <div id="results-disclaimer">
                 {" "}
                 * Muscle &amp; Strength does not imply any

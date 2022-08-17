@@ -47,7 +47,10 @@ export const Review = ({
             height="300"
             class=" ls-is-cached lazyloaded"
             alt="User sImage"
-            src={imgUrl}
+            src={
+              imgUrl ||
+              "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg"
+            }
           />
         </div>
         <div class="user-name">{name}</div>
