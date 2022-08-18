@@ -46,6 +46,7 @@ export const Product = () => {
     useReduxActions();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetchStoreSingleProduct(id);
     fetchReviews(id);
   }, [id]);

@@ -149,7 +149,7 @@
 - {DONE} fix view product button in store page
 - {DONE} fix FrontHero background-image if a user didn't load the website in home page
 - {DONE} fix menu-sys-overlay still open when clicking on navbar item and navigating to another page    
-- {TODO} let the user view top of Product page every time he/she navigated to it
+- {DONE} let the user view top of Product page every time he/she navigated to it
 - {TODO} create Review page       
 not important:
 - {TODO} don't have duplicate products in database
