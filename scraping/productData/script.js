@@ -18,6 +18,28 @@ const mainSelectorNutrition =
   "#main-wrap .aside .product-nutrition";
 const closeModalSelector =
   " body > div.ui-dialog.shipping-modal.ui-widget.ui-widget-content.ui-front.ui-draggable.ui-resizable > div.ui-dialog-titlebar.ui-corner-all.ui-widget-header.ui-helper-clearfix.ui-draggable-handle > button";
+const mainSelectorReviews =
+  "#main-wrap .main-content.continued .allReviews .review-wrapper";
+
+const customAdditionalReviews = async (page) => {
+  // await page.waitForTimeout(1000 * 10);
+  // try {
+  //   await page.click(closeModalSelector);
+  // } catch (error) {
+  //   console.log("modal didn't open");
+  // }
+
+  const btnSelector = "#load-more-reviews";
+  for (let index = 0; index < 6; index++) {
+    await page.waitForTimeout(1000 * 3);
+    try {
+      await page.click(btnSelector);
+    } catch (error) {
+      console.log("doesn't have more reviews");
+    }
+    await page.waitForTimeout(1000 * 15);
+  }
+};
 const customAdditional = async (page) => {
   await page.waitForTimeout(1000 * 10);
   try {
@@ -42,8 +64,35 @@ const customAdditional = async (page) => {
   }
 
   await page.waitForTimeout(1000 * 10);
+  await customAdditionalReviews(page);
 };
 
+export const getProductReviews = async (url, productId) => {
+  const __filename = fileURLToPath(import.meta.url);
+
+  const __dirname = path.dirname(__filename);
+  //   console.log("directory-name 👉️", __dirname);
+  const mainPageHtml = `${__dirname}/pageHtml.html`;
+  const mainDataJson = `${__dirname}/data.json`;
+
+  const mainPageHtml2 = `${__dirname}/pageHtml2.html`;
+  const mainDataJson2 = `${__dirname}/data2.json`;
+
+  const timeout = 1000 * 60 * 3;
+
+  const waitForSelector = "#main-wrap";
+
+  const html = await getHtml(
+    url,
+    waitForSelector,
+    timeout,
+    customAdditionalReviews
+  );
+
+  let $ = cheerio.load(html.toString());
+  let reviews = scrapReviews($(mainSelectorReviews).toString());
+  console.log(reviews.length);
+};
 export const getProductData = async (url, type) => {
   const __filename = fileURLToPath(import.meta.url);
 
@@ -65,11 +114,10 @@ export const getProductData = async (url, type) => {
     timeout,
     customAdditional
   );
-
-  fs.writeFile(mainPageHtml2, html, function (err) {
-    if (err) throw err;
-    console.log("Saved!");
-  });
+  // fs.writeFile(mainPageHtml2, html, function (err) {
+  //   if (err) throw err;
+  //   console.log("Saved!");
+  // });
 
   // read the html body from the file system (this is very faster then reading it from the internet)
   // const html = await promisify(fs.readFile)(mainPageHtml2);
@@ -127,12 +175,11 @@ export const getProductData = async (url, type) => {
   );
   productData.productDetail.reviewsOverall = reviewsOverall;
 
-  const mainSelectorReviews =
-    "#main-wrap .main-content.continued .allReviews .review-wrapper";
-
   let reviews = scrapReviews($(mainSelectorReviews).toString());
 
   productData.reviews = reviews;
+  console.log(reviews.length);
+
   try {
     console.log("Saving the product...⌛");
 

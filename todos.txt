@@ -144,7 +144,7 @@
 - {DONE} add show more functionality for TOP RATED FLAVORS in Product page
 - {DONE} fix scrap product that doesn't have nutrition
 - {DONE} scrap TOP RATED PRODUCTS and TRENDING PRODUCTS products detail data and fetch them in the frontend
-- {TODO} scrap more Reviews for a product
+- {DONE} scrap more Reviews for a product
 - {TODO} add 'view 10 more reviews' functionality in Product page
 - {TODO} create Review page       
 not important:

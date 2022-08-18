@@ -4,7 +4,10 @@ import {
   topRatedProductsData,
   trendingProductsData,
 } from "./productData/data.js";
-import { getProductData } from "./productData/script.js";
+import {
+  getProductData,
+  getProductReviews,
+} from "./productData/script.js";
 
 const main = async () => {
   console.log("start scraping... ⌛");
@@ -13,7 +16,7 @@ const main = async () => {
     "https://www.muscleandstrength.com/store/perfect-sports-apex-grass-fed-whey-protein.html";
   // re scrap { index: 7 }
   for (
-    let index = 1;
+    let index = 0;
     index < trendingProductsData.length;
     index++
   ) {
@@ -25,12 +28,13 @@ const main = async () => {
     );
     console.log({ index });
   }
-  // await getFeaturesListData();
 
   // const element = topDealsProductsData.find(
   //   ({ title }) => title === "JNX Sports The Ripper, 30 Servings"
   // );
-
+  // {
+  //   index: 2;
+  // }
   // const element = topDealsProductsData[11];
 
   // await getProductData(
