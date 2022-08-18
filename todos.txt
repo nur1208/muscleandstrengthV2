@@ -145,7 +145,7 @@
 - {DONE} fix scrap product that doesn't have nutrition
 - {DONE} scrap TOP RATED PRODUCTS and TRENDING PRODUCTS products detail data and fetch them in the frontend
 - {DONE} scrap more Reviews for a product
-- {TODO} add 'view 10 more reviews' functionality in Product page
+- {DONE} add 'view 10 more reviews' functionality in Product page
 - {TODO} create Review page       
 not important:
 - {TODO} don't have duplicate products in database

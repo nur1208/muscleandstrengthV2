@@ -12,19 +12,27 @@ export const reviewReducer = (
 ) => {
   switch (action.type) {
     case REVIEW_ACTIONS.REVIEW_FETCH.LOADING:
-      return { ...state, ...initialState, loading: true };
+      return {
+        ...state,
+        loading: true,
+      };
 
     case REVIEW_ACTIONS.REVIEW_FETCH.SUCCESS:
       return {
         ...state,
         ...initialState,
-        data: { ...state.data, ...action.payload },
+        data: {
+          ...state.data,
+          reviews: [
+            ...state.data.reviews,
+            ...action.payload.reviews,
+          ],
+        },
       };
 
     case REVIEW_ACTIONS.REVIEW_FETCH.FAIL:
       return {
         ...state,
-        ...initialState,
         error: action.payload,
       };
 

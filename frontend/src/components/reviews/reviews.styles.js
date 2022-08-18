@@ -7,7 +7,7 @@ export const MainWrapper = styled.div`
 
   .viewmore-loadingmessage {
     z-index: 10;
-    display: none;
+    /* display: none; */
     text-align: center;
     margin: auto;
   }
