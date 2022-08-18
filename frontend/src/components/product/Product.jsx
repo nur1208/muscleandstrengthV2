@@ -67,7 +67,12 @@ export const Product = (props) => {
             </span>
           </div>
           <div className="button-wrap">
-            <Button text="View Product" isBlue isSmall />
+            <Button
+              text="View Product"
+              isBlue
+              isSmall
+              onClick={handleClick}
+            />
           </div>
         </div>
       </div>

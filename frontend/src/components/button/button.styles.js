@@ -72,6 +72,11 @@ export const MainWrapper = styled.button`
     color: #fefefe;
     text-shadow: 1px 1px 0 #004780;
     border: 1px solid #004a85;
+    &:hover{
+      background-color: #004780;
+      background-image: linear-gradient(#004175,#004780);
+      color: #e6e6e6;
+    }
   `}
 
   ${({ isLarge }) =>

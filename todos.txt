@@ -146,6 +146,9 @@
 - {DONE} scrap TOP RATED PRODUCTS and TRENDING PRODUCTS products detail data and fetch them in the frontend
 - {DONE} scrap more Reviews for a product
 - {DONE} add 'view 10 more reviews' functionality in Product page
+- {DONE} fix view product button in store page
+- {TODO} fix menu-sys-overlay still open when clicking on navbar item and navigating to another page    
+- {TODO} let the user view top of Product page every time he/she navigated to it
 - {TODO} create Review page       
 not important:
 - {TODO} don't have duplicate products in database
