@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useReduxActions } from "../../hooks";
+import React from "react";
+import { useUpdateCustomNavInfo } from "../../hooks";
 import { getIconById, ICONS_ID } from "../../icons";
 import { RatingBox } from "../ratingBox/RatingBox";
 import { MainWrapper } from "./productHeader.styles";
@@ -13,15 +13,7 @@ export const ProductHeader = ({
   ratingPercentage,
   reviewsNum,
 }) => {
-  const { updateCustomNavInfo } = useReduxActions();
-  useEffect(() => {
-    updateCustomNavInfo(`> Store > ${name}`);
-
-    return () => {
-      updateCustomNavInfo(null);
-    };
-  }, [name]);
-
+  useUpdateCustomNavInfo(`> Store > ${name}`);
   return (
     <MainWrapper>
       <div class="ship-to-block tooltip tooltipstered">
