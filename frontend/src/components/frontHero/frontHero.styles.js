@@ -6,7 +6,7 @@ export const MainWrapper = styled.div`
   position: relative;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url(./images/front-800.jpg);
+  background-image: url(/images/front-800.jpg);
 
   .overlay {
     position: absolute;
@@ -44,7 +44,7 @@ export const MainWrapper = styled.div`
   }
 
   @media screen and (min-width: 37.5em) {
-    background-image: url(./images/front.jpg);
+    background-image: url(/images/front.jpg);
     min-height: 600px;
 
     .overlay {
