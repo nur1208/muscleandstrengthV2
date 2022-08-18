@@ -68,8 +68,10 @@ export function useSubmenu() {
 
   const navigate = useNavigate();
   const handleClickItemBtn = (href) => {
-    if (isOpen && openedType === OPENED_TYPES.NAVBAR)
+    if (isOpen && openedType === OPENED_TYPES.NAVBAR) {
+      updateIsOpen({ isOpen: false });
       navigate(href);
+    }
   };
 
   const handleClickGoTo = (href) => {
