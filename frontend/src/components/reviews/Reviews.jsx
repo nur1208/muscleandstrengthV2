@@ -6,7 +6,11 @@ import { Button } from "../button/Button";
 import { Review } from "../review/Review";
 import { MainWrapper } from "./reviews.styles";
 
-export const Reviews = ({ reviews }) => {
+export const Reviews = ({
+  reviews,
+  viewMorePer,
+  hasViewAllBtn,
+}) => {
   const [currentPage, setCurrentPage] = useState(1);
   const navigate = useNavigate();
 
@@ -65,17 +69,21 @@ export const Reviews = ({ reviews }) => {
 
       <div class="button-columns btn-row-mobile">
         <Button
-          text="View 10 More Reviews"
+          text={`View ${
+            viewMorePer ? viewMorePer : 10
+          } More Reviews`}
           isBlue
           onClick={handleOnClick}
         />
 
-        <Button
-          text="View All Reviews"
-          isBlue
-          isEllipsis
-          onClick={handleClickViewAll}
-        />
+        {hasViewAllBtn && (
+          <Button
+            text="View All Reviews"
+            isBlue
+            isEllipsis
+            onClick={handleClickViewAll}
+          />
+        )}
       </div>
     </MainWrapper>
   );

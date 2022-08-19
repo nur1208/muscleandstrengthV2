@@ -96,7 +96,11 @@ export const Product = () => {
                   hasTitleSection
                 />
               )}
-              <Reviews reviews={reviews} />
+              <Reviews
+                reviews={reviews}
+                viewMorePer={10}
+                hasViewAllBtn
+              />
               <div id="results-disclaimer">
                 {" "}
                 * Muscle &amp; Strength does not imply any

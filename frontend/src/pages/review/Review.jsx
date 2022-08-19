@@ -61,7 +61,7 @@ export const Review = () => {
                   font-size: 18px;"
             />
             <SortingFiltering />
-            <Reviews reviews={reviews} />
+            <Reviews reviews={reviews} viewMorePer={50} />
             <div id="results-disclaimer">
               {" "}
               * Muscle &amp; Strength does not imply any medical
