@@ -321,6 +321,21 @@ export const MainWrapper = styled.div`
     height: 4px;
     background: #999;
   }
+
+  .review-sorting-filtering .loading-message {
+    z-index: 10;
+    display: none;
+    text-align: center;
+    overflow: hidden;
+    float: left;
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  .review-sorting-filtering .loading-message img {
+    max-width: 100%;
+    height: auto;
+  }
   @media (min-width: 400px) {
     .review-sorting-filtering .filter-by,
     .review-sorting-filtering .sort-by {

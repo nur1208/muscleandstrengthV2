@@ -150,7 +150,12 @@
 - {DONE} fix FrontHero background-image if a user didn't load the website in home page
 - {DONE} fix menu-sys-overlay still open when clicking on navbar item and navigating to another page    
 - {DONE} let the user view top of Product page every time he/she navigated to it
-- {TODO} create Review page       
+- {DONE} create SmallProduct component
+- {DONE} create useUpdateCustomNavInfo hook
+- {DONE} create SortingFiltering component and useStartFilter hook
+- {DONE} set up Review page       
+- {TODO} don't show show more btn in ReviewsOverall component if there are no more flavors 
+- {TODO} add isVerifiedBuyers parameter in Reviews model and re-scrap the products
 not important:
 - {TODO} don't have duplicate products in database
         note: use scrapedDataUrl as primary key

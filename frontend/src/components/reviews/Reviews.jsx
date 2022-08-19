@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { useReduxActions } from "../../hooks";
 import { Button } from "../button/Button";
 import { Review } from "../review/Review";
@@ -7,6 +8,7 @@ import { MainWrapper } from "./reviews.styles";
 
 export const Reviews = ({ reviews }) => {
   const [currentPage, setCurrentPage] = useState(1);
+  const navigate = useNavigate();
 
   const {
     product_store: {
@@ -24,6 +26,21 @@ export const Reviews = ({ reviews }) => {
       setCurrentPage(nextPage);
     }
   };
+
+  const handleClickViewAll = () => {
+    if (productSingle?._id) {
+      navigate(
+        `/store/reviews/brands/${productSingle?.brand?.title.replaceAll(
+          " ",
+          "-"
+        )}/${productSingle?.name.replaceAll(" ", "-")}`,
+        {
+          state: { productData: productSingle },
+        }
+      );
+    }
+  };
+
   return (
     <MainWrapper>
       <div class="review-wrapper">
@@ -53,7 +70,12 @@ export const Reviews = ({ reviews }) => {
           onClick={handleOnClick}
         />
 
-        <Button text="View All Reviews" isBlue isEllipsis />
+        <Button
+          text="View All Reviews"
+          isBlue
+          isEllipsis
+          onClick={handleClickViewAll}
+        />
       </div>
     </MainWrapper>
   );

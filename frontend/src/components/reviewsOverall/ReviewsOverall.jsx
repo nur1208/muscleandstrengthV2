@@ -11,11 +11,16 @@ export const ReviewsOverall = ({
   verifiedBuyers,
   graphBar,
   ratedFlavors,
+  hasTitleSection,
+  customStyle,
 }) => {
   const [isShowMore, setIsShowMore] = useState(false);
   return (
-    <MainWrapper isShowMore={isShowMore}>
-      <SectionTitle title="Reviews" />
+    <MainWrapper
+      customStyle={customStyle}
+      isShowMore={isShowMore}
+    >
+      {hasTitleSection && <SectionTitle title="Reviews" />}
       <div class="section-inner-wrap">
         <div class="overall-rating-subsection">
           <div class="subsection-inner-wrap">

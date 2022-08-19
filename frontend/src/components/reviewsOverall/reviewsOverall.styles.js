@@ -281,5 +281,7 @@ export const MainWrapper = styled.div`
     .top-rated-flavors-subsection .rating-item-wrap {
       max-width: 80%;
     }
-  } ;
+  }
+
+  ${({ customStyle }) => (customStyle ? customStyle : "")}
 `;

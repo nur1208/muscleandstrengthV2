@@ -33,3 +33,5 @@ export { Nutrition } from "./nutrition/Nutrition";
 export { ProductInfo } from "./productInfo/ProductInfo";
 export { ReviewsOverall } from "./reviewsOverall/ReviewsOverall";
 export { Reviews } from "./reviews/Reviews";
+export { SmallProduct } from "./smallProduct/SmallProduct";
+export { SortingFiltering } from "./sortingFiltering/SortingFiltering";

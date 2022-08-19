@@ -28,6 +28,12 @@ export const SortingFiltering = () => {
           />
           <StarFilter />
         </div>
+        <div id="loadingmessage" class="loading-message">
+          <img
+            src="https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/ajax-loader.gif"
+            alt="Loading"
+          />
+        </div>
       </div>
     </MainWrapper>
   );

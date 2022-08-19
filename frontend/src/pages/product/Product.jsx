@@ -93,6 +93,7 @@ export const Product = () => {
                 <ReviewsOverall
                   {...productSingle?.productDetail
                     ?.reviewsOverall}
+                  hasTitleSection
                 />
               )}
               <Reviews reviews={reviews} />

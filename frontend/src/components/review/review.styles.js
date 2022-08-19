@@ -255,6 +255,7 @@ export const MainWrapper = styled.div`
     margin-top: -0.4em;
     margin-left: 0.5em;
   }
+
   @media (min-width: 600px) {
     .helpful-wrap {
       font-size: 13px;
