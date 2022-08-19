@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { Button } from "../button/Button";
 import { MainWrapper } from "./smallProduct.styles";
 
@@ -10,10 +11,26 @@ export const SmallProduct = () => {
     },
   } = useSelector((state) => state);
 
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(
+      `/store/product/${productSingle?.name.replaceAll(
+        " ",
+        "-"
+      )}`,
+      {
+        state: {
+          id: productSingle?._id,
+          productData: productSingle,
+        },
+      }
+    );
+  };
   return (
     <MainWrapper>
       <div class="image-wrap">
-        <a href="/store/force-factor-test-x180-boost.html">
+        <a onClick={handleClick}>
           <picture>
             <source
               width="350"
@@ -43,7 +60,13 @@ export const SmallProduct = () => {
           </a>
         </div>
         <div class="product-text">{productSingle.tagline}</div>
-        <Button text="View Product" isBlue isLarge isExpanded />
+        <Button
+          text="View Product"
+          isBlue
+          isLarge
+          isExpanded
+          onClick={handleClick}
+        />
         {/* <a
           href="/store/force-factor-test-x180-boost.html"
           class="btn btn-lg btn-blue"
