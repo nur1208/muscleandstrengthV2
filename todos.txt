@@ -156,7 +156,7 @@
 - {DONE} set up Review page       
 - {DONE} don't show more btn in ReviewsOverall component if there are no more flavors 
 - {DONE} make Reviews component more dynamic 
-- {TODO} add click even listener to "Sort and filter" button
+- {DONE} add click even listener to "Sort and filter" button
 - {TODO} fix Review page responsive problems
 - {TODO} add isVerifiedBuyers parameter in Reviews model and re-scrap the products
 not important:

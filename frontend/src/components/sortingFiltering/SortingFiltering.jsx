@@ -1,19 +1,20 @@
 import React from "react";
+import { useState } from "react";
 import { Button } from "../button/Button";
 import { Radio } from "./Radio";
 import { MainWrapper } from "./sortingFiltering.styles";
 import { StarFilter } from "./StarFilter";
 
-// for (let index = 0; index <= 5; index++) {
-//     console.log("start" + index,index * 20);for (let indexIN = (index * 3)  + 3; indexIN >= (index * 3) + 1; indexIN--) {
-//       console.log(indexIN,(indexIN +index) * 5)
-//     }
-// }
 export const SortingFiltering = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <MainWrapper>
+    <MainWrapper isOpen={isOpen}>
       <div class="mobile-header">
-        <Button text="Sort &amp; Filter" isBlue />
+        <Button
+          text="Sort &amp; Filter"
+          isBlue
+          onClick={() => setIsOpen(!isOpen)}
+        />
 
         <label class="heading"></label>
       </div>

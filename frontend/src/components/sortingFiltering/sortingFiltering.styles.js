@@ -56,6 +56,15 @@ export const MainWrapper = styled.div`
     display: none;
   }
 
+  ${({ isOpen }) =>
+    isOpen &&
+    `  
+  .review-sorting-filtering {
+    display: block;
+    margin-bottom: 1em;
+  }
+  `}
+
   .review-sorting-filtering .inner-wrap {
     margin-top: -1px;
     border-left: 1px solid #ddd;
