@@ -173,6 +173,9 @@ export const MainWrapper = styled.div`
     list-style: none;
   }
 
+  li {
+    font-size: 16px;
+  }
   .slist-on li {
     display: none;
   }

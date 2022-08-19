@@ -44,29 +44,29 @@ export const MainWrapper = styled.div`
   }
 
   .aside {
-    width: 95%;
+    /* width: 95%; */
     padding-left: 2.5%;
     padding-right: 2.5%;
     display: block;
     background-color: transparent;
-    float: left;
+    /* float: left; */
     padding-top: 0;
     margin-top: 0;
   }
 
   .aside {
-    width: 95%;
+    /* width: 95%; */
     padding-left: 2.5%;
     padding-right: 2.5%;
     display: block;
-    float: left;
+    /* float: left; */
     padding-top: 0;
     margin-top: 0;
   }
 
   .main-content {
-    float: left;
-    width: 95%;
+    /* float: left;
+    width: 95%; */
     padding-left: 2.5%;
     padding-right: 2.5%;
   }
@@ -158,19 +158,19 @@ export const MainWrapper = styled.div`
 
     .main-content {
       float: left;
-      width: 60%;
+      width: 62.5%;
       padding-left: 2.5%;
       padding-right: 0;
     }
   }
 
-  @media (min-width: 840px) {
+  /* @media (min-width: 840px) {
     .main-content {
       float: left;
       width: 68%;
       position: relative;
     }
-  }
+  } */
   @media (min-width: 1082px) {
     .center-header .center-header-title {
       font-size: 2.5em;
@@ -201,7 +201,7 @@ export const MainWrapper = styled.div`
 
     .main-content {
       float: left;
-      width: 65%;
+      width: 67.5%;
       padding-left: 2.5%;
       padding-right: 0;
     }
