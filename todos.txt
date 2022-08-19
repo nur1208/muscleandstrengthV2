@@ -154,7 +154,10 @@
 - {DONE} create useUpdateCustomNavInfo hook
 - {DONE} create SortingFiltering component and useStartFilter hook
 - {DONE} set up Review page       
-- {TODO} don't show show more btn in ReviewsOverall component if there are no more flavors 
+- {DONE} don't show more btn in ReviewsOverall component if there are no more flavors 
+- {TODO} make Reviews component more dynamic 
+- {TODO} add click even listener to "Sort and filter" button
+- {TODO} fix Review page responsive problems
 - {TODO} add isVerifiedBuyers parameter in Reviews model and re-scrap the products
 not important:
 - {TODO} don't have duplicate products in database

@@ -89,13 +89,15 @@ export const ReviewsOverall = ({
                     <span class="option-label">{title}</span>
                   </li>
                 ))}
+                {ratedFlavors.length > 3 && (
+                  <div
+                    class="slist-more"
+                    onClick={() => setIsShowMore(!isShowMore)}
+                  >
+                    {isShowMore ? "Show Less -" : "Show More +"}
+                  </div>
+                )}
 
-                <div
-                  class="slist-more"
-                  onClick={() => setIsShowMore(!isShowMore)}
-                >
-                  {isShowMore ? "Show Less -" : "Show More +"}
-                </div>
                 {/* <div class="slist-less">Show Less -</div> */}
               </ul>
             </div>

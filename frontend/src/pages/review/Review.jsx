@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import {
   Banner,
@@ -26,6 +27,9 @@ export const Review = () => {
       data: { reviews },
     },
   } = useSelector((state) => state);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useUpdateCustomNavInfo(
     `> Store > Reviews > ${productSingle.name}`
@@ -58,7 +62,7 @@ export const Review = () => {
             />
             <SortingFiltering />
             <Reviews reviews={reviews} />
-            <div id="w">
+            <div id="results-disclaimer">
               {" "}
               * Muscle &amp; Strength does not imply any medical
               claims from this review. There are no guarantees of
