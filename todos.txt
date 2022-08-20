@@ -160,6 +160,8 @@
 - {DONE} add click even listener to "View Product" button and Product image in Review page
 - {DONE} fix Review page responsive problems
 - {DONE} create LoginModal component
+- {DONE} create 'sign up' api route
+- {TODO} use 'sign up'
 - {TODO} add isVerifiedBuyers parameter in Reviews model and re-scrap the products
 not important:
 - {TODO} don't have duplicate products in database

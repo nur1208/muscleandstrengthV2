@@ -9,6 +9,7 @@ import globalErrorHandler, {
   handleWrongURL,
 } from "./controllers/error.js";
 import reviewRouter from "./routes/review.js";
+import userRouter from "./routes/user.js";
 
 dotenv.config();
 
@@ -38,6 +39,7 @@ const main = async () => {
     app.use(router);
     app.use("/api/v1/products", productRouter);
     app.use("/api/v1/reviews", reviewRouter);
+    app.use("/api/v1/users", userRouter);
 
     // global error handlers
     app.all("*", handleWrongURL);
