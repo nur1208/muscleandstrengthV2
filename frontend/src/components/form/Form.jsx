@@ -14,7 +14,13 @@ export const Form = ({ fields, title, type, sideInfoTitle }) => {
     <MainWrapper>
       <div class="login-wrapper">
         <div class="grid-x">
-          <div class="cell bp740-8 customer-login">
+          <div
+            class={
+              type !== FORM_TYPES.LOGIN_MODAL
+                ? "cell bp740-8 customer-login"
+                : ""
+            }
+          >
             <Messages />
             <h1 class="page-title text-center">{title}</h1>
             <form
@@ -37,15 +43,30 @@ export const Form = ({ fields, title, type, sideInfoTitle }) => {
                   isExpanded
                   hasLoader
                 />
+                {type === FORM_TYPES.LOGIN_MODAL && (
+                  <Button
+                    text="Create Account"
+                    // isBlue
+                    isExpanded
+                    hasLoader
+                  />
+                )}
               </div>
-              {type === FORM_TYPES.LOGIN && <ForgotPassword />}
+              {(type === FORM_TYPES.LOGIN ||
+                type === FORM_TYPES.LOGIN_MODAL) && (
+                <ForgotPassword />
+              )}
             </form>
           </div>
-          <div class="cell bp740-4 new-customer-create-account">
-            <h3>{sideInfoTitle}</h3>
-            {type === FORM_TYPES.LOGIN && <RightLoginInfo />}
-            {type === FORM_TYPES.SIGN_UP && <RightSignUpInfo />}
-          </div>
+          {type !== FORM_TYPES.LOGIN_MODAL && (
+            <div class="cell bp740-4 new-customer-create-account">
+              <h3>{sideInfoTitle}</h3>
+              {type === FORM_TYPES.LOGIN && <RightLoginInfo />}
+              {type === FORM_TYPES.SIGN_UP && (
+                <RightSignUpInfo />
+              )}
+            </div>
+          )}
         </div>
       </div>
     </MainWrapper>

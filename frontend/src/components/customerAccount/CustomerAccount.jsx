@@ -1,24 +1,42 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import {
+  Link,
+  useLocation,
+  useNavigate,
+} from "react-router-dom";
+import { useReduxActions } from "../../hooks";
 import { IconUserLogin } from "../../icons";
+import { MODAL_TYPES } from "../../redux/constants";
 import { MainWrapper } from "./customerAccount.styles";
 
 export const CustomerAccount = () => {
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+  const { updateModalState } = useReduxActions();
+
+  const handleOnClick = () => {
+    if (pathname.includes("store")) {
+      updateModalState({
+        isOpen: true,
+        type: MODAL_TYPES.LOGIN,
+      });
+    } else navigate("/store/customer/account/login");
+  };
   return (
     <MainWrapper>
       <>
         <div class="user-account-link">
-          <Link to="/store/customer/account/create">
+          <a onClick={handleOnClick}>
             <IconUserLogin />
             <label>Account</label>
-          </Link>
+          </a>
         </div>
 
         <div class="user-login-link">
-          <Link to="/store/customer/account/login">
+          <a onClick={handleOnClick}>
             <IconUserLogin />
             <label>Login</label>
-          </Link>
+          </a>
         </div>
       </>
     </MainWrapper>

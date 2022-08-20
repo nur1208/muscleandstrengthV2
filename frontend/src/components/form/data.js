@@ -128,6 +128,7 @@ export const benefits = [
 
 export const FORM_TYPES = {
   LOGIN: "LOGIN",
+  LOGIN_MODAL: "LOGIN_MODAL",
   SIGN_UP: "SIGN_UP",
 };
 

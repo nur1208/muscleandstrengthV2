@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import GlobalStyle from "./app.styles";
+import { LoginModal } from "./components";
 import {
   Home,
   Login,
@@ -28,6 +29,7 @@ function App() {
           </Route>
         </Route>
       </Routes>
+      <LoginModal />
     </>
   );
 }

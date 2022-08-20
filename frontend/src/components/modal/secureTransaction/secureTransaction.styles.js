@@ -73,8 +73,8 @@ export const MainWrapper = styled.div`
   .close-icon {
     position: absolute;
     z-index: 9999;
-    top: 0;
-    right: 0;
+    top: 5px;
+    right: 5px;
     line-height: 25px;
     width: 25px;
     cursor: pointer;
