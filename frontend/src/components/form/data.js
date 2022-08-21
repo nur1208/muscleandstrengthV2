@@ -2,7 +2,7 @@ export const loginFields = [
   {
     placeholder: "Email Address",
     id: "email",
-    name: "login[username]",
+    name: "email",
     type: "email",
     required: true,
     fieldType: "INPUT",
@@ -10,7 +10,7 @@ export const loginFields = [
   {
     placeholder: "Password",
     id: "pass",
-    name: "login[password]",
+    name: "password",
     type: "password",
     required: true,
     fieldType: "INPUT",

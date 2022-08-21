@@ -18,7 +18,7 @@ import { MainWrapper } from "./customerAccount.styles";
 export const CustomerAccount = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  const { updateModalState } = useReduxActions();
+  const { updateModalState, logout } = useReduxActions();
 
   const { userData } = useSelector((state) => state.user_store);
 
@@ -29,6 +29,10 @@ export const CustomerAccount = () => {
         type: MODAL_TYPES.LOGIN,
       });
     } else navigate("/store/customer/account/login");
+  };
+  const handleLogout = (e) => {
+    e.stopPropagation();
+    logout();
   };
   return (
     <MainWrapper>
@@ -67,10 +71,7 @@ export const CustomerAccount = () => {
                       </a>
                     </li>
                     <li class="logout">
-                      <a
-                        rel="nofollow"
-                        href="https://www.muscleandstrength.com/store/customer/account/logout/"
-                      >
+                      <a rel="nofollow" onClick={handleLogout}>
                         <SvgWrapper childStyle="width:1.3em!important; height:1.3em!important; margin-bottom:-.3em!important; margin-right: 0.1em;">
                           {getIconById(ICONS_ID.IconLogout)}
                         </SvgWrapper>{" "}

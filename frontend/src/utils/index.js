@@ -6,3 +6,4 @@ export { timeSince } from "./timeSince";
 export { addDays } from "./addDays";
 export { subtractDays } from "./subtractDays";
 export { fetchData } from "./fetchData";
+export { removeCookie } from "./removeCookie";

@@ -131,7 +131,7 @@ export const MainWrapper = styled.div`
     }
 
     .store-dropdown {
-      top: 55px;
+      top: 53px;
       width: 160px;
     }
 

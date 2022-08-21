@@ -12,7 +12,7 @@ import { RightLoginInfo } from "./RightLoginInfo";
 import { RightSignUpInfo } from "./RightSignUpInfo";
 
 export const Form = ({ fields, title, type, sideInfoTitle }) => {
-  const { signUp } = useReduxActions();
+  const { signUp, login } = useReduxActions();
   const { userInput } = useSelector((state) => state.user_store);
 
   const handleOnClick = (e) => {
@@ -20,7 +20,7 @@ export const Form = ({ fields, title, type, sideInfoTitle }) => {
     if (type === FORM_TYPES.SIGN_UP) {
       signUp(userInput.signUp);
     } else {
-      console.log("else");
+      login(userInput.login);
     }
   };
   return (

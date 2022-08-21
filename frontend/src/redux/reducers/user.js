@@ -15,12 +15,14 @@ export const userReducer = (state = initialState, action) => {
         userInput: { ...state.userInput, ...action.payload },
       };
     case USER_ACTIONS.SIGN_UP.LOADING:
+    case USER_ACTIONS.LOGIN.LOADING:
       return {
         ...state,
         loading: true,
       };
 
     case USER_ACTIONS.SIGN_UP.SUCCESS:
+    case USER_ACTIONS.LOGIN.SUCCESS:
     case USER_ACTIONS.AUTO_LOGIN:
       return {
         ...state,
@@ -29,11 +31,16 @@ export const userReducer = (state = initialState, action) => {
       };
 
     case USER_ACTIONS.SIGN_UP.FALL:
+    case USER_ACTIONS.LOGIN.FALL:
       return {
         ...state,
         loading: false,
         error: action.payload,
       };
+
+    case USER_ACTIONS.LOGOUT:
+      return { ...state, userData: null };
+
     default:
       return state;
   }

@@ -1,5 +1,5 @@
 import { UserEndPoints } from "../../services";
-import { setCookie } from "../../utils";
+import { removeCookie, setCookie } from "../../utils";
 import { USER_ACTIONS } from "../constants";
 
 const saveUserData = (userData, token) => {
@@ -65,3 +65,63 @@ export const autoLogin = (userDate) => async (dispatch) =>
 
 export const updateField = (data) => (dispatch) =>
   dispatch({ type: USER_ACTIONS.UPDATE_FIELD, payload: data });
+
+export const login =
+  (userData, response) => async (dispatch, getState) => {
+    try {
+      response && response("logging in");
+      dispatch({ type: USER_ACTIONS.LOGIN.LOADING });
+      // response.data.doc
+      const { data } = await UserEndPoints.login(userData);
+      // const { data } = await axios.post(
+      //   `${BACKEND_API_URL}/${USER_ROUTE}/login`,
+      //   {
+      //     ...userData,
+      //   }
+      // );
+
+      response && response("logged in successfully");
+      response &&
+        response(`welcome back ${data.data.user.name}`);
+
+      // const serverUserDate = {
+      //   ...data.data.user,
+      //   token: data.token,
+      // };
+      // localStorage.setItem(
+      //   "userData",
+      //   JSON.stringify(serverUserDate)
+      // );
+
+      const serverUserDate = saveUserData(
+        data.data.user,
+        data.token
+      );
+      dispatch({
+        type: USER_ACTIONS.LOGIN.SUCCESS,
+        payload: serverUserDate,
+      });
+    } catch (error) {
+      response && response("logging in failed");
+
+      const errorMessage = error?.response?.data?.message
+        ? error?.response?.data?.message
+        : error.message;
+
+      response && response(errorMessage);
+
+      response &&
+        response("if you want to try again say, login");
+
+      dispatch({
+        type: USER_ACTIONS.LOGIN.FALL,
+        payload: errorMessage,
+      });
+    }
+  };
+
+export const logout = () => (dispatch) => {
+  // localStorage.setItem("userData", null);
+  removeCookie("userData");
+  dispatch({ type: USER_ACTIONS.LOGOUT });
+};
