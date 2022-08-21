@@ -163,6 +163,7 @@
 - {DONE} create 'sign up' api route
 - {DONE} use 'sign up' api route in the frontend
 - {DONE} create 'auto login' functionality in the frontend
+- {DONE} update CustomerAccount component if a user logged in
 - {TODO} add isVerifiedBuyers parameter in Reviews model and re-scrap the products
 not important:
 - {TODO} don't have duplicate products in database

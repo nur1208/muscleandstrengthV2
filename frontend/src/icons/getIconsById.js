@@ -1,4 +1,7 @@
 import {
+  IconLogout,
+  IconHistory,
+  IconAccount,
   IconGoalHealthyLifestyle,
   IconGoalBuildMuscle,
   IconGoalBurnFat,
@@ -151,6 +154,15 @@ export const getIconById = (iconId, style) => {
 
     case "icon-goal-healthy-lifestyle":
       return <IconGoalHealthyLifestyle style={style} />;
+
+    case "icon-account":
+      return <IconAccount style={style} />;
+
+    case "icon-history":
+      return <IconHistory style={style} />;
+
+    case "icon-logout":
+      return <IconLogout style={style} />;
 
     default:
       return <IconQuestionMark style={style} />;

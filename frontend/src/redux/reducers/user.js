@@ -2,7 +2,7 @@ import { USER_ACTIONS } from "../constants";
 
 const initialState = {
   loading: false,
-  userData: {},
+  userData: null,
   error: null,
   userInput: { signUp: { isNotified: true }, login: {} },
 };

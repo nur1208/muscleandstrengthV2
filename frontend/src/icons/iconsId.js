@@ -23,4 +23,7 @@ export const ICONS_ID = {
   IconCreateBlue: "icon-create-blue",
   IconCreate: "icon-create",
   IconVerifiedBuyer: "icon-verified-buyer",
+  IconAccount: "icon-account",
+  IconHistory: "icon-history",
+  IconLogout: "icon-logout",
 };
