@@ -1,4 +1,6 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { useReduxActions } from "../../hooks";
 import { Button } from "../button/Button";
 import { FORM_TYPES, loginFields } from "./data";
 import { Field } from "./Field";
@@ -10,6 +12,17 @@ import { RightLoginInfo } from "./RightLoginInfo";
 import { RightSignUpInfo } from "./RightSignUpInfo";
 
 export const Form = ({ fields, title, type, sideInfoTitle }) => {
+  const { signUp } = useReduxActions();
+  const { userInput } = useSelector((state) => state.user_store);
+
+  const handleOnClick = (e) => {
+    e.preventDefault();
+    if (type === FORM_TYPES.SIGN_UP) {
+      signUp(userInput.signUp);
+    } else {
+      console.log("else");
+    }
+  };
   return (
     <MainWrapper>
       <div class="login-wrapper">
@@ -31,15 +44,20 @@ export const Form = ({ fields, title, type, sideInfoTitle }) => {
             >
               <div class="row">
                 {fields.map((data) => (
-                  <Field {...data} />
+                  <Field {...data} formType={type} />
                 ))}
               </div>
               {type === FORM_TYPES.SIGN_UP && <GetNotified />}
 
               <div class="button-wrap">
                 <Button
-                  text="Login"
+                  text={
+                    type === FORM_TYPES.SIGN_UP
+                      ? "Create Account"
+                      : "Login"
+                  }
                   isBlue
+                  onClick={handleOnClick}
                   isExpanded
                   hasLoader
                 />

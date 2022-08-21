@@ -225,6 +225,7 @@ export const MainWrapper = styled.div`
   select:not([multiple]) {
     padding-top: 0;
     padding-bottom: 0;
+    font-size: 1rem;
   }
 
   select {

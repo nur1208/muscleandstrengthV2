@@ -1,14 +1,28 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { useReduxActions } from "../../hooks";
 import { SwitchWrapper } from "./form.styles";
 
 export const GetNotified = () => {
+  const { userInput } = useSelector((state) => state.user_store);
+
+  const { updateField } = useReduxActions();
+
   const [toggleSwitch, setToggleSwitch] = useState(true);
+  //  setToggleSwitch(!toggleSwitch);
+  const initIsNotified = userInput.signUp?.isNotified;
+  const handleOnClick = () => {
+    const newObject = {};
+    newObject.signUp = { ...userInput.signUp };
+    newObject.signUp.isNotified = !initIsNotified;
+    updateField(newObject);
+  };
   return (
     <div class="newsletter">
       <div class="switch-wrapper">
         <div class="switch small">
           <input
-            onClick={() => setToggleSwitch(!toggleSwitch)}
+            onClick={handleOnClick}
             class="switch-input"
             id="is_subscribed"
             type="checkbox"
@@ -16,7 +30,7 @@ export const GetNotified = () => {
             value="1"
             checked="checked"
           />
-          <SwitchWrapper toggleSwitch={toggleSwitch}>
+          <SwitchWrapper toggleSwitch={initIsNotified}>
             <label class="switch-paddle" for="is_subscribed">
               <span class="switch-active" aria-hidden="true">
                 Yes

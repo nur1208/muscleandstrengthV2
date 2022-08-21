@@ -21,7 +21,7 @@ export const signUpFields = [
   {
     placeholder: "First Name",
     id: "firstname",
-    name: "firstname",
+    name: "firstName",
     type: "text",
     required: true,
     fieldType: "INPUT",
@@ -29,7 +29,7 @@ export const signUpFields = [
   {
     placeholder: "Last Name",
     id: "lastname",
-    name: "lastname",
+    name: "lastName",
     type: "text",
     required: true,
     fieldType: "INPUT",
@@ -53,7 +53,7 @@ export const signUpFields = [
   {
     placeholder: "Goal",
     id: "register-goal",
-    name: "fitness_goal",
+    name: "goal",
     required: false,
     options: [
       "Goal",
@@ -67,7 +67,7 @@ export const signUpFields = [
   },
   {
     id: "register-experience",
-    name: "training_experience",
+    name: "trainingExperience",
     required: false,
     options: [
       "Training Experience",
@@ -96,7 +96,7 @@ export const signUpFields = [
   {
     placeholder: "Referral Code (optional)",
     id: "rewards_referral",
-    name: "rewards_referral",
+    name: "referralCode",
     type: "text",
     required: false,
     fieldType: "INPUT",

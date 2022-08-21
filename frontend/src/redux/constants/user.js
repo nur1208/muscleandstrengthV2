@@ -1,0 +1,8 @@
+export const USER_ACTIONS = {
+  SIGN_UP: {
+    SUCCESS: "SIGN_UP_SUCCESS",
+    FALL: "SIGN_UP_FALL",
+    LOADING: "SIGN_UP_LOADING",
+  },
+  UPDATE_FIELD: "UPDATE_FIELD",
+};
