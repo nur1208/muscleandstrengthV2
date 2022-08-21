@@ -1,6 +1,6 @@
 import { UserEndPoints } from "../../services";
 import { setCookie } from "../../utils";
-import { USER_ACTIONS } from "../constants/user";
+import { USER_ACTIONS } from "../constants";
 
 const saveUserData = (userData, token) => {
   const serverUserDate = {
@@ -56,6 +56,12 @@ export const signUp =
       });
     }
   };
+
+export const autoLogin = (userDate) => async (dispatch) =>
+  dispatch({
+    type: USER_ACTIONS.AUTO_LOGIN,
+    payload: userDate,
+  });
 
 export const updateField = (data) => (dispatch) =>
   dispatch({ type: USER_ACTIONS.UPDATE_FIELD, payload: data });

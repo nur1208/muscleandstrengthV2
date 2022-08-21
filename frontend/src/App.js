@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import GlobalStyle from "./app.styles";
 import { LoginModal } from "./components";
+import { useAutoLogin } from "./hooks";
 import {
   Home,
   Login,
@@ -11,6 +12,8 @@ import {
 } from "./pages";
 
 function App() {
+  useAutoLogin();
+
   return (
     <>
       <GlobalStyle />

@@ -5,4 +5,5 @@ export const USER_ACTIONS = {
     LOADING: "SIGN_UP_LOADING",
   },
   UPDATE_FIELD: "UPDATE_FIELD",
+  AUTO_LOGIN: "AUTO_LOGIN",
 };

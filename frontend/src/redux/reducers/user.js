@@ -21,6 +21,7 @@ export const userReducer = (state = initialState, action) => {
       };
 
     case USER_ACTIONS.SIGN_UP.SUCCESS:
+    case USER_ACTIONS.AUTO_LOGIN:
       return {
         ...state,
         loading: false,
