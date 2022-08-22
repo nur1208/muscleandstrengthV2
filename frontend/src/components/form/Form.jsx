@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useReduxActions } from "../../hooks";
+import { isValidEmail } from "../../utils";
 import { Button } from "../button/Button";
 import { FORM_TYPES, loginFields } from "./data";
 import { Field } from "./Field";
@@ -12,17 +13,66 @@ import { RightLoginInfo } from "./RightLoginInfo";
 import { RightSignUpInfo } from "./RightSignUpInfo";
 
 export const Form = ({ fields, title, type, sideInfoTitle }) => {
-  const { signUp, login } = useReduxActions();
+  const { signUp, login, createUserError } = useReduxActions();
   const { userInput } = useSelector((state) => state.user_store);
+
+  const isValid = (type) => {
+    if (!userInput[type]?.email) {
+      createUserError("Email is required");
+      return false;
+    }
+
+    if (!isValidEmail(userInput[type]?.email)) {
+      createUserError("please enter a valid email");
+      return false;
+    }
+
+    if (!userInput[type]?.password) {
+      createUserError("Password is required");
+      return false;
+    }
+
+    if (type === "login") return true;
+
+    if (!userInput[type]?.lastName) {
+      createUserError("Last name is required");
+      return false;
+    }
+
+    if (!userInput[type]?.firstName) {
+      createUserError("First name is required");
+      return false;
+    }
+
+    if (!userInput[type]?.confirmation) {
+      createUserError("Confirm password is required");
+      return false;
+    }
+    if (
+      userInput[type]?.password !== userInput[type]?.confirmation
+    ) {
+      createUserError("confirm password must equal password");
+      return false;
+    }
+
+    return true;
+  };
 
   const handleOnClick = (e) => {
     e.preventDefault();
     if (type === FORM_TYPES.SIGN_UP) {
-      signUp(userInput.signUp);
+      if (isValid("signUp")) signUp(userInput.signUp);
     } else {
-      login(userInput.login);
+      if (isValid("login")) login(userInput.login);
     }
   };
+
+  useEffect(() => {
+    return () => {
+      createUserError(null);
+    };
+  }, []);
+
   return (
     <MainWrapper>
       <div class="login-wrapper">

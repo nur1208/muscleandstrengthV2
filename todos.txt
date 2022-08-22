@@ -166,6 +166,8 @@
 - {DONE} update CustomerAccount component if a user logged in
 - {DONE} create 'login' api route
 - {DONE} use 'login' api route and create 'logout' functionality in the frontend
+- {TODO} show error message when login and sign up if there is one.
+- {TODO} create LogoutSuccess page
 - {TODO} add isVerifiedBuyers parameter in Reviews model and re-scrap the products
 not important:
 - {TODO} don't have duplicate products in database

@@ -19,6 +19,7 @@ export const userReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: true,
+        error: null,
       };
 
     case USER_ACTIONS.SIGN_UP.SUCCESS:
@@ -28,10 +29,12 @@ export const userReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         userData: action.payload,
+        error: null,
       };
 
     case USER_ACTIONS.SIGN_UP.FALL:
     case USER_ACTIONS.LOGIN.FALL:
+    case USER_ACTIONS.CREATE_USER_ERROR:
       return {
         ...state,
         loading: false,

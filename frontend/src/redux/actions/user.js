@@ -125,3 +125,9 @@ export const logout = () => (dispatch) => {
   removeCookie("userData");
   dispatch({ type: USER_ACTIONS.LOGOUT });
 };
+
+export const createUserError = (error) => (dispatch) =>
+  dispatch({
+    type: USER_ACTIONS.CREATE_USER_ERROR,
+    payload: error,
+  });

@@ -7,3 +7,4 @@ export { addDays } from "./addDays";
 export { subtractDays } from "./subtractDays";
 export { fetchData } from "./fetchData";
 export { removeCookie } from "./removeCookie";
+export { isValidEmail } from "./isValidEmail";
