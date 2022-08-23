@@ -3,9 +3,9 @@ import { getIconById } from "../../icons";
 import { InPageNavData } from "./data";
 import { MainWrapper } from "./inPageNav.styles";
 
-export const InPageNav = () => {
+export const InPageNav = ({bgc}) => {
   return (
-    <MainWrapper>
+    <MainWrapper bgc={bgc}>
       <div class="inner">
         <div class="grid-x">
           {InPageNavData.map(({ title, href, iconId }) => (

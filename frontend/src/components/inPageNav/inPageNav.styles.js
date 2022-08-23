@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MainWrapper = styled.div`
-  background-color: #f5f5f5;
+  background-color: ${({ bgc }) => (bgc ? bgc : "#f5f5f5")};
 
   .inner {
     max-width: 1200px;

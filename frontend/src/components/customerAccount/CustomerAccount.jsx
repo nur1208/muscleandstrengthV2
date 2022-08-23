@@ -33,6 +33,7 @@ export const CustomerAccount = () => {
   const handleLogout = (e) => {
     e.stopPropagation();
     logout();
+    navigate("/store/customer/account/logoutSuccess");
   };
   return (
     <MainWrapper>

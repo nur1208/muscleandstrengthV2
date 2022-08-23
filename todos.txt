@@ -171,9 +171,9 @@
 - {DONE} show loading in 'login' and 'sign up' btn when the actions are loading and fix pushing to home page before log in or sign up successfully
 - {DONE} if a use logged in using LoginModal so don't push to home page just close the modal
 - {DONE} create Notification component
-- {TODO} show logged in successfully and sign up successfully message using Notification component 
-- {TODO} create LogoutSuccess page
-- {TODO} create Account page
+- {DONE} show logged in successfully and sign up successfully message using Notification component 
+- {DONE} set up LogoutSuccess page
+- {TODO} set up Account page
 - {TODO} push a user to account page after login or sign up
 - {TODO} add isVerifiedBuyers parameter in Reviews model and re-scrap the products
 not important:

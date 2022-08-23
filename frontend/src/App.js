@@ -5,6 +5,7 @@ import { useAutoLogin } from "./hooks";
 import {
   Home,
   Login,
+  LogoutSuccess,
   Product,
   Review,
   SignUp,
@@ -29,6 +30,10 @@ function App() {
           <Route path="customer/account">
             <Route path="login" element={<Login />} />
             <Route path="create" element={<SignUp />} />
+            <Route
+              path="logoutSuccess"
+              element={<LogoutSuccess />}
+            />
           </Route>
         </Route>
       </Routes>
