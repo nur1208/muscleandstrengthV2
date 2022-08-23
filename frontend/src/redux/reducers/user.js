@@ -4,6 +4,7 @@ const initialState = {
   loading: false,
   userData: null,
   error: null,
+  success: null,
   userInput: { signUp: { isNotified: true }, login: {} },
 };
 
@@ -20,6 +21,7 @@ export const userReducer = (state = initialState, action) => {
         ...state,
         loading: true,
         error: null,
+        success: null,
       };
 
     case USER_ACTIONS.SIGN_UP.SUCCESS:
@@ -30,6 +32,7 @@ export const userReducer = (state = initialState, action) => {
         loading: false,
         userData: action.payload,
         error: null,
+        success: true,
       };
 
     case USER_ACTIONS.SIGN_UP.FALL:
@@ -39,6 +42,7 @@ export const userReducer = (state = initialState, action) => {
         ...state,
         loading: false,
         error: action.payload,
+        success: null,
       };
 
     case USER_ACTIONS.LOGOUT:

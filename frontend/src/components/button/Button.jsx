@@ -7,6 +7,7 @@ export const Button = ({
   // icon: { id, style },
   icon,
   hasLoader,
+  loading,
   ...otherProps
 }) => {
   return (
@@ -17,7 +18,7 @@ export const Button = ({
         </SvgWrapper>
       )}{" "}
       {text}
-      {hasLoader && (
+      {loading && (
         <span class="css-loader-block">
           <span class="css-loader"></span>
         </span>

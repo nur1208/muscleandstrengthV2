@@ -32,19 +32,19 @@ export const MainWrapper = styled.button`
       transform: rotate(360deg);
     }
   }
-
+  /* 
   .css-loader-block {
     display: none;
-  }
+  } */
   .css-loader-block {
     width: 22px;
     height: 22px;
-    left: -44px;
+    left: 0;
     right: 0;
     margin: 0 auto;
-    top: 14%;
+    top: 38%;
     transform: translateY(-50%);
-    position: relative;
+    position: absolute;
     z-index: 10;
   }
 

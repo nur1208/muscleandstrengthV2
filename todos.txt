@@ -168,6 +168,7 @@
 - {DONE} use 'login' api route and create 'logout' functionality in the frontend
 - {DONE} show error message when login and sign up if there is one.
 - {DONE} push a user to home page after login or sign up
+- {DONE} show loading in 'login' and 'sign up' btn when the actions are loading and fix pushing to home page before log in or sign up successfully
 - {TODO} create Notification component
 - {TODO} show logged in successfully and sign up successfully message using Notification component 
 - {TODO} create LogoutSuccess page

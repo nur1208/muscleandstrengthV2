@@ -15,7 +15,9 @@ import { RightSignUpInfo } from "./RightSignUpInfo";
 
 export const Form = ({ fields, title, type, sideInfoTitle }) => {
   const { signUp, login, createUserError } = useReduxActions();
-  const { userInput } = useSelector((state) => state.user_store);
+  const { userInput, loading, success } = useSelector(
+    (state) => state.user_store
+  );
 
   const navigate = useNavigate();
   const isValid = (type) => {
@@ -63,15 +65,9 @@ export const Form = ({ fields, title, type, sideInfoTitle }) => {
   const handleOnClick = (e) => {
     e.preventDefault();
     if (type === FORM_TYPES.SIGN_UP) {
-      if (isValid("signUp")) {
-        signUp(userInput.signUp);
-        navigate("/");
-      }
+      if (isValid("signUp")) signUp(userInput.signUp);
     } else {
-      if (isValid("login")) {
-        login(userInput.login);
-        navigate("/");
-      }
+      if (isValid("login")) login(userInput.login);
     }
   };
 
@@ -80,6 +76,10 @@ export const Form = ({ fields, title, type, sideInfoTitle }) => {
       createUserError(null);
     };
   }, []);
+
+  useEffect(() => {
+    if (success) navigate("/");
+  }, [success]);
 
   return (
     <MainWrapper>
@@ -115,16 +115,15 @@ export const Form = ({ fields, title, type, sideInfoTitle }) => {
                       : "Login"
                   }
                   isBlue
+                  loading={loading}
                   onClick={handleOnClick}
                   isExpanded
-                  hasLoader
                 />
                 {type === FORM_TYPES.LOGIN_MODAL && (
                   <Button
                     text="Create Account"
                     // isBlue
                     isExpanded
-                    hasLoader
                   />
                 )}
               </div>
