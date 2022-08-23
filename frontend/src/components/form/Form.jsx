@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { useReduxActions } from "../../hooks";
 import { isValidEmail } from "../../utils";
 import { Button } from "../button/Button";
@@ -16,6 +17,7 @@ export const Form = ({ fields, title, type, sideInfoTitle }) => {
   const { signUp, login, createUserError } = useReduxActions();
   const { userInput } = useSelector((state) => state.user_store);
 
+  const navigate = useNavigate();
   const isValid = (type) => {
     if (!userInput[type]?.email) {
       createUserError("Email is required");
@@ -61,9 +63,15 @@ export const Form = ({ fields, title, type, sideInfoTitle }) => {
   const handleOnClick = (e) => {
     e.preventDefault();
     if (type === FORM_TYPES.SIGN_UP) {
-      if (isValid("signUp")) signUp(userInput.signUp);
+      if (isValid("signUp")) {
+        signUp(userInput.signUp);
+        navigate("/");
+      }
     } else {
-      if (isValid("login")) login(userInput.login);
+      if (isValid("login")) {
+        login(userInput.login);
+        navigate("/");
+      }
     }
   };
 
