@@ -131,3 +131,8 @@ export const createUserError = (error) => (dispatch) =>
     type: USER_ACTIONS.CREATE_USER_ERROR,
     payload: error,
   });
+
+export const resetUserSuccess = () => (dispatch) =>
+  dispatch({
+    type: USER_ACTIONS.RESET_SUCCESS,
+  });

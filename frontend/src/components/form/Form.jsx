@@ -3,8 +3,10 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useReduxActions } from "../../hooks";
 import { MODAL_TYPES } from "../../redux/constants";
+import colors from "../../styles/colors";
 import { isValidEmail } from "../../utils";
 import { Button } from "../button/Button";
+import { useNotification } from "../Notification";
 import { FORM_TYPES, loginFields } from "./data";
 import { Field } from "./Field";
 import { ForgotPassword } from "./ForgotPassword";
@@ -15,10 +17,15 @@ import { RightLoginInfo } from "./RightLoginInfo";
 import { RightSignUpInfo } from "./RightSignUpInfo";
 
 export const Form = ({ fields, title, type, sideInfoTitle }) => {
-  const { signUp, login, createUserError, closeModal } =
-    useReduxActions();
   const {
-    user_store: { userInput, loading, success },
+    signUp,
+    login,
+    createUserError,
+    closeModal,
+    resetUserSuccess,
+  } = useReduxActions();
+  const {
+    user_store: { userInput, userData, loading, success },
     modal_store: { isOpen, type: modalType },
   } = useSelector((state) => state);
 
@@ -64,6 +71,7 @@ export const Form = ({ fields, title, type, sideInfoTitle }) => {
 
     return true;
   };
+  const dispatch = useNotification();
 
   const handleOnClick = (e) => {
     e.preventDefault();
@@ -80,12 +88,39 @@ export const Form = ({ fields, title, type, sideInfoTitle }) => {
     };
   }, []);
 
+  const handleSuccess = () => {
+    resetUserSuccess();
+    dispatch({
+      type: "success",
+      message: `Welcome Back ${userData.firstName}`,
+      title: `${
+        type === FORM_TYPES.SIGN_UP ? "Signed up" : "logged in"
+      } Successfully`,
+      position: "bottomL",
+      iconColor: colors.green,
+    });
+  };
+
   useEffect(() => {
-    if (success) {
-      if (isOpen && modalType === MODAL_TYPES.LOGIN)
-        closeModal();
-      else navigate("/");
-    }
+    // IF A user in login page and he/she opened Login model
+    // so no need to add this useEffect to Login page that the meaning
+    // OF THE first if statement
+    if (
+      !(
+        isOpen &&
+        modalType === MODAL_TYPES.LOGIN &&
+        type === FORM_TYPES.LOGIN
+      )
+    )
+      if (success) {
+        if (isOpen && modalType === MODAL_TYPES.LOGIN) {
+          handleSuccess();
+          closeModal();
+        } else {
+          handleSuccess();
+          navigate("/");
+        }
+      }
   }, [success]);
 
   return (

@@ -32,7 +32,7 @@ export const userReducer = (state = initialState, action) => {
         loading: false,
         userData: action.payload,
         error: null,
-        success: true,
+        success: action.type !== USER_ACTIONS.AUTO_LOGIN,
       };
 
     case USER_ACTIONS.SIGN_UP.FALL:
@@ -50,6 +50,12 @@ export const userReducer = (state = initialState, action) => {
         ...state,
         userData: null,
         error: null,
+        success: null,
+      };
+
+    case USER_ACTIONS.RESET_SUCCESS:
+      return {
+        ...state,
         success: null,
       };
 

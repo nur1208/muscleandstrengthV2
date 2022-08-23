@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { MODAL_TYPES } from "../../../redux/constants";
 import { FORM_TYPES, loginFields } from "../../data";
 import { Form } from "../../form/Form";
@@ -11,6 +12,8 @@ export const LoginModal = () => {
     type: FORM_TYPES.LOGIN_MODAL,
     fields: loginFields,
   };
+
+  const { type } = useSelector((state) => state.modal_store);
   return (
     <Modal
       // isOpen={true}
@@ -18,7 +21,9 @@ export const LoginModal = () => {
     >
       <MainWrapper>
         {" "}
-        <Form {...formProps} />
+        {/* only render Form component when LoginModel is 
+            open because the useEffects in it */}
+        {type === MODAL_TYPES.LOGIN && <Form {...formProps} />}
       </MainWrapper>
     </Modal>
   );
