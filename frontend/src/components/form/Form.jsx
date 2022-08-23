@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useReduxActions } from "../../hooks";
+import { MODAL_TYPES } from "../../redux/constants";
 import { isValidEmail } from "../../utils";
 import { Button } from "../button/Button";
 import { FORM_TYPES, loginFields } from "./data";
@@ -14,10 +15,12 @@ import { RightLoginInfo } from "./RightLoginInfo";
 import { RightSignUpInfo } from "./RightSignUpInfo";
 
 export const Form = ({ fields, title, type, sideInfoTitle }) => {
-  const { signUp, login, createUserError } = useReduxActions();
-  const { userInput, loading, success } = useSelector(
-    (state) => state.user_store
-  );
+  const { signUp, login, createUserError, closeModal } =
+    useReduxActions();
+  const {
+    user_store: { userInput, loading, success },
+    modal_store: { isOpen, type: modalType },
+  } = useSelector((state) => state);
 
   const navigate = useNavigate();
   const isValid = (type) => {
@@ -78,7 +81,11 @@ export const Form = ({ fields, title, type, sideInfoTitle }) => {
   }, []);
 
   useEffect(() => {
-    if (success) navigate("/");
+    if (success) {
+      if (isOpen && modalType === MODAL_TYPES.LOGIN)
+        closeModal();
+      else navigate("/");
+    }
   }, [success]);
 
   return (

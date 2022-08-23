@@ -46,7 +46,12 @@ export const userReducer = (state = initialState, action) => {
       };
 
     case USER_ACTIONS.LOGOUT:
-      return { ...state, userData: null };
+      return {
+        ...state,
+        userData: null,
+        error: null,
+        success: null,
+      };
 
     default:
       return state;
