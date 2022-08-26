@@ -7,6 +7,7 @@ import {
   Footer,
   Header,
   MyPoints,
+  MyReferrals,
   NavbarInfo,
   PerksFooter,
 } from "../../components";
@@ -33,7 +34,9 @@ export const Account = () => {
 
       case ACCOUNT_NAV_OPTIONS.POINTS_REWARD:
         return <MyPoints />;
-      // return <div>here</div>;
+
+      case ACCOUNT_NAV_OPTIONS.MY_REFERRALS:
+        return <MyReferrals />;
       default:
         return undefined;
     }

@@ -16,4 +16,5 @@ export const ACCOUNT_NAV_OPTIONS = {
   DASHBOARD_HOME: "dashboard_home",
   ORDER_HISTORY: "order_history",
   POINTS_REWARD: "points_&_rewards",
+  MY_REFERRALS: "my_referrals",
 };

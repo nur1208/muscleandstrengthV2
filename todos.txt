@@ -186,6 +186,8 @@
 - {DONE} make Account page more dynamic
 - {DONE} create OrderHistory component
 - {DONE} create MyPoints  component
+- {DONE} create MyReferrals  component
+
 - {TODO} add isVerifiedBuyers parameter in Reviews model and re-scrap the products
 not important:
 - {TODO} don't have duplicate products in database

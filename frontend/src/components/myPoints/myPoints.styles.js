@@ -202,6 +202,18 @@ export const MainWrapper = styled.div`
   .mypoints-transfers-spendings {
     padding-bottom: 1em;
   }
+
+  .data-grid .pointsearned .data,
+  .data-grid .pointsspent .data {
+    color: #059;
+    font-family: nimbusnovus-bold, sans-serif;
+  }
+  @media (max-width: 800px) {
+    .data-grid .appr {
+      color: #fff;
+      background-color: #079c3a;
+    }
+  }
   @media (min-width: 400px) {
     .point-header-wrap .right,
     .point-header-wrap .left {
