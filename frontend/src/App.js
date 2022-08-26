@@ -29,13 +29,13 @@ function App() {
             element={<Review />}
           />
           <Route path="customer/account">
-            <Route index element={<Account />} />
             <Route path="login" element={<Login />} />
             <Route path="create" element={<SignUp />} />
             <Route
               path="logoutSuccess"
               element={<LogoutSuccess />}
             />
+            <Route path=":navItem" element={<Account />} />
           </Route>
         </Route>
       </Routes>

@@ -11,3 +11,8 @@ export const accountNavData = [
   { label: "Update Profile", iconId: "icon-cog" },
   { label: "Email Subscriptions", iconId: "icon-email" },
 ];
+
+export const ACCOUNT_NAV_OPTIONS = {
+  DASHBOARD_HOME: "dashboard_home",
+  ORDER_HISTORY: "order_history",
+};

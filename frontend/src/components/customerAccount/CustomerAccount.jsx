@@ -13,6 +13,7 @@ import {
   SvgWrapper,
 } from "../../icons";
 import { MODAL_TYPES } from "../../redux/constants";
+import { ACCOUNT_NAV_OPTIONS } from "../accountNav/data";
 import { MainWrapper } from "./customerAccount.styles";
 
 export const CustomerAccount = () => {
@@ -38,7 +39,9 @@ export const CustomerAccount = () => {
 
   const handleClickAccount = () => {
     if (!pathname.includes("store"))
-      navigate("/store/customer/account");
+      navigate(
+        `/store/customer/account/${ACCOUNT_NAV_OPTIONS.DASHBOARD_HOME}`
+      );
   };
   return (
     <MainWrapper>
@@ -58,7 +61,9 @@ export const CustomerAccount = () => {
                       <a
                         rel="nofollow"
                         onClick={() =>
-                          navigate("/store/customer/account")
+                          navigate(
+                            `/store/customer/account/${ACCOUNT_NAV_OPTIONS.DASHBOARD_HOME}`
+                          )
                         }
                       >
                         <SvgWrapper childStyle="width:1.3em!important; height:1.3em!important; margin-bottom:-.3em!important; margin-right: 0.1em;">
@@ -70,7 +75,11 @@ export const CustomerAccount = () => {
                     <li>
                       <a
                         rel="nofollow"
-                        href="https://www.muscleandstrength.com/store/sales/order/history/"
+                        onClick={() =>
+                          navigate(
+                            `/store/customer/account/${ACCOUNT_NAV_OPTIONS.ORDER_HISTORY}`
+                          )
+                        }
                       >
                         <SvgWrapper childStyle="width:1.3em!important; height:1.3em!important; margin-bottom:-.3em!important; margin-right: 0.1em;">
                           {getIconById(ICONS_ID.IconHistory)}

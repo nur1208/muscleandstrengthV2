@@ -1,21 +1,37 @@
 import React from "react";
+import { useLocation, useParams } from "react-router-dom";
 import {
   AccountNav,
-  AddressBox,
   Banner,
   EmailSignUp,
   Footer,
   Header,
   NavbarInfo,
   PerksFooter,
-  SimpleAccountInfo,
 } from "../../components";
-import { BANNER_BLOCK_12 } from "../../components/data";
+import {
+  ACCOUNT_NAV_OPTIONS,
+  BANNER_BLOCK_12,
+} from "../../components/data";
 import { useUpdateCustomNavInfo } from "../../hooks";
 import { MainWrapper } from "./account.styles";
+import { DashboardHome } from "./DashboardHome";
 
 export const Account = () => {
   useUpdateCustomNavInfo("> Store > My account");
+
+  const { navItem } = useParams();
+  const renderNavContent = () => {
+    switch (navItem) {
+      case ACCOUNT_NAV_OPTIONS.DASHBOARD_HOME:
+        return <DashboardHome />;
+
+      case ACCOUNT_NAV_OPTIONS.ORDER_HISTORY:
+        return <div>order history</div>;
+      default:
+        return undefined;
+    }
+  };
   return (
     <MainWrapper>
       {" "}
@@ -26,13 +42,7 @@ export const Account = () => {
         <div className="aside">
           <AccountNav />
         </div>
-        <div className="main-content">
-          <h1>Account Dashboard</h1>
-          <div className="dashboard clearfix">
-            <SimpleAccountInfo />
-            <AddressBox />
-          </div>
-        </div>
+        <div className="main-content">{renderNavContent()}</div>
       </div>
       <PerksFooter />
       <EmailSignUp />
