@@ -26,4 +26,9 @@ export const ICONS_ID = {
   IconAccount: "icon-account",
   IconHistory: "icon-history",
   IconLogout: "icon-logout",
+  IconMnsCoin: "icon-mns-coin",
+  IconReferralProgram: "icon-referral-program",
+  IconAddressBook: "icon-address-book",
+  IconCog: "icon-cog",
+  IconEmail: "icon-email",
 };

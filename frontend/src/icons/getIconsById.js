@@ -1,4 +1,9 @@
 import {
+  IconEmail,
+  IconCog,
+  IconAddressBook,
+  IconReferralProgram,
+  IconMnsCoin,
   IconLogout,
   IconHistory,
   IconAccount,
@@ -163,6 +168,21 @@ export const getIconById = (iconId, style) => {
 
     case "icon-logout":
       return <IconLogout style={style} />;
+
+    case "icon-mns-coin":
+      return <IconMnsCoin style={style} />;
+
+    case "icon-referral-program":
+      return <IconReferralProgram style={style} />;
+
+    case "icon-address-book":
+      return <IconAddressBook style={style} />;
+
+    case "icon-cog":
+      return <IconCog style={style} />;
+
+    case "icon-email":
+      return <IconEmail style={style} />;
 
     default:
       return <IconQuestionMark style={style} />;
