@@ -35,12 +35,16 @@ export const CustomerAccount = () => {
     logout();
     navigate("/store/customer/account/logoutSuccess");
   };
+
+  const handleClickAccount = () => {
+    navigate("/store/customer/account");
+  };
   return (
     <MainWrapper>
       <>
         {userData ? (
           <div class="user-account-link">
-            <a onClick={handleOnClick}>
+            <a onClick={handleClickAccount}>
               <IconUserLogin />
               <label>
                 Account <span class="caret-down"></span>

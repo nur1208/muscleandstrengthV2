@@ -35,3 +35,6 @@ export { ReviewsOverall } from "./reviewsOverall/ReviewsOverall";
 export { Reviews } from "./reviews/Reviews";
 export { SmallProduct } from "./smallProduct/SmallProduct";
 export { SortingFiltering } from "./sortingFiltering/SortingFiltering";
+export { AccountNav } from "./accountNav/AccountNav";
+export { SimpleAccountInfo } from "./simpleAccountInfo/SimpleAccountInfo";
+export { AddressBox } from "./addressBox/AddressBox";

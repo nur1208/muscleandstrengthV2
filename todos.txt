@@ -175,10 +175,10 @@
 - {DONE} set up LogoutSuccess page
 - {DONE} create AccountNav component
 - {DONE} scrap AccountNav component data
-- {TODO} make AccountNav component more dynamic
-- {TODO} create SimpleAccountInfo component
-- {TODO} create AddressBox component
-- {TODO} set up Account page
+- {DONE} make AccountNav component more dynamic
+- {DONE} create SimpleAccountInfo component
+- {DONE} create AddressBox component
+- {DONE} set up Account page
 - {TODO} push a user to account page after login or sign up
 - {TODO} add isVerifiedBuyers parameter in Reviews model and re-scrap the products
 not important:

@@ -3,6 +3,7 @@ import GlobalStyle from "./app.styles";
 import { LoginModal } from "./components";
 import { useAutoLogin } from "./hooks";
 import {
+  Account,
   Home,
   Login,
   LogoutSuccess,
@@ -28,6 +29,7 @@ function App() {
             element={<Review />}
           />
           <Route path="customer/account">
+            <Route index element={<Account />} />
             <Route path="login" element={<Login />} />
             <Route path="create" element={<SignUp />} />
             <Route
