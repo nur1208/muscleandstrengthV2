@@ -38,3 +38,4 @@ export { SortingFiltering } from "./sortingFiltering/SortingFiltering";
 export { AccountNav } from "./accountNav/AccountNav";
 export { SimpleAccountInfo } from "./simpleAccountInfo/SimpleAccountInfo";
 export { AddressBox } from "./addressBox/AddressBox";
+export { MyPoints } from "./myPoints/MyPoints";

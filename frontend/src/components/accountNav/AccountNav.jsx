@@ -18,13 +18,13 @@ export const AccountNav = () => {
         {accountNavData.map(({ label, iconId, selected }) => (
           <Link
             class={
-              label.replace(" ", "_").toLocaleLowerCase() ===
+              label.replaceAll(" ", "_").toLocaleLowerCase() ===
               navItem
                 ? "selected"
                 : undefined
             }
             to={`/store/customer/account/${label
-              .replace(" ", "_")
+              .replaceAll(" ", "_")
               .toLocaleLowerCase()}`}
           >
             <SvgWrapper childStyle="width:1.5em; height:1.5em; margin-bottom: -0.4em!important; margin-right: .5em;">

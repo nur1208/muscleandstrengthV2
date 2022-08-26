@@ -6,6 +6,7 @@ import {
   EmailSignUp,
   Footer,
   Header,
+  MyPoints,
   NavbarInfo,
   PerksFooter,
 } from "../../components";
@@ -29,6 +30,10 @@ export const Account = () => {
 
       case ACCOUNT_NAV_OPTIONS.ORDER_HISTORY:
         return <OrderHistory />;
+
+      case ACCOUNT_NAV_OPTIONS.POINTS_REWARD:
+        return <MyPoints />;
+      // return <div>here</div>;
       default:
         return undefined;
     }
