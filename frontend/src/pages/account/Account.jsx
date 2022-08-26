@@ -16,6 +16,7 @@ import {
 import { useUpdateCustomNavInfo } from "../../hooks";
 import { MainWrapper } from "./account.styles";
 import { DashboardHome } from "./DashboardHome";
+import { OrderHistory } from "./OrderHistory";
 
 export const Account = () => {
   useUpdateCustomNavInfo("> Store > My account");
@@ -27,7 +28,7 @@ export const Account = () => {
         return <DashboardHome />;
 
       case ACCOUNT_NAV_OPTIONS.ORDER_HISTORY:
-        return <div>order history</div>;
+        return <OrderHistory />;
       default:
         return undefined;
     }

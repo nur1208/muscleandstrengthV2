@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const MainWrapper = styled.div`
+  font-size: 16px;
   padding-bottom: 1em;
   position: relative;
   z-index: 1;
@@ -49,6 +50,9 @@ export const MainWrapper = styled.div`
     visibility: hidden;
   }
 
+  .main-content p {
+    margin-top: 0;
+  }
   @media (max-width: 840px) {
     .aside {
       min-height: 0 !important;
