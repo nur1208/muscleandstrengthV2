@@ -118,7 +118,7 @@ export const Form = ({ fields, title, type, sideInfoTitle }) => {
           closeModal();
         } else {
           handleSuccess();
-          navigate("/");
+          navigate("/store/customer/account");
         }
       }
   }, [success]);
