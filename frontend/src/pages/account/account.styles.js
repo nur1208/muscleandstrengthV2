@@ -48,6 +48,26 @@ export const MainWrapper = styled.div`
     clear: both;
     visibility: hidden;
   }
+
+  @media (max-width: 840px) {
+    .aside {
+      min-height: 0 !important;
+    }
+
+    .aside {
+      margin: 0.9em 1.1em 2.5em;
+      padding: 0.6em;
+    }
+    .aside {
+      background: #f5f5f5;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
   @media (min-width: 400px) {
     #main-wrap {
       padding-top: 2.5%;

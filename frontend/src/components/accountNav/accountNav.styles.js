@@ -45,6 +45,7 @@ export const MainWrapper = styled.div`
     background-color: #fff;
     color: #059;
   }
+
   @media (min-width: 800px) {
     .title {
       cursor: default;
@@ -61,4 +62,17 @@ export const MainWrapper = styled.div`
       display: block;
     }
   }
+
+  ${({ isOpen }) =>
+    isOpen &&
+    `
+    .inline-caret {
+      transform: rotate(90deg);
+    }
+    
+    .nav-wrap {
+      padding-bottom: 0.5em;
+      display: block;
+    }
+  `}
 `;

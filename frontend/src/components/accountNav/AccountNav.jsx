@@ -7,10 +7,12 @@ export const AccountNav = () => {
   const initNavItems = accountNavData;
   initNavItems[0].selected = true;
   const [navItems, setNavItems] = useState(initNavItems);
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <MainWrapper>
-      <span class="title">
-        Account Navigation<span class="inline-caret">›</span>
+    <MainWrapper isOpen={isOpen}>
+      <span class="title" onClick={() => setIsOpen(!isOpen)}>
+        <span>Account Navigation</span>
+        <span class="inline-caret">›</span>
       </span>
       <div class="nav-wrap">
         {navItems.map(({ label, iconId, selected }) => (
