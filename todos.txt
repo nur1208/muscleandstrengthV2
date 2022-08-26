@@ -180,7 +180,7 @@
 - {DONE} create AddressBox component
 - {DONE} set up Account page
 - {DONE} push a user to account page after login or sign up
-- {TODO} don't push a user to Account page when a user in Store page in clicked account navbar item
+- {DONE} don't push a user to Account page when a user in Store page in he/she clicked account navbar item
 - {TODO} add isVerifiedBuyers parameter in Reviews model and re-scrap the products
 not important:
 - {TODO} don't have duplicate products in database

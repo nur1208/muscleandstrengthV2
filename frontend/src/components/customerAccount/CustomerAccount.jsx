@@ -37,7 +37,8 @@ export const CustomerAccount = () => {
   };
 
   const handleClickAccount = () => {
-    navigate("/store/customer/account");
+    if (!pathname.includes("store"))
+      navigate("/store/customer/account");
   };
   return (
     <MainWrapper>
@@ -56,7 +57,9 @@ export const CustomerAccount = () => {
                     <li>
                       <a
                         rel="nofollow"
-                        href="https://www.muscleandstrength.com/store/customer/account/"
+                        onClick={() =>
+                          navigate("/store/customer/account")
+                        }
                       >
                         <SvgWrapper childStyle="width:1.3em!important; height:1.3em!important; margin-bottom:-.3em!important; margin-right: 0.1em;">
                           {getIconById(ICONS_ID.IconAccount)}
