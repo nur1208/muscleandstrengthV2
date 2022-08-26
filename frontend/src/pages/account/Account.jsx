@@ -10,6 +10,7 @@ import {
   MyReferrals,
   NavbarInfo,
   PerksFooter,
+  SavedCards,
 } from "../../components";
 import {
   ACCOUNT_NAV_OPTIONS,
@@ -37,7 +38,11 @@ export const Account = () => {
 
       case ACCOUNT_NAV_OPTIONS.MY_REFERRALS:
         return <MyReferrals />;
-      default:
+
+      case ACCOUNT_NAV_OPTIONS.SAVED_CREDIT_CARDS:
+        return <SavedCards />;
+
+        default:
         return undefined;
     }
   };

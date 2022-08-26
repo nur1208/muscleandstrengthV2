@@ -17,4 +17,5 @@ export const ACCOUNT_NAV_OPTIONS = {
   ORDER_HISTORY: "order_history",
   POINTS_REWARD: "points_&_rewards",
   MY_REFERRALS: "my_referrals",
+  SAVED_CREDIT_CARDS: "saved_credit_cards",
 };

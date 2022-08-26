@@ -187,6 +187,7 @@
 - {DONE} create OrderHistory component
 - {DONE} create MyPoints  component
 - {DONE} create MyReferrals  component
+- {DONE} create SavedCards component
 
 - {TODO} add isVerifiedBuyers parameter in Reviews model and re-scrap the products
 not important:
