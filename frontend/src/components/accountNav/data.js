@@ -1,0 +1,13 @@
+export const accountNavData = [
+  { label: "Dashboard Home", iconId: "icon-account" },
+  { label: "Order History", iconId: "icon-history" },
+  { label: "Points & Rewards", iconId: "icon-mns-coin" },
+  { label: "My Referrals", iconId: "icon-referral-program" },
+  {
+    label: "Saved Credit Cards",
+    iconId: "icon-saved-cards",
+  },
+  { label: "Address Book", iconId: "icon-address-book" },
+  { label: "Update Profile", iconId: "icon-cog" },
+  { label: "Email Subscriptions", iconId: "icon-email" },
+];
