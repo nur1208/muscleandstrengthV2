@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation, useParams } from "react-router-dom";
 import {
   AccountNav,
+  AddEditAddress,
   Banner,
   EmailSignUp,
   Footer,
@@ -42,7 +43,10 @@ export const Account = () => {
       case ACCOUNT_NAV_OPTIONS.SAVED_CREDIT_CARDS:
         return <SavedCards />;
 
-        default:
+      case ACCOUNT_NAV_OPTIONS.ADDRESS_BOOK:
+        return <AddEditAddress />;
+
+      default:
         return undefined;
     }
   };

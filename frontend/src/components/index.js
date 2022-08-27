@@ -41,3 +41,4 @@ export { AddressBox } from "./addressBox/AddressBox";
 export { MyPoints } from "./myPoints/MyPoints";
 export { MyReferrals } from "./myReferrals/MyReferrals";
 export { SavedCards } from "./savedCards/SavedCards";
+export { AddEditAddress } from "./addEditAddress/AddEditAddress";

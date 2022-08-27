@@ -188,6 +188,10 @@
 - {DONE} create MyPoints  component
 - {DONE} create MyReferrals  component
 - {DONE} create SavedCards component
+- {DONE} create AddEditAddress component
+- {TODO} create UpdateProfile component
+- {TODO} create EmailSubscriptions component
+
 
 - {TODO} add isVerifiedBuyers parameter in Reviews model and re-scrap the products
 not important:
