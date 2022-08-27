@@ -472,9 +472,6 @@ export const AddEditAddress = () => {
           </span>
         </div>
         <Button isBlue text="Save Information" />
-        {/* <button type="submit" class="btn btn-blue btn-auto">
-          
-        </button> */}
       </form>
     </MainWrapper>
   );

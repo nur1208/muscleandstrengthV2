@@ -12,6 +12,7 @@ import {
   NavbarInfo,
   PerksFooter,
   SavedCards,
+  UpdateProfile,
 } from "../../components";
 import {
   ACCOUNT_NAV_OPTIONS,
@@ -45,6 +46,9 @@ export const Account = () => {
 
       case ACCOUNT_NAV_OPTIONS.ADDRESS_BOOK:
         return <AddEditAddress />;
+
+      case ACCOUNT_NAV_OPTIONS.UPDATE_PROFILE:
+        return <UpdateProfile />;
 
       default:
         return undefined;

@@ -18,4 +18,5 @@ export const ACCOUNT_NAV_OPTIONS = {
   POINTS_REWARD: "points_&_rewards",
   MY_REFERRALS: "my_referrals",
   ADDRESS_BOOK: "address_book",
+  UPDATE_PROFILE: "update_profile",
 };
