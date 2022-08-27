@@ -189,7 +189,8 @@
 - {DONE} create MyReferrals  component
 - {DONE} create SavedCards component
 - {DONE} create AddEditAddress component
-- {TODO} create UpdateProfile component
+- {DONE} create UpdateProfile component
+- {DONE} create UpdateProfile component part 2
 - {TODO} create EmailSubscriptions component
 
 

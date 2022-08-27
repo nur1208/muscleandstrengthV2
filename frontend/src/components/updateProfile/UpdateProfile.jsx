@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { MainWrapper } from "./updateProfile.styles";
 
 export const UpdateProfile = () => {
+  const [changePassword, setChangePassword] = useState(false);
   return (
     <MainWrapper>
       <h1>Update Profile</h1>
@@ -240,6 +241,9 @@ export const UpdateProfile = () => {
                 onclick="setPasswordForm(this.checked)"
                 title="Change Password"
                 class="checkbox"
+                onClick={() =>
+                  setChangePassword(!changePassword)
+                }
               />{" "}
               <label for="change_password">
                 Change Password
@@ -247,7 +251,9 @@ export const UpdateProfile = () => {
             </p>
             <div
               class="change-password-form"
-              style={{ display: "none" }}
+              style={{
+                display: changePassword ? "block" : "none",
+              }}
             >
               <div class="margBot10 h6 text-center">
                 Update Your Password

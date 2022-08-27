@@ -106,6 +106,67 @@ export const MainWrapper = styled.div`
   form label .required {
     color: #d41313;
   }
+
+  form label:after,
+  form label:before {
+    content: "";
+    display: table;
+  }
+
+  .form label:after,
+  form label:after {
+    clear: both;
+  }
+
+  form p {
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding-left: 2.0833333333%;
+    padding-right: 2.0833333333%;
+    color: #202020;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    float: left;
+    width: 20px;
+    margin: 0 5px 0 0;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .font-s-small {
+    font-size: 13px;
+  }
+
+  form .required {
+    color: #d41313;
+  }
+
+  .h6,
+  h6 {
+    font-variant-ligatures: none;
+    -webkit-font-variant-ligatures: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+
+    margin: 0;
+    color: #059;
+
+    text-align: center;
+
+    font-weight: 600;
+  }
+
+  @media (min-width: 840px) {
+    form p {
+      margin-bottom: 15px;
+    }
+  }
   @media (min-width: 900px) {
     .edit-form .input-field-wrap {
       float: left;
