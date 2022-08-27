@@ -5,6 +5,7 @@ import {
   AddEditAddress,
   Banner,
   EmailSignUp,
+  EmailSubscriptions,
   Footer,
   Header,
   MyPoints,
@@ -49,6 +50,9 @@ export const Account = () => {
 
       case ACCOUNT_NAV_OPTIONS.UPDATE_PROFILE:
         return <UpdateProfile />;
+
+      case ACCOUNT_NAV_OPTIONS.EMAIL_SUBSCRIPTIONS:
+        return <EmailSubscriptions />;
 
       default:
         return undefined;

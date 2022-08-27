@@ -191,7 +191,7 @@
 - {DONE} create AddEditAddress component
 - {DONE} create UpdateProfile component
 - {DONE} create UpdateProfile component part 2
-- {TODO} create EmailSubscriptions component
+- {DONE} create EmailSubscriptions component
 
 
 - {TODO} add isVerifiedBuyers parameter in Reviews model and re-scrap the products

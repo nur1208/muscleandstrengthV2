@@ -19,4 +19,6 @@ export const ACCOUNT_NAV_OPTIONS = {
   MY_REFERRALS: "my_referrals",
   ADDRESS_BOOK: "address_book",
   UPDATE_PROFILE: "update_profile",
+  SAVED_CREDIT_CARDS: "saved_credit_cards",
+  EMAIL_SUBSCRIPTIONS: "email_subscriptions",
 };

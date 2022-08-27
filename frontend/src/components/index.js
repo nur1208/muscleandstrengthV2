@@ -43,3 +43,4 @@ export { MyReferrals } from "./myReferrals/MyReferrals";
 export { SavedCards } from "./savedCards/SavedCards";
 export { AddEditAddress } from "./addEditAddress/AddEditAddress";
 export { UpdateProfile } from "./updateProfile/UpdateProfile";
+export { EmailSubscriptions } from "./emailSubscriptions/EmailSubscriptions";
