@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 import {
   Banner,
   EmailSignUp,
@@ -14,7 +15,10 @@ import {
   SortingFiltering,
 } from "../../components";
 import { BANNER_BLOCK_12 } from "../../components/data";
-import { useUpdateCustomNavInfo } from "../../hooks";
+import {
+  useReduxActions,
+  useUpdateCustomNavInfo,
+} from "../../hooks";
 import { MainWrapper } from "./Review.styles";
 
 export const Review = () => {
@@ -27,13 +31,26 @@ export const Review = () => {
       data: { reviews },
     },
   } = useSelector((state) => state);
+  const { id } = useParams();
+
+  const { fetchStoreSingleProduct, fetchReviews } =
+    useReduxActions();
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+
+    if (!productSingle.name) {
+      fetchStoreSingleProduct(id);
+      fetchReviews(id);
+    }
+  }, [id, productSingle]);
 
   useUpdateCustomNavInfo(
     `> Store > Reviews > ${productSingle.name}`
   );
+
+  if (!productSingle.name) return <div>loading...</div>;
+
   return (
     <MainWrapper>
       <div id="page">

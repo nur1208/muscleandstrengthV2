@@ -13,8 +13,17 @@ export const ReviewsOverall = ({
   ratedFlavors,
   hasTitleSection,
   customStyle,
+  customHandleWriteReview,
 }) => {
   const [isShowMore, setIsShowMore] = useState(false);
+
+  const handleWriteReview = () => {
+    if (customHandleWriteReview) {
+      customHandleWriteReview();
+    } else {
+      console.log("handleWriteReview");
+    }
+  };
   return (
     <MainWrapper
       customStyle={customStyle}
@@ -107,6 +116,7 @@ export const ReviewsOverall = ({
         <div class="review-utility-bar">
           <Button
             text="Write Review"
+            onClick={handleWriteReview}
             icon={{
               id: ICONS_ID.IconCreate,
               style:

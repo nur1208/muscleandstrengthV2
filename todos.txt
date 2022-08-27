@@ -192,7 +192,7 @@
 - {DONE} create UpdateProfile component
 - {DONE} create UpdateProfile component part 2
 - {DONE} create EmailSubscriptions component
-
+- {DONE} add 'when i user click on 'Write Review' in Product page' open Review page in new tag functionality
 
 - {TODO} add isVerifiedBuyers parameter in Reviews model and re-scrap the products
 not important:

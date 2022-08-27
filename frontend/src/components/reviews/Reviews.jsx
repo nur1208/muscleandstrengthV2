@@ -37,7 +37,9 @@ export const Reviews = ({
         `/store/reviews/brands/${productSingle?.brand?.title.replaceAll(
           " ",
           "-"
-        )}/${productSingle?.name.replaceAll(" ", "-")}`,
+        )}/${productSingle?.name.replaceAll(" ", "-")}/${
+          productSingle._id
+        }`,
         {
           state: { productData: productSingle },
         }

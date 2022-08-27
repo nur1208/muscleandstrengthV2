@@ -94,6 +94,17 @@ export const Product = () => {
                   {...productSingle?.productDetail
                     ?.reviewsOverall}
                   hasTitleSection
+                  customHandleWriteReview={() =>
+                    window.open(
+                      `/store/reviews/brands/${productSingle?.brand?.title.replaceAll(
+                        " ",
+                        "-"
+                      )}/${productSingle?.name.replaceAll(
+                        " ",
+                        "-"
+                      )}/${productSingle._id}`
+                    )
+                  }
                 />
               )}
               <Reviews

@@ -25,7 +25,7 @@ function App() {
           <Route index element={<Store />} />
           <Route path="product/:id" element={<Product />} />
           <Route
-            path="reviews/brands/:brand/:product"
+            path="reviews/brands/:brand/:product/:id"
             element={<Review />}
           />
           <Route path="customer/account">
