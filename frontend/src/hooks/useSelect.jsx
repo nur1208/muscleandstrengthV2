@@ -1,12 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 
-export const useSelect = (initOptions, getSelectedValue) => {
+export const useSelect = (
+  initOptions,
+  getSelectedValue,
+  customValueUpdate,
+  disabledOptions = []
+) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const [options, setOptions] = useState(initOptions);
   const [selectedValue, setSelectedValue] = useState("");
 
   const listRef = useRef(null);
+
   const updateOption = (updateIndex, newObject) => {
     const cleanObject = {};
 
@@ -14,24 +20,53 @@ export const useSelect = (initOptions, getSelectedValue) => {
       if (newObject[key]) cleanObject[key] = false;
     });
 
-    const newOptions = options.map((option, index) =>
+    let newOptions = options.map((option, index) =>
       index === updateIndex
-        ? { ...option, ...newObject }
-        : { ...option, ...cleanObject }
+        ? {
+            ...option,
+            ...newObject,
+          }
+        : {
+            ...option,
+            ...cleanObject,
+          }
     );
+
+    // newOptions = newOptions.map((option, index) =>
+    //   disabledOptions.includes(index)?{}:
+    // );
+
     setSelectedValue(
       newOptions.find((option) => option.isSelected)?.title
     );
+    const currentSelectedValue = {
+      value: newOptions.find((option) => option.isSelected)
+        ?.title,
+      index: newOptions.findIndex((option) => option.isSelected),
+    };
     getSelectedValue &&
-      getSelectedValue({
-        value: newOptions.find((option) => option.isSelected)
-          ?.title,
-        index: newOptions.findIndex(
-          (option) => option.isSelected
-        ),
-      });
+      getSelectedValue(
+        customValueUpdate
+          ? (currentValue) =>
+              customValueUpdate(
+                currentValue,
+                currentSelectedValue,
+                newObject
+              )
+          : currentSelectedValue
+      );
+
     setOptions(newOptions);
   };
+
+  useEffect(() => {
+    setOptions(
+      options.map((option, index) => ({
+        ...option,
+        isDisabled: disabledOptions.includes(index),
+      }))
+    );
+  }, [disabledOptions]);
 
   useEffect(() => {
     updateOption(0, { isSelected: true, isActive: true });

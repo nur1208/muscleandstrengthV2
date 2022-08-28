@@ -106,6 +106,11 @@ export const MainWrapper = styled.div`
     padding-right: 25px;
   }
 
+  .sod_option.disabled {
+    background: #fff;
+    color: #d5d5d5;
+    cursor: not-allowed;
+  }
   &:hover {
     border-color: #888;
   }

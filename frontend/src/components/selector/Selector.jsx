@@ -6,6 +6,8 @@ export const Selector = ({
   options: initOptions,
   label,
   getSelectedValue,
+  customValueUpdate,
+  disabledOptions,
   ...others
 }) => {
   const [
@@ -24,7 +26,9 @@ export const Selector = ({
         .map(({ title }, index) => ({
           title: `${index}-${title}`,
         })),
-    getSelectedValue
+    getSelectedValue,
+    customValueUpdate,
+    disabledOptions
   );
   return (
     <MainWrapper
@@ -47,15 +51,25 @@ export const Selector = ({
           style={{ maxHeight: "196px" }}
         >
           {options.map(
-            ({ title, isSelected, isActive }, index) => (
+            (
+              { title, isSelected, isActive, isDisabled },
+              index
+            ) => (
               <span
                 class={`sod_option  ${
                   isSelected ? "selected" : ""
-                } ${isActive ? "active" : ""}`}
+                } ${isActive ? "active" : ""} ${
+                  isDisabled ? "disabled" : ""
+                }`}
+                key={`${index}-option`}
                 title="Pick a Flavor"
                 data-value="-1"
-                onClick={() => handleOptionClick(index)}
-                onMouseOver={() => handleOptionHover(index)}
+                onClick={() =>
+                  !isDisabled && handleOptionClick(index)
+                }
+                onMouseOver={() =>
+                  !isDisabled && handleOptionHover(index)
+                }
               >
                 {title}
               </span>

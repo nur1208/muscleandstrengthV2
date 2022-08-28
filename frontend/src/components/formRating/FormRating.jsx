@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { MainWrapper } from "./formRating.styles";
 
-export const FormRating = () => {
+export const FormRating = ({ customStyle }) => {
   const [selectStart, setSelectStart] = useState(0);
   const [hoverStart, setHoverStart] = useState(0);
   return (
-    <MainWrapper>
+    <MainWrapper customStyle={customStyle}>
       <div class="select-wrap">
         {Array(5)
           .fill(true)

@@ -47,4 +47,6 @@ export const MainWrapper = styled.div`
     background-position: center;
     z-index: 0;
   }
+
+  ${({ customStyle }) => customStyle}
 `;
