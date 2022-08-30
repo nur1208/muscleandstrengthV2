@@ -1,3 +1,5 @@
+import { promisify } from "util";
+
 import jwt from "jsonwebtoken";
 import UserModel from "../models/user.js";
 import AppError from "../utils/appError.js";
@@ -81,4 +83,48 @@ export const login = catchAsync(async (req, res, next) => {
   // 3 if the everything okay send the token to the clint
 
   createSendToken(user, 200, req, res);
+});
+
+export const protect = catchAsync(async (req, res, next) => {
+  let token;
+
+  // 1 getting token and check if it's there
+  if (
+    req.headers.authorization &&
+    req.headers.authorization.startsWith("Bearer")
+  ) {
+    token = req.headers.authorization.split(" ")[1];
+  }
+
+  if (!token) {
+    return next(
+      new AppError(
+        "you are not logged in! Please log in to get access",
+        401
+      )
+    );
+  }
+  // 2 verification token
+  const decode = await promisify(jwt.verify)(
+    token,
+    process.env.JWT_SECRET
+  );
+
+  // 3 check if user still exists
+  const currentUser = await UserModel.findById(decode.id);
+  // if the user deleted after we send him a token
+  // and before the token expired
+  if (!currentUser) {
+    return next(
+      new AppError(
+        "The user belonging to this token does no longer exist",
+        401,
+        "TokenExpiredError"
+      )
+    );
+  }
+
+  // grant access to protected route
+  req.user = currentUser;
+  next();
 });

@@ -1,0 +1,93 @@
+@port = 4050
+@Host =  http://127.0.0.1
+
+@route = api/v1/users
+
+@userToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzg5NDE0MGQ3NDMyMzcxOGVkOWMzNiIsImlhdCI6MTY0Nzg3NTA5MywiZXhwIjoxNjQ4MTM0MjkzfQ.Q0V2WLG7zIB2079PoRk5Tx9UdnUFHIaUiQ7FbXOLPUQ
+POST {{Host}}:{{port}}/{{route}}
+Content-Type: application/json
+
+{
+    "name":"nur",
+    "password":"12341234",
+    "email":"ssr4@yahoo.com",
+    "gander":"Male"
+}
+###
+GET http://127.0.0.1:4050
+###
+
+POST {{Host}}:{{port}}/{{route}}/signup
+Content-Type: application/json
+
+{
+    "name":"nur",
+    "email":"mdsnsdur1208@163.com",
+    "password":"12341234",
+    "gender":"Male"
+}
+
+###
+
+POST {{Host}}:{{port}}/{{route}}/login
+Content-Type: application/json
+
+{
+    
+    "email":"mdnur1208@163.com",
+    "password":"12341234"
+    
+}
+
+###
+
+
+POST {{Host}}:{{port}}/{{route}}/forgetPassword
+Content-Type: application/json
+
+{
+    
+    "email":"mdnur1208@163.com"
+    
+}
+
+
+###
+
+
+PUT {{Host}}:{{port}}/{{route}}/resetPassword
+Content-Type: application/json
+
+{
+    
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMmRkYmIzOGY0MGZkMTJiM2M3MTdjNiIsImlhdCI6MTY0NzcxNjcyNCwiZXhwIjoxNjQ3OTc1OTI0fQ.ObES4YS5erVFSWQ-OyoWfjTW-_HaVxidBmhmm_D-mIE",
+    "password":"12345678",
+    
+}
+
+### 
+
+PUT {{Host}}:{{port}}/{{route}}/622c901754ff5ae48978dabe
+Content-Type: application/json
+Authorization: Bearer {{userToken}}
+
+{
+    
+    "name":"ben",
+    "gender":"female",
+    "executableChromePath": "C:/Program Files/Google/Chrome/Application/chrome.exe"
+    
+
+}
+
+### 
+
+PUT {{Host}}:{{port}}/{{route}}/updateMyPassword
+Content-Type: application/json
+Authorization: Bearer {{userToken}}
+
+{
+    
+    "password":"12341234",
+    "newPassword":"12345678"
+}
