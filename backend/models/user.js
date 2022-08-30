@@ -10,6 +10,7 @@ const userSchema = new mongoose.Schema(
     goal: { type: String },
     trainingExperience: { type: String },
     referralCode: { type: String },
+    reviewingAs: { type: String },
     isNotified: { type: Boolean, default: false },
     gender: { type: String, enum: ["male", "female"] },
     password: { type: String, required: true, select: false },

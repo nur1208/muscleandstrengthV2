@@ -193,7 +193,13 @@
 - {DONE} create UpdateProfile component part 2
 - {DONE} create EmailSubscriptions component
 - {DONE} add 'when i user click on 'Write Review' in Product page' open Review page in new tag functionality
-
+- {DONE} create FormRating component
+- {DONE} create FlavorForm component and updating Selector component
+- {DONE} create WriteReview component 
+- {DONE} add isDisabled parameter to Button component
+- {DONE} add 'reviewingAs' parameter to User modal
+- {TODO} create updateMe endpoint for user resource
+- {TODO} let the user update 'reviewingAs' from WriteReview component 
 - {TODO} add isVerifiedBuyers parameter in Reviews model and re-scrap the products
 not important:
 - {TODO} don't have duplicate products in database
