@@ -120,6 +120,45 @@ export const login =
     }
   };
 
+export const updateUserInfo =
+  (userData, response) => async (dispatch, getState) => {
+    try {
+      dispatch({ type: USER_ACTIONS.UPDATE_INFO.LOADING });
+      // response.data.doc
+      const { data } = await UserEndPoints.updateInfo(
+        userData,
+        getState().user_store.userData.token
+      );
+
+      response && response("your info updated successfully");
+
+      const serverUserDate = saveUserData(
+        data.data.user,
+        getState().user_store.userData.token
+      );
+      dispatch({
+        type: USER_ACTIONS.UPDATE_INFO.SUCCESS,
+        payload: serverUserDate,
+      });
+    } catch (error) {
+      response && response("updating your info failed");
+
+      const errorMessage = error?.response?.data?.message
+        ? error?.response?.data?.message
+        : error.message;
+
+      response && response(errorMessage);
+
+      // response &&
+      //   response("if you want to try again say, login");
+
+      dispatch({
+        type: USER_ACTIONS.UPDATE_INFO.FALL,
+        payload: errorMessage,
+      });
+    }
+  };
+
 export const logout = () => (dispatch) => {
   // localStorage.setItem("userData", null);
   removeCookie("userData");

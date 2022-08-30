@@ -1,14 +1,45 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { useReduxActions } from "../../hooks";
 import { Button } from "../button/Button";
 import { FormRating } from "../formRating/FormRating";
 import { FlavorForm } from "./FlavorForm";
 import { MainWrapperWrite } from "./reviewsOverall.styles";
 
 export const WriteReview = ({ ratedFlavors }) => {
+  const {
+    userData: {
+      firstName,
+      lastName,
+      reviewingAs: reviewingAsRedux,
+    },
+    loading,
+    success,
+  } = useSelector((state) => state.user_store);
+
+  const { updateUserInfo } = useReduxActions();
+
+  const [reviewingAs, setReviewingAs] = useState(
+    reviewingAsRedux
+      ? reviewingAsRedux
+      : `${firstName} ${
+          lastName.length !== 0 ? lastName[0] : ""
+        }`
+  );
   const [overallRating, setOverallRating] = useState(0);
   const [isEditMemberName, setIsEditMemberName] =
     useState(false);
+
+  useEffect(() => {
+    if (success) setIsEditMemberName(false);
+  }, [success]);
+
+  const handleChangeReviewAs = () => {
+    updateUserInfo({ reviewingAs });
+  };
+
   return (
     <MainWrapperWrite>
       <div class="member-form-wrap">
@@ -25,13 +56,14 @@ export const WriteReview = ({ ratedFlavors }) => {
           <input
             type="text"
             placeholder="Display Name"
-            value="md n"
+            value={reviewingAs}
             maxlength="20"
+            onChange={(e) => setReviewingAs(e.target.value)}
           />
           <Button
             initText="Done"
-            onClick={() => setIsEditMemberName(false)}
-            loading={false}
+            onClick={handleChangeReviewAs}
+            loading={loading}
             loadingText="Changing"
           />
         </div>
@@ -47,7 +79,9 @@ export const WriteReview = ({ ratedFlavors }) => {
               class="member-image lazyloaded"
               src="https://www.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/user-img.jpg"
             />
-            <div class="name change-member-name">md n</div>
+            <div class="name change-member-name">
+              {reviewingAs}
+            </div>
             <Button
               text="change"
               onClick={() => setIsEditMemberName(true)}

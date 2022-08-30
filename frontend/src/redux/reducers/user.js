@@ -17,6 +17,7 @@ export const userReducer = (state = initialState, action) => {
       };
     case USER_ACTIONS.SIGN_UP.LOADING:
     case USER_ACTIONS.LOGIN.LOADING:
+    case USER_ACTIONS.UPDATE_INFO.LOADING:
       return {
         ...state,
         loading: true,
@@ -27,6 +28,7 @@ export const userReducer = (state = initialState, action) => {
     case USER_ACTIONS.SIGN_UP.SUCCESS:
     case USER_ACTIONS.LOGIN.SUCCESS:
     case USER_ACTIONS.AUTO_LOGIN:
+    case USER_ACTIONS.UPDATE_INFO.SUCCESS:
       return {
         ...state,
         loading: false,
@@ -38,6 +40,7 @@ export const userReducer = (state = initialState, action) => {
     case USER_ACTIONS.SIGN_UP.FALL:
     case USER_ACTIONS.LOGIN.FALL:
     case USER_ACTIONS.CREATE_USER_ERROR:
+    case USER_ACTIONS.UPDATE_INFO.FALL:
       return {
         ...state,
         loading: false,

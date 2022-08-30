@@ -9,8 +9,8 @@ const UserEndPoints = {
     return API().post(`${USER_ROUTE}/login`, { ...userData });
   },
 
-  updateInfo(userId, userData, userToken) {
-    return API(userToken).put(`${USER_ROUTE}/${userId}`, {
+  updateInfo(userData, userToken) {
+    return API(userToken).put(`${USER_ROUTE}`, {
       ...userData,
     });
   },

@@ -200,7 +200,7 @@
 - {DONE} add 'reviewingAs' parameter to User modal
 - {DONE} create updateMe endpoint for user resource
 - {DONE} fix frontend imports problems
-- {TODO} let the user update 'reviewingAs' from WriteReview component 
+- {DONE} let the user update 'reviewingAs' from WriteReview component 
 - {TODO} add isVerifiedBuyers parameter in Reviews model and re-scrap the products
 not important:
 - {TODO} don't have duplicate products in database
