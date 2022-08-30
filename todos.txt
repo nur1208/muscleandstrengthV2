@@ -198,7 +198,8 @@
 - {DONE} create WriteReview component 
 - {DONE} add isDisabled parameter to Button component
 - {DONE} add 'reviewingAs' parameter to User modal
-- {TODO} create updateMe endpoint for user resource
+- {DONE} create updateMe endpoint for user resource
+- {DONE} fix frontend imports problems
 - {TODO} let the user update 'reviewingAs' from WriteReview component 
 - {TODO} add isVerifiedBuyers parameter in Reviews model and re-scrap the products
 not important:
