@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { MainWrapper } from "./formRating.styles";
 
-export const FormRating = ({ customStyle }) => {
+export const FormRating = ({
+  customStyle,
+  getSelectedStart,
+}) => {
   const [selectStart, setSelectStart] = useState(0);
   const [hoverStart, setHoverStart] = useState(0);
   return (
@@ -15,7 +18,10 @@ export const FormRating = ({ customStyle }) => {
               key={`${index}-index`}
               onMouseOver={() => setHoverStart(index + 1)}
               onMouseOut={() => setHoverStart(0)}
-              onClick={() => setSelectStart(index + 1)}
+              onClick={() => {
+                getSelectedStart(index + 1);
+                setSelectStart(index + 1);
+              }}
             ></div>
           ))}
       </div>
