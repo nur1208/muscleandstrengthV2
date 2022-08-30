@@ -31,4 +31,5 @@ export const ICONS_ID = {
   IconAddressBook: "icon-address-book",
   IconCog: "icon-cog",
   IconEmail: "icon-email",
+  IconUpdateWhite: "icon-update-white",
 };

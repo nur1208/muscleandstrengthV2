@@ -1,5 +1,5 @@
 import React from "react";
-import { getIconById, SvgWrapper } from "../../icons";
+import { getIconById, ICONS_ID, SvgWrapper } from "../../icons";
 import { MainWrapper } from "./button.styles";
 
 export const Button = ({
@@ -8,21 +8,38 @@ export const Button = ({
   icon,
   hasLoader,
   loading,
+  initText,
+  loadingText,
   ...otherProps
 }) => {
   return (
-    <MainWrapper {...otherProps}>
+    <MainWrapper
+      isLoadingBlue={loading && loadingText}
+      {...otherProps}
+    >
       {icon && (
         <SvgWrapper childStyle={icon.style}>
           {getIconById(icon.id)}
         </SvgWrapper>
       )}{" "}
-      {text}
-      {loading && (
-        <span class="css-loader-block">
-          <span class="css-loader"></span>
-        </span>
+      {initText && !loading ? (
+        <span class="init">{initText}</span>
+      ) : (
+        text
       )}
+      {loading &&
+        (loadingText ? (
+          <span class="loading">
+            <span class="svg-wrap" style={{ lineHeight: "1em" }}>
+              {getIconById(ICONS_ID.IconUpdateWhite)}
+            </span>{" "}
+            {loadingText}...
+          </span>
+        ) : (
+          <span class="css-loader-block">
+            <span class="css-loader"></span>
+          </span>
+        ))}
     </MainWrapper>
   );
 };

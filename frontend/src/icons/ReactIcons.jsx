@@ -596,6 +596,23 @@ export const IconEmail = ({ style }) => {
     </svg>
   );
 };
+
+export const IconUpdateWhite = ({ style }) => {
+  return (
+    <svg
+      style={style}
+      id="icon-update-white"
+      viewBox="0 0 100 100"
+      width="15"
+      height="15"
+    >
+      <path
+        fill="#fff"
+        d="M80.1 19.9C72.4 12.3 61.7 7.5 50 7.5 31.8 7.5 16.2 19 10.2 35.1l10 3.7C24.7 26.7 36.3 18.1 50 18.1c8.8 0 16.8 3.6 22.5 9.3l-11.9 12h31.9V7.5L80.1 19.9zM50 81.9c-8.8 0-16.8-3.6-22.5-9.3l11.9-11.9H7.5v31.9L20 80.1c7.7 7.7 18.3 12.5 30.1 12.5 18.2 0 33.8-11.5 39.8-27.6l-10-3.7c-4.6 12-16.2 20.6-29.9 20.6z"
+      />
+    </svg>
+  );
+};
 export const IconMnsCoin = ({ style }) => {
   return (
     <svg style={style} id="icon-mns-coin" viewBox="0 0 100 100">

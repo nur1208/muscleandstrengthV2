@@ -64,8 +64,23 @@ export const MainWrapper = styled.button`
     animation: 1.1s linear infinite load8;
   }
 
-  ${({ isBlue }) =>
-    isBlue &&
+  @keyframes loading {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .svg-wrap {
+    animation: 2s linear infinite loading;
+  }
+  .svg-wrap {
+    display: inline-block;
+    line-height: 1em;
+  }
+  ${({ isBlue, isLoadingBlue }) =>
+    (isBlue || isLoadingBlue) &&
     `
     background-color: #059;
     background-image: linear-gradient(#0063b3,#004780);
@@ -122,6 +137,17 @@ export const MainWrapper = styled.button`
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+  `}
+
+
+
+  ${({ isDisabled }) =>
+    isDisabled &&
+    `
+    background-color: #f2f2f2;
+    color: #aaa;
+    background-image: none;
+    cursor: inherit;
   `}
 
 
