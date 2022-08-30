@@ -46,7 +46,7 @@ export const Product = (props) => {
               />
             </div>
             <div className="product-name">{`${
-              brand?.name
+              brand?.title
             } ${name}, ${
               buyOption ? buyOption.title : ""
             }`}</div>

@@ -201,6 +201,7 @@
 - {DONE} create updateMe endpoint for user resource
 - {DONE} fix frontend imports problems
 - {DONE} let the user update 'reviewingAs' from WriteReview component 
+- {DONE} fix undefine for product name in Product component 
 - {TODO} add isVerifiedBuyers parameter in Reviews model and re-scrap the products
 not important:
 - {TODO} don't have duplicate products in database
