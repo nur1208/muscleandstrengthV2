@@ -44,3 +44,5 @@ export { SavedCards } from "./savedCards/SavedCards";
 export { AddEditAddress } from "./addEditAddress/AddEditAddress";
 export { UpdateProfile } from "./updateProfile/UpdateProfile";
 export { EmailSubscriptions } from "./emailSubscriptions/EmailSubscriptions";
+export { PageTitle } from "./pageTitle/PageTitle";
+export { MobileTabs } from "./mobileTabs/MobileTabs";
