@@ -46,3 +46,4 @@ export { UpdateProfile } from "./updateProfile/UpdateProfile";
 export { EmailSubscriptions } from "./emailSubscriptions/EmailSubscriptions";
 export { PageTitle } from "./pageTitle/PageTitle";
 export { MobileTabs } from "./mobileTabs/MobileTabs";
+export { LayeredNavigation } from "./layeredNavigation/LayeredNavigation";
