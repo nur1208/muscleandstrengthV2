@@ -43,7 +43,12 @@ export const BuyingOption = ({
           {Math.floor((cost.regularPrice / serving) * 100) / 100}{" "}
           Per Serving
         </div>{" "}
-        <div class="deal">
+        <div
+          class="deal"
+          style={{
+            display: !deal ? "none" : undefined,
+          }}
+        >
           <span class="mns-label lbl-deal">{deal} </span>
         </div>
       </div>

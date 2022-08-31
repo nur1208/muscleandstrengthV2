@@ -58,7 +58,12 @@ export const Product = (props) => {
           </span>
         </div>
         <div className="product-info">
-          <span className="mns-label lbl-deal">
+          <span
+            className="mns-label lbl-deal"
+            style={{
+              display: !buyOption.deal ? "none" : undefined,
+            }}
+          >
             {buyOption ? buyOption.deal : deal}
           </span>
           <div className="price-box">

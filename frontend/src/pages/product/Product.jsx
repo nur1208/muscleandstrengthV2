@@ -65,9 +65,15 @@ export const Product = () => {
             <div className="main-content">
               <ProductHeader {...productData} />
               <FeaturesList />
-              <Deals
-                deals={productSingle?.productDetail?.deals || []}
-              />
+              {productSingle?.productDetail?.deals &&
+                productSingle?.productDetail?.deals.length !==
+                  0 && (
+                  <Deals
+                    deals={
+                      productSingle?.productDetail?.deals || []
+                    }
+                  />
+                )}
             </div>
             <div class="aside aside-after">
               <BuyingOptions
