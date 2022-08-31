@@ -141,13 +141,14 @@ export const MainWrapper = styled.button`
 
 
 
-  ${({ isDisabled }) =>
-    isDisabled &&
+  ${({ isLightBlue }) =>
+    isLightBlue &&
     `
-    background-color: #f2f2f2;
-    color: #aaa;
-    background-image: none;
-    cursor: inherit;
+    background-color: #0687e6;
+    background-image: linear-gradient(#0d95f9,#0578cd);
+    color: #fff;
+    text-shadow: 1px 1px 0 #0578cd;
+    border: 1px solid #057bd2
   `}
 
 
@@ -160,5 +161,15 @@ ${({ isGreen }) =>
     text-shadow: 1px 1px 0 #068431;
     border: 1px solid #068833;
 
+  `}
+
+  
+  ${({ isDisabled }) =>
+    isDisabled &&
+    `
+    background-color: #f2f2f2;
+    color: #aaa;
+    background-image: none;
+    cursor: inherit;
   `}
 `;
