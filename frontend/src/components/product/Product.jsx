@@ -20,9 +20,15 @@ export const Product = (props) => {
   } = props;
 
   const handleClick = () => {
-    navigate(`product/${name.replaceAll(" ", "-")}`, {
-      state: { id: _id, productData: props },
-    });
+    navigate(
+      `product/${name.replaceAll(" ", "-")}/${_id}`.replace(
+        "%",
+        ""
+      ),
+      {
+        state: { id: _id, productData: props },
+      }
+    );
   };
 
   const buyOption =

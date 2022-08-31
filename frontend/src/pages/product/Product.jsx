@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import {
   Banner,
   BuyingOptions,
@@ -28,9 +28,8 @@ import { useReduxActions } from "../../hooks";
 import { MainWrapper } from "./product.styles";
 
 export const Product = () => {
-  const {
-    state: { id, productData },
-  } = useLocation();
+  const { id } = useParams();
+  const { state } = useLocation();
 
   const {
     product_store: {
@@ -44,6 +43,7 @@ export const Product = () => {
 
   const { fetchStoreSingleProduct, fetchReviews } =
     useReduxActions();
+  let mainData;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -51,9 +51,10 @@ export const Product = () => {
     fetchReviews(id);
   }, [id]);
 
-  // if (loading || !productSingle.imgUrl)
-  //   return <div>loading...</div>;
+  if (state?.productData?.name) mainData = state.productData;
+  else mainData = productSingle;
 
+  if (!mainData.name) return <div>loading...</div>;
   return (
     <>
       <MainWrapper>
@@ -63,7 +64,7 @@ export const Product = () => {
           <NavbarInfo />
           <div id="main-wrap">
             <div className="main-content">
-              <ProductHeader {...productData} />
+              <ProductHeader {...mainData} />
               <FeaturesList />
               {productSingle?.productDetail?.deals &&
                 productSingle?.productDetail?.deals.length !==
@@ -77,7 +78,7 @@ export const Product = () => {
             </div>
             <div class="aside aside-after">
               <BuyingOptions
-                options={productData.buyingOptions || []}
+                options={mainData.buyingOptions || []}
               />
               <div class="product-aside"></div>
 
