@@ -24,8 +24,13 @@ export const Product = (props) => {
       state: { id: _id, productData: props },
     });
   };
+
   const buyOption =
-    buyingOptions && buyingOptions[buyingOptions.length - 1];
+    buyingOptions &&
+    buyingOptions.length !== 0 &&
+    // select fist buying option with deal,
+    // If all buying options without deal than select the first option
+    (buyingOptions.find(({ deal }) => deal) || buyingOptions[0]);
   return (
     <MainWrapper>
       <div className="height-setter">
