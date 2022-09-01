@@ -18,7 +18,7 @@ export const MainWrapper = styled.div`
   }
 
   li {
-    padding: 0 12px;
+    padding: 0 6px;
   }
 
   .store-control__link {
@@ -81,6 +81,11 @@ export const MainWrapper = styled.div`
 
   a.products .switch-node {
     left: 0;
+  }
+  @media (min-width: 400px) {
+    li {
+      padding: 0 6px;
+    }
   }
   @media (min-width: 840px) {
     margin-bottom: 15px;
