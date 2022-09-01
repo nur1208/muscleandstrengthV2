@@ -1,18 +1,38 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
+import { useMediaQuery } from "react-responsive";
 import { RatingBox } from "../ratingBox/RatingBox";
 
 export const Item = ({ label, items }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const isPC = useMediaQuery({ minWidth: 840 });
+  const [isOpen, setIsOpen] = useState(null);
+
   const [isShowMore, setIsShowMore] = useState(false);
+
   return (
     <dl id="category-list-id" class="narrow-by-list">
       <dt
         class={isOpen ? "filter-item--active" : ""}
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() =>
+          // if the screen size is PC so the first click must be true
+          // otherwise false
+          setIsOpen(isOpen === null ? !isPC : !isOpen)
+        }
       >
         {label} <span class="caret-down"></span>
       </dt>
-      <dd style={{ display: !isOpen ? "none" : "block" }}>
+      <dd
+        style={{
+          // let css media query handle the first render to display or not
+          // this element, than change it when a user click on dt to toggle it.
+          display:
+            isOpen === null
+              ? undefined
+              : !isOpen
+              ? "none"
+              : "block",
+        }}
+      >
         <ul
           class={`short-list-on show-five-mobile ${
             isShowMore ? "active" : ""
