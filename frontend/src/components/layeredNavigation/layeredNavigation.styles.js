@@ -355,6 +355,27 @@ export const MainWrapper = styled.div`
     z-index: 100;
     box-shadow: 0 -1px 1px rgb(51 51 51 / 30%);
   }
+
+  .rating-filter-item {
+    font-size: 13px;
+  }
+
+  .rating-filter-item a.rating-filter-item-wrap {
+    display: flex !important;
+    align-items: center;
+
+    color: #303030;
+    padding: 1em 0 1em 2em;
+    cursor: pointer;
+  }
+
+  .rating-filter-item .rating-filter-item-text {
+    margin-left: 5px;
+  }
+
+  .short-list-on.active li {
+    display: block;
+  }
   @media screen and (min-width: 52.5em) {
     .blue-stripe,
     h2.blue-stripe {
@@ -433,6 +454,9 @@ export const MainWrapper = styled.div`
 
     .narrow-by-list ul[class*="short-list"] {
       padding: 0 0.5em;
+    }
+    .block-content__filters .filter-process.button-row {
+      display: none;
     }
   }
 `;
