@@ -1,5 +1,6 @@
 import { getAccountNavData } from "./accountNav/script.js";
 import { getFeaturesListData } from "./featuresListData/script.js";
+import { getLayeredNavigationData } from "./layeredNavigation/script.js";
 import {
   topDealsProductsData,
   topRatedProductsData,
@@ -12,7 +13,7 @@ import {
 
 const main = async () => {
   console.log("start scraping... ⌛");
-  await getAccountNavData();
+  await getLayeredNavigationData();
   // const url =
   //   // "https://www.muscleandstrength.com/store/omega-3.html";
   //   "https://www.muscleandstrength.com/store/perfect-sports-apex-grass-fed-whey-protein.html";
