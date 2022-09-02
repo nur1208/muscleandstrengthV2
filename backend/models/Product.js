@@ -18,6 +18,7 @@ const schema = new mongoose.Schema(
     features: [String],
     ratingPercentage: Number, //this field is temporary
     reviewsNum: Number, //this field is temporary
+    type: [String],
     buyingOptions: [
       {
         cost: {
@@ -30,7 +31,6 @@ const schema = new mongoose.Schema(
         options: [{ title: { type: String } }],
       },
     ],
-    type: String,
     productDetail: {
       deals: [
         {
