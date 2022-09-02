@@ -5,9 +5,13 @@ export const filterObj = (obj, ...allowedFields) => {
     if (allowedFields.includes(el)) {
       if (typeof obj[el] === "object") {
         if (obj[el].operation && obj[el].value) {
-          const arrayObject = {};
-          arrayObject[el] = obj[el].value;
-          newObj[`$${obj[el].operation}`] = arrayObject;
+          if (newObj[`$${obj[el].operation}`]) {
+            console.log("multiple array update");
+          } else {
+            const arrayObject = {};
+            arrayObject[el] = obj[el].value;
+            newObj[`$${obj[el].operation}`] = arrayObject;
+          }
         }
       } else {
         if (el === "gender") {

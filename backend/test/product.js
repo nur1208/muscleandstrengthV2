@@ -22,7 +22,7 @@ const testUpdateProduct = async () => {
   const { data } = await axios.put(
     `${baseUrl}/${mainRoute}/62fe694913fa1f3a05693f72`,
     {
-      type: { operation: "push", value: "something type" },
+      type: { operation: "pull", value: "here" },
       name: "The Ripper",
     }
   );
