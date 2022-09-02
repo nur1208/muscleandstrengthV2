@@ -4,6 +4,7 @@ import {
   getProduct,
   getProducts,
   limitProductDetail,
+  updateProduct,
 } from "../controllers/product.js";
 const productRouter = express.Router();
 productRouter
@@ -11,6 +12,6 @@ productRouter
   .post(createProduct)
   .get(limitProductDetail, getProducts);
 
-productRouter.route("/:id").get(getProduct);
+productRouter.route("/:id").get(getProduct).put(updateProduct);
 
 export default productRouter;

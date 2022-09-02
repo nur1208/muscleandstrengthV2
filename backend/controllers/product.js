@@ -1,6 +1,11 @@
 import ProductModel from "../models/Product.js";
 import catchAsync from "../utils/catchAsync.js";
-import { createOne, getAll, getOne } from "./handlerFactory.js";
+import {
+  createOne,
+  getAll,
+  getOne,
+  updateOne,
+} from "./handlerFactory.js";
 
 export const limitProductDetail = catchAsync(
   async (req, res, next) => {
@@ -15,3 +20,4 @@ export const limitProductDetail = catchAsync(
 export const createProduct = createOne(ProductModel);
 export const getProduct = getOne(ProductModel);
 export const getProducts = getAll(ProductModel);
+export const updateProduct = updateOne(ProductModel, ["type"]);

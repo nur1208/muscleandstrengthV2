@@ -1,6 +1,7 @@
 import APIFeatures from "../utils/apiFeatures.js";
 import AppError from "../utils/appError.js";
 import catchAsync from "../utils/catchAsync.js";
+import { filterObj } from "../utils/filterObj.js";
 
 export const createOne = (Model, moreLogic) =>
   catchAsync(async (req, res, next) => {
@@ -82,6 +83,25 @@ export const getOne = (Model, options = {}) =>
       status: "success",
       data: {
         doc,
+      },
+    });
+  });
+export const updateOne = (Model, allowedFields) =>
+  catchAsync(async (req, res, next) => {
+    const filteredBody = filterObj(req.body, ...allowedFields);
+
+    const updatedDoc = await Model.findByIdAndUpdate(
+      req.params.id,
+      filteredBody,
+      { new: true, runValidators: true }
+    );
+
+    res.status(200).json({
+      status: "success",
+      data: {
+        user: {
+          ...updatedDoc._doc,
+        },
       },
     });
   });

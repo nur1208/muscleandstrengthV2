@@ -18,9 +18,19 @@ const testGetProducts = async () => {
   data.data.doc.forEach((doc) => console.log(doc));
 };
 
+const testUpdateProduct = async () => {
+  const { data } = await axios.put(
+    `${baseUrl}/${mainRoute}/62fe694913fa1f3a05693f72`,
+    { name: "The Ripper 2" }
+  );
+  console.log(data);
+
+  //   data.data.doc.forEach((doc) => console.log(doc));
+};
+
 const main = async () => {
   try {
-    await testGetProducts();
+    await testUpdateProduct();
   } catch (error) {
     console.log(error);
   }
