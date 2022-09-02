@@ -19,6 +19,7 @@ const schema = new mongoose.Schema(
       },
     ],
     content: String,
+    isVerifiedBuyers: { type: Boolean, default: false },
     helpful: String,
     dateOfCreation: Date,
   },

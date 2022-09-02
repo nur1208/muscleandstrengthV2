@@ -37,6 +37,8 @@ export const scrapReviews = (mainDivHtml) => {
           label: getText($(".badge-label", $(badge))),
         }));
 
+      item.isVerifiedBuyers =
+        item.badges.includes("Verified Buyer");
       item.content = getText(
         $(".review-content-wrap .user-review", $(review)),
         "*"
