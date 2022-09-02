@@ -99,7 +99,7 @@ export const updateOne = (Model, allowedFields) =>
     res.status(200).json({
       status: "success",
       data: {
-        user: {
+        doc: {
           ...updatedDoc._doc,
         },
       },

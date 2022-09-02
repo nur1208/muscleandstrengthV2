@@ -1,14 +1,25 @@
 export const filterObj = (obj, ...allowedFields) => {
   const newObj = {};
+
   Object.keys(obj).forEach((el) => {
     if (allowedFields.includes(el)) {
-      if (el === "gender") {
-        newObj[el] = obj[el].toLowerCase();
+      if (typeof obj[el] === "object") {
+        if (obj[el].operation && obj[el].value) {
+          const arrayObject = {};
+          arrayObject[el] = obj[el].value;
+          newObj[`$${obj[el].operation}`] = arrayObject;
+        }
       } else {
-        newObj[el] = obj[el];
+        if (el === "gender") {
+          newObj[el] = obj[el].toLowerCase();
+        } else {
+          newObj[el] = obj[el];
+        }
       }
     }
   });
+
+  console.log({ newObj });
 
   return newObj;
 };

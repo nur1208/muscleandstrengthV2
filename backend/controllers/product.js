@@ -20,4 +20,7 @@ export const limitProductDetail = catchAsync(
 export const createProduct = createOne(ProductModel);
 export const getProduct = getOne(ProductModel);
 export const getProducts = getAll(ProductModel);
-export const updateProduct = updateOne(ProductModel, ["type"]);
+export const updateProduct = updateOne(ProductModel, [
+  "type",
+  "name",
+]);

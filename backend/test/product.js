@@ -21,9 +21,13 @@ const testGetProducts = async () => {
 const testUpdateProduct = async () => {
   const { data } = await axios.put(
     `${baseUrl}/${mainRoute}/62fe694913fa1f3a05693f72`,
-    { name: "The Ripper 2" }
+    {
+      type: { operation: "push", value: "something type" },
+      name: "The Ripper",
+    }
   );
-  console.log(data);
+  console.log(data.data.doc.type);
+  console.log(data.data.doc.name);
 
   //   data.data.doc.forEach((doc) => console.log(doc));
 };
