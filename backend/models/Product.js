@@ -13,6 +13,7 @@ const schema = new mongoose.Schema(
       //   id: { type: mongoose.Schema.Types.ObjectId, ref: "Brand" },
     },
     name: String,
+    sourceUrl: { type: String, unique: true },
     tagline: String,
     features: [String],
     ratingPercentage: Number, //this field is temporary

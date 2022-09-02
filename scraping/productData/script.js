@@ -93,7 +93,17 @@ export const getProductReviews = async (url, productId) => {
   let reviews = scrapReviews($(mainSelectorReviews).toString());
   console.log(reviews.length);
 };
+
+const isScraped = async (url) => {
+  const { data } = await GenericEndpoints.get(
+    `products?sourceUrl=${url}`
+  );
+
+  return !data.data.doc.results;
+};
 export const getProductData = async (url, type) => {
+  if (await isScraped(url))
+    return console.log("This product scraped");
   const __filename = fileURLToPath(import.meta.url);
 
   const __dirname = path.dirname(__filename);
@@ -138,6 +148,7 @@ export const getProductData = async (url, type) => {
 
   productData.productDetail.deals = deals;
   productData.type = type;
+  productData.sourceUrl = url;
   const mainSelectorBuyingOptions =
     "#main-wrap .aside .product-shop .group-wrap";
 

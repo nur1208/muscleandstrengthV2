@@ -218,8 +218,8 @@
 - {DONE} create ProductsWrapper component
 - {DONE} update Product component by adding Rating and details for price 
 - {DONE} set up Search page
-- {TODO} add isVerifiedBuyers parameter in Reviews model and scrap it 
-
+- {DONE} add isVerifiedBuyers parameter in Reviews model and scrap it 
+- {DONE} add sourceUrl parameter in Product model and scrap it 
 not important:
 - {TODO} don't have duplicate products in database
         note: use scrapedDataUrl as primary key
