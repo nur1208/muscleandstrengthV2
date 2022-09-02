@@ -1,16 +1,20 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { IconCloseX, IconSearchRightBold } from "../../icons";
 import { MainWrapper } from "./searchBar.styles";
 
 export const SearchBar = () => {
   const [searchValue, setSearchValue] = useState("");
+  const navigate = useNavigate();
+  const handleSearch = (e) => {
+    e.preventDefault();
+    navigate(`/store/search?q=${searchValue.replace(" ", "+")}`);
+  };
   return (
     <MainWrapper>
       <form
         id="search_mini_form--mobile"
         class="search_mini_form"
-        action="/store/search/"
-        method="get"
       >
         <div class="search-form-wrapper">
           <label class="visually-hidden" for="search--mobile">
@@ -38,7 +42,11 @@ export const SearchBar = () => {
               }}
             />
           </span>
-          <button class="search-button" type="submit">
+          <button
+            class="search-button"
+            type="submit"
+            onClick={handleSearch}
+          >
             <span class="visually-hidden">Submit</span>
             <IconSearchRightBold />
           </button>

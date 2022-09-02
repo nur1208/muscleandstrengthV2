@@ -47,3 +47,6 @@ export { EmailSubscriptions } from "./emailSubscriptions/EmailSubscriptions";
 export { PageTitle } from "./pageTitle/PageTitle";
 export { MobileTabs } from "./mobileTabs/MobileTabs";
 export { LayeredNavigation } from "./layeredNavigation/LayeredNavigation";
+export { SearchInfoBar } from "./searchInfoBar/SearchInfoBar";
+export { AjaxErrors } from "./ajaxErrors/AjaxErrors";
+export { ProductsWrapper } from "./productsWrapper/ProductsWrapper";

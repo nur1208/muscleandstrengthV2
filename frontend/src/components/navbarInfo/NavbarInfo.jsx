@@ -5,14 +5,14 @@ import { getIconById, ICONS_ID } from "../../icons";
 import { capitalizeFirstLetter } from "../../utils";
 import { MainWrapper } from "./navbarInfo.styles";
 
-export const NavbarInfo = () => {
+export const NavbarInfo = ({ noMarginBottom }) => {
   const { pathname } = useLocation();
   const { customNavInfo } = useSelector(
     (state) => state.navbar_store
   );
 
   return (
-    <MainWrapper>
+    <MainWrapper noMarginBottom={noMarginBottom}>
       <div class="nav-block--inner">
         <div class="breadcrumb">
           <Link

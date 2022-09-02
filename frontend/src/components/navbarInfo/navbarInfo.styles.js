@@ -67,8 +67,13 @@ export const MainWrapper = styled.nav`
       display: inline-block;
     }
   }
+  ${({ noMarginBottom }) =>
+    noMarginBottom
+      ? ""
+      : `
 
-  @media (min-width: 1280px) {
-    margin-bottom: 15px;
-  }
+      @media (min-width: 1280px) {
+        margin-bottom: 15px;
+      }
+    `}
 `;

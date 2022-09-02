@@ -642,3 +642,17 @@ export const IconMnsCoin = ({ style }) => {
     </svg>
   );
 };
+
+export const IconAsc = ({ style }) => {
+  return (
+    <svg style={style} id="icon-asc" viewBox="0 0 100 100">
+      <path
+        fill="none"
+        stroke="#059"
+        stroke-width="11"
+        stroke-miterlimit="10"
+        d="M7.9 83.4h84.2M7.9 36.1H51M7.9 12.4h21M7.9 59.8h63.2"
+      />
+    </svg>
+  );
+};

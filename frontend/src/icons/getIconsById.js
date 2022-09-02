@@ -1,4 +1,5 @@
 import {
+  IconAsc,
   IconUpdateWhite,
   IconEmail,
   IconCog,
@@ -187,6 +188,9 @@ export const getIconById = (iconId, style) => {
 
     case "icon-update-white":
       return <IconUpdateWhite style={style} />;
+
+    case "icon-asc":
+      return <IconAsc style={style} />;
 
     default:
       return <IconQuestionMark style={style} />;

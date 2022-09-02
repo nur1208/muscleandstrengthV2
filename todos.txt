@@ -205,6 +205,19 @@
 - {DONE} fix some products in store page doesn't have deal
 - {DONE} hide deal section for products without deals
 - {DONE} fix not able to refreshing Product page 
+- {DONE} create PageTitle component 
+- {DONE} create MobileTabs component 
+- {DONE} create LayeredNavigation component 
+- {DONE} add isLightBlue parameter to Button component
+- {DONE} scrap LayeredNavigation component's data
+- {DONE} make LayeredNavigation component more dynamic
+- {DONE} make LayeredNavigation component more dynamic part 2
+- {DONE} fix css problems in MobileTabs component
+- {DONE} create SearchInfoBar component
+- {DONE} create AjaxErrors component
+- {DONE} create ProductsWrapper component
+- {DONE} update Product component by adding Rating and details for price 
+- {DONE} set up Search page
 - {TODO} add isVerifiedBuyers parameter in Reviews model and re-scrap the products
 not important:
 - {TODO} don't have duplicate products in database
