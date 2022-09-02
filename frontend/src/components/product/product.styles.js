@@ -126,7 +126,24 @@ export const MainWrapper = styled.div`
     justify-content: center;
     align-items: center;
   }
+  .before-discount {
+    margin-bottom: -3px;
+  }
+  .before-discount .price {
+    text-decoration: line-through;
+    font-size: 15px;
+    color: #d41313;
+  }
 
+  .stock-label {
+    font-size: 9px;
+    margin-top: 0.2em;
+    margin-bottom: 0.6em;
+    font-weight: 400;
+  }
+  .green {
+    color: #079c3a;
+  }
   @media (min-width: 600px) {
     .price-box {
       padding-bottom: 10px;

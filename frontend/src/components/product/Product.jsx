@@ -3,6 +3,7 @@ import { MainWrapper } from "./product.styles";
 import { Button } from "../index";
 import { Link, useNavigate } from "react-router-dom";
 import { PRODUCT_DATA } from "../data";
+import { RatingBox } from "../ratingBox/RatingBox";
 
 export const Product = (props) => {
   const navigate = useNavigate();
@@ -17,6 +18,8 @@ export const Product = (props) => {
     brand,
     buyingOptions,
     _id,
+    hasRating,
+    hasDetailsPrice,
   } = props;
 
   const handleClick = () => {
@@ -72,7 +75,19 @@ export const Product = (props) => {
           >
             {buyOption ? buyOption.deal : deal}
           </span>
+          {hasRating && (
+            <div className="rating-stars">
+              <RatingBox />
+              <span class="review-count">(147)</span>
+            </div>
+          )}
+
           <div className="price-box">
+            {hasDetailsPrice && (
+              <div class="before-discount">
+                <span class="price">$99.99</span>{" "}
+              </div>
+            )}
             <span className="price">
               $
               {buyOption
@@ -81,6 +96,9 @@ export const Product = (props) => {
                   : buyOption.cost.regularPrice
                 : price}
             </span>
+            {hasDetailsPrice && (
+              <div class="green stock-label">IN STOCK</div>
+            )}
           </div>
           <div className="button-wrap">
             <Button
