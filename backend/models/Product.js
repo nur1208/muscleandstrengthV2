@@ -15,9 +15,10 @@ const schema = new mongoose.Schema(
     name: String,
     sourceUrl: { type: String, unique: true },
     tagline: String,
-    category: String,
-    subCategory: String,
+    category: [String],
+    subCategory: [String],
     features: [String],
+    isInStock: Boolean,
     ratingPercentage: Number, //this field is temporary
     reviewsNum: Number, //this field is temporary
     type: [String],
