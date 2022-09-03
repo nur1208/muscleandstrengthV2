@@ -13,10 +13,15 @@ import {
 
 const main = async () => {
   console.log("start scraping... ⌛");
-  await getLayeredNavigationData();
-  // const url =
-  //   // "https://www.muscleandstrength.com/store/omega-3.html";
-  //   "https://www.muscleandstrength.com/store/perfect-sports-apex-grass-fed-whey-protein.html";
+  // await getLayeredNavigationData();
+  const url =
+    // "https://www.muscleandstrength.com/store/omega-3.html";
+    "https://www.muscleandstrength.com/store/combat-powder.html";
+
+  await getProductData(url, "trending");
+
+  await getProductData(url, "topDeals");
+
   // // re scrap { index: 7 }
   // for (
   //   let index = 0;

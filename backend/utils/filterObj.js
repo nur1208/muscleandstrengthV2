@@ -23,7 +23,5 @@ export const filterObj = (obj, ...allowedFields) => {
     }
   });
 
-  console.log({ newObj });
-
   return newObj;
 };

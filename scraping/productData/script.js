@@ -94,15 +94,22 @@ export const getProductReviews = async (url, productId) => {
   console.log(reviews.length);
 };
 
-const isScraped = async (url) => {
+const isScraped = async (url, type) => {
   const { data } = await GenericEndpoints.get(
     `products?sourceUrl=${url}`
   );
 
-  return !data.data.doc.results;
+  if (data.results) {
+    const foundProduct = data.data.doc[0];
+    await GenericEndpoints.put(`products/${foundProduct._id}`, {
+      type: { operation: "push", value: type },
+    });
+  }
+
+  return data.results;
 };
 export const getProductData = async (url, type) => {
-  if (await isScraped(url))
+  if (await isScraped(url, type))
     return console.log("This product scraped");
   const __filename = fileURLToPath(import.meta.url);
 
@@ -122,7 +129,8 @@ export const getProductData = async (url, type) => {
     url,
     waitForSelector,
     timeout,
-    customAdditional
+    customAdditional,
+    true
   );
   // fs.writeFile(mainPageHtml2, html, function (err) {
   //   if (err) throw err;
@@ -147,7 +155,7 @@ export const getProductData = async (url, type) => {
   productData.productDetail = {};
 
   productData.productDetail.deals = deals;
-  productData.type = type;
+  productData.type = [type];
   productData.sourceUrl = url;
   const mainSelectorBuyingOptions =
     "#main-wrap .aside .product-shop .group-wrap";

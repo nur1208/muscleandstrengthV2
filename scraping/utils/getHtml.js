@@ -4,10 +4,11 @@ export const getHtml = async (
   url,
   waitForSelector,
   timeout,
-  customAdditional
+  customAdditional,
+  headless = false
 ) => {
   const browser = await puppeteer.launch({
-    headless: false,
+    headless,
     executablePath:
       "C:/Program Files/Google/Chrome/Application/chrome.exe",
   });
@@ -16,7 +17,7 @@ export const getHtml = async (
     timeout,
   });
   await page.waitForSelector(waitForSelector, { timeout });
-  
+
   customAdditional && (await customAdditional(page));
   const html = await page.evaluate(
     () => document.body.innerHTML

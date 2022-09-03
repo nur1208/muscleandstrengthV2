@@ -220,9 +220,12 @@
 - {DONE} set up Search page
 - {DONE} add isVerifiedBuyers parameter in Reviews model and scrap it 
 - {DONE} add sourceUrl parameter in Product model and scrap it 
+- {DONE} make type parameter In Product modal as Array of String
+- {DONE} create updateProduct api route 
+- {DONE} update updateProduct api route 
+- {DONE} make scrap product script doesn't scrap the same Product twice
+        note: use sourceUrl as primary key
 not important:
-- {TODO} don't have duplicate products in database
-        note: use scrapedDataUrl as primary key
 - {TODO} fix Selector up down keys when there are long list
 - {TODO} create LaberWithSvg component and make it dynamic
 - {TODO} make Submenu and SubSubmenu components as one component
