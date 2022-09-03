@@ -226,6 +226,11 @@
 - {DONE} make scrap product script doesn't scrap the same Product twice
         note: use sourceUrl as primary key
 - {DONE} re-scrap store products
+- {DONE} add category and subCategory parameters to Product model
+- {TODO} create script to scrap products by category
+- {TODO} set up Search page part 2
+- {TODO} set update Category page
+
 not important:
 - {TODO} fix Selector up down keys when there are long list
 - {TODO} create LaberWithSvg component and make it dynamic
