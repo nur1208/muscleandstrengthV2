@@ -14,25 +14,25 @@ import {
 const main = async () => {
   console.log("start scraping... ⌛");
   // await getLayeredNavigationData();
-  const url =
-    // "https://www.muscleandstrength.com/store/omega-3.html";
-    "https://www.muscleandstrength.com/store/combat-powder.html";
+  // const url =
+  // "https://www.muscleandstrength.com/store/omega-3.html";
+  // "https://www.muscleandstrength.com/store/combat-powder.html";
 
-  await getProductData(url, "trending");
+  // await getProductData(url, "trending");
 
-  await getProductData(url, "topDeals");
+  // await getProductData(url, "topDeals");
 
   // // re scrap { index: 7 }
   // for (
-  //   let index = 0;
-  //   index < trendingProductsData.length;
+  //   let index = 9;
+  //   index < topRatedProductsData.length;
   //   index++
   // ) {
-  //   const { href } = trendingProductsData[index];
+  //   const { href } = topRatedProductsData[index];
 
   //   await getProductData(
   //     `https://www.muscleandstrength.com${href}`,
-  //     "trending"
+  //     "topRated"
   //   );
   //   console.log({ index });
   // }
@@ -43,12 +43,12 @@ const main = async () => {
   // {
   //   index: 2;
   // }
-  // const element = topDealsProductsData[11];
+  const element = topRatedProductsData[7];
 
-  // await getProductData(
-  //   `https://www.muscleandstrength.com${element.href}`,
-  //   "topRated"
-  // );
+  await getProductData(
+    `https://www.muscleandstrength.com${element.href}`,
+    "topRated"
+  );
 
   console.log("DONE scraping ✔");
 };

@@ -225,6 +225,7 @@
 - {DONE} update updateProduct api route 
 - {DONE} make scrap product script doesn't scrap the same Product twice
         note: use sourceUrl as primary key
+- {DONE} re-scrap store products
 not important:
 - {TODO} fix Selector up down keys when there are long list
 - {TODO} create LaberWithSvg component and make it dynamic
