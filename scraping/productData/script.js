@@ -101,21 +101,33 @@ const isScraped = async (url, type, withCategory) => {
   );
 
   if (data.results) {
-    const body = {
-      type: { operation: "push", value: type },
-    };
-
-    if (withCategory) {
-      body.category = {
-        operation: "push",
-        value: withCategory.category,
-      };
-      body.subCategory = {
-        operation: "push",
-        value: withCategory.subCategory,
-      };
-    }
     const foundProduct = data.data.doc[0];
+
+    const body = {};
+
+    if (!foundProduct.type.includes(type)) {
+      body.type = { operation: "push", value: type };
+    }
+    if (withCategory) {
+      if (
+        !foundProduct.category.includes(withCategory.category)
+      ) {
+        body.category = {
+          operation: "push",
+          value: withCategory.category,
+        };
+      }
+      if (
+        !foundProduct.subCategory.includes(
+          withCategory.subCategory
+        )
+      ) {
+        body.subCategory = {
+          operation: "push",
+          value: withCategory.subCategory,
+        };
+      }
+    }
     await GenericEndpoints.put(
       `products/${foundProduct._id}`,
       body
@@ -198,7 +210,14 @@ export const getProductData = async (
       $(mainSelectorNutrition).toString()
     );
 
-    productData.productDetail.nutrition = nutrition;
+    if (nutrition.length >= 3)
+      productData.productDetail.nutrition = nutrition;
+    else
+      productData.productDetail.nutrition = [
+        nutrition[0],
+        nutrition[1],
+        nutrition[2],
+      ];
   } else {
     console.log("skip scrap nutrition");
   }
