@@ -2,11 +2,14 @@ import React from "react";
 import {
   AjaxErrors,
   Banner,
+  EmailSignUp,
+  Footer,
   Header,
   LayeredNavigation,
   MobileTabs,
   NavbarInfo,
   PageTitle,
+  PerksFooter,
   ProductsWrapper,
   SearchInfoBar,
 } from "../../components";
@@ -40,6 +43,9 @@ export const Search = () => {
           </section>
         </article>
       </div>
+      <PerksFooter />
+      <EmailSignUp />
+      <Footer />
     </MainWrapper>
   );
 };

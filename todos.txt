@@ -230,7 +230,9 @@
 - {DONE} add isInStock parameter to Product model and update category and  subCategory type
 - {DONE} create script to scrap products by category
 - {DONE} scrap isInStock, update isInStock parameter in Product model 
-- {TODO} scrap products by category and subCategory
+- {DONE} update 'updateProduct' api route
+- {DONE} fix responsive problems for Footer and EmailSignUp components
+- {DONE} scrap products by category and subCategory
 - {TODO} set up Search page part 2
 - {TODO} set Category page
 

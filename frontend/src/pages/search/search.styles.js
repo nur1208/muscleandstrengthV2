@@ -6,8 +6,8 @@ export const MainWrapper = styled.div`
   color: #303030;
   padding: 0;
   margin: 0;
-
-  /* * {
+  /* 
+  * {
     background-color: rgb(201, 76, 76);
   } */
   #main-wrapper {
