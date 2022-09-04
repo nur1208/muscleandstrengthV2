@@ -23,4 +23,6 @@ export const getProducts = getAll(ProductModel);
 export const updateProduct = updateOne(ProductModel, [
   "type",
   "name",
+  "category",
+  "subCategory",
 ]);

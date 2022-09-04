@@ -6,7 +6,7 @@ export const filterObj = (obj, ...allowedFields) => {
       if (typeof obj[el] === "object") {
         if (obj[el].operation && obj[el].value) {
           if (newObj[`$${obj[el].operation}`]) {
-            console.log("multiple array update");
+            newObj[`$${obj[el].operation}`][el] = obj[el].value;
           } else {
             const arrayObject = {};
             arrayObject[el] = obj[el].value;
