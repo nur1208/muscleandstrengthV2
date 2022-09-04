@@ -14,16 +14,15 @@ import { scrapProductsByCategory } from "./productsByCategory/script.js";
 
 const main = async () => {
   console.log("start scraping... ⌛");
-  await scrapProductsByCategory(
-    "https://www.muscleandstrength.com/store/category/protein.html"
-    // "https://www.muscleandstrength.com/store/category/general-health.html"
-  );
-  // await getLayeredNavigationData();
-  // const url =
-  // "https://www.muscleandstrength.com/store/omega-3.html";
+  // await scrapProductsByCategory(
+  //   "https://www.muscleandstrength.com/store/category/protein.html"
+  //   // "https://www.muscleandstrength.com/store/category/general-health.html"
+  // );
+  const url =
+    "https://www.muscleandstrength.com/store/now-mega-d-3-and-mk-7.html";
   // "https://www.muscleandstrength.com/store/combat-powder.html";
 
-  // await getProductData(url, "trending");
+  await getProductData(url, "trending");
 
   // await getProductData(url, "topDeals");
 

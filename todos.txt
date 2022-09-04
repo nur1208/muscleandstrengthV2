@@ -229,8 +229,10 @@
 - {DONE} add category and subCategory parameters to Product model
 - {DONE} add isInStock parameter to Product model and update category and  subCategory type
 - {DONE} create script to scrap products by category
+- {DONE} scrap isInStock, update isInStock parameter in Product model 
+- {TODO} scrap products by category and subCategory
 - {TODO} set up Search page part 2
-- {TODO} set UpdateCategory page
+- {TODO} set Category page
 
 not important:
 - {TODO} fix Selector up down keys when there are long list

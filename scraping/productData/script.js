@@ -36,6 +36,7 @@ const customAdditionalReviews = async (page) => {
       await page.click(btnSelector);
     } catch (error) {
       console.log("doesn't have more reviews");
+      break;
     }
     await page.waitForTimeout(1000 * 15);
   }

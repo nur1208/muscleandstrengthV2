@@ -24,6 +24,7 @@ export const scrapBuyingOptions = (mainDivHtml) => {
         ),
       },
       title: $(".title", $(group)).text().trim(),
+      isInStock: !$(".fields").html().includes("Out of Stock"),
       serving: Number(
         $(".serving-info", $(group)).text().split(" ")[0].trim()
       ),
