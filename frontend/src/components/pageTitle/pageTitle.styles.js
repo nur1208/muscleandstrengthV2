@@ -6,6 +6,8 @@ export const MainWrapper = styled.div`
 
   margin-bottom: 10px;
   padding-top: 20px;
+  padding-bottom: 5px;
+
   font-weight: 600;
   h1 {
     font-size: 2em;
@@ -25,6 +27,8 @@ export const MainWrapper = styled.div`
   @media (min-width: 840px) {
     margin-bottom: 15px;
     padding-top: 25px;
+    padding-bottom: 10px;
+
     h1.page-title {
       margin: 0 0 15px;
     }
