@@ -13,3 +13,5 @@ export const getText = (element, rep, to) =>
     .trim();
 export const getIconId = (element) =>
   element.attr("href").split("#")[1].trim();
+
+export const getHref = (element) => element.attr("href").trim();

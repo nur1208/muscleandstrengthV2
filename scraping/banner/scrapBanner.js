@@ -21,7 +21,7 @@ export const scrapBanner = (html) => {
   //     .split("/");
   //   bannerData.srcset =
   //     splittedSrcset[splittedSrcset.length - 1].trim();
-  bannerData.srcset = $(sourceSelector).attr("srcset").trim();
+  bannerData.srcset = $(sourceSelector).attr("srcset")?.trim();
   bannerData.media = $(sourceSelector).attr("media").trim();
 
   bannerData.widthImg = $(imgSelector).attr("width");
@@ -29,7 +29,9 @@ export const scrapBanner = (html) => {
 
   //   const splittedSrc = $(imgSelector).attr("src").split("/");
   //   bannerData.src = splittedSrc[splittedSrc.length - 1].trim();
-  bannerData.src = $(imgSelector).attr("data-src").trim();
+  bannerData.src =
+    $(imgSelector)?.attr("data-src")?.trim() ||
+    $(imgSelector)?.attr("src")?.trim();
   bannerData.alt = $(imgSelector).attr("alt").trim();
 
   return bannerData;

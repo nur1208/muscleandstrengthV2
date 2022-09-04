@@ -227,9 +227,10 @@
         note: use sourceUrl as primary key
 - {DONE} re-scrap store products
 - {DONE} add category and subCategory parameters to Product model
-- {TODO} create script to scrap products by category
+- {DONE} add isInStock parameter to Product model and update category and  subCategory type
+- {DONE} create script to scrap products by category
 - {TODO} set up Search page part 2
-- {TODO} set update Category page
+- {TODO} set UpdateCategory page
 
 not important:
 - {TODO} fix Selector up down keys when there are long list

@@ -10,9 +10,14 @@ import {
   getProductData,
   getProductReviews,
 } from "./productData/script.js";
+import { scrapProductsByCategory } from "./productsByCategory/script.js";
 
 const main = async () => {
   console.log("start scraping... ⌛");
+  await scrapProductsByCategory(
+    "https://www.muscleandstrength.com/store/category/protein.html"
+    // "https://www.muscleandstrength.com/store/category/general-health.html"
+  );
   // await getLayeredNavigationData();
   // const url =
   // "https://www.muscleandstrength.com/store/omega-3.html";
@@ -43,12 +48,12 @@ const main = async () => {
   // {
   //   index: 2;
   // }
-  const element = topRatedProductsData[7];
+  // const element = topRatedProductsData[7];
 
-  await getProductData(
-    `https://www.muscleandstrength.com${element.href}`,
-    "topRated"
-  );
+  // await getProductData(
+  //   `https://www.muscleandstrength.com${element.href}`,
+  //   "topRated"
+  // );
 
   console.log("DONE scraping ✔");
 };
