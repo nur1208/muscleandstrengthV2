@@ -95,22 +95,41 @@ export const getProductReviews = async (url, productId) => {
   console.log(reviews.length);
 };
 
-const isScraped = async (url, type) => {
+const isScraped = async (url, type, withCategory) => {
   const { data } = await GenericEndpoints.get(
     `products?sourceUrl=${url}`
   );
 
   if (data.results) {
-    const foundProduct = data.data.doc[0];
-    await GenericEndpoints.put(`products/${foundProduct._id}`, {
+    const body = {
       type: { operation: "push", value: type },
-    });
+    };
+
+    if (withCategory) {
+      body.category = {
+        operation: "push",
+        value: withCategory.category,
+      };
+      body.subCategory = {
+        operation: "push",
+        value: withCategory.subCategory,
+      };
+    }
+    const foundProduct = data.data.doc[0];
+    await GenericEndpoints.put(
+      `products/${foundProduct._id}`,
+      body
+    );
   }
 
   return data.results;
 };
-export const getProductData = async (url, type) => {
-  if (await isScraped(url, type))
+export const getProductData = async (
+  url,
+  type,
+  withCategory
+) => {
+  if (await isScraped(url, type, withCategory))
     return console.log("This product scraped");
   const __filename = fileURLToPath(import.meta.url);
 
@@ -156,6 +175,11 @@ export const getProductData = async (url, type) => {
   productData.productDetail = {};
 
   productData.productDetail.deals = deals;
+  if (withCategory) {
+    productData.category = [withCategory.category];
+    productData.subCategory = [withCategory.subCategory];
+  }
+
   productData.type = [type];
   productData.sourceUrl = url;
   const mainSelectorBuyingOptions =

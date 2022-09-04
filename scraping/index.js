@@ -5,6 +5,7 @@ import {
   topDealsProductsData,
   topRatedProductsData,
   trendingProductsData,
+  proteinCategories,
 } from "./productData/data.js";
 import {
   getProductData,
@@ -18,28 +19,44 @@ const main = async () => {
   //   "https://www.muscleandstrength.com/store/category/protein.html"
   //   // "https://www.muscleandstrength.com/store/category/general-health.html"
   // );
-  const url =
-    "https://www.muscleandstrength.com/store/now-mega-d-3-and-mk-7.html";
-  // "https://www.muscleandstrength.com/store/combat-powder.html";
+  // const url =
+  //   "https://www.muscleandstrength.com/store/now-mega-d-3-and-mk-7.html";
+  // // "https://www.muscleandstrength.com/store/combat-powder.html";
 
-  await getProductData(url, "trending");
+  // await getProductData(url, "trending");
 
   // await getProductData(url, "topDeals");
 
   // // re scrap { index: 7 }
-  // for (
-  //   let index = 9;
-  //   index < topRatedProductsData.length;
-  //   index++
-  // ) {
-  //   const { href } = topRatedProductsData[index];
+  const currentSubIndex = 0;
+  console.log(`current subCategory ${currentSubIndex}`);
 
-  //   await getProductData(
-  //     `https://www.muscleandstrength.com${href}`,
-  //     "topRated"
-  //   );
-  //   console.log({ index });
-  // }
+  for (
+    let index = 0;
+    index <
+    proteinCategories.subCategories[currentSubIndex].products
+      .length;
+    index++
+  ) {
+    const href =
+      proteinCategories.subCategories[currentSubIndex].products[
+        index
+      ];
+
+    console.log(`current product ${index}... ⌛`);
+
+    await getProductData(
+      `https://www.muscleandstrength.com${href}`,
+      null,
+      {
+        category: proteinCategories.title,
+        subCategory:
+          proteinCategories.subCategories[currentSubIndex].title,
+      }
+    );
+
+    console.log(`DONE scraping ${index} ✅`);
+  }
 
   // const element = topDealsProductsData.find(
   //   ({ title }) => title === "JNX Sports The Ripper, 30 Servings"
