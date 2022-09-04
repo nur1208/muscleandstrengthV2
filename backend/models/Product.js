@@ -18,7 +18,7 @@ const schema = new mongoose.Schema(
     category: [String],
     subCategory: [String],
     features: [String],
-    isInStock: Boolean,
+
     ratingPercentage: Number, //this field is temporary
     reviewsNum: Number, //this field is temporary
     type: [String],
@@ -31,6 +31,7 @@ const schema = new mongoose.Schema(
         title: { type: String },
         serving: { type: Number },
         deal: { type: String },
+        isInStock: { type: Boolean, default: true },
         options: [{ title: { type: String } }],
       },
     ],
