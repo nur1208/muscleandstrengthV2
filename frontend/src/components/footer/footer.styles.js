@@ -15,10 +15,10 @@ export const MainWrapper = styled.footer`
     flex-flow: row wrap;
   }
 
-  .grid-margin-x {
+  /* .grid-margin-x {
     margin-left: -0.5555555556rem;
     margin-right: -0.5555555556rem;
-  }
+  } */
 
   .cell {
     flex: 0 0 auto;
@@ -126,10 +126,10 @@ export const MainWrapper = styled.footer`
   }
 
   @media print, screen and (min-width: 52.5em) {
-    .grid-margin-x {
+    /* .grid-margin-x {
       margin-left: -0.8333333333rem;
       margin-right: -0.8333333333rem;
-    }
+    } */
 
     .medium-3 {
       width: 25%;
