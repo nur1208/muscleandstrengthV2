@@ -19,10 +19,16 @@ export const scrapProductInfo = (mainDivHtml) => {
         $(child).hasClass("video-wrapper")
       ) {
         item.type = "video";
-        item.videId = $("iframe", $(child))
-          .attr("src")
-          .split("embed/")[1]
-          .trim();
+        if (
+          $("iframe", $(child)).attr("src").includes("youtube")
+        )
+          item.videId = $("iframe", $(child))
+            .attr("src")
+            .split("embed/")[1]
+            .trim();
+        else
+          item.videId = $("iframe", $(child)).attr("src").trim();
+
         return item;
       }
 

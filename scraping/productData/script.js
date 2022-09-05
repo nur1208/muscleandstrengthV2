@@ -210,7 +210,7 @@ export const getProductData = async (
       $(mainSelectorNutrition).toString()
     );
 
-    if (nutrition.length >= 3)
+    if (nutrition.length <= 3)
       productData.productDetail.nutrition = nutrition;
     else
       productData.productDetail.nutrition = [
