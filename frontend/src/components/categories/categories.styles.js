@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const MainWrapper = styled.div`
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
 
   .cell {
     flex: 0 0 auto;
@@ -21,8 +22,12 @@ export const MainWrapper = styled.div`
 
   .cell {
     width: calc(100% - 0.625rem);
-    margin-left: 0.3125rem;
-    margin-right: 0.3125rem;
+    /* margin-left: 0.3125rem; */
+    /* margin-right: 0.3125rem; */
+  }
+
+  a {
+    font-size: 16px;
   }
 
   .small-12 {
@@ -160,6 +165,7 @@ export const MainWrapper = styled.div`
     }
   }
   @media print, screen and (min-width: 46.25em) {
+    justify-content: space-between;
     .bp740-6 {
       width: 50%;
     }
@@ -170,8 +176,8 @@ export const MainWrapper = styled.div`
   @media print, screen and (min-width: 52.5em) {
     .cell {
       width: calc(100% - 0.9375rem);
-      margin-left: 0.46875rem;
-      margin-right: 0.46875rem;
+      /* margin-left: 0.46875rem; */
+      /* margin-right: 0.46875rem; */
     }
 
     .small-12 {
