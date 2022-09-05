@@ -28,7 +28,7 @@ const main = async () => {
   // await getProductData(url, "topDeals");
 
   // // re scrap { index: 7 }
-  const currentSubIndex = 1;
+  const currentSubIndex = 5;
   console.log(`current subCategory ${currentSubIndex}`);
 
   for (
@@ -43,7 +43,11 @@ const main = async () => {
         index
       ];
 
-    console.log(href);
+    console.log({
+      href,
+      title:
+        proteinCategories.subCategories[currentSubIndex].title,
+    });
     console.log(`current product ${index}... ⌛`);
 
     await getProductData(

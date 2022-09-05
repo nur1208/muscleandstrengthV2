@@ -52,7 +52,7 @@ import {
   IconDealWhite,
 } from "./index";
 
-export const getIconById = (iconId, style) => {
+export const getIconById = (iconId, style, fill) => {
   switch (iconId) {
     case "icon-question-mark":
       return <IconQuestionMark style={style} />;
@@ -112,7 +112,7 @@ export const getIconById = (iconId, style) => {
       return <IconLogoBlue style={style} />;
 
     case "icon-deal":
-      return <IconDeal style={style} />;
+      return <IconDeal style={style} fill={fill} />;
 
     case "icon-mns-rewards":
       return <IconMnsRewards style={style} />;

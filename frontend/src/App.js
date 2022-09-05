@@ -4,6 +4,7 @@ import { LoginModal } from "./components";
 import { useAutoLogin } from "./hooks";
 import {
   Account,
+  Categories,
   Home,
   Login,
   LogoutSuccess,
@@ -33,6 +34,9 @@ function App() {
             path="reviews/brands/:brand/:product/:id"
             element={<Review />}
           />
+          <Route path="category">
+            <Route index element={<Categories />} />
+          </Route>
           <Route path="customer/account">
             <Route path="login" element={<Login />} />
             <Route path="create" element={<SignUp />} />

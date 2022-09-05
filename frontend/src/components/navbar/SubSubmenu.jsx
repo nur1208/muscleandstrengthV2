@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   useHover,
   useSubmenu,
@@ -15,7 +16,8 @@ export const SubSubmenu = ({
 }) => {
   const initStyle = "has-sub-submenu";
 
-  const [ref, isOpen, handleBack] = useSubmenu();
+  const [ref, isOpen, handleBack, handleClickItemBtn] =
+    useSubmenu();
 
   // useEffect(() => {
   //   updateIsOpen(isHovered);
@@ -41,7 +43,7 @@ export const SubSubmenu = ({
         </div>
         <div class="view-all-link">
           {subSubMainTitle}
-          <a href={subSubMainHref}>
+          <a onClick={() => handleClickItemBtn(subSubMainHref)}>
             <button class="btn btn-blue">
               View all {subSubMainTitle}
             </button>

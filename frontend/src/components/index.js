@@ -50,3 +50,6 @@ export { LayeredNavigation } from "./layeredNavigation/LayeredNavigation";
 export { SearchInfoBar } from "./searchInfoBar/SearchInfoBar";
 export { AjaxErrors } from "./ajaxErrors/AjaxErrors";
 export { ProductsWrapper } from "./productsWrapper/ProductsWrapper";
+export { SectionTitle } from "./sectionTitle/SectionTitle";
+export { Categories } from "./categories/Categories";
+export { AlphablockCategories } from "./alphablockCategories/AlphablockCategories";

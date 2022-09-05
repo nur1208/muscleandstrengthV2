@@ -12,9 +12,9 @@ export const navbarData = [
           {
             hasSubSubmenu: true,
             subItemTitle: "Shop by Category",
-            subItemHref: "/store/category.html",
+            subItemHref: "/store/category",
             subSubMainTitle: "Categories",
-            subSubMainHref: "/store/category.html",
+            subSubMainHref: "/store/category",
             subSubGroupTitle: "Top Categories",
             itemsOfSubSubItem: [
               {

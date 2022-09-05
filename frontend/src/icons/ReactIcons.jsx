@@ -201,11 +201,11 @@ export const IconLogoBlue = ({ style }) => {
   );
 };
 
-export const IconDeal = ({ style }) => {
+export const IconDeal = ({ style, fill }) => {
   return (
     <svg style={style} id="icon-deal" viewBox="0 0 100 100">
       <path
-        fill="#059"
+        fill={fill || "#059"}
         d="M87.5 3.8h-26C56.7 3.8 50 6.6 46.7 10L6.4 50.3C3 53.6 3 59.2 6.4 62.5l31.1 31.1c3.4 3.4 8.9 3.4 12.3 0L90 53.3c3.4-3.4 6.1-10 6.1-14.8v-26c.1-4.8-3.8-8.7-8.6-8.7zM76 32.7c-4.8 0-8.7-3.9-8.7-8.7s3.9-8.7 8.7-8.7 8.7 3.9 8.7 8.7-4 8.7-8.7 8.7z"
       />
     </svg>

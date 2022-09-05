@@ -233,9 +233,16 @@
 - {DONE} update 'updateProduct' api route
 - {DONE} fix responsive problems for Footer and EmailSignUp components
 - {DONE} scrap products by category and subCategory
-- {TODO} set up Search page part 2
+- {DONE} set up Search page part 2
+- {DONE} make sure not to add the same type for product in IsScrapped function
+- {DONE} update PageTitle component
+- {DONE} fix couldn't scrap videoId if the video not from youtube 
+- {DONE} create Categories component
+- {DONE} scrap Categories component  data
+- {DONE} make Categories component more dynamic
+- {DONE} create AlphablockCategories component
+- {DONE} set Categories page
 - {TODO} set Category page
-
 not important:
 - {TODO} fix Selector up down keys when there are long list
 - {TODO} create LaberWithSvg component and make it dynamic

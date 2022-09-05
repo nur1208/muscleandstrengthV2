@@ -22,7 +22,7 @@ export const Search = () => {
       <Banner {...BANNER_BLOCK_12} />
       <Header />
       <NavbarInfo noMarginBottom />
-      <PageTitle />
+      <PageTitle title="Search Results" />
       <div id="main-wrapper">
         <h2 class="blue-stripe show-for-medium all-products">
           All Products
