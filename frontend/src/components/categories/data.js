@@ -1,0 +1,218 @@
+export const categoriesData = [
+  {
+    title: "Protein",
+    items: [
+      "Protein Deals (152)",
+      "Whey Protein",
+      "Vegan Protein",
+      "Protein Bars",
+      "Whey Protein Isolate",
+      "Shop all Protein",
+    ],
+    img: {
+      srcsetMobile:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/protein-mobile.jpg",
+      srcsetDesktop:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/protein-desktop.jpg",
+      src: "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/protein-desktop.jpg",
+    },
+  },
+  {
+    title: "Pre-Workout",
+    items: [
+      "Pre-Workout Deals (86)",
+      "High Stimulant",
+      "Stimulant-Free",
+      "Creatine-Free",
+      "Pre-Workout For Fat Loss",
+      "Shop all Pre-Workout",
+    ],
+    img: {
+      srcsetMobile:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/preworkout-mobile.jpg",
+      srcsetDesktop:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/preworkout-desktop.jpg",
+      src: "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/preworkout-desktop.jpg",
+    },
+  },
+  {
+    title: "Health & Wellness",
+    items: [
+      "Health & Wellness Deals (290)",
+      "Immune Support",
+      "Fish Oil",
+      "Collagen",
+      "Greens Food",
+      "Shop all Health & Wellness",
+    ],
+    img: {
+      srcsetMobile:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/healthandwellness-mobile.jpg",
+      srcsetDesktop:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/healthandwellness-desktop.jpg",
+      src: "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/healthandwellness-desktop.jpg",
+    },
+  },
+  {
+    title: "Clothing",
+    items: [
+      "Clothing Deals (43)",
+      "T-Shirts",
+      "Tanks & Stringers",
+      "M&S Clothing",
+      "Women's Clothing",
+      "Shop all Clothing",
+    ],
+    img: {
+      srcsetMobile:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/clothing-mobile.jpg",
+      srcsetDesktop:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/clothing-desktop.jpg",
+      src: "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/clothing-desktop.jpg",
+    },
+  },
+  {
+    title: "Functional Foods",
+    items: [
+      "Functional Foods Deals (92)",
+      "Protein Bars",
+      "High Protein Snacks",
+      "Baking & Cooking",
+      "Meal Replacements",
+      "Shop all Functional Foods",
+    ],
+    img: {
+      srcsetMobile:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/functionalfoods-mobile.jpg",
+      srcsetDesktop:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/functionalfoods-desktop.jpg",
+      src: "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/functionalfoods-desktop.jpg",
+    },
+  },
+  {
+    title: "Fat Loss",
+    items: [
+      "Fat Loss Deals (147)",
+      "Thermogenics",
+      "Stimulant-Free",
+      "Appetite Suppressants",
+      "For Women",
+      "Shop all Fat Loss",
+    ],
+    img: {
+      srcsetMobile:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/fatloss-mobile.jpg",
+      srcsetDesktop:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/fatloss-desktop.jpg",
+      src: "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/fatloss-desktop.jpg",
+    },
+  },
+  {
+    title: "Workout Accessories",
+    items: [
+      "Accessories Deals (58)",
+      "Shaker Bottles",
+      "Lifting Straps",
+      "Wrist Support",
+      "Gym Bags",
+      "Shop all Workout Accessories",
+    ],
+    img: {
+      srcsetMobile:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/accessories-mobile.jpg",
+      srcsetDesktop:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/accessories-desktop.jpg",
+      src: "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/accessories-desktop.jpg",
+    },
+  },
+  {
+    title: "BCAAs & EAAs",
+    items: [
+      "BCAA & EAA Deals (123)",
+      "Essential Amino Acids (EAAs)",
+      "BCAAs with Energy",
+      "Beta-Alanine",
+      "Leucine",
+      "Shop all BCAAs & EAAs",
+    ],
+    img: {
+      srcsetMobile:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/bcaaeaa-mobile.jpg",
+      srcsetDesktop:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/bcaaeaa-desktop.jpg",
+      src: "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/bcaaeaa-desktop.jpg",
+    },
+  },
+  {
+    title: "Vitamins & Minerals",
+    items: [
+      "Vitamin Deals (142)",
+      "Multivitamins",
+      "Men's Multivitamins",
+      "Women's Multivitamins",
+      "Single Vitamins",
+      "Shop all Vitamins & Minerals",
+    ],
+    img: {
+      srcsetMobile:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/vitamins-mobile.jpg",
+      srcsetDesktop:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/vitamins-desktop.jpg",
+      src: "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/vitamins-desktop.jpg",
+    },
+  },
+  {
+    title: "Creatine",
+    items: [
+      "Creatine Deals (31)",
+      "Creatine Monohydrate",
+      "Multi-Creatine Blends",
+      "Kre-Alkalyn",
+      "Creatine Chelate",
+      "Shop all Creatine",
+    ],
+    img: {
+      srcsetMobile:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/creatine-mobile.jpg",
+      srcsetDesktop:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/creatine-desktop.jpg",
+      src: "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/creatine-desktop.jpg",
+    },
+  },
+  {
+    title: "Mass Gainers",
+    items: [
+      "Mass Gainer Deals (26)",
+      "1000+ Calories",
+      "500-800 Calories",
+      "Muscle Building Stacks",
+      "Test Boosters",
+      "Shop all Mass Gainers",
+    ],
+    img: {
+      srcsetMobile:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/massgainers-mobile.jpg",
+      srcsetDesktop:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/massgainers-desktop.jpg",
+      src: "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/massgainers-desktop.jpg",
+    },
+  },
+  {
+    title: "Test Boosters",
+    items: [
+      "Test Booster Deals (94)",
+      "ZMA",
+      "Tribulus",
+      "D-Aspartic Acid (DAA)",
+      "Anti-Estrogen",
+      "Shop all Test Boosters",
+    ],
+    img: {
+      srcsetMobile:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/test-mobile.jpg",
+      srcsetDesktop:
+        "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/test-desktop.jpg",
+      src: "https://cdn.muscleandstrength.com/store/skin/frontend/mnsv4/default/images/category/category-main/top/test-desktop.jpg",
+    },
+  },
+];
