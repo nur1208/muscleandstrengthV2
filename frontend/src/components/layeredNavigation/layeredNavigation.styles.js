@@ -458,5 +458,10 @@ export const MainWrapper = styled.div`
     .block-content__filters .filter-process.button-row {
       display: none;
     }
+
+    .block-layered-nav .block-content__filters {
+      display: block !important;
+      margin-top: 0;
+    }
   }
 `;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { getIconById, ICONS_ID } from "../../icons";
 import { Button } from "../button/Button";
 import { layeredNavigationData } from "./data";
@@ -6,6 +6,7 @@ import { Item } from "./Item";
 import { MainWrapper } from "./layeredNavigation.styles";
 
 export const LayeredNavigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <MainWrapper>
       <div class="block block-layered-nav">
@@ -20,6 +21,7 @@ export const LayeredNavigation = () => {
                 isSmall
                 isLightBlue
                 text="Sort &amp; Filter"
+                onClick={() => setIsOpen(!isOpen)}
               />
               {/* <div class="btn btn-sm btn-light-blue btn-tab">
                 
@@ -28,7 +30,7 @@ export const LayeredNavigation = () => {
           </div>
           <div
             class="block-content__filters refine-search-wrap"
-            style={{ display: "block" }}
+            style={{ display: isOpen ? "block" : "none" }}
           >
             <div class="sorting-bar a-promo-sort-bar">
               <div class="option-wrap">
