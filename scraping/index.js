@@ -28,7 +28,9 @@ const main = async () => {
   // await getProductData(url, "topDeals");
 
   // // re scrap { index: 7 }
-  const currentSubIndex = 5;
+  // console.log(proteinCategories.subCategories.length);
+  // 11 limit
+  const currentSubIndex = 8;
   console.log(`current subCategory ${currentSubIndex}`);
 
   for (

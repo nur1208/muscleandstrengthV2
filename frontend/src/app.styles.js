@@ -1,5 +1,73 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+export const GridX = styled.div`
+  .grid-x {
+    display: flex;
+    flex-flow: row wrap;
+  }
 
+  .cell {
+    flex: 0 0 auto;
+    min-height: 0;
+    min-width: 0;
+    width: 100%;
+    flex-basis: auto;
+  }
+
+  .grid-x > .small-12 {
+    width: 100%;
+  }
+
+  .grid-margin-x > .cell {
+    width: calc(100% - 0.625rem);
+  }
+
+  .grid-margin-x > .small-12 {
+    width: calc(100% - 0.625rem);
+  }
+
+  @media print, screen and (min-width: 37.5em) {
+    .grid-x > .bp600-4 {
+      width: 33.3333333333%;
+    }
+    .grid-margin-x > .bp600-4 {
+      width: calc(33.3333333333% - 0.625rem);
+    }
+  }
+
+  @media print, screen and (min-width: 52.5em) {
+    .grid-margin-x > .cell {
+      width: calc(100% - 0.9375rem);
+    }
+
+    .grid-margin-x > .small-12 {
+      width: calc(100% - 0.9375rem);
+    }
+
+    .grid-margin-x > .bp600-4 {
+      width: calc(33.3333333333% - 0.9375rem);
+    }
+  }
+
+  @media print, screen and (min-width: 60em) {
+    .grid-x > .bp960-3 {
+      width: 25%;
+    }
+
+    .grid-margin-x > .bp960-3 {
+      width: calc(25% - 0.9375rem);
+    }
+  }
+
+  @media screen and (min-width: 80em) {
+    .grid-x > .bp1280-3 {
+      width: 25%;
+    }
+
+    .grid-margin-x > .bp1280-3 {
+      width: calc(25% - 0.9375rem);
+    }
+  }
+`;
 const GlobalStyle = createGlobalStyle`
 
 html {

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const MainWrapper = styled.div`
+  background-color: #fff;
+
   h2.grey-stripe {
     color: #303030;
     margin-bottom: 6px;

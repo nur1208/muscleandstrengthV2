@@ -17,6 +17,11 @@ export const MainWrapper = styled.div`
     margin-left: 14px;
   }
 
+  .option-wrap {
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
   .store-control {
     display: none;
   }
@@ -88,8 +93,62 @@ export const MainWrapper = styled.div`
     list-style: none;
     padding: 0;
   }
+
+  .option-wrap .option {
+    display: inline-block;
+    font-size: 13px;
+    border-radius: 2px;
+  }
+  .option-wrap .option.active {
+    background: #059;
+    padding: 0 12px;
+  }
+  .option-wrap .option .inner-wrap {
+    color: #059;
+    cursor: pointer;
+  }
+
+  .option-wrap .option.active .inner-wrap {
+    color: #fff;
+    font-family: nimbusnovus-medium, sans-serif;
+  }
+
+  .option-toggle {
+    flex: 0 0 84px;
+    border-left: 1px solid #ddd;
+    padding: 0 15px;
+    margin-left: 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .option-toggle .inner {
+    width: 75px;
+  }
+
+  .option-toggle .inner a {
+    display: block;
+    text-align: center;
+  }
+
+  .option-toggle svg {
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+    margin-bottom: -5px;
+  }
   @media (min-width: 480px) {
     font-size: 16px;
+    .option-wrap {
+      display: inline-block;
+    }
+    .option-wrap .option {
+      padding: 0 20px;
+    }
+
+    .option-toggle {
+      flex: 0 0 auto;
+    }
   }
 
   @media (min-width: 840px) {

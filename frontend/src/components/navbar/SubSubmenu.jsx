@@ -64,7 +64,11 @@ export const SubSubmenu = ({
               suSubItemImageUrl,
             }) => (
               <li>
-                <a href={subSubItemHref}>
+                <a
+                  onClick={() =>
+                    handleClickItemBtn(subSubItemHref)
+                  }
+                >
                   {subSubMainTitle === "Brands" ? (
                     <img
                       src={suSubItemImageUrl}

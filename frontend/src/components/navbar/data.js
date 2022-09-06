@@ -19,58 +19,53 @@ export const navbarData = [
             itemsOfSubSubItem: [
               {
                 suSubItemTitle: "Protein",
-                subSubItemHref: "/store/category/protein.html",
+                subSubItemHref: "/store/category/protein",
               },
               {
                 suSubItemTitle: "Pre-Workout",
-                subSubItemHref:
-                  "/store/category/pre-workout.html",
+                subSubItemHref: "/store/category/pre-workout",
               },
               {
                 suSubItemTitle: "Health & Wellness",
-                subSubItemHref:
-                  "/store/category/general-health.html",
+                subSubItemHref: "/store/category/general-health",
               },
               {
                 suSubItemTitle: "Clothing",
-                subSubItemHref: "/store/category/clothing.html",
+                subSubItemHref: "/store/category/clothing",
               },
               {
                 suSubItemTitle: "Functional Foods",
                 subSubItemHref:
-                  "/store/category/functional-foods.html",
+                  "/store/category/functional-foods",
               },
               {
                 suSubItemTitle: "Fat Loss",
-                subSubItemHref: "/store/category/fat-loss.html",
+                subSubItemHref: "/store/category/fat-loss",
               },
               {
                 suSubItemTitle: "Workout Accessories",
-                subSubItemHref:
-                  "/store/category/accessories.html",
+                subSubItemHref: "/store/category/accessories",
               },
               {
                 suSubItemTitle: "BCAAs & EAAs",
-                subSubItemHref: "/store/category/bcaas.html",
+                subSubItemHref: "/store/category/bcaas",
               },
               {
                 suSubItemTitle: "Vitamins & Minerals",
                 subSubItemHref:
-                  "/store/category/vitamins-minerals.html",
+                  "/store/category/vitamins-minerals",
               },
               {
                 suSubItemTitle: "Creatine",
-                subSubItemHref: "/store/category/creatine.html",
+                subSubItemHref: "/store/category/creatine",
               },
               {
                 suSubItemTitle: "Mass Gainers",
-                subSubItemHref:
-                  "/store/category/weight-gainers.html",
+                subSubItemHref: "/store/category/weight-gainers",
               },
               {
                 suSubItemTitle: "Test Boosters",
-                subSubItemHref:
-                  "/store/category/testosterone.html",
+                subSubItemHref: "/store/category/testosterone",
               },
             ],
           },

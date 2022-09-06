@@ -242,7 +242,9 @@
 - {DONE} make Categories component more dynamic
 - {DONE} create AlphablockCategories component
 - {DONE} set Categories page
-- {TODO} set Category page
+- {DONE} create subCategories component
+- {DONE} set Category page
+
 not important:
 - {TODO} fix Selector up down keys when there are long list
 - {TODO} create LaberWithSvg component and make it dynamic

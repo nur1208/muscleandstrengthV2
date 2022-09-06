@@ -53,3 +53,4 @@ export { ProductsWrapper } from "./productsWrapper/ProductsWrapper";
 export { SectionTitle } from "./sectionTitle/SectionTitle";
 export { Categories } from "./categories/Categories";
 export { AlphablockCategories } from "./alphablockCategories/AlphablockCategories";
+export { SubCategories } from "./subCategories/SubCategories";

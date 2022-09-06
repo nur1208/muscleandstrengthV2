@@ -8,3 +8,4 @@ export { LogoutSuccess } from "./logoutSuccess/LogoutSuccess";
 export { Account } from "./account/Account";
 export { Search } from "./search/Search";
 export { Categories } from "./categories/Categories";
+export { Category } from "./category/Category";
