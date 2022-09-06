@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { useMediaQuery } from "react-responsive";
 import { useParams } from "react-router-dom";
 import {
   AjaxErrors,
@@ -22,6 +23,7 @@ import { proteinCategories } from "./data";
 export const Category = () => {
   const { type } = useParams();
   const { data } = useSelector((state) => state.product_store);
+  const isNotPC = useMediaQuery({ minWidth: 840 });
 
   const trendingProps = {
     title: "Trending Products",
@@ -57,16 +59,17 @@ export const Category = () => {
           <section>
             <StoreSectionSwiper {...trendingProps} />
           </section>
-          <section>
-            <h2 class="blue-stripe show-for-medium all-products">
-              All Products
-            </h2>
-          </section>
+          {isNotPC && (
+            <section>
+              <h2 class="blue-stripe show-for-medium all-products">
+                All Products
+              </h2>
+            </section>
+          )}
         </article>
         <article className="col2-container">
           <aside className="left-aside">
             <div>
-              <MobileTabs />
               <LayeredNavigation />
             </div>
           </aside>
