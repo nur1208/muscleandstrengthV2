@@ -176,27 +176,53 @@ export const MainWrapper = styled.div`
   
   
   @media (max-width: 839px) {
-    display: flex;
+    // display: flex;
 
     .mns-label.lbl-deal {
       display: initial;
       padding: 3px;
     }
+.height-setter{
+      display: grid;
+    grid-gap: 0 25px;
+    grid-template-columns: 30% auto;
+    align-items: start;
+    grid-template-areas:
+        "pictureG dynamicG"
+        "pictureG infoG";
+    height: 100%;
+    background-color: #fff;
+    position: relative;
 
+}
+.image-wrap{
+
+  grid-area: pictureG;
+
+}
     .dynamic-height {
       padding-bottom: 176px !important;
+      grid-area: dynamicG;
     }
+ .product-info{
 
+  grid-area: infoG;
+
+}
     .product-name {
       text-align: inherit;
     }
     .button-wrap {
-      justify-content: flex-start;
+      justify-content: space-between!important;
+      flex-wrap: nowrap;
     }
 
-    .product-info {
-      width: auto;
-    }
+      button{
+      
+      font-size: 13px;
+      padding: 0 5px;
+      }
+
   }
   
   `}/* hasRating */

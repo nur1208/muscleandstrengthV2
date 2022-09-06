@@ -123,6 +123,13 @@ export const MainWrapper = styled.div`
 
   .button-wrap {
     justify-content: flex-start;
+    /* flex-wrap: wrap; */
+    gap: 3px;
+  }
+
+  .button-wrap button {
+    font-size: 13px;
+    padding: 0 1px;
   }
 
   .clearBoth {
