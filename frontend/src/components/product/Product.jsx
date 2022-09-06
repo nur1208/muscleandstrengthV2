@@ -41,7 +41,14 @@ export const Product = (props) => {
     // If all buying options without deal than select the first option
     (buyingOptions.find(({ deal }) => deal) || buyingOptions[0]);
   return (
-    <MainWrapper>
+    <MainWrapper hasRating={hasRating}>
+      <div className="image-wrap">
+        <img
+          className="product-image lazyloaded"
+          src={imgUrl[400]?.split(" ")[0]}
+          alt={title}
+        />
+      </div>
       <div className="height-setter">
         <div
           className="dynamic-height"
@@ -52,13 +59,13 @@ export const Product = (props) => {
         >
           {/* <Link className="product-link" to={href || "#"}> */}
           <span className="product-link" onClick={handleClick}>
-            <div className="image-wrap">
+            {/* <div className="image-wrap">
               <img
                 className="product-image lazyloaded"
                 src={imgUrl[400]?.split(" ")[0]}
                 alt={title}
               />
-            </div>
+            </div> */}
             <div className="product-name">{`${
               brand?.title
             } ${name}, ${

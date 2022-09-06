@@ -170,4 +170,34 @@ export const MainWrapper = styled.div`
       bottom: 20px;
     }
   }
+  ${({ hasRating }) =>
+    hasRating &&
+    `
+  
+  
+  @media (max-width: 839px) {
+    display: flex;
+
+    .mns-label.lbl-deal {
+      display: initial;
+      padding: 3px;
+    }
+
+    .dynamic-height {
+      padding-bottom: 176px !important;
+    }
+
+    .product-name {
+      text-align: inherit;
+    }
+    .button-wrap {
+      justify-content: flex-start;
+    }
+
+    .product-info {
+      width: auto;
+    }
+  }
+  
+  `}/* hasRating */
 `;

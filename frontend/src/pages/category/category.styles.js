@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const MainWrapper = styled.div`
+  /* * {
+    background-color: rgb(201, 76, 76);
+  } */
   line-height: 1.3;
   color: #303030;
   padding: 0;

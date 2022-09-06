@@ -244,6 +244,7 @@
 - {DONE} set Categories page
 - {DONE} create subCategories component
 - {DONE} set Category page
+- {DONE} make Product more responsive
 
 not important:
 - {TODO} fix Selector up down keys when there are long list
