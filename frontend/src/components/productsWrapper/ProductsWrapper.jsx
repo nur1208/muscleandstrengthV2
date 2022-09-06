@@ -4,7 +4,7 @@ import { PRODUCT_DATA } from "../data";
 import { Product } from "../product/Product";
 import { MainWrapper } from "./productsWrapper.styleds";
 
-export const ProductsWrapper = () => {
+export const ProductsWrapper = ({ hasAddCardBtn }) => {
   return (
     <MainWrapper>
       <div class="search-result-products ajax-loading-overlay">
@@ -25,6 +25,7 @@ export const ProductsWrapper = () => {
               >
                 <div class="inner-wrap">
                   <Product
+                    hasAddCardBtn
                     hasRating
                     hasDetailsPrice
                     {...PRODUCT_DATA}

@@ -74,7 +74,7 @@ export const Category = () => {
             <div className="result-content-wrap">
               <SearchInfoBar hasSort />
               {false && <AjaxErrors />}
-              <ProductsWrapper />
+              <ProductsWrapper hasAddCardBtn />
             </div>
           </section>
         </article>

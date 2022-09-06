@@ -20,6 +20,7 @@ export const Product = (props) => {
     _id,
     hasRating,
     hasDetailsPrice,
+    hasAddCardBtn,
   } = props;
 
   const handleClick = () => {
@@ -42,14 +43,14 @@ export const Product = (props) => {
     (buyingOptions.find(({ deal }) => deal) || buyingOptions[0]);
   return (
     <MainWrapper hasRating={hasRating}>
-      <div className="image-wrap">
-        <img
-          className="product-image lazyloaded"
-          src={imgUrl[400]?.split(" ")[0]}
-          alt={title}
-        />
-      </div>
       <div className="height-setter">
+        <div className="image-wrap">
+          <img
+            className="product-image lazyloaded"
+            src={imgUrl[400]?.split(" ")[0]}
+            alt={title}
+          />
+        </div>
         <div
           className="dynamic-height"
           style={{
@@ -108,9 +109,17 @@ export const Product = (props) => {
             )}
           </div>
           <div className="button-wrap">
+            {hasAddCardBtn && (
+              <Button
+                text="Add Card"
+                isBlue
+                isSmall
+                onClick={handleClick}
+              />
+            )}
             <Button
               text="View Product"
-              isBlue
+              isBlue={!hasAddCardBtn}
               isSmall
               onClick={handleClick}
             />
