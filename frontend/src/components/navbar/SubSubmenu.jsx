@@ -16,8 +16,13 @@ export const SubSubmenu = ({
 }) => {
   const initStyle = "has-sub-submenu";
 
-  const [ref, isOpen, handleBack, handleClickItemBtn] =
-    useSubmenu();
+  const [
+    ref,
+    isOpen,
+    handleBack,
+    handleClickItemBtn,
+    handleClickGoTo,
+  ] = useSubmenu();
 
   // useEffect(() => {
   //   updateIsOpen(isHovered);
@@ -43,11 +48,11 @@ export const SubSubmenu = ({
         </div>
         <div class="view-all-link">
           {subSubMainTitle}
-          <a onClick={() => handleClickItemBtn(subSubMainHref)}>
+          <span onClick={() => handleClickGoTo(subSubMainHref)}>
             <button class="btn btn-blue">
               View all {subSubMainTitle}
             </button>
-          </a>
+          </span>
         </div>
         <ul
           class={`link-list ${
@@ -65,9 +70,7 @@ export const SubSubmenu = ({
             }) => (
               <li>
                 <a
-                  onClick={() =>
-                    handleClickItemBtn(subSubItemHref)
-                  }
+                  onClick={() => handleClickGoTo(subSubItemHref)}
                 >
                   {subSubMainTitle === "Brands" ? (
                     <img
