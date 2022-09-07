@@ -7,7 +7,13 @@ export default class APIFeatures {
   filter() {
     // 1A) filtering
     const queryObj = { ...this.queryString };
-    const excludedFields = ["page", "sort", "limit", "fields"];
+    const excludedFields = [
+      "page",
+      "sort",
+      "limit",
+      "fields",
+      "q",
+    ];
 
     excludedFields.forEach((el) => delete queryObj[el]);
 
@@ -30,6 +36,31 @@ export default class APIFeatures {
     return this;
   }
 
+  search(by) {
+    const queryOr = [];
+
+    for (let index = 0; index < by.length; index++) {
+      // for (let index = 0; index < 1; index++) {
+      const item = by[index];
+      const tempObject = {};
+      tempObject[item] = {
+        $regex: this.queryString.q,
+        $options: "i",
+      };
+
+      queryOr.push(tempObject);
+      // {
+      //   $regex: `(\\b)${this.queryString.q}`,
+      //   $options: "i",
+      // };
+    }
+
+    console.log({ queryObject: queryOr });
+
+    this.query.find({ $or: queryOr });
+
+    return this;
+  }
   sort() {
     if (this.queryString.sort) {
       const sortBy = this.queryString.sort.split(",").join(" ");

@@ -10,7 +10,9 @@ const testTheServer = async () => {
 };
 
 const testGetProducts = async () => {
-  const { data } = await axios.get(`${baseUrl}/${mainRoute}`);
+  const { data } = await axios.get(
+    `${baseUrl}/${mainRoute}?q=Primeval Labs`
+  );
   console.log(data);
 
   data.data.doc.forEach((doc) => console.log(doc));
@@ -40,7 +42,7 @@ const testUpdateProduct = async () => {
 
 const main = async () => {
   try {
-    await testUpdateProduct();
+    await testGetProducts();
   } catch (error) {
     console.log(error);
   }

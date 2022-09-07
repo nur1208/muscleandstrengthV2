@@ -35,7 +35,7 @@ export const createMany = (Model, moreLogic) =>
     });
   });
 
-export const getAll = (Model) =>
+export const getAll = (Model, searchBy) =>
   catchAsync(async (req, res, next) => {
     let filter = {};
     // if (req.params.tourId) filter = { tour: req.params.tourId };
@@ -51,7 +51,8 @@ export const getAll = (Model) =>
       .filter()
       .sort()
       .limitFields()
-      .pagination();
+      .pagination()
+      .search(searchBy);
     // execute the query
 
     const doc = await features.query; //.explain();
