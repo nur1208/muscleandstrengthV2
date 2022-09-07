@@ -178,10 +178,6 @@ export const MainWrapper = styled.div`
   @media (max-width: 839px) {
     // display: flex;
 
-    .mns-label.lbl-deal {
-      display: initial;
-      padding: 3px;
-    }
 .height-setter{
       display: grid;
     grid-gap: 0 25px;
