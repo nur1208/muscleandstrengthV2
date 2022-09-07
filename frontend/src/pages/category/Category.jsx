@@ -20,7 +20,7 @@ import { BANNER_BLOCK_12 } from "../../components/data";
 import { useReduxActions } from "../../hooks";
 import { capitalizeFirstLetter } from "../../utils";
 import { MainWrapper } from "./category.styles";
-import { proteinCategories } from "./data";
+import { proteinCategories, preWorkoutCategories } from "./data";
 
 export const Category = () => {
   const { type, subType } = useParams();
@@ -52,7 +52,17 @@ export const Category = () => {
       }));
     }
   }, [type, subType]);
+  const getCategoriesData = (type) => {
+    switch (type) {
+      case "pre-workout":
+        return preWorkoutCategories;
 
+      default:
+        return proteinCategories;
+    }
+  };
+
+  const categoriesData = getCategoriesData(type);
   return (
     <MainWrapper>
       {" "}
@@ -68,11 +78,11 @@ export const Category = () => {
       />
       <main id="main-wrapper">
         <article className="before-content">
-          {!subType && proteinCategories.bannerData && (
+          {!subType && categoriesData.bannerData && (
             <section>
               <Banner
                 noImageDownloaded
-                {...proteinCategories.bannerData}
+                {...categoriesData.bannerData}
               />
             </section>
           )}
@@ -80,7 +90,7 @@ export const Category = () => {
             <section>
               <SubCategories
                 category={type}
-                categories={proteinCategories.subCategories.map(
+                categories={categoriesData.subCategories.map(
                   ({ title }) => title
                 )}
               />

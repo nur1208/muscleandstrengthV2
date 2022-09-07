@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { getIconById, ICONS_ID, SvgWrapper } from "../../icons";
 import { MainWrapper } from "./categories.styles";
 import { categoriesData } from "./data";
@@ -12,18 +13,26 @@ export const Categories = () => {
           class="cell small-12 bp740-6 large-4"
         >
           <h2 class="grey-stripe">
-            <a
+            <Link
               class="main-cat"
-              href="/store/category/protein.html"
+              to={`/store/category/${title.toLocaleLowerCase()}`}
             >
               {title}
               <span class="caret-right"></span>
-            </a>
+            </Link>
           </h2>
           <ul class="sub-cats">
             {items.map((item, index) => (
               <li key={`${index}-index`}>
-                <a href="https://www.muscleandstrength.com/store/promos.html?filter=eyJvcmRlciI6InNvcnRfb3JkZXIgZGVzYyxzYWxlc19yYW5raW5nIGFzYyIsImJyYW5kZmlsdGVyIjpbXSwiY2F0ZWdvcnlmaWx0ZXIiOlsiOSJdLCJjbGFzc2ZpbHRlciI6W119">
+                <Link
+                  to={
+                    index === items.length - 1
+                      ? `/store/category/${title.toLocaleLowerCase()}`
+                      : `/store/category/${title.toLocaleLowerCase()}/${item
+                          .replace(" ", "-")
+                          .toLocaleLowerCase()}`
+                  }
+                >
                   {index === 0 && (
                     <SvgWrapper childStyle="width:.9em; height:.9em; margin-right:.2em; margin-bottom:-.1em">
                       {getIconById(
@@ -34,7 +43,7 @@ export const Categories = () => {
                     </SvgWrapper>
                   )}
                   {item}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
