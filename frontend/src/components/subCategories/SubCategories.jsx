@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { GridX } from "../../app.styles";
 import { MainWrapper } from "./subCategories.styles";
 
-export const SubCategories = ({ categories }) => {
+export const SubCategories = ({ categories, category }) => {
   return (
     <MainWrapper>
       <div class="grey-stripe">
@@ -11,15 +12,17 @@ export const SubCategories = ({ categories }) => {
       <GridX>
         <div className="grid-x grid-margin-x">
           {categories.map((title) => (
-            <a
+            <Link
               class="cell small-12 bp600-4 bp960-3 bp1280-3"
-              href="https://www.muscleandstrength.com/store/category/protein/whey-protein.html"
+              to={`/store/category/${category}/${title
+                .replace(" ", "-")
+                .toLowerCase()}`}
             >
               <div class="inner-wrap">
                 <div class="title">{title}</div>
                 <span class="caret-right"></span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </GridX>

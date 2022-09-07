@@ -23,7 +23,7 @@ import { MainWrapper } from "./category.styles";
 import { proteinCategories } from "./data";
 
 export const Category = () => {
-  const { type } = useParams();
+  const { type, subType } = useParams();
   const { data } = useSelector((state) => state.product_store);
   const isNotPC = useMediaQuery({ minWidth: 840 });
   const { fetchProducts } = useReduxActions();
@@ -31,11 +31,27 @@ export const Category = () => {
     title: "Trending Products",
     products: data?.trendingProducts,
   };
+  const subCategory =
+    subType &&
+    subType
+      .replace("-", " ")
+      .split(" ")
+      .map((item) => capitalizeFirstLetter(item))
+      .join(" ");
   useEffect(() => {
-    fetchProducts(`category=${type}&limit=20`, (data) => ({
-      categoryProducts: data.doc,
-    }));
-  }, [type]);
+    if (subType) {
+      fetchProducts(
+        `subCategory=${subCategory}&limit=20`,
+        (data) => ({
+          categoryProducts: data.doc,
+        })
+      );
+    } else {
+      fetchProducts(`category=${type}&limit=20`, (data) => ({
+        categoryProducts: data.doc,
+      }));
+    }
+  }, [type, subType]);
 
   return (
     <MainWrapper>
@@ -44,11 +60,15 @@ export const Category = () => {
       <Header />
       <NavbarInfo noMarginBottom />
       <PageTitle
-        title={capitalizeFirstLetter(`${type} Supplements`)}
+        title={
+          subType
+            ? subCategory
+            : capitalizeFirstLetter(`${type} Supplements`)
+        }
       />
       <main id="main-wrapper">
         <article className="before-content">
-          {proteinCategories.bannerData && (
+          {!subType && proteinCategories.bannerData && (
             <section>
               <Banner
                 noImageDownloaded
@@ -56,13 +76,17 @@ export const Category = () => {
               />
             </section>
           )}
-          <section>
-            <SubCategories
-              categories={proteinCategories.subCategories.map(
-                ({ title }) => title
-              )}
-            />
-          </section>
+          {!subType && (
+            <section>
+              <SubCategories
+                category={type}
+                categories={proteinCategories.subCategories.map(
+                  ({ title }) => title
+                )}
+              />
+            </section>
+          )}
+
           <section>
             <StoreSectionSwiper {...trendingProps} />
           </section>

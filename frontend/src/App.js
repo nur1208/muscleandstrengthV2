@@ -38,6 +38,10 @@ function App() {
           <Route path="category">
             <Route index element={<Categories />} />
             <Route path=":type" element={<Category />} />
+            <Route
+              path=":type/:subType"
+              element={<Category />}
+            />
           </Route>
           <Route path="customer/account">
             <Route path="login" element={<Login />} />
