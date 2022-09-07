@@ -1,6 +1,15 @@
 import { fetchData } from "../../utils";
 import { PRODUCT_ACTIONS } from "../constants";
 
+export const fetchProducts =
+  (query, payloadReturn) => (dispatch) =>
+    fetchData(
+      `products?${query}`,
+      PRODUCT_ACTIONS.PRODUCT_FETCH_PRODUCTS,
+      dispatch,
+      payloadReturn
+      // (data) => ({ topProducts: data.doc })
+    );
 export const fetchStoreProducts = () => {
   return (dispatch) => {
     fetchData(
