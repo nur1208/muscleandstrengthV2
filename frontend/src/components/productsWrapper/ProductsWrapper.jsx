@@ -6,7 +6,7 @@ import { MainWrapper } from "./productsWrapper.styleds";
 
 export const ProductsWrapper = ({ hasAddCardBtn }) => {
   return (
-    <MainWrapper>
+    <MainWrapper hasAddCardBtn={hasAddCardBtn}>
       <div class="search-result-products ajax-loading-overlay">
         <div class="css-loader-container ajax-loader-block">
           <span class="css-loader-block please-wait">
@@ -25,7 +25,7 @@ export const ProductsWrapper = ({ hasAddCardBtn }) => {
               >
                 <div class="inner-wrap">
                   <Product
-                    hasAddCardBtn
+                    hasAddCardBtn={hasAddCardBtn}
                     hasRating
                     hasDetailsPrice
                     {...PRODUCT_DATA}

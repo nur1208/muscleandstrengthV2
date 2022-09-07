@@ -129,7 +129,6 @@ export const MainWrapper = styled.div`
 
   .button-wrap button {
     font-size: 13px;
-    padding: 0 1px;
   }
 
   .clearBoth {
@@ -212,5 +211,20 @@ export const MainWrapper = styled.div`
     .grid-products-wrapper .inner-wrap {
       border-width: 15px;
     }
-  } ;
+  }
+
+  ${({ hasAddCardBtn }) =>
+    hasAddCardBtn &&
+    `
+  .button-wrap {
+    justify-content: space-between;
+  }
+
+  .button-wrap button {
+    width: 45%;
+    padding: 0 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  `}
 `;
