@@ -37,6 +37,7 @@ export default class APIFeatures {
   }
 
   search(by) {
+    if (!this.queryString.q) return this;
     const queryOr = [];
 
     for (let index = 0; index < by.length; index++) {
