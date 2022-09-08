@@ -35,6 +35,37 @@ export const createMany = (Model, moreLogic) =>
     });
   });
 
+export const count = (Model, searchBy) =>
+  catchAsync(async (req, res, next) => {
+    let filter = {};
+    // if (req.params.tourId) filter = { tour: req.params.tourId };
+
+    if (req.customFilter) filter = req.customFilter;
+
+    // build the query
+    const features = new APIFeatures(
+      Model.countDocuments(filter),
+      // Model.find({}),
+      req.query,
+      true
+    )
+      .filter()
+      .search(searchBy);
+    // .sort()
+    // .limitFields()
+    // .pagination()
+    // execute the query
+
+    const count = await features.query; //.explain();
+    // const count = await Model.countDocuments({
+    //   type: "topDeals",
+    // });
+    // send the response
+    res.status(200).json({
+      status: "success",
+      data: { count },
+    });
+  });
 export const getAll = (Model, searchBy) =>
   catchAsync(async (req, res, next) => {
     let filter = {};

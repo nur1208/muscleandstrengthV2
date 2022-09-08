@@ -1,7 +1,9 @@
 export default class APIFeatures {
-  constructor(query, queryString) {
+  constructor(query, queryString, isCount = false) {
     this.query = query;
     this.queryString = queryString;
+
+    this.isCount = isCount;
   }
 
   filter() {
@@ -31,7 +33,9 @@ export default class APIFeatures {
       /\b(gte|gt|lte|lt)\b/g,
       (match) => `$${match}`
     );
-    this.query.find(JSON.parse(queryStr));
+    if (this.isCount)
+      this.query.countDocuments(JSON.parse(queryStr));
+    else this.query.find(JSON.parse(queryStr));
     // let query = Tour.find(JSON.parse(queryStr));
     return this;
   }
@@ -56,9 +60,9 @@ export default class APIFeatures {
       // };
     }
 
-    console.log({ queryObject: queryOr });
-
-    this.query.find({ $or: queryOr });
+    if (this.isCount)
+      this.query.countDocuments({ $or: queryOr });
+    else this.query.find({ $or: queryOr });
 
     return this;
   }

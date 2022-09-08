@@ -1,6 +1,7 @@
 import ProductModel from "../models/Product.js";
 import catchAsync from "../utils/catchAsync.js";
 import {
+  count,
   createOne,
   getAll,
   getOne,
@@ -19,10 +20,9 @@ export const limitProductDetail = catchAsync(
 
 export const createProduct = createOne(ProductModel);
 export const getProduct = getOne(ProductModel);
-export const getProducts = getAll(ProductModel, [
-  "name",
-  "brand.title",
-]);
+const searchBy = ["name", "brand.title"];
+export const getProducts = getAll(ProductModel, searchBy);
+export const countProducts = count(ProductModel, searchBy);
 const allowedFields = [
   "type",
   "name",

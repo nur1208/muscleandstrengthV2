@@ -16,6 +16,13 @@ const testGetProducts = async () => {
   data.data.doc.forEach((doc) => console.log(doc));
 };
 
+const testCountProducts = async () => {
+  const { data } = await axios.get(
+    `${baseUrl}/${mainRoute}/count?q=pro`
+  );
+  console.log(data);
+};
+
 const testUpdateProduct = async () => {
   // PhedraCut Water X Diuretic
   const { data } = await axios.put(
@@ -53,7 +60,7 @@ const testUpdateProduct = async () => {
 
 const main = async () => {
   try {
-    await testUpdateProduct();
+    await testGetProducts();
   } catch (error) {
     console.log(error);
   }
