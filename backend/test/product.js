@@ -10,9 +10,7 @@ const testTheServer = async () => {
 };
 
 const testGetProducts = async () => {
-  const { data } = await axios.get(
-    `${baseUrl}/${mainRoute}?q=Primeval Labs`
-  );
+  const { data } = await axios.get(`${baseUrl}/${mainRoute}?`);
   console.log(data);
 
   data.data.doc.forEach((doc) => console.log(doc));
@@ -24,14 +22,27 @@ const testUpdateProduct = async () => {
     `${baseUrl}/${mainRoute}/6312b453666da3bdd551a7e5`,
     {
       type: { operation: "pull", value: "testType" },
-      category: { operation: "push", value: "testCategory" },
+      category: { operation: "pull", value: "testCategory" },
       subCategory: {
         operation: "pull",
         value: "testSubCategory",
       },
-      name: "PhedraCut Water X Diuretic test",
+      name: "PhedraCut Water X Diuretic",
+      buyingOptions: [
+        {
+          cost: { beforeDiscount: 0, regularPrice: 14.99 },
+          isInStock: true,
+          title: "90 Capsules",
+          serving: 30,
+          deal: "Buy 1 Get 1 FREE",
+          options: [],
+          _id: "6312b453666da3bdd551a7e6",
+        },
+      ],
     }
   );
+
+  console.log(data.data.doc.buyingOptions);
   console.log(data.data.doc.type);
   console.log(data.data.doc.name);
   console.log(data.data.doc.category);
@@ -42,7 +53,7 @@ const testUpdateProduct = async () => {
 
 const main = async () => {
   try {
-    await testGetProducts();
+    await testUpdateProduct();
   } catch (error) {
     console.log(error);
   }

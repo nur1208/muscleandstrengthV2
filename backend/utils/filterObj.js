@@ -12,6 +12,8 @@ export const filterObj = (obj, ...allowedFields) => {
             arrayObject[el] = obj[el].value;
             newObj[`$${obj[el].operation}`] = arrayObject;
           }
+        } else {
+          newObj[el] = obj[el];
         }
       } else {
         if (el === "gender") {

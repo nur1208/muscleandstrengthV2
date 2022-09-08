@@ -23,9 +23,14 @@ export const getProducts = getAll(ProductModel, [
   "name",
   "brand.title",
 ]);
-export const updateProduct = updateOne(ProductModel, [
+const allowedFields = [
   "type",
   "name",
   "category",
   "subCategory",
-]);
+  "buyingOptions",
+];
+export const updateProduct = updateOne(
+  ProductModel,
+  allowedFields
+);
