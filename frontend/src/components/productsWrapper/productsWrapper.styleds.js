@@ -227,4 +227,12 @@ export const MainWrapper = styled.div`
     text-overflow: ellipsis;
   }
   `}
+
+  ${({ loading }) =>
+    loading &&
+    `
+  ul.grid-x{
+    opacity: 0.5;
+  }
+  `}
 `;

@@ -25,7 +25,9 @@ import { proteinCategories, preWorkoutCategories } from "./data";
 
 export const Category = () => {
   const { type, subType } = useParams();
-  const { data } = useSelector((state) => state.product_store);
+  const { data, loading } = useSelector(
+    (state) => state.product_store
+  );
   const isNotPC = useMediaQuery({ minWidth: 840 });
   const { fetchProducts } = useReduxActions();
   const [currentPage, setCurrentPage] = useState(1);
@@ -80,18 +82,20 @@ export const Category = () => {
   };
 
   const handleShowNext = () => {
-    fetchProducts(
-      `${
-        subType ? "subCategory" : "category"
-      }=${type}&limit=20&page=${currentPage + 1}`,
-      (dataNew) => ({
-        categoryProducts: [
-          ...data.categoryProducts,
-          ...dataNew.doc,
-        ],
-      })
-    );
-    setCurrentPage(currentPage + 1);
+    if (!loading) {
+      fetchProducts(
+        `${
+          subType ? "subCategory" : "category"
+        }=${type}&limit=20&page=${currentPage + 1}`,
+        (dataNew) => ({
+          categoryProducts: [
+            ...data.categoryProducts,
+            ...dataNew.doc,
+          ],
+        })
+      );
+      setCurrentPage(currentPage + 1);
+    }
   };
   const categoriesData = getCategoriesData(type);
   return (
@@ -159,6 +163,7 @@ export const Category = () => {
                 handleShowNext={handleShowNext}
                 count={data.categoryProductsCount}
                 products={data.categoryProducts}
+                loading={loading}
               />
             </div>
           </section>

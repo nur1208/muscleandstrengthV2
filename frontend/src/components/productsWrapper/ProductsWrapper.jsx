@@ -10,10 +10,11 @@ export const ProductsWrapper = ({
   products,
   showNext,
   handleShowNext,
+  loading,
 }) => {
   const initProducts = products || [];
   return (
-    <MainWrapper hasAddCardBtn={hasAddCardBtn}>
+    <MainWrapper loading={loading} hasAddCardBtn={hasAddCardBtn}>
       <div class="search-result-products ajax-loading-overlay">
         <div class="css-loader-container ajax-loader-block">
           <span class="css-loader-block please-wait">
@@ -45,6 +46,7 @@ export const ProductsWrapper = ({
               <div class="view-more-wrap">
                 <Button
                   isBlue
+                  loading={loading}
                   onClick={handleShowNext}
                   text={`View Next ${
                     count - products.length > showNext
