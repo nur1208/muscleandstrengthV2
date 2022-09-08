@@ -2,9 +2,9 @@ import { fetchData } from "../../utils";
 import { PRODUCT_ACTIONS } from "../constants";
 
 export const fetchProducts =
-  (query, payloadReturn) => (dispatch) =>
+  (query, payloadReturn, isCount) => (dispatch) =>
     fetchData(
-      `products?${query}`,
+      `products${isCount ? "/count" : ""}?${query}`,
       PRODUCT_ACTIONS.PRODUCT_FETCH_PRODUCTS,
       dispatch,
       payloadReturn

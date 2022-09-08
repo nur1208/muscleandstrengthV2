@@ -2,12 +2,10 @@ import React from "react";
 import { getIconById, ICONS_ID } from "../../icons";
 import { MainWrapper } from "./searchInfoBar.styles";
 
-export const SearchInfoBar = ({ hasSort }) => {
+export const SearchInfoBar = ({ hasSort, countStore, q }) => {
   return (
     <MainWrapper>
-      <div class="text-wrap">
-        Showing results for 'Perfect Sports'{" "}
-      </div>
+      <div class="text-wrap">Showing results for '{q}' </div>
       {hasSort ? (
         <div class="sort-wrap">
           <div class="option-wrap">
@@ -61,7 +59,7 @@ export const SearchInfoBar = ({ hasSort }) => {
                   Store
                 </span>
                 <span class="store-control__link__count">
-                  (39)
+                  ({countStore || 0})
                 </span>
               </a>
             </li>

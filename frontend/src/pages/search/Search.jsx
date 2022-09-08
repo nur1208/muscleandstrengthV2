@@ -28,15 +28,21 @@ export const Search = () => {
   const [searchParams, _] = useSearchParams({});
   const { fetchProducts } = useReduxActions();
   const {
-    data: { searchedProducts },
+    data: { searchedProducts, searchedProductsCount },
   } = useSelector((state) => state.product_store);
 
+  const q = searchParams.get("q").replaceAll("+", " ");
   useEffect(() => {
+    fetchProducts(`q=${q}`, (data) => ({
+      searchedProducts: data.doc,
+    }));
+
     fetchProducts(
-      `q=${searchParams.get("q").replaceAll("+", " ")}`,
+      `q=${q}`,
       (data) => ({
-        searchedProducts: data.doc,
-      })
+        searchedProductsCount: data.count,
+      }),
+      true
     );
   }, [searchParams]);
 
@@ -59,7 +65,10 @@ export const Search = () => {
           </aside>
           <section className="content">
             <div className="result-content-wrap">
-              <SearchInfoBar />
+              <SearchInfoBar
+                countStore={searchedProductsCount}
+                q={q}
+              />
               {false && <AjaxErrors />}
               <ProductsWrapper products={searchedProducts} />
             </div>
