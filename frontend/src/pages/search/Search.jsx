@@ -1,4 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
+
+import {
+  useLocation,
+  useParams,
+  useSearchParams,
+} from "react-router-dom";
 import {
   AjaxErrors,
   Banner,
@@ -14,9 +21,25 @@ import {
   SearchInfoBar,
 } from "../../components";
 import { BANNER_BLOCK_12 } from "../../components/data";
+import { useReduxActions } from "../../hooks";
 import { MainWrapper } from "./search.styles";
 
 export const Search = () => {
+  const [searchParams, _] = useSearchParams({});
+  const { fetchProducts } = useReduxActions();
+  const {
+    data: { searchedProducts },
+  } = useSelector((state) => state.product_store);
+
+  useEffect(() => {
+    fetchProducts(
+      `q=${searchParams.get("q").replaceAll("+", " ")}`,
+      (data) => ({
+        searchedProducts: data.doc,
+      })
+    );
+  }, [searchParams]);
+
   return (
     <MainWrapper>
       <Banner {...BANNER_BLOCK_12} />
@@ -38,7 +61,7 @@ export const Search = () => {
             <div className="result-content-wrap">
               <SearchInfoBar />
               {false && <AjaxErrors />}
-              <ProductsWrapper />
+              <ProductsWrapper products={searchedProducts} />
             </div>
           </section>
         </article>

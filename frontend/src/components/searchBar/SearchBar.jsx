@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { IconCloseX, IconSearchRightBold } from "../../icons";
 import { MainWrapper } from "./searchBar.styles";
 
@@ -8,7 +8,9 @@ export const SearchBar = () => {
   const navigate = useNavigate();
   const handleSearch = (e) => {
     e.preventDefault();
-    navigate(`/store/search?q=${searchValue.replace(" ", "+")}`);
+    navigate(
+      `/store/search?q=${searchValue.replaceAll(" ", "+")}`
+    );
   };
   return (
     <MainWrapper>

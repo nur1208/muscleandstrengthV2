@@ -8,6 +8,7 @@ const initialState = {
     topRatedProducts: [],
     trendingProducts: [],
     categoryProducts: [],
+    searchedProducts: [],
   },
   error: null,
 };
