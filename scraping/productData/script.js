@@ -105,7 +105,35 @@ const isScraped = async (url, type, withCategory) => {
 
     const body = {};
 
-    if (!foundProduct.type.includes(type)) {
+    if (
+      foundProduct.buyingOptions.some(
+        ({ cost }) => !cost.regularPrice
+      )
+    ) {
+      const timeout = 1000 * 60 * 5;
+
+      const waitForSelector = "#main-wrap";
+
+      console.log("update the price 🛠🛠...");
+      const html = await getHtml(
+        url,
+        waitForSelector,
+        timeout,
+        null,
+        true
+      );
+
+      let $ = cheerio.load(html.toString());
+
+      const mainSelectorBuyingOptions =
+        "#main-wrap .aside .product-shop .group-wrap";
+
+      body.buyingOptions = scrapBuyingOptions(
+        $(mainSelectorBuyingOptions).toString()
+      );
+    }
+
+    if (type && !foundProduct.type.includes(type)) {
       body.type = { operation: "push", value: type };
     }
     if (withCategory) {
@@ -128,10 +156,15 @@ const isScraped = async (url, type, withCategory) => {
         };
       }
     }
-    await GenericEndpoints.put(
-      `products/${foundProduct._id}`,
-      body
-    );
+    try {
+      await GenericEndpoints.put(
+        `products/${foundProduct._id}`,
+        body
+      );
+    } catch (error) {
+      console.log(error);
+      throw "error";
+    }
   }
 
   return data.results;

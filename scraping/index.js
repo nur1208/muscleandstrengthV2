@@ -6,6 +6,7 @@ import {
   topRatedProductsData,
   trendingProductsData,
   proteinCategories,
+  preWorkoutCategories,
 } from "./productData/data.js";
 import {
   getProductData,
@@ -16,7 +17,7 @@ import { scrapProductsByCategory } from "./productsByCategory/script.js";
 const main = async () => {
   console.log("start scraping... ⌛");
   // await scrapProductsByCategory(
-  //   "https://www.muscleandstrength.com/store/category/protein.html"
+  //   "https://www.muscleandstrength.com/store/category/pre-workout.html"
   //   // "https://www.muscleandstrength.com/store/category/general-health.html"
   // );
   // const url =
@@ -28,41 +29,37 @@ const main = async () => {
   // await getProductData(url, "topDeals");
 
   // // re scrap { index: 7 }
-  // console.log(proteinCategories.subCategories.length);
+  console.log(preWorkoutCategories.subCategories.length);
   // 11 limit
-  const currentSubIndex = 10;
-  console.log(`current subCategory ${currentSubIndex}`);
-
+  // const currentSubIndex = 0;
   for (
-    let index = 0;
-    index <
-    proteinCategories.subCategories[currentSubIndex].products
-      .length;
-    index++
+    let currentSubIndex = 2;
+    currentSubIndex < proteinCategories.subCategories.length;
+    currentSubIndex++
   ) {
-    const href =
-      proteinCategories.subCategories[currentSubIndex].products[
-        index
-      ];
+    console.log(`current subCategory ${currentSubIndex}`);
+    const { products, title } =
+      proteinCategories.subCategories[currentSubIndex];
+    for (let index = 0; index < products.length; index++) {
+      const href = products[index];
 
-    console.log({
-      href,
-      title:
-        proteinCategories.subCategories[currentSubIndex].title,
-    });
-    console.log(`current product ${index}... ⌛`);
+      console.log({
+        href,
+        title,
+      });
+      console.log(`current product ${index}... ⌛`);
 
-    await getProductData(
-      `https://www.muscleandstrength.com${href}`,
-      null,
-      {
-        category: proteinCategories.title,
-        subCategory:
-          proteinCategories.subCategories[currentSubIndex].title,
-      }
-    );
+      await getProductData(
+        `https://www.muscleandstrength.com${href}`,
+        null,
+        {
+          category: proteinCategories.title,
+          subCategory: title,
+        }
+      );
 
-    console.log(`DONE scraping ${index} ✅`);
+      console.log(`DONE scraping ${index} ✅`);
+    }
   }
 
   // const element = topDealsProductsData.find(

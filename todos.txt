@@ -249,6 +249,21 @@
 - {DONE} add hasAddCardBtn parameter to Product and ProductsWrapper
 - {DONE} add toggle functionality to LayeredNavigation component
 - {DONE} make Category more responsive
+- {DONE} make Product more responsive part 3
+- {DONE} fix scraping error in scrapProductInfo
+- {DONE} fetch products by category in Category page
+- {DONE} make Product more responsive part 4
+- {DONE} set up subCategory page
+- {DONE} fix SubSubmenu navigation error
+- {DONE} make Category page and Categories component more dynamic
+- {DONE} fix fetching products error after adding search functionality
+- {DONE} ALLOW updating buyingOptions in updateProduct api route
+- {DONE} fix some products doesn't have price
+        note: when you scrap products make sure your vpn location is the USA
+- {TODO} create search functionality
+        - {DONE} add search functionality to getProducts endpoint
+- {TODO} scrap pre-workout Categories
+- {TODO} scrap proteinDeals 
 not important:
 - {TODO} fix Selector up down keys when there are long list
 - {TODO} create LaberWithSvg component and make it dynamic
