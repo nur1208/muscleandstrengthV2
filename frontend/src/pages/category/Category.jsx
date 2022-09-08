@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useMediaQuery } from "react-responsive";
@@ -27,6 +28,7 @@ export const Category = () => {
   const { data } = useSelector((state) => state.product_store);
   const isNotPC = useMediaQuery({ minWidth: 840 });
   const { fetchProducts } = useReduxActions();
+  const [currentPage, setCurrentPage] = useState(1);
   const trendingProps = {
     title: "Trending Products",
     products: data?.trendingProducts,
@@ -66,6 +68,7 @@ export const Category = () => {
       );
     }
   }, [type, subType]);
+
   const getCategoriesData = (type) => {
     switch (type) {
       case "pre-workout":
@@ -76,6 +79,20 @@ export const Category = () => {
     }
   };
 
+  const handleShowNext = () => {
+    fetchProducts(
+      `${
+        subType ? "subCategory" : "category"
+      }=${type}&limit=20&page=${currentPage + 1}`,
+      (dataNew) => ({
+        categoryProducts: [
+          ...data.categoryProducts,
+          ...dataNew.doc,
+        ],
+      })
+    );
+    setCurrentPage(currentPage + 1);
+  };
   const categoriesData = getCategoriesData(type);
   return (
     <MainWrapper>
@@ -138,6 +155,9 @@ export const Category = () => {
               {false && <AjaxErrors />}
               <ProductsWrapper
                 hasAddCardBtn
+                showNext={20}
+                handleShowNext={handleShowNext}
+                count={data.categoryProductsCount}
                 products={data.categoryProducts}
               />
             </div>

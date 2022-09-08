@@ -4,7 +4,13 @@ import { PRODUCT_DATA } from "../data";
 import { Product } from "../product/Product";
 import { MainWrapper } from "./productsWrapper.styleds";
 
-export const ProductsWrapper = ({ hasAddCardBtn, products }) => {
+export const ProductsWrapper = ({
+  count,
+  hasAddCardBtn,
+  products,
+  showNext,
+  handleShowNext,
+}) => {
   const initProducts = products || [];
   return (
     <MainWrapper hasAddCardBtn={hasAddCardBtn}>
@@ -33,13 +39,23 @@ export const ProductsWrapper = ({ hasAddCardBtn, products }) => {
             </li>
           ))}
         </ul>
-        <div class="toolbar-bottom clearBoth">
-          <div class="toolbar clearfix">
-            <div class="view-more-wrap">
-              <Button isBlue text="View Next 19 Products" />
+        {count > products.length && (
+          <div class="toolbar-bottom clearBoth">
+            <div class="toolbar clearfix">
+              <div class="view-more-wrap">
+                <Button
+                  isBlue
+                  onClick={handleShowNext}
+                  text={`View Next ${
+                    count - products.length > showNext
+                      ? showNext
+                      : count - products.length
+                  } Products`}
+                />
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </MainWrapper>
   );

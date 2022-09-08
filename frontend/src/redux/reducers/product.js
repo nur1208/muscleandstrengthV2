@@ -21,7 +21,7 @@ export const productReducer = (
     case PRODUCT_ACTIONS.PRODUCT_FETCH_STORE.LOADING:
     case PRODUCT_ACTIONS.PRODUCT_FETCH_SINGLE.LOADING:
     case PRODUCT_ACTIONS.PRODUCT_FETCH_PRODUCTS.LOADING:
-      return { ...state, ...initialState, loading: true };
+      return { ...state, error: null, loading: true };
 
     case PRODUCT_ACTIONS.PRODUCT_FETCH_STORE.SUCCESS:
     case PRODUCT_ACTIONS.PRODUCT_FETCH_SINGLE.SUCCESS:
