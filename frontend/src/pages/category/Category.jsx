@@ -46,10 +46,24 @@ export const Category = () => {
           categoryProducts: data.doc,
         })
       );
+      fetchProducts(
+        `subCategory=${subCategory}`,
+        (data) => ({
+          categoryProductsCount: data.count,
+        }),
+        true
+      );
     } else {
       fetchProducts(`category=${type}&limit=20`, (data) => ({
         categoryProducts: data.doc,
       }));
+      fetchProducts(
+        `category=${type}`,
+        (data) => ({
+          categoryProductsCount: data.count,
+        }),
+        true
+      );
     }
   }, [type, subType]);
   const getCategoriesData = (type) => {
@@ -116,7 +130,11 @@ export const Category = () => {
           </aside>
           <section className="content">
             <div className="result-content-wrap">
-              <SearchInfoBar hasSort />
+              <SearchInfoBar
+                hasSort
+                showNum={data.categoryProducts.length}
+                countStore={data.categoryProductsCount}
+              />
               {false && <AjaxErrors />}
               <ProductsWrapper
                 hasAddCardBtn

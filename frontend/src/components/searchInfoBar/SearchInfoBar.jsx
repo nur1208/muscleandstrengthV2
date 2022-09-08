@@ -2,10 +2,21 @@ import React from "react";
 import { getIconById, ICONS_ID } from "../../icons";
 import { MainWrapper } from "./searchInfoBar.styles";
 
-export const SearchInfoBar = ({ hasSort, countStore, q }) => {
+export const SearchInfoBar = ({
+  hasSort,
+  countStore,
+  q,
+  showNum,
+}) => {
   return (
     <MainWrapper>
-      <div class="text-wrap">Showing results for '{q}' </div>
+      <div class="text-wrap">
+        {hasSort
+          ? `Showing ${showNum || 0} of ${
+              countStore || 0
+            } products`
+          : `Showing results for '${q}'`}{" "}
+      </div>
       {hasSort ? (
         <div class="sort-wrap">
           <div class="option-wrap">

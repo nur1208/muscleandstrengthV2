@@ -33,13 +33,13 @@ const main = async () => {
   // 11 limit
   // const currentSubIndex = 0;
   for (
-    let currentSubIndex = 2;
-    currentSubIndex < proteinCategories.subCategories.length;
+    let currentSubIndex = 0;
+    currentSubIndex < preWorkoutCategories.subCategories.length;
     currentSubIndex++
   ) {
     console.log(`current subCategory ${currentSubIndex}`);
     const { products, title } =
-      proteinCategories.subCategories[currentSubIndex];
+      preWorkoutCategories.subCategories[currentSubIndex];
     for (let index = 0; index < products.length; index++) {
       const href = products[index];
 

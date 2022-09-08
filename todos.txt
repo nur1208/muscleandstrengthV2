@@ -260,9 +260,13 @@
 - {DONE} ALLOW updating buyingOptions in updateProduct api route
 - {DONE} fix some products doesn't have price
         note: when you scrap products make sure your vpn location is the USA
-- {TODO} create search functionality
+- {DONE} create search functionality
         - {DONE} add search functionality to getProducts endpoint
-- {TODO} scrap pre-workout Categories
+        - {DONE} in the frontend
+- {DONE} create countProducts API endpoint
+- {DONE} fetch total number of found documents for search
+- {DONE} fetch total number of found documents for category
+- {TODO} scrap other Categories
 - {TODO} scrap proteinDeals 
 not important:
 - {TODO} fix Selector up down keys when there are long list
