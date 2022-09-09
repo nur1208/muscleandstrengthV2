@@ -9,3 +9,4 @@ export { Account } from "./account/Account";
 export { Search } from "./search/Search";
 export { Categories } from "./categories/Categories";
 export { Category } from "./category/Category";
+export { Brand } from "./brand/Brand";

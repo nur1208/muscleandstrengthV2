@@ -4,6 +4,7 @@ import { LoginModal } from "./components";
 import { useAutoLogin } from "./hooks";
 import {
   Account,
+  Brand,
   Categories,
   Category,
   Home,
@@ -31,6 +32,7 @@ function App() {
             path="product/:name/:id"
             element={<Product />}
           />
+          <Route path="brands/:name" element={<Brand />} />
           <Route
             path="reviews/brands/:brand/:product/:id"
             element={<Review />}
