@@ -1,12 +1,6 @@
 import styled from "styled-components";
 
 export const MainWrapper = styled.div`
-  ${({ isOpen }) =>
-    isOpen
-      ? ""
-      : `
-    display:none;
-  `}
   .ui-dialog {
     outline: 0;
     box-sizing: border-box;
@@ -87,6 +81,15 @@ export const MainWrapper = styled.div`
     font-size: 1.8rem;
   }
 
+  ${({ customStyle }) => (customStyle ? customStyle : "")}
+  ${({ isOpen }) =>
+    isOpen
+      ? ""
+      : `
+    display:none;
+  `}
+
+  
   @media (min-width: 840px) {
     .ui-dialog {
       padding: 15px;

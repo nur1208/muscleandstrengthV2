@@ -3,7 +3,12 @@ import { useSelector } from "react-redux";
 import { useReduxActions } from "../../hooks";
 import { MainWrapper } from "./secureTransaction/secureTransaction.styles";
 
-export const Modal = ({ isOpen, children, type }) => {
+export const Modal = ({
+  isOpen,
+  children,
+  type,
+  customStyle,
+}) => {
   const { closeModal } = useReduxActions();
 
   const { isOpen: isOpenRedux, type: typeRedux } = useSelector(
@@ -12,6 +17,7 @@ export const Modal = ({ isOpen, children, type }) => {
   return (
     <MainWrapper
       // isOpen={isOpen && type === MODAL_TYPES.SECURE_TRANSACTION}
+      customStyle={customStyle}
       isOpen={isOpen || (isOpenRedux && typeRedux === type)}
     >
       <div
