@@ -12,9 +12,18 @@ export const BrandModal = () => {
     justify-content: center;
 
     .ui-dialog{
-            width: 50%;
+            width: 100%;
             left: inherit;
     }
+
+
+       @media print, screen and (min-width: 37.5em) {
+      .ui-dialog{
+        width: 70%;
+
+      }
+
+     
     `}
     >
       <MainWrapper
@@ -34,16 +43,16 @@ export const BrandModal = () => {
         <h3>
           PUSHING THE LIMITS OF SCIENCE AND HUMAN POTENTIAL
         </h3>
-        <div class="video-wrapper video-wide-screen">
+        {/* <div class="video-wrapper video-wide-screen">
           <iframe
             class=" lazyloaded"
             src="https://player.vimeo.com/video/459515606"
             width="640"
             height="480"
             allow="autoplay; fullscreen"
-            allowfullscreen=""
+            // allowfullscreen=""
           ></iframe>
-        </div>
+        </div> */}
         <p>
           MuscleTech® was born out of an obsession to redefine
           the limits of science and human potential. With our
