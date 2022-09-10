@@ -163,7 +163,20 @@ ${({ isGreen }) =>
 
   `}
 
-  
+${({ isDynxs }) =>
+    isDynxs &&
+    `
+    font-size: 11px;
+    line-height: 35px;
+    padding: 0 16px;
+
+    @media (min-width: 600px){
+      padding: 0 12px;
+      line-height: 30px;
+    }
+  `}
+
+
   ${({ isDisabled }) =>
     isDisabled &&
     `
