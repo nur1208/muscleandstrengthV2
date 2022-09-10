@@ -212,6 +212,29 @@ export const MainWrapper = styled.div`
   .grey-stripe {
     display: none;
   }
+
+  .product-info .price-box {
+    text-align: center;
+  }
+
+  font-size: 16px;
+  .delete {
+    float: right;
+  }
+  @media (max-width: 839px) {
+    .currency-grid div.grid-row {
+      grid-template-areas:
+        "imageC infoC subtotalC"
+        "imageC messagesC messagesC"
+        "imageC quantityC quantityC";
+    }
+
+    .qty-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
   @media (min-width: 600px) {
     .input-dynxs {
       padding: 0 10px;

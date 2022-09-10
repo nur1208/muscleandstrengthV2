@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { MainWrapper } from "./card.styles";
 
 export const Card = () => {
   return (
     <MainWrapper>
-      <a href="/store/checkout/cart/">
+      <Link to="/store/checkout/cart">
         <div class="counter">0</div>
         <svg viewBox="0 0 100 100">
           <g fill="#FFF">
@@ -12,7 +13,7 @@ export const Card = () => {
           </g>
         </svg>
         <label>Cart</label>
-      </a>
+      </Link>
     </MainWrapper>
   );
 };
