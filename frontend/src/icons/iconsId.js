@@ -33,4 +33,6 @@ export const ICONS_ID = {
   IconEmail: "icon-email",
   IconUpdateWhite: "icon-update-white",
   IconAsc: "icon-asc",
+  IconLowPrice: "icon-low-price",
+  IconSale: "icon-sale",
 };

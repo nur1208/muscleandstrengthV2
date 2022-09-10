@@ -1,4 +1,6 @@
 import {
+  IconSale,
+  IconLowPrice,
   IconAsc,
   IconUpdateWhite,
   IconEmail,
@@ -73,7 +75,7 @@ export const getIconById = (iconId, style, fill) => {
     case "icon-insta-comments":
       return <IconInstaComments style={style} />;
     case "icon-support-white":
-      return <IconSupportWhite style={style} />;
+      return <IconSupportWhite fill={fill} style={style} />;
     case "icon-nav-store":
       return <IconNavStore style={style} />;
     case "icon-nav-workouts":
@@ -136,7 +138,7 @@ export const getIconById = (iconId, style, fill) => {
       return <IconShare style={style} />;
 
     case "icon-truck":
-      return <IconTruck style={style} />;
+      return <IconTruck style={style} fill={fill} />;
 
     case "icon-saved-cards":
       return <IconSavedCards style={style} />;
@@ -191,6 +193,12 @@ export const getIconById = (iconId, style, fill) => {
 
     case "icon-asc":
       return <IconAsc style={style} />;
+
+    case "icon-low-price":
+      return <IconLowPrice style={style} />;
+
+    case "icon-sale":
+      return <IconSale style={style} />;
 
     default:
       return <IconQuestionMark style={style} />;

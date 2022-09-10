@@ -1,6 +1,6 @@
 import React from "react";
 
-export const IconSupportWhite = ({ style }) => {
+export const IconSupportWhite = ({ style, fill }) => {
   return (
     <svg
       id="icon-support-white"
@@ -8,7 +8,7 @@ export const IconSupportWhite = ({ style }) => {
       viewBox="0 0 100 100"
     >
       <path
-        fill="#FFF"
+        fill={fill || "#FFF"}
         d="M77.1 12.9l-.3-.3c-.8-.9-2-1.4-3.3-1.3-1.2.1-2.3.8-3 1.7L57.9 31.2c-.6.8-.9 1.8-.9 2.8.1 1.1.6 2 1.4 2.7l3 2.5c1.9 1.6 2.1 4.3.5 6.2L46.6 63.5c-1.6 1.9-4.3 2.1-6.2.5 0 0-2.7-2.3-3-2.6-.8-.6-1.8-.9-2.8-.9-1 .1-1.8.5-2.4 1.1l-.1.1-12.3 12.1-2.8 2.8c-.8.8-1.2 1.9-1.1 3.1.1 1.2.8 2.3 1.7 3 .2.1 1.1.6 1.2.8 0 0 7.1 5.6 16.8 5.1 16.8-1 51.4-42.4 49.9-59.3-.5-6.3-5-12.5-8.4-16.4z"
       />
     </svg>
@@ -375,10 +375,10 @@ export const IconShare = ({ style }) => {
   );
 };
 
-export const IconTruck = ({ style }) => {
+export const IconTruck = ({ style, fill }) => {
   return (
     <svg style={style} id="icon-truck" viewBox="0 0 100 100">
-      <g fill="#059">
+      <g fill={fill || "#059"}>
         <circle cx="75.6" cy="71.1" r="7" />
         <circle cx="25.6" cy="71.1" r="7" />
         <path d="M78.8 30.3H64.2v28.3H10.9c-1.9 0-3.4 1.5-3.4 3.4v2c0 1.9 1.5 3.4 3.4 3.4H17c1.4-3.4 4.8-5.8 8.7-5.8 3.9 0 7.3 2.4 8.7 5.8H67c1.4-3.4 4.8-5.8 8.7-5.8 3.9 0 7.3 2.4 8.7 5.8h8.4V44.2l-14-13.9zm6 19.8L69 47.7V35.6h8.1l7.8 7.8v6.7z" />
@@ -652,6 +652,28 @@ export const IconAsc = ({ style }) => {
         stroke-width="11"
         stroke-miterlimit="10"
         d="M7.9 83.4h84.2M7.9 36.1H51M7.9 12.4h21M7.9 59.8h63.2"
+      />
+    </svg>
+  );
+};
+
+export const IconLowPrice = ({ style }) => {
+  return (
+    <svg style={style} id="icon-low-price" viewBox="0 0 100 100">
+      <path
+        fill="#AAA"
+        d="M83 29.6L64.7 48 28 11.3 9.7 29.6l36.7 36.7L28 84.7h55V29.6z"
+      />
+    </svg>
+  );
+};
+
+export const IconSale = ({ style }) => {
+  return (
+    <svg style={style} id="icon-sale" viewBox="0 0 100 100">
+      <path
+        fill="#AAA"
+        d="M49.5 9.6c-21.7 0-39.3 17.6-39.3 39.3s17.6 39.3 39.3 39.3c21.7 0 39.3-17.6 39.3-39.3S71.2 9.6 49.5 9.6zm0 70.7c-17.3 0-31.4-14.1-31.4-31.4s14.1-31.4 31.4-31.4 31.4 14.1 31.4 31.4-14.1 31.4-31.4 31.4zm2.6-34.1V35.8h10.5v-5.2H52.1v-5.2h-5.2v5.2H36.4v20.9h10.5V62H36.4v5.2h10.5v5.2h5.2v-5.2h10.5V46.3H52.1zm-5.2 0h-5.2V35.8h5.2v10.4zm10.4 15.7h-5.2V51.5h5.2v10.4z"
       />
     </svg>
   );
