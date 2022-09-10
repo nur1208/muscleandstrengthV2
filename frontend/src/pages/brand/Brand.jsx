@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useMediaQuery } from "react-responsive";
+import { useParams } from "react-router-dom";
 import {
   AjaxErrors,
   Banner,
@@ -18,18 +19,43 @@ import {
   StoreSectionSwiper,
 } from "../../components";
 import { BANNER_BLOCK_12 } from "../../components/data";
+import { useReduxActions } from "../../hooks";
 import { MainWrapper } from "./brand.styles";
 
 export const Brand = () => {
+  const { name } = useParams();
+
   const isNotPC = useMediaQuery({ minWidth: 840 });
   const { data, loading } = useSelector(
     (state) => state.product_store
   );
+  const { fetchProducts } = useReduxActions();
 
   const trendingProps = {
     title: "Trending Products",
     products: data?.trendingProducts,
   };
+
+  useEffect(() => {
+    let localName = name;
+    if (localName === "muscletech") {
+      localName = localName.replace("m", "M").replace("t", "T");
+    }
+    fetchProducts(
+      `brand.title=${localName}&limit=20`,
+      (data) => ({
+        brandProducts: data.doc,
+      })
+    );
+
+    fetchProducts(
+      `brand.title=${localName}`,
+      (data) => ({
+        brandProductsCount: data.count,
+      }),
+      true
+    );
+  }, [name]);
 
   return (
     <MainWrapper>
@@ -61,16 +87,16 @@ export const Brand = () => {
             <div className="result-content-wrap">
               <SearchInfoBar
                 hasSort
-                // showNum={data.categoryProducts.length}
-                // countStore={data.categoryProductsCount}
+                showNum={data.brandProducts.length}
+                countStore={data.brandProductsCount}
               />
               {false && <AjaxErrors />}
               <ProductsWrapper
                 hasAddCardBtn
                 showNext={20}
                 // handleShowNext={handleShowNext}
-                count={data.categoryProductsCount}
-                products={data.categoryProducts}
+                count={data.brandProductsCount}
+                products={data.brandProducts}
                 loading={loading}
               />
             </div>

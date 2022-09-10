@@ -9,6 +9,7 @@ const initialState = {
     trendingProducts: [],
     categoryProducts: [],
     searchedProducts: [],
+    brandProducts: [],
   },
   error: null,
 };
