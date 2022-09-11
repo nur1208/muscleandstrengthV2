@@ -26,11 +26,13 @@ const testLogin = async () => {
 
 const testUpdateMe = async () => {
   const updateInfo = {
-    firstName: "updated first name 2",
-    reviewingAs: "md nur  2",
     cart: {
-      operation: "pull",
-      value: "6312b3c1666da3bdd551a5cd",
+      operation: "push",
+      value: {
+        product: "6312b453666da3bdd551a7e5",
+        qty: 3,
+        buyingOptionId: "6312b453666da3bdd551a7e6",
+      },
     },
   };
   const { data } = await axios.put(

@@ -14,7 +14,16 @@ const userSchema = new mongoose.Schema(
     isNotified: { type: Boolean, default: false },
     gender: { type: String, enum: ["male", "female"] },
     password: { type: String, required: true, select: false },
-    cart: { type: [mongoose.Types.ObjectId], ref: "products" },
+    cart: [
+      {
+        product: {
+          type: mongoose.Types.ObjectId,
+          ref: "Product",
+        },
+        qty: { type: Number, default: 1 },
+        buyingOptionId: { type: mongoose.Types.ObjectId },
+      },
+    ],
     passwordChangedAt: Date,
     passwordResetToken: String,
     passwordResetExpires: Date,
@@ -41,14 +50,14 @@ userSchema.pre("save", async function (next) {
   next();
 });
 
-// userSchema.pre(/^find/, function (next) {
-//   this.populate({
-//     path: "watchList",
-//     select: "_id symbol name",
-//   });
+userSchema.pre(/^find/, function (next) {
+  this.populate({
+    path: "cart.product",
+    select: "imgUrl brand name buyingOptions",
+  });
 
-//   next();
-// });
+  next();
+});
 
 userSchema.methods.correctPassword = async function (
   candidatePassword,
