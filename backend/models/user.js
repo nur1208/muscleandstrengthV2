@@ -14,6 +14,7 @@ const userSchema = new mongoose.Schema(
     isNotified: { type: Boolean, default: false },
     gender: { type: String, enum: ["male", "female"] },
     password: { type: String, required: true, select: false },
+    cart: { type: [mongoose.Types.ObjectId], ref: "products" },
     passwordChangedAt: Date,
     passwordResetToken: String,
     passwordResetExpires: Date,
