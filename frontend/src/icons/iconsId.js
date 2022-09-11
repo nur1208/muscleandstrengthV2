@@ -35,4 +35,11 @@ export const ICONS_ID = {
   IconAsc: "icon-asc",
   IconLowPrice: "icon-low-price",
   IconSale: "icon-sale",
+  IconVISA: "icon-VISA",
+  IconMC: "icon-MC",
+  IconAMEX: "icon-AMEX",
+  IconDISC: "icon-DISC",
+  IconPAYPAL: "icon-PAYPAL",
+  IconAPPLEPAY: "icon-APPLEPAY",
+  IconGOOGLEPAY: "icon-GOOGLEPAY",
 };

@@ -1,4 +1,11 @@
 import {
+  IconGOOGLEPAY,
+  IconAPPLEPAY,
+  IconPAYPAL,
+  IconDISC,
+  IconAMEX,
+  IconMC,
+  IconVISA,
   IconSale,
   IconLowPrice,
   IconAsc,
@@ -199,6 +206,27 @@ export const getIconById = (iconId, style, fill) => {
 
     case "icon-sale":
       return <IconSale style={style} />;
+
+    case "icon-VISA":
+      return <IconVISA style={style} />;
+
+    case "icon-MC":
+      return <IconMC style={style} />;
+
+    case "icon-AMEX":
+      return <IconAMEX style={style} />;
+
+    case "icon-DISC":
+      return <IconDISC style={style} />;
+
+    case "icon-PAYPAL":
+      return <IconPAYPAL style={style} />;
+
+    case "icon-APPLEPAY":
+      return <IconAPPLEPAY style={style} />;
+
+    case "icon-GOOGLEPAY":
+      return <IconGOOGLEPAY style={style} />;
 
     default:
       return <IconQuestionMark style={style} />;
