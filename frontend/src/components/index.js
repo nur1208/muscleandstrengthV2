@@ -55,3 +55,6 @@ export { Categories } from "./categories/Categories";
 export { AlphablockCategories } from "./alphablockCategories/AlphablockCategories";
 export { SubCategories } from "./subCategories/SubCategories";
 export { BrandHeader } from "./brandHeader/BrandHeader";
+export { CartHeader } from "./cartHeader/CartHeader";
+export { Cart } from "./cart/Cart";
+export { CartTools } from "./cartTools/CartTools";

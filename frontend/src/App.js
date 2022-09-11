@@ -13,6 +13,7 @@ import {
   Product,
   Review,
   Search,
+  ShoppingCart,
   SignUp,
   Store,
 } from "./pages";
@@ -44,6 +45,9 @@ function App() {
               path=":type/:subType"
               element={<Category />}
             />
+          </Route>
+          <Route path="checkout">
+            <Route path="cart" element={<ShoppingCart />} />
           </Route>
           <Route path="customer/account">
             <Route path="login" element={<Login />} />
