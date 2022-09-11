@@ -1,11 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { useMediaQuery } from "react-responsive";
 import { Button } from "../button/Button";
 import { StoreSectionSwiper } from "../storeSectionSwiper/StoreSectionSwiper";
 import { MainWrapper } from "./cart.styles";
 
 export const Cart = () => {
   const { data } = useSelector((state) => state.product_store);
+  const isNotPC = useMediaQuery({ maxWidth: 839 });
 
   const trendingProps = {
     title: "Trending Products",
@@ -61,19 +63,40 @@ export const Cart = () => {
               <label for="cart[47515693][qty]" class="is-hidden">
                 Quantity for Item
               </label>
-              <input
-                id="cart[47515693][qty]"
-                type="number"
-                class="qty text-center input-dynxs"
-                name="cart[47515693][qty]"
-                value="1"
-                size="2"
-                maxlength="3"
-              />
-              <span className="update-text">
-                <Button text="Update Qty" isDynxs />
+              {isNotPC ? (
+                <div>
+                  <input
+                    id="cart[47515693][qty]"
+                    type="number"
+                    class="qty text-center input-dynxs"
+                    name="cart[47515693][qty]"
+                    value="1"
+                    size="2"
+                    maxlength="3"
+                  />{" "}
+                  <span className="update-text">
+                    <Button text="Update Qty" isDynxs />
+                  </span>
+                </div>
+              ) : (
+                <>
+                  <input
+                    id="cart[47515693][qty]"
+                    type="number"
+                    class="qty text-center input-dynxs"
+                    name="cart[47515693][qty]"
+                    value="1"
+                    size="2"
+                    maxlength="3"
+                  />{" "}
+                  <span className="update-text">
+                    <Button text="Update Qty" isDynxs />
+                  </span>
+                </>
+              )}
+              <span className="delete">
+                <Button text="Delete" isDynxs />
               </span>
-              <Button text="Delete" isDynxs />
             </div>
             <div class="price-wrap box-subtotal">
               <div class="item-subtotal">

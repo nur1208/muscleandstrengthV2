@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const MainWrapper = styled.div`
+  &,
   .cart-wrap {
     margin-bottom: 10px;
   }
@@ -243,6 +244,7 @@ export const MainWrapper = styled.div`
   }
 
   @media (min-width: 840px) {
+    &,
     .cart-wrap {
       margin-bottom: 15px;
     }
