@@ -68,6 +68,7 @@ export const MainWrapper = styled.div`
   .cart-wrap .cart-item .product-name {
     color: #059;
     display: block;
+    font-size: 15px;
   }
 
   .currency-grid div.grid-row .box-messages {

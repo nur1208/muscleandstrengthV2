@@ -1,12 +1,16 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
 import { Button } from "../button/Button";
 import { StoreSectionSwiper } from "../storeSectionSwiper/StoreSectionSwiper";
 import { MainWrapper } from "./cart.styles";
 
 export const Cart = () => {
-  const { data } = useSelector((state) => state.product_store);
+  const {
+    product_store: { data },
+    user_store: { userData },
+  } = useSelector((state) => state);
   const isNotPC = useMediaQuery({ maxWidth: 839 });
 
   const trendingProps = {
@@ -33,131 +37,106 @@ export const Cart = () => {
             <div class="qty box-quantity">qty</div>
             <div class="subtotal box-subtotal">subtotal</div>
           </div>
-          <div class="grid-row cart-item css-grid">
-            <div class="item-image box-image">
-              <a href="https://www.muscleandstrength.com/store/omega-3.html">
-                <img
-                  src="https://cdn.muscleandstrength.com/store/media/catalog/product/cache/all/thumbnail/230x/9df78eab33525d08d6e5fb8d27136e95/o/m/omega_3_100_softgels.jpg"
-                  alt="NOW Foods Omega-3 - 100 Softgels"
-                  title="NOW Foods Omega-3 - 100 Softgels"
-                />
-              </a>
-            </div>
-            <div class="item-info box-info">
-              <span class="product-name">
-                <a href="https://www.muscleandstrength.com/store/omega-3.html">
-                  NOW Foods Omega-3 - 100 Softgels
-                </a>
-              </span>
-              <span class="price">$9.99</span>{" "}
-            </div>
-            <div class="box-messages">
-              <div class="options_messages"></div>
-            </div>
-            <div class="retail-price-wrap box-price">
-              <div class="item-price">
-                <span class="price">$9.99</span>{" "}
-              </div>
-            </div>
-            <div class="qty-wrap box-quantity">
-              <label for="cart[47515693][qty]" class="is-hidden">
-                Quantity for Item
-              </label>
-              {isNotPC ? (
-                <div>
-                  <input
-                    id="cart[47515693][qty]"
-                    type="number"
-                    class="qty text-center input-dynxs"
-                    name="cart[47515693][qty]"
-                    value="1"
-                    size="2"
-                    maxlength="3"
-                  />{" "}
-                  <span className="update-text">
-                    <Button text="Update Qty" isDynxs />
-                  </span>
-                </div>
-              ) : (
-                <>
-                  <input
-                    id="cart[47515693][qty]"
-                    type="number"
-                    class="qty text-center input-dynxs"
-                    name="cart[47515693][qty]"
-                    value="1"
-                    size="2"
-                    maxlength="3"
-                  />{" "}
-                  <span className="update-text">
-                    <Button text="Update Qty" isDynxs />
-                  </span>
-                </>
-              )}
-              <span className="delete">
-                <Button text="Delete" isDynxs />
-              </span>
-            </div>
-            <div class="price-wrap box-subtotal">
-              <div class="item-subtotal">
-                <span class="price">$9.99</span>{" "}
-              </div>
-            </div>
-          </div>
-          <div class="grid-row cart-item css-grid">
-            <div class="item-image box-image">
-              <div class="padding">
-                <a href="https://www.muscleandstrength.com/store/catalog/product/view/id/36502/s/free-now-foods-omega-3-100-softgels/">
-                  <img
-                    src="https://cdn.muscleandstrength.com/store/media/catalog/product/cache/all/thumbnail/230x/9df78eab33525d08d6e5fb8d27136e95/o/m/omega_3_100_softgels_5.jpg"
-                    alt="FREE NOW Foods Omega-3, 100 Softgels"
-                    title="FREE NOW Foods Omega-3, 100 Softgels"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="item-info box-info">
-              <span class="product-name">
-                NOW Foods Omega-3, 100 Softgels{" "}
-              </span>
-              <span class="price">FREE</span>
-            </div>
-            <div class="box-messages">
-              <span class="mns-label lbl-deal">
-                Buy 1 Get 1 FREE{" "}
-              </span>
-              <div class="options_messages">
-                <dl class="item-options 47540391">
-                  <dt>1 x NOW Foods Omega-3 - 100 Softgels </dt>
-                </dl>
-              </div>
-            </div>
-            <div class="retail-price-wrap box-price">
-              <div class="padding">
-                <div class="item-price">
-                  <span class="price">FREE</span>
-                </div>
-              </div>
-            </div>
-            <div class="qty-wrap box-quantity">
-              <label class="is-hidden" for="promo_item_47540391">
-                Free Qty
-              </label>
-              <input
-                id="promo_item_47540391"
-                disabled=""
-                class="qty text-center input-sm"
-                value="1"
-                size="2"
-                maxlength="3"
-              />
-            </div>
-            <div class="price-wrap box-subtotal">
-              <div class="item-subtotal">
-                <span class="price">FREE</span>
-              </div>
-            </div>
-          </div>
+          {userData?.cart &&
+            userData.cart.map(
+              ({
+                qty,
+                product,
+                buyingOptionId,
+                selectedFlavor,
+              }) => {
+                const buyingOption = product.buyingOptions.find(
+                  ({ _id }) => _id === buyingOptionId
+                );
+
+                const to =
+                  `/store/product/${product.name.replaceAll(
+                    " ",
+                    "-"
+                  )}/${product._id}`.replace("%", "");
+                const title = `${product.brand.title} ${product.name} - ${buyingOption.title} ${selectedFlavor}`;
+                return (
+                  <div class="grid-row cart-item css-grid">
+                    <div class="item-image box-image">
+                      <Link to={to}>
+                        <img
+                          src={product.imgUrl[400].split(" ")[0]}
+                          alt={title}
+                          title={title}
+                        />
+                      </Link>
+                    </div>
+                    <div class="item-info box-info">
+                      <span class="product-name">
+                        <Link to={to}>{title}</Link>
+                      </span>
+                      <span class="price">
+                        ${buyingOption.cost.regularPrice}
+                      </span>{" "}
+                    </div>
+                    <div class="box-messages">
+                      <div class="options_messages"></div>
+                    </div>
+                    <div class="retail-price-wrap box-price">
+                      <div class="item-price">
+                        <span class="price">
+                          ${buyingOption.cost.regularPrice}
+                        </span>{" "}
+                      </div>
+                    </div>
+                    <div class="qty-wrap box-quantity">
+                      <label
+                        for="cart[47515693][qty]"
+                        class="is-hidden"
+                      >
+                        Quantity for Item
+                      </label>
+                      {isNotPC ? (
+                        <div>
+                          <input
+                            id="cart[47515693][qty]"
+                            type="number"
+                            class="qty text-center input-dynxs"
+                            name="cart[47515693][qty]"
+                            value={qty}
+                            size="2"
+                            maxlength="3"
+                          />{" "}
+                          <span className="update-text">
+                            <Button text="Update Qty" isDynxs />
+                          </span>
+                        </div>
+                      ) : (
+                        <>
+                          <input
+                            id="cart[47515693][qty]"
+                            type="number"
+                            class="qty text-center input-dynxs"
+                            name="cart[47515693][qty]"
+                            value="1"
+                            size="2"
+                            maxlength="3"
+                          />{" "}
+                          <span className="update-text">
+                            <Button text="Update Qty" isDynxs />
+                          </span>
+                        </>
+                      )}
+                      <span className="delete">
+                        <Button text="Delete" isDynxs />
+                      </span>
+                    </div>
+                    <div class="price-wrap box-subtotal">
+                      <div class="item-subtotal">
+                        <span class="price">
+                          ${qty * buyingOption.cost.regularPrice}
+                        </span>{" "}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+            )}
         </div>
       </form>
       <h5 class="blue bordered">Limited Time Cart Offers</h5>
