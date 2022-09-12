@@ -36,6 +36,7 @@ export const updateMe = catchAsync(async (req, res, next) => {
     data: {
       user: {
         ...updatedUser._doc,
+        id: updatedUser._doc._id,
       },
     },
   });
