@@ -79,6 +79,14 @@ export const MainWrapper = styled.button`
     display: inline-block;
     line-height: 1em;
   }
+
+  ${({ isBlue, loading }) =>
+    loading && isBlue
+      ? ``
+      : `.css-loader {
+
+      border-left-color:#059
+    }`}
   ${({ isBlue, isLoadingBlue }) =>
     (isBlue || isLoadingBlue) &&
     `

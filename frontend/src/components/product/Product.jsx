@@ -25,10 +25,10 @@ export const Product = (props) => {
 
   const handleClick = () => {
     navigate(
-      `product/${name.replaceAll(" ", "-")}/${_id}`.replace(
-        "%",
-        ""
-      ),
+      `/store/product/${name.replaceAll(
+        " ",
+        "-"
+      )}/${_id}`.replace("%", ""),
       {
         state: { id: _id, productData: props },
       }

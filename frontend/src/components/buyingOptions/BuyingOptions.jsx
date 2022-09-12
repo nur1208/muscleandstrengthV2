@@ -70,7 +70,12 @@ export const BuyingOptions = ({ options: buyingOptions }) => {
       });
     }
 
-    updateUserInfo({ cart: newCart });
+    updateUserInfo({
+      cart: {
+        operation: "push",
+        value: newCart,
+      },
+    });
     navigate("/store/checkout/cart");
   };
   return (

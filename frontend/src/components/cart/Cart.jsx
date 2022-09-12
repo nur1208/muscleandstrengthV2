@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
+import { useReduxActions } from "../../hooks";
 import { Button } from "../button/Button";
 import { StoreSectionSwiper } from "../storeSectionSwiper/StoreSectionSwiper";
 import { MainWrapper } from "./cart.styles";
@@ -9,21 +10,34 @@ import { MainWrapper } from "./cart.styles";
 export const Cart = () => {
   const {
     product_store: { data },
-    user_store: { userData },
+    user_store: { userData, loading },
   } = useSelector((state) => state);
   const isNotPC = useMediaQuery({ maxWidth: 839 });
+  const { updateUserInfo } = useReduxActions();
+  const [currentActionIndex, setCurrentActionIndex] =
+    useState(-1);
 
   const trendingProps = {
     title: "Trending Products",
     products: data?.trendingProducts,
   };
+
+  const handleDelete = (e, index) => {
+    e.preventDefault();
+    setCurrentActionIndex(index);
+    updateUserInfo({
+      cart: {
+        operation: "pull",
+        value: {
+          ...userData.cart[index],
+          product: userData.cart[index].product._id,
+        },
+      },
+    });
+  };
   return (
     <MainWrapper>
-      <form
-        id="cartForm"
-        action="https://www.muscleandstrength.com/store/checkout/cart/updatePost/"
-        method="post"
-      >
+      <form id="cartForm">
         <input
           name="form_key"
           type="hidden"
@@ -39,12 +53,16 @@ export const Cart = () => {
           </div>
           {userData?.cart &&
             userData.cart.map(
-              ({
-                qty,
-                product,
-                buyingOptionId,
-                selectedFlavor,
-              }) => {
+              (
+                {
+                  qty,
+                  product,
+                  buyingOptionId,
+                  selectedFlavor,
+                  _id,
+                },
+                index
+              ) => {
                 const buyingOption = product.buyingOptions.find(
                   ({ _id }) => _id === buyingOptionId
                 );
@@ -56,7 +74,10 @@ export const Cart = () => {
                   )}/${product._id}`.replace("%", "");
                 const title = `${product.brand.title} ${product.name} - ${buyingOption.title} ${selectedFlavor}`;
                 return (
-                  <div class="grid-row cart-item css-grid">
+                  <div
+                    key={_id}
+                    class="grid-row cart-item css-grid"
+                  >
                     <div class="item-image box-image">
                       <Link to={to}>
                         <img
@@ -123,7 +144,16 @@ export const Cart = () => {
                         </>
                       )}
                       <span className="delete">
-                        <Button text="Delete" isDynxs />
+                        <Button
+                          text="Delete"
+                          isDynxs
+                          // isBlue
+                          loading={
+                            loading &&
+                            currentActionIndex === index
+                          }
+                          onClick={(e) => handleDelete(e, index)}
+                        />
                       </span>
                     </div>
                     <div class="price-wrap box-subtotal">
