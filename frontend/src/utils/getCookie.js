@@ -1,6 +1,10 @@
 export const getCookie = (cname, isJsonObject) => {
   let name = cname + "=";
+
   let decodedCookie = decodeURIComponent(document.cookie);
+
+  decodedCookie = decodedCookie.replace(/~~pct~~/g, "%");
+
   let ca = decodedCookie.split(";");
   for (let i = 0; i < ca.length; i++) {
     let c = ca[i];

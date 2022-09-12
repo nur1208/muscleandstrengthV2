@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { useEffect } from "react";
 import { Selector } from "../selector/Selector";
 import { Qty } from "./Qty";
 const selectorStyle = `
@@ -15,7 +16,42 @@ export const BuyingOption = ({
   title,
   deal,
   options,
+  setCart,
+  isError,
+  _id,
 }) => {
+  const [qty, setQty] = useState(0);
+  const [selectedFlavor, setSelectedFlavor] = useState("");
+  useEffect(() => {
+    // check if qty bigger than 0
+    if (qty > 0) {
+      //add or update buying option
+      setCart((currentItems) =>
+        // check if this buying option exist
+        currentItems.find(
+          ({ buyingOptionId }) => buyingOptionId === _id
+        )
+          ? // buying option is exist then just update qty's value
+            currentItems.map((item) =>
+              item.buyingOptionId === _id
+                ? { ...item, qty, selectedFlavor }
+                : item
+            )
+          : // otherwise add new buying option to cart state
+            [
+              ...currentItems,
+              { buyingOptionId: _id, qty, selectedFlavor },
+            ]
+      );
+    }
+    //else remove buying option from cart state
+    else
+      setCart((currentItems) =>
+        currentItems.filter(
+          ({ buyingOptionId }) => buyingOptionId !== _id
+        )
+      );
+  }, [qty, _id, selectedFlavor]);
   return (
     <div
       class={`group ${options.length === 0 ? "no-options" : ""}`}
@@ -57,15 +93,17 @@ export const BuyingOption = ({
           {options.length !== 0 && (
             <div class="option-field field">
               <Selector
+                getSelectedValue={setSelectedFlavor}
                 customStyle={selectorStyle}
                 label="Pick a Flavor"
                 isBlue
+                isError={isError}
                 options={options}
               />
             </div>
           )}
           <div class="qty-field field">
-            <Qty />
+            <Qty qty={qty} setQty={setQty} />
           </div>
         </div>
       </div>

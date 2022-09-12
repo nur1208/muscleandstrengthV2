@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-export const Qty = () => {
-  const [qty, setQty] = useState(1);
+export const Qty = ({ qty, setQty }) => {
   return (
     <div class="input-group">
       <label class="is-hidden" for="super_group_38915">
