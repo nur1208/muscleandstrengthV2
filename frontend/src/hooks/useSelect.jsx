@@ -60,12 +60,13 @@ export const useSelect = (
   };
 
   useEffect(() => {
-    setOptions(
-      options.map((option, index) => ({
-        ...option,
-        isDisabled: disabledOptions.includes(index),
-      }))
-    );
+    if (disabledOptions.length)
+      setOptions(
+        options.map((option, index) => ({
+          ...option,
+          isDisabled: disabledOptions.includes(index),
+        }))
+      );
   }, [disabledOptions]);
 
   useEffect(() => {
