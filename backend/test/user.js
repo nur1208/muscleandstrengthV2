@@ -34,6 +34,7 @@ const testUpdateMe = async () => {
         buyingOptionId: "6312b453666da3bdd551a7e6",
       },
     },
+    // "cart.<index>0.qty": 1,
   };
   const { data } = await axios.put(
     `${baseUrl}/${mainRoute}`,

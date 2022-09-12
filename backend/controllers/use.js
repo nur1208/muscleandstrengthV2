@@ -21,7 +21,8 @@ export const updateMe = catchAsync(async (req, res, next) => {
     "firstName",
     "lastName",
     "reviewingAs",
-    "cart"
+    "cart",
+    "cart.array.qty"
   );
   if (req.file) filteredBody.photo = req.file.filename;
 

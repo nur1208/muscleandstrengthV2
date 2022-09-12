@@ -2,6 +2,16 @@ export const filterObj = (obj, ...allowedFields) => {
   const newObj = {};
 
   Object.keys(obj).forEach((el) => {
+    if (el.includes(".<index>")) {
+      if (
+        allowedFields.includes(
+          el.replaceAll(/<.*?\./g, "array.")
+        )
+      ) {
+        newObj[el.replaceAll(/<.*?>/g, "")] = obj[el];
+      }
+    }
+
     if (allowedFields.includes(el)) {
       if (typeof obj[el] === "object") {
         if (obj[el].operation && obj[el].value) {
