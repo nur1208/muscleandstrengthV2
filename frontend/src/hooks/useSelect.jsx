@@ -4,7 +4,8 @@ export const useSelect = (
   initOptions,
   getSelectedValue,
   customValueUpdate,
-  disabledOptions = []
+  disabledOptions = [],
+  afterSelectingOption
 ) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -97,6 +98,7 @@ export const useSelect = (
   const handleOptionClick = (index) => {
     updateOption(index, { isSelected: true });
     setIsOpen(false);
+    afterSelectingOption && afterSelectingOption();
   };
 
   const handleKeyDown = (e) => {

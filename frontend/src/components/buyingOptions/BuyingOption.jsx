@@ -45,13 +45,18 @@ export const BuyingOption = ({
       );
     }
     //else remove buying option from cart state
-    else
+    else {
       setCart((currentItems) =>
         currentItems.filter(
           ({ buyingOptionId }) => buyingOptionId !== _id
         )
       );
+    }
   }, [qty, _id, selectedFlavor]);
+
+  const afterSelectingOption = () => {
+    if (qty === 0) setQty(1);
+  };
   return (
     <div
       class={`group ${options.length === 0 ? "no-options" : ""}`}
@@ -98,6 +103,7 @@ export const BuyingOption = ({
                 label="Pick a Flavor"
                 isBlue
                 isError={isError}
+                afterSelectingOption={afterSelectingOption}
                 options={options}
               />
             </div>

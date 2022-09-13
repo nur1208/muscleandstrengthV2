@@ -8,6 +8,7 @@ export const Selector = ({
   getSelectedValue,
   customValueUpdate,
   disabledOptions,
+  afterSelectingOption,
   ...others
 }) => {
   const [
@@ -28,7 +29,8 @@ export const Selector = ({
         })),
     getSelectedValue,
     customValueUpdate,
-    disabledOptions
+    disabledOptions,
+    afterSelectingOption
   );
   return (
     <MainWrapper
