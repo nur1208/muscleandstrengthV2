@@ -18,7 +18,7 @@ const signToken = (id) => {
 const createSendToken = (user, statusCode, req, res) => {
   const token = signToken(user._id);
 
-  const { firstName, lastName, gender, email, _id } = user;
+  const { firstName, lastName, gender, email, _id, cart } = user;
 
   res.status(statusCode).json({
     status: "success",
@@ -30,6 +30,7 @@ const createSendToken = (user, statusCode, req, res) => {
         gender,
         email,
         id: _id,
+        cart,
       },
     },
   });

@@ -26,15 +26,15 @@ const testLogin = async () => {
 
 const testUpdateMe = async () => {
   const updateInfo = {
-    cart: {
-      operation: "push",
-      value: {
-        product: "6312b453666da3bdd551a7e5",
-        qty: 3,
-        buyingOptionId: "6312b453666da3bdd551a7e6",
-      },
-    },
-    // "cart.<index>0.qty": 1,
+    // cart: {
+    //   operation: "push",
+    //   value: {
+    //     product: "6312b453666da3bdd551a7e5",
+    //     qty: 3,
+    //     buyingOptionId: "6312b453666da3bdd551a7e6",
+    //   },
+    // },
+    "cart.<index>0.qty": 11,
   };
   const { data } = await axios.put(
     `${baseUrl}/${mainRoute}`,
