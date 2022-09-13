@@ -143,6 +143,7 @@ export const useSelect = (
       );
       updateOption(index, { isSelected: true });
       setIsOpen(false);
+      afterSelectingOption && afterSelectingOption();
     }
   };
 
