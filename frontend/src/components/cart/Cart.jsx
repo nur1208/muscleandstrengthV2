@@ -3,18 +3,22 @@ import { useSelector } from "react-redux";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 import { useReduxActions } from "../../hooks";
+import colors from "../../styles/colors";
 import { Button } from "../button/Button";
+import { useNotification } from "../Notification";
 import { StoreSectionSwiper } from "../storeSectionSwiper/StoreSectionSwiper";
 import { MainWrapper } from "./cart.styles";
+import { QtyWrapper } from "./QtyWrapper";
 
 export const Cart = () => {
   const {
     product_store: { data },
     user_store: { userData, loading },
   } = useSelector((state) => state);
-  const isNotPC = useMediaQuery({ maxWidth: 839 });
   const { updateUserInfo } = useReduxActions();
   const [currentActionIndex, setCurrentActionIndex] =
+    useState(-1);
+  const [currentActiveIndexQty, setCurrentActiveIndexQty] =
     useState(-1);
 
   const trendingProps = {
@@ -24,6 +28,7 @@ export const Cart = () => {
 
   const handleDelete = (e, index) => {
     e.preventDefault();
+    setCurrentActiveIndexQty(-1);
     setCurrentActionIndex(index);
     updateUserInfo({
       cart: {
@@ -35,6 +40,28 @@ export const Cart = () => {
       },
     });
   };
+
+  const dispatch = useNotification();
+
+  const handleOnClickQty = (e, qty, index) => {
+    e.preventDefault();
+    if (qty <= 0)
+      return dispatch({
+        type: "error",
+        message: `qty must be bigger than 0`,
+        title: `inValid value for qty`,
+        position: "bottomL",
+        iconColor: colors.red,
+      });
+    setCurrentActionIndex(-1);
+    setCurrentActiveIndexQty(index);
+
+    const newObject = {};
+    const key = "cart.<index>" + index + ".qty";
+    newObject[key] = qty;
+    updateUserInfo(newObject);
+  };
+
   return (
     <MainWrapper>
       <form id="cartForm">
@@ -63,9 +90,10 @@ export const Cart = () => {
                 },
                 index
               ) => {
-                const buyingOption = product.buyingOptions.find(
-                  ({ _id }) => _id === buyingOptionId
-                );
+                const buyingOption =
+                  product?.buyingOptions?.find(
+                    ({ _id }) => _id === buyingOptionId
+                  );
 
                 const to =
                   `/store/product/${product.name.replaceAll(
@@ -112,37 +140,16 @@ export const Cart = () => {
                       >
                         Quantity for Item
                       </label>
-                      {isNotPC ? (
-                        <div>
-                          <input
-                            id="cart[47515693][qty]"
-                            type="number"
-                            class="qty text-center input-dynxs"
-                            name="cart[47515693][qty]"
-                            value={qty}
-                            size="2"
-                            maxlength="3"
-                          />{" "}
-                          <span className="update-text">
-                            <Button text="Update Qty" isDynxs />
-                          </span>
-                        </div>
-                      ) : (
-                        <>
-                          <input
-                            id="cart[47515693][qty]"
-                            type="number"
-                            class="qty text-center input-dynxs"
-                            name="cart[47515693][qty]"
-                            value="1"
-                            size="2"
-                            maxlength="3"
-                          />{" "}
-                          <span className="update-text">
-                            <Button text="Update Qty" isDynxs />
-                          </span>
-                        </>
-                      )}
+                      <QtyWrapper
+                        qty={qty}
+                        index={index}
+                        loading={
+                          currentActiveIndexQty === index &&
+                          loading
+                        }
+                        handleOnClickQty={handleOnClickQty}
+                      />
+
                       <span className="delete">
                         <Button
                           text="Delete"
@@ -159,7 +166,10 @@ export const Cart = () => {
                     <div class="price-wrap box-subtotal">
                       <div class="item-subtotal">
                         <span class="price">
-                          ${qty * buyingOption.cost.regularPrice}
+                          $
+                          {Number(
+                            qty * buyingOption.cost.regularPrice
+                          ).toFixed(2)}
                         </span>{" "}
                       </div>
                     </div>
