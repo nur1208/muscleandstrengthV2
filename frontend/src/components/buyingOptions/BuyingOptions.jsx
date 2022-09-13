@@ -48,7 +48,7 @@ export const BuyingOptions = ({ options: buyingOptions }) => {
 
     const unSelected = [];
     // check if a user select a Flavor and update selectedFlavor value
-    const newCart = cart.map((item) => {
+    let newCart = cart.map((item) => {
       const { selectedFlavor, buyingOptionId } = item;
       if (selectedFlavor.index === 0) {
         unSelected.push(buyingOptionId);
@@ -74,13 +74,28 @@ export const BuyingOptions = ({ options: buyingOptions }) => {
     }
 
     // check for duplicate items in user's cart
-    const foundDuplicate = newCart.find(
+    // productId, buyingOptionId and selectedFlavor is unique value
+    // const foundDuplicate = newCart.find(
+    //   ({
+    //     product: productID,
+    //     selectedFlavor: selectedFlavorNew,
+    //     buyingOptionId: buyingOptionIdNew,
+    //   }) =>
+    //     userData.cart.find(
+    //       ({ product, selectedFlavor, buyingOptionId }) =>
+    //         product._id === productID &&
+    //         selectedFlavor === selectedFlavorNew &&
+    //         buyingOptionId === buyingOptionIdNew
+    //     )
+    // );
+
+    const foundDuplicate = newCart.map(
       ({
         product: productID,
         selectedFlavor: selectedFlavorNew,
         buyingOptionId: buyingOptionIdNew,
       }) =>
-        userData.cart.find(
+        userData.cart.findIndex(
           ({ product, selectedFlavor, buyingOptionId }) =>
             product._id === productID &&
             selectedFlavor === selectedFlavorNew &&
@@ -88,22 +103,49 @@ export const BuyingOptions = ({ options: buyingOptions }) => {
         )
     );
 
-    if (foundDuplicate) {
-      return dispatch({
-        type: "error",
-        message: `this product is already added to your cart`,
-        title: `found duplicate items`,
-        position: "bottomL",
-        iconColor: colors.green,
+    if (foundDuplicate.some((item) => item !== -1)) {
+      for (
+        let index = 0;
+        index < foundDuplicate.length;
+        index++
+      ) {
+        const elIndex = foundDuplicate[index];
+        if (elIndex === -1) break;
+        const newObject = {};
+        const key = "cart.<index>" + elIndex + ".qty";
+        newObject[key] =
+          userData.cart[elIndex].qty + newCart[index].qty;
+
+        // console.log(newObject);
+        updateUserInfo(newObject);
+      }
+      newCart = newCart.filter(
+        (_, index) => !foundDuplicate.includes(index)
+      );
+    }
+
+    console.log({ newCart, foundDuplicate });
+
+    // if (foundDuplicate) {
+    //   return dispatch({
+    //     type: "error",
+    //     message: `this product is already added to your cart`,
+    //     title: `found duplicate items`,
+    //     position: "bottomL",
+    //     iconColor: colors.green,
+    //   });
+    // }
+
+    // new cart is no empty
+    if (newCart.length) {
+      updateUserInfo({
+        cart: {
+          operation: "push",
+          value: newCart,
+        },
       });
     }
 
-    updateUserInfo({
-      cart: {
-        operation: "push",
-        value: newCart,
-      },
-    });
     navigate("/store/checkout/cart");
   };
   return (
