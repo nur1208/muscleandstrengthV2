@@ -10,6 +10,7 @@ import { BuyingOption } from "./BuyingOption";
 import { MainWrapper } from "./buyingOptions.styles";
 import colors from "../../styles/colors";
 import { useNavigate, useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export const BuyingOptions = ({ options: buyingOptions }) => {
   const { id } = useParams();
@@ -17,6 +18,8 @@ export const BuyingOptions = ({ options: buyingOptions }) => {
   const [cart, setCart] = useState([]);
   const [unSelectedF, setUnSelectedF] = useState([]);
   const { updateModalState, updateUserInfo } = useReduxActions();
+  const { userData } = useSelector((state) => state.user_store);
+
   const handleClick = () => {
     updateModalState({
       isOpen: true,
@@ -65,6 +68,31 @@ export const BuyingOptions = ({ options: buyingOptions }) => {
         type: "error",
         message: `you must select a flavor for each buying option with flavors`,
         title: `select a flavor`,
+        position: "bottomL",
+        iconColor: colors.green,
+      });
+    }
+
+    // check for duplicate items in user's cart
+    const foundDuplicate = newCart.find(
+      ({
+        product: productID,
+        selectedFlavor: selectedFlavorNew,
+        buyingOptionId: buyingOptionIdNew,
+      }) =>
+        userData.cart.find(
+          ({ product, selectedFlavor, buyingOptionId }) =>
+            product._id === productID &&
+            selectedFlavor === selectedFlavorNew &&
+            buyingOptionId === buyingOptionIdNew
+        )
+    );
+
+    if (foundDuplicate) {
+      return dispatch({
+        type: "error",
+        message: `this product is already added to your cart`,
+        title: `found duplicate items`,
         position: "bottomL",
         iconColor: colors.green,
       });
