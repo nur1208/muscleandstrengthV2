@@ -21,7 +21,7 @@ export const BuyingOption = ({
   _id,
 }) => {
   const [qty, setQty] = useState(0);
-  const [selectedFlavor, setSelectedFlavor] = useState("");
+  const [selectedFlavor, setSelectedFlavor] = useState(null);
   useEffect(() => {
     // check if qty bigger than 0
     if (qty > 0) {

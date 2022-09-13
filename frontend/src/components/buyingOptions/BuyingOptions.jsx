@@ -18,7 +18,9 @@ export const BuyingOptions = ({ options: buyingOptions }) => {
   const [cart, setCart] = useState([]);
   const [unSelectedF, setUnSelectedF] = useState([]);
   const { updateModalState, updateUserInfo } = useReduxActions();
-  const { userData } = useSelector((state) => state.user_store);
+  const { userData, loading } = useSelector(
+    (state) => state.user_store
+  );
 
   const handleClick = () => {
     updateModalState({
@@ -50,13 +52,15 @@ export const BuyingOptions = ({ options: buyingOptions }) => {
     // check if a user select a Flavor and update selectedFlavor value
     let newCart = cart.map((item) => {
       const { selectedFlavor, buyingOptionId } = item;
-      if (selectedFlavor.index === 0) {
+      if (selectedFlavor && selectedFlavor.index === 0) {
         unSelected.push(buyingOptionId);
         return item;
       } else
         return {
           ...item,
-          selectedFlavor: selectedFlavor.value,
+          selectedFlavor: selectedFlavor
+            ? selectedFlavor.value
+            : undefined,
           product: id,
         };
     });
@@ -98,10 +102,25 @@ export const BuyingOptions = ({ options: buyingOptions }) => {
         userData.cart.findIndex(
           ({ product, selectedFlavor, buyingOptionId }) =>
             product._id === productID &&
-            selectedFlavor === selectedFlavorNew &&
+            (!selectedFlavor ||
+              selectedFlavor === selectedFlavorNew) &&
             buyingOptionId === buyingOptionIdNew
         )
     );
+
+    const filteredNewCart = newCart.filter(
+      (_, index) => foundDuplicate[index] === -1
+    );
+
+    // new cart is no empty
+    if (filteredNewCart.length) {
+      updateUserInfo({
+        cart: {
+          operation: "push",
+          value: filteredNewCart,
+        },
+      });
+    }
 
     if (foundDuplicate.some((item) => item !== -1)) {
       for (
@@ -119,12 +138,9 @@ export const BuyingOptions = ({ options: buyingOptions }) => {
         // console.log(newObject);
         updateUserInfo(newObject);
       }
-      newCart = newCart.filter(
-        (_, index) => !foundDuplicate.includes(index)
-      );
     }
 
-    console.log({ newCart, foundDuplicate });
+    console.log({ filteredNewCart, newCart, foundDuplicate });
 
     // if (foundDuplicate) {
     //   return dispatch({
@@ -136,17 +152,7 @@ export const BuyingOptions = ({ options: buyingOptions }) => {
     //   });
     // }
 
-    // new cart is no empty
-    if (newCart.length) {
-      updateUserInfo({
-        cart: {
-          operation: "push",
-          value: newCart,
-        },
-      });
-    }
-
-    navigate("/store/checkout/cart");
+    // navigate("/store/checkout/cart");
   };
   return (
     <MainWrapper>
@@ -175,6 +181,7 @@ export const BuyingOptions = ({ options: buyingOptions }) => {
                 hasLoader
                 isBlue
                 isLarge
+                loading={loading}
                 onClick={handleClickAddCart}
               />
               {/* <button

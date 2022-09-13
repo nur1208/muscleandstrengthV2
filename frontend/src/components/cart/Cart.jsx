@@ -100,7 +100,11 @@ export const Cart = () => {
                     " ",
                     "-"
                   )}/${product._id}`.replace("%", "");
-                const title = `${product.brand.title} ${product.name} - ${buyingOption.title} ${selectedFlavor}`;
+                const title = `${product.brand.title} ${
+                  product.name
+                } - ${buyingOption.title} ${
+                  selectedFlavor ? selectedFlavor : ""
+                }`;
                 return (
                   <div
                     key={_id}
