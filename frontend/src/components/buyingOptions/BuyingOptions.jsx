@@ -11,14 +11,16 @@ import { MainWrapper } from "./buyingOptions.styles";
 import colors from "../../styles/colors";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 export const BuyingOptions = ({ options: buyingOptions }) => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [cart, setCart] = useState([]);
   const [unSelectedF, setUnSelectedF] = useState([]);
-  const { updateModalState, updateUserInfo } = useReduxActions();
-  const { userData, loading } = useSelector(
+  const { updateModalState, updateUserInfo, resetUserSuccess } =
+    useReduxActions();
+  const { userData, loading, success } = useSelector(
     (state) => state.user_store
   );
 
@@ -154,6 +156,13 @@ export const BuyingOptions = ({ options: buyingOptions }) => {
 
     // navigate("/store/checkout/cart");
   };
+
+  useEffect(() => {
+    if (success) {
+      resetUserSuccess();
+      navigate("/store/checkout/cart");
+    }
+  }, [success]);
   return (
     <MainWrapper>
       <SectionTitle title="Buying Options" />
