@@ -1,5 +1,6 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
+import { useNavigate } from "react-router-dom";
 import { getIconById, ICONS_ID } from "../../icons";
 import { Button } from "../button/Button";
 import { MainWrapper } from "./cartHeader.styles";
@@ -7,6 +8,10 @@ import { MainWrapper } from "./cartHeader.styles";
 export const CartHeader = () => {
   const isPhone = useMediaQuery({ maxWidth: 480 });
 
+  const navigate = useNavigate();
+  const handleContinueShopping = () => {
+    navigate("/store");
+  };
   return (
     <MainWrapper>
       <div class="cartHeader">
@@ -65,7 +70,11 @@ export const CartHeader = () => {
           </div>
         </div>
         <div class="button-row">
-          <Button text="Continue Shopping" isSmall />
+          <Button
+            text="Continue Shopping"
+            isSmall
+            onClick={handleContinueShopping}
+          />
           {/* <button
             type="button"
             class="btn btn-white btn-sm btn-auto btn-shop"
