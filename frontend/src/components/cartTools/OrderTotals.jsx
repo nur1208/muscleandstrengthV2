@@ -1,14 +1,31 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Button } from "../button/Button";
 
 export const OrderTotals = () => {
+  const { userData } = useSelector((state) => state.user_store);
+  const initialValue = 0;
+  const totalPrice = userData?.cart.reduce(
+    (
+      previousValue,
+      { buyingOptionId, product: { buyingOptions }, isFree }
+    ) => {
+      const buyingOption = buyingOptions?.find(
+        ({ _id }) => _id === buyingOptionId
+      );
+      if (isFree) return previousValue + 0;
+      return previousValue + buyingOption.cost.regularPrice;
+    },
+    initialValue
+  );
+  console.log({ totalPrice });
   return (
     <>
       <div class="orderTotals" id="shopping-cart-totals-table">
         <div class="table-row">
           <div class="price-label">Subtotal </div>
           <div class="price-wrap">
-            <span class="price">$9.99</span>{" "}
+            <span class="price">${totalPrice}</span>{" "}
           </div>
         </div>
         <div class="table-row grand">
@@ -17,13 +34,15 @@ export const OrderTotals = () => {
           </div>
           <div class="price-wrap">
             <strong>
-              <span class="price">$9.99</span>
+              <span class="price">${totalPrice}</span>
             </strong>
           </div>
         </div>
         <div class="table-row">
           <div class="price-label">Points Earned </div>
-          <div class="price-wrap">19 points </div>
+          <div class="price-wrap">
+            {Number(totalPrice * 2).toFixed(2)} points{" "}
+          </div>
         </div>
       </div>
       <div

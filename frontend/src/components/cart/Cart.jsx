@@ -99,15 +99,17 @@ export const Cart = () => {
                   );
 
                 const to =
-                  `/store/product/${product.name.replaceAll(
+                  `/store/product/${product?.name?.replaceAll(
                     " ",
                     "-"
                   )}/${product._id}`.replace("%", "");
-                const title = `${product.brand.title} ${
-                  product.name
-                } - ${buyingOption.title} ${
+                const title = `${product?.brand?.title} ${
+                  product?.name
+                } - ${buyingOption?.title} ${
                   selectedFlavor ? selectedFlavor : ""
                 }`;
+
+                if (!product.name) return;
                 return (
                   <div
                     key={_id}

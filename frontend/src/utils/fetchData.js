@@ -4,13 +4,14 @@ export const fetchData = async (
   url,
   type,
   dispatch,
-  payloadReturn
+  payloadReturn,
+  token
 ) => {
   dispatch({ type: type.LOADING });
   // setLoading(true);
   try {
     // const res = await axios.get(url);
-    const res = await GenericEndpoints.get(url);
+    const res = await GenericEndpoints.get(url, token);
     dispatch({
       type: type.SUCCESS,
       payload: payloadReturn

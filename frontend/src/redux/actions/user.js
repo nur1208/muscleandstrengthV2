@@ -1,5 +1,5 @@
 import { UserEndPoints } from "../../services";
-import { removeCookie, setCookie } from "../../utils";
+import { fetchData, removeCookie, setCookie } from "../../utils";
 import { USER_ACTIONS } from "../constants";
 
 const saveUserData = (userData, token) => {
@@ -120,6 +120,16 @@ export const login =
     }
   };
 
+export const getMe = () => async (dispatch, getState) =>
+  fetchData(
+    "users",
+    USER_ACTIONS.GET_ME,
+    dispatch,
+    (data) => ({
+      cart: data.cart,
+    }),
+    getState().user_store.userData.token
+  );
 export const updateUserInfo =
   (userData, response) => async (dispatch, getState) => {
     try {
@@ -140,6 +150,7 @@ export const updateUserInfo =
         type: USER_ACTIONS.UPDATE_INFO.SUCCESS,
         payload: serverUserDate,
       });
+      getMe();
     } catch (error) {
       response && response("updating your info failed");
 

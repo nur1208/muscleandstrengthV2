@@ -18,6 +18,7 @@ export const userReducer = (state = initialState, action) => {
     case USER_ACTIONS.SIGN_UP.LOADING:
     case USER_ACTIONS.LOGIN.LOADING:
     case USER_ACTIONS.UPDATE_INFO.LOADING:
+    case USER_ACTIONS.GET_ME.LOADING:
       return {
         ...state,
         loading: true,
@@ -41,6 +42,7 @@ export const userReducer = (state = initialState, action) => {
     case USER_ACTIONS.LOGIN.FALL:
     case USER_ACTIONS.CREATE_USER_ERROR:
     case USER_ACTIONS.UPDATE_INFO.FALL:
+    case USER_ACTIONS.GET_ME.FALL:
       return {
         ...state,
         loading: false,
@@ -61,7 +63,15 @@ export const userReducer = (state = initialState, action) => {
         ...state,
         success: null,
       };
-
+    case USER_ACTIONS.GET_ME.SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        userData: state.userData
+          ? { ...state.userData, ...action.payload }
+          : { cart: [] },
+        error: null,
+      };
     default:
       return state;
   }
