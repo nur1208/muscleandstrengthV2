@@ -120,6 +120,12 @@ export const login =
     }
   };
 
+export const updateCurrentUserAction =
+  (data) => async (dispatch) =>
+    dispatch({
+      type: USER_ACTIONS.CURRENT_ACTION,
+      payload: data,
+    });
 export const getMe = () => async (dispatch, getState) =>
   fetchData(
     "users",

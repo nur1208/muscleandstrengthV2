@@ -12,17 +12,21 @@ import colors from "../../styles/colors";
 import { useNavigate, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
+import { CURRENT_ACTIONS } from "../../redux/constants";
 
 export const BuyingOptions = ({ options: buyingOptions }) => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [cart, setCart] = useState([]);
   const [unSelectedF, setUnSelectedF] = useState([]);
-  const { updateModalState, updateUserInfo, resetUserSuccess } =
-    useReduxActions();
-  const { userData, loading, success } = useSelector(
-    (state) => state.user_store
-  );
+  const {
+    updateCurrentUserAction,
+    updateModalState,
+    updateUserInfo,
+    resetUserSuccess,
+  } = useReduxActions();
+  const { userData, loading, success, currentAction } =
+    useSelector((state) => state.user_store);
 
   const handleClick = () => {
     updateModalState({
@@ -153,13 +157,17 @@ export const BuyingOptions = ({ options: buyingOptions }) => {
     //     iconColor: colors.green,
     //   });
     // }
-
+    updateCurrentUserAction(CURRENT_ACTIONS.ADD_TO_CART);
     // navigate("/store/checkout/cart");
   };
 
   useEffect(() => {
-    if (success) {
+    if (
+      success &&
+      currentAction === CURRENT_ACTIONS.ADD_TO_CART
+    ) {
       resetUserSuccess();
+      updateCurrentUserAction(null);
       navigate("/store/checkout/cart");
     }
   }, [success]);

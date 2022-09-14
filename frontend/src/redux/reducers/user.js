@@ -48,6 +48,7 @@ export const userReducer = (state = initialState, action) => {
         loading: false,
         error: action.payload,
         success: null,
+        currentAction: null,
       };
 
     case USER_ACTIONS.LOGOUT:
@@ -63,6 +64,13 @@ export const userReducer = (state = initialState, action) => {
         ...state,
         success: null,
       };
+
+    case USER_ACTIONS.CURRENT_ACTION:
+      return {
+        ...state,
+        currentAction: action.payload,
+      };
+
     case USER_ACTIONS.GET_ME.SUCCESS:
       return {
         ...state,
