@@ -25,10 +25,24 @@ export const BuyingOption = ({
   useEffect(() => {
     // check if qty bigger than 0
     if (qty > 0) {
+      console.log();
       //add or update buying option
-      setCart((currentItems) =>
+      setCart((currentItems) => {
+        const newBuyingOption = [
+          ...currentItems,
+          { buyingOptionId: _id, qty, selectedFlavor },
+        ];
+        if (deal.toLocaleLowerCase().includes("get 1 free")) {
+          newBuyingOption.push({
+            buyingOptionId: _id,
+            qty,
+            selectedFlavor,
+            isFree: true,
+          });
+        }
+
         // check if this buying option exist
-        currentItems.find(
+        return currentItems.find(
           ({ buyingOptionId }) => buyingOptionId === _id
         )
           ? // buying option is exist then just update qty's value
@@ -38,11 +52,8 @@ export const BuyingOption = ({
                 : item
             )
           : // otherwise add new buying option to cart state
-            [
-              ...currentItems,
-              { buyingOptionId: _id, qty, selectedFlavor },
-            ]
-      );
+            newBuyingOption;
+      });
     }
     //else remove buying option from cart state
     else {

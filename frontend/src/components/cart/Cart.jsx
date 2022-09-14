@@ -8,6 +8,7 @@ import { Button } from "../button/Button";
 import { useNotification } from "../Notification";
 import { StoreSectionSwiper } from "../storeSectionSwiper/StoreSectionSwiper";
 import { MainWrapper } from "./cart.styles";
+import { Price } from "./Price";
 import { QtyWrapper } from "./QtyWrapper";
 
 export const Cart = () => {
@@ -34,8 +35,9 @@ export const Cart = () => {
       cart: {
         operation: "pull",
         value: {
-          ...userData.cart[index],
+          buyingOptionId: userData.cart[index].buyingOptionId,
           product: userData.cart[index].product._id,
+          selectedFlavor: userData.cart[index].selectedFlavor,
         },
       },
     });
@@ -87,6 +89,7 @@ export const Cart = () => {
                   buyingOptionId,
                   selectedFlavor,
                   _id,
+                  isFree,
                 },
                 index
               ) => {
@@ -123,48 +126,36 @@ export const Cart = () => {
                       <span class="product-name">
                         <Link to={to}>{title}</Link>
                       </span>
-                      {buyingOption.cost.beforeDiscount ? (
-                        <div class="before-deal-price">
-                          <span class="price">
-                            ${buyingOption.cost.beforeDiscount}
-                          </span>
-                        </div>
-                      ) : (
-                        ""
-                      )}
-                      <span class="price">
-                        ${buyingOption.cost.regularPrice}
-                      </span>{" "}
+                      <Price
+                        isFree={isFree}
+                        buyingOption={buyingOption}
+                      />
                     </div>
                     <div class="box-messages">
-                      {buyingOption.deal && (
-                        <span class="mns-label lbl-deal">
-                          {buyingOption.deal}
-                        </span>
-                      )}
+                      {buyingOption.deal &&
+                        (!buyingOption.deal
+                          ?.toLocaleLowerCase()
+                          ?.includes("get 1 free") ||
+                          isFree) && (
+                          <span class="mns-label lbl-deal">
+                            {buyingOption.deal}
+                          </span>
+                        )}
 
                       <div class="options_messages">
-                        {/* <dl class="item-options 47565523">
-                          <dt>
-                            1 x NOW Foods Omega-3 - 100 Softgels{" "}
-                          </dt>
-                        </dl> */}
+                        {isFree && (
+                          <dl class="item-options 47565523">
+                            <dt>1 x {title}</dt>
+                          </dl>
+                        )}
                       </div>
                     </div>
                     <div class="retail-price-wrap box-price">
                       <div class="item-price">
-                        {buyingOption.cost.beforeDiscount ? (
-                          <div class="before-deal-price">
-                            <span class="price">
-                              ${buyingOption.cost.beforeDiscount}
-                            </span>
-                          </div>
-                        ) : (
-                          ""
-                        )}
-                        <span class="price">
-                          ${buyingOption.cost.regularPrice}
-                        </span>{" "}
+                        <Price
+                          isFree={isFree}
+                          buyingOption={buyingOption}
+                        />
                       </div>
                     </div>
                     <div class="qty-wrap box-quantity">
@@ -181,29 +172,35 @@ export const Cart = () => {
                           currentActiveIndexQty === index &&
                           loading
                         }
+                        isFree={isFree}
                         handleOnClickQty={handleOnClickQty}
                       />
-
-                      <span className="delete">
-                        <Button
-                          text="Delete"
-                          isDynxs
-                          // isBlue
-                          loading={
-                            loading &&
-                            currentActionIndex === index
-                          }
-                          onClick={(e) => handleDelete(e, index)}
-                        />
-                      </span>
+                      {!isFree && (
+                        <span className="delete">
+                          <Button
+                            text="Delete"
+                            isDynxs
+                            // isBlue
+                            loading={
+                              loading &&
+                              currentActionIndex === index
+                            }
+                            onClick={(e) =>
+                              handleDelete(e, index)
+                            }
+                          />
+                        </span>
+                      )}
                     </div>
                     <div class="price-wrap box-subtotal">
                       <div class="item-subtotal">
                         <span class="price">
-                          $
-                          {Number(
-                            qty * buyingOption.cost.regularPrice
-                          ).toFixed(2)}
+                          {isFree
+                            ? "Free"
+                            : `$${Number(
+                                qty *
+                                  buyingOption.cost.regularPrice
+                              ).toFixed(2)}`}
                         </span>{" "}
                       </div>
                     </div>

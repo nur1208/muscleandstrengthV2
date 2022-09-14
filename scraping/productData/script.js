@@ -18,8 +18,7 @@ const mainSelectorNutrition =
   "#main-wrap .aside .product-nutrition";
 const closeModalSelector =
   " body > div.ui-dialog.shipping-modal.ui-widget.ui-widget-content.ui-front.ui-draggable.ui-resizable > div.ui-dialog-titlebar.ui-corner-all.ui-widget-header.ui-helper-clearfix.ui-draggable-handle > button";
-const mainSelectorReviews =
-  "#main-wrap .main-content.continued .allReviews .review-wrapper";
+const mainSelectorReviews = ".allReviews .review-wrapper";
 
 const customAdditionalReviews = async (page) => {
   // await page.waitForTimeout(1000 * 10);
@@ -255,16 +254,14 @@ export const getProductData = async (
     console.log("skip scrap nutrition");
   }
 
-  const mainSelectorProductInfo =
-    "#main-wrap .main-content.continued .std";
+  const mainSelectorProductInfo = ".std";
 
   const productInfo = scrapProductInfo(
     $(mainSelectorProductInfo).toString()
   );
   productData.productDetail.productInfo = productInfo;
 
-  const mainSelectorRO =
-    "#main-wrap .main-content.continued .product-reviews-section";
+  const mainSelectorRO = ".product-reviews-section";
 
   const reviewsOverall = scrapReviewsOverall(
     $(mainSelectorRO).toString()

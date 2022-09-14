@@ -23,6 +23,7 @@ const userSchema = new mongoose.Schema(
         qty: { type: Number, default: 1 },
         buyingOptionId: { type: mongoose.Types.ObjectId },
         selectedFlavor: { type: String },
+        isFree: { type: Boolean },
       },
     ],
     passwordChangedAt: Date,

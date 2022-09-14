@@ -12,6 +12,7 @@ const Wrapper = ({
   handleOnClick,
   loading,
   index,
+  isFree,
 }) => (
   <>
     <input
@@ -25,14 +26,16 @@ const Wrapper = ({
       // size="2"
       // maxlength="3"
     />{" "}
-    <span className="update-text">
-      <Button
-        text="Update Qty"
-        isDynxs
-        onClick={(e) => handleOnClick(e, qty, index)}
-        loading={loading}
-      />
-    </span>
+    {!isFree && (
+      <span className="update-text">
+        <Button
+          text="Update Qty"
+          isDynxs
+          onClick={(e) => handleOnClick(e, qty, index)}
+          loading={loading}
+        />
+      </span>
+    )}
   </>
 );
 
@@ -41,6 +44,7 @@ export const QtyWrapper = ({
   index,
   loading,
   handleOnClickQty,
+  isFree,
 }) => {
   const [qty, setQty] = useState(intQty);
   const isNotPC = useMediaQuery({ maxWidth: 839 });
@@ -95,6 +99,7 @@ export const QtyWrapper = ({
     qty,
     loading,
     index,
+    isFree,
   };
   return isNotPC ? (
     <div>

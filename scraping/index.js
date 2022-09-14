@@ -7,6 +7,9 @@ import {
   trendingProductsData,
   proteinCategories,
   preWorkoutCategories,
+  generalHealthCategories,
+  clothingCategories,
+  functionalFoodsCategories,
 } from "./productData/data.js";
 import {
   getProductData,
@@ -16,10 +19,10 @@ import { scrapProductsByCategory } from "./productsByCategory/script.js";
 
 const main = async () => {
   console.log("start scraping... ⌛");
-  // await scrapProductsByCategory(
-  //   "https://www.muscleandstrength.com/store/category/pre-workout.html"
-  //   // "https://www.muscleandstrength.com/store/category/general-health.html"
-  // );
+  await scrapProductsByCategory(
+    "https://www.muscleandstrength.com/store/category/fat-loss.html"
+    // "https://www.muscleandstrength.com/store/category/general-health.html"
+  );
   // const url =
   //   "https://www.muscleandstrength.com/store/now-mega-d-3-and-mk-7.html";
   // // "https://www.muscleandstrength.com/store/combat-powder.html";
@@ -29,38 +32,39 @@ const main = async () => {
   // await getProductData(url, "topDeals");
 
   // // re scrap { index: 7 }
-  console.log(preWorkoutCategories.subCategories.length);
+  // console.log(preWorkoutCategories.subCategories.length);
   // 11 limit
   // const currentSubIndex = 0;
-  for (
-    let currentSubIndex = 0;
-    currentSubIndex < preWorkoutCategories.subCategories.length;
-    currentSubIndex++
-  ) {
-    console.log(`current subCategory ${currentSubIndex}`);
-    const { products, title } =
-      preWorkoutCategories.subCategories[currentSubIndex];
-    for (let index = 0; index < products.length; index++) {
-      const href = products[index];
+  // for (
+  //   let currentSubIndex = 2;
+  //   currentSubIndex <
+  //   functionalFoodsCategories.subCategories.length;
+  //   currentSubIndex++
+  // ) {
+  //   console.log(`current subCategory ${currentSubIndex}`);
+  //   const { products, title } =
+  //     functionalFoodsCategories.subCategories[currentSubIndex];
+  //   for (let index = 0; index < products.length; index++) {
+  //     const href = products[index];
 
-      console.log({
-        href,
-        title,
-      });
-      console.log(`current product ${index}... ⌛`);
+  //     console.log({
+  //       href,
+  //       title,
+  //     });
+  //     console.log(`current product ${index}... ⌛`);
 
-      await getProductData(
-        `https://www.muscleandstrength.com${href}`,
-        null,
-        {
-          category: proteinCategories.title,
-          subCategory: title,
-        }
-      );
+  //     await getProductData(
+  //       `https://www.muscleandstrength.com${href}`,
+  //       null,
+  //       {
+  //         category: functionalFoodsCategories.title,
+  //         subCategory: title,
+  //       }
+  //     );
 
-      console.log(`DONE scraping ${index} ✅`);
-    }
-  }
+  //     console.log(`DONE scraping ${index} ✅`);
+  //   }
+  // }
 
   // const element = topDealsProductsData.find(
   //   ({ title }) => title === "JNX Sports The Ripper, 30 Servings"

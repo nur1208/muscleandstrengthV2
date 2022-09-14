@@ -39,15 +39,21 @@ export const scrapProductsByCategory = async (url) => {
   //   "https://www.muscleandstrength.com/store/customer/account/create/";
   const waitForSelector = "#main-wrapper";
 
-  // const html = await getHtml(url, waitForSelector, timeout);
+  const html = await getHtml(
+    url,
+    waitForSelector,
+    timeout,
+    null,
+    true
+  );
 
-  // fs.writeFile(mainPageHtml, html, function (err) {
-  //   if (err) throw err;
-  //   console.log("Saved!");
-  // });
+  fs.writeFile(mainPageHtml, html, function (err) {
+    if (err) throw err;
+    console.log("Saved!");
+  });
 
   // read the html body from the file system (this is very faster then reading it from the internet)
-  const html = await promisify(fs.readFile)(mainPageHtml);
+  // const html = await promisify(fs.readFile)(mainPageHtml);
 
   let $ = cheerio.load(html.toString());
 

@@ -266,8 +266,61 @@
 - {DONE} create countProducts API endpoint
 - {DONE} fetch total number of found documents for search
 - {DONE} fetch total number of found documents for category
+- {DONE} add view next products functionality in ProductsWrapper component
+- {DONE} show loading and disable view next button when getting more products
+- {DONE} CREATE BrandHeader component
+- {DONE} create BrandModal component
+- {DONE} fix BrandModal component responsive problems
+- {DONE} fix BrandModal component responsive problems part 2
+- {DONE} set up Brand page
+- {DONE} fetch products by Brand in the frontend
+- start in 30 minutes ⌛, ⌛
+- {DONE} create CartHeader component
+- {DONE} create Cart component
+- finish in 30 minutes ❌, ❌
+- {DONE} add isDynxs parameter to Button component
+- {DONE} create more react icons
+- {DONE} fix Cart component responsive problems
+- {DONE} fix Cart component responsive problems part 2
+- start in 45 minutes ⌛, ⌛, 30 ⌛
+- {DONE} create CartTools component
+- {DONE} set up ShoppingCart page
+- finish in 45 minutes ❌, ❌, ✅
+- start in 45 minutes ⌛, 30 ⌛, 30 ⌛, 30 ⌛
+- {DONE} add cart parameter to User model
+- {DONE} let updateMe endpoint update cart parameter
+- {DONE} create 'add to cart' functionality in the backend
+- {DONE} fix useSelect errors
+- {DONE} create 'add to cart' functionality in the backend part 2
+- {DONE} create 'add to cart' functionality in the frontend
+- finish in 45 minutes ❌, ❌, ❌, ❌
+- start in 30 minutes ⌛
+- {DONE} make Cart component more dynamic
+- {DONE} create 'delete item from cart' functionality
+- finish in 30 minutes ❌
+- start in 60 minutes ⌛, ⌛, ⌛, 30 ⌛ 
+- {DONE} create 'allow a the frontend update qty of cart element in the database' functionality
+- {DONE} create 'update qty' functionality in Cart component
+- {DONE} make sure that a cart doesn't have duplicate items
+- {DONE} create 'if a user add a duplicate item again in cart increase qty' functionality 
+- {DONE} fetch cart parameter too when login and signUp
+- {DONE} create 'if a user select flavor set qty to 1' functionality
+- {DONE} click afterSelectingOption after clicking enter key
+- finish in 60 minutes ❌, ❌, ❌, ✅
+- {DONE} add products without flavors to the cart
+- {DONE} PUSH a user to cart page after update user's cart successfully
+- start in 60 minutes ⌛
+- {DONE} add deals to cart items
+- {DONE} add before-deal-price to cart items
+- {TODO} create 'buy 1 get 1 free' functionality for Cart component
+- {TODO} calculate order total
+- {TODO} activate 'continue Shopping' btn
+- {TODO} show cart items number
+- finish in 60 minutes 
+- {TODO} set up 'Checkout' page
 - {TODO} scrap other Categories
 - {TODO} scrap proteinDeals 
+- {TODO} make sure updating exist element for array for "cart.array.qty"
 not important:
 - {TODO} fix Selector up down keys when there are long list
 - {TODO} create LaberWithSvg component and make it dynamic

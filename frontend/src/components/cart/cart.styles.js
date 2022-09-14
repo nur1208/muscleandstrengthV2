@@ -232,6 +232,10 @@ export const MainWrapper = styled.div`
   .cart-item .before-deal-price .price {
     text-decoration: line-through;
   }
+  .currency-grid div.grid-row:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
   @media (max-width: 839px) {
     .currency-grid div.grid-row {
       grid-template-areas:
