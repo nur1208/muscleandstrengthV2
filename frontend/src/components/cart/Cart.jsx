@@ -128,7 +128,19 @@ export const Cart = () => {
                       </span>{" "}
                     </div>
                     <div class="box-messages">
-                      <div class="options_messages"></div>
+                      {buyingOption.deal && (
+                        <span class="mns-label lbl-deal">
+                          {buyingOption.deal}
+                        </span>
+                      )}
+
+                      <div class="options_messages">
+                        {/* <dl class="item-options 47565523">
+                          <dt>
+                            1 x NOW Foods Omega-3 - 100 Softgels{" "}
+                          </dt>
+                        </dl> */}
+                      </div>
                     </div>
                     <div class="retail-price-wrap box-price">
                       <div class="item-price">
