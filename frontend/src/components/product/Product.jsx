@@ -9,6 +9,8 @@ export const Product = (props) => {
   const navigate = useNavigate();
 
   const {
+    reviewsNum,
+    ratingPercentage,
     href,
     imgUrl,
     title,
@@ -60,13 +62,6 @@ export const Product = (props) => {
         >
           {/* <Link className="product-link" to={href || "#"}> */}
           <span className="product-link" onClick={handleClick}>
-            {/* <div className="image-wrap">
-              <img
-                className="product-image lazyloaded"
-                src={imgUrl[400]?.split(" ")[0]}
-                alt={title}
-              />
-            </div> */}
             <div className="product-name">{`${
               brand?.title
             } ${name}, ${
@@ -85,24 +80,22 @@ export const Product = (props) => {
           </span>
           {hasRating && (
             <div className="rating-stars">
-              <RatingBox />
-              <span class="review-count">(147)</span>
+              <RatingBox width={ratingPercentage} />
+              {/* reviewsNum, ratingPercentage, */}
+              <span class="review-count">({reviewsNum})</span>
             </div>
           )}
 
           <div className="price-box">
-            {hasDetailsPrice && (
+            {hasDetailsPrice && !!buyOption.cost.beforeDiscount && (
               <div class="before-discount">
-                <span class="price">$99.99</span>{" "}
+                <span class="price">
+                  ${buyOption.cost.beforeDiscount}
+                </span>{" "}
               </div>
             )}
             <span className="price">
-              $
-              {buyOption
-                ? buyOption.cost.beforeDiscount
-                  ? buyOption.cost.beforeDiscount
-                  : buyOption.cost.regularPrice
-                : price}
+              ${buyOption ? buyOption.cost.regularPrice : price}
             </span>
             {hasDetailsPrice && (
               <div class="green stock-label">IN STOCK</div>
