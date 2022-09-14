@@ -223,6 +223,15 @@ export const MainWrapper = styled.div`
   .delete {
     float: right;
   }
+
+  .cart-item .before-deal-price {
+    color: #d41313;
+    font-size: 13px;
+  }
+
+  .cart-item .before-deal-price .price {
+    text-decoration: line-through;
+  }
   @media (max-width: 839px) {
     .currency-grid div.grid-row {
       grid-template-areas:
@@ -411,6 +420,11 @@ export const MainWrapper = styled.div`
       -ms-grid-row: 1;
       -ms-grid-row-span: 3;
       -ms-grid-column: 9;
+    }
+
+    .cart-item .retail-price-wrap .before-deal-price {
+      font-size: 14.5px;
+      /* text-align: right; */
     }
   }
 `;

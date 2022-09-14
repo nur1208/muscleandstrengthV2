@@ -123,6 +123,15 @@ export const Cart = () => {
                       <span class="product-name">
                         <Link to={to}>{title}</Link>
                       </span>
+                      {buyingOption.cost.beforeDiscount ? (
+                        <div class="before-deal-price">
+                          <span class="price">
+                            ${buyingOption.cost.beforeDiscount}
+                          </span>
+                        </div>
+                      ) : (
+                        ""
+                      )}
                       <span class="price">
                         ${buyingOption.cost.regularPrice}
                       </span>{" "}
@@ -144,6 +153,15 @@ export const Cart = () => {
                     </div>
                     <div class="retail-price-wrap box-price">
                       <div class="item-price">
+                        {buyingOption.cost.beforeDiscount ? (
+                          <div class="before-deal-price">
+                            <span class="price">
+                              ${buyingOption.cost.beforeDiscount}
+                            </span>
+                          </div>
+                        ) : (
+                          ""
+                        )}
                         <span class="price">
                           ${buyingOption.cost.regularPrice}
                         </span>{" "}
