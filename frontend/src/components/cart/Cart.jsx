@@ -45,7 +45,13 @@ export const Cart = () => {
 
   const dispatch = useNotification();
 
-  const handleOnClickQty = (e, qty, index) => {
+  const updateQty = (index, qty) => {
+    const newObject = {};
+    const key = "cart.<index>" + index + ".qty";
+    newObject[key] = qty;
+    updateUserInfo(newObject);
+  };
+  const handleOnClickQty = (e, qty, index, hasFreeProduct) => {
     e.preventDefault();
     if (qty <= 0)
       return dispatch({
@@ -56,12 +62,27 @@ export const Cart = () => {
         iconColor: colors.red,
       });
     setCurrentActionIndex(-1);
+
+    if (hasFreeProduct) {
+      const currentBuyingOptionId =
+        userData?.cart[index].buyingOptionId;
+      const newObject = {};
+
+      userData?.cart.forEach(({ buyingOptionId }, indexEl) => {
+        if (currentBuyingOptionId === buyingOptionId) {
+          // updateQty(indexEl, qty);
+          const key = "cart.<index>" + indexEl + ".qty";
+          newObject[key] = qty;
+        }
+      });
+
+      updateUserInfo(newObject);
+      setCurrentActiveIndexQty(currentBuyingOptionId);
+      return;
+    }
     setCurrentActiveIndexQty(index);
 
-    const newObject = {};
-    const key = "cart.<index>" + index + ".qty";
-    newObject[key] = qty;
-    updateUserInfo(newObject);
+    updateQty(index, qty);
   };
 
   return (
@@ -110,6 +131,9 @@ export const Cart = () => {
                 }`;
 
                 if (!product.name) return;
+                const hasFreeProduct = buyingOption.deal
+                  ?.toLocaleLowerCase()
+                  ?.includes("buy 1 get 1 free");
                 return (
                   <div
                     key={_id}
@@ -135,10 +159,7 @@ export const Cart = () => {
                     </div>
                     <div class="box-messages">
                       {buyingOption.deal &&
-                        (!buyingOption.deal
-                          ?.toLocaleLowerCase()
-                          ?.includes("get 1 free") ||
-                          isFree) && (
+                        (!hasFreeProduct || isFree) && (
                           <span class="mns-label lbl-deal">
                             {buyingOption.deal}
                           </span>
@@ -171,10 +192,13 @@ export const Cart = () => {
                         qty={qty}
                         index={index}
                         loading={
-                          currentActiveIndexQty === index &&
+                          (currentActiveIndexQty === index ||
+                            buyingOptionId ===
+                              currentActiveIndexQty) &&
                           loading
                         }
                         isFree={isFree}
+                        hasFreeProduct={hasFreeProduct}
                         handleOnClickQty={handleOnClickQty}
                       />
                       {!isFree && (

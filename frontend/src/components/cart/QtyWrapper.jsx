@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { useReduxActions } from "../../hooks";
 import colors from "../../styles/colors";
@@ -13,6 +14,7 @@ const Wrapper = ({
   loading,
   index,
   isFree,
+  hasFreeProduct,
 }) => (
   <>
     <input
@@ -31,7 +33,9 @@ const Wrapper = ({
         <Button
           text="Update Qty"
           isDynxs
-          onClick={(e) => handleOnClick(e, qty, index)}
+          onClick={(e) =>
+            handleOnClick(e, qty, index, hasFreeProduct)
+          }
           loading={loading}
         />
       </span>
@@ -45,8 +49,12 @@ export const QtyWrapper = ({
   loading,
   handleOnClickQty,
   isFree,
+  hasFreeProduct,
 }) => {
   const [qty, setQty] = useState(intQty);
+  useEffect(() => {
+    setQty(intQty);
+  }, [intQty]);
   const isNotPC = useMediaQuery({ maxWidth: 839 });
   const handleOnKeyDown = (e) => {
     if (["Backspace", "ArrowUp", "ArrowDown"].includes(e.key))
@@ -100,6 +108,7 @@ export const QtyWrapper = ({
     loading,
     index,
     isFree,
+    hasFreeProduct,
   };
   return isNotPC ? (
     <div>

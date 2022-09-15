@@ -32,7 +32,9 @@ export const BuyingOption = ({
           ...currentItems,
           { buyingOptionId: _id, qty, selectedFlavor },
         ];
-        if (deal.toLocaleLowerCase().includes("get 1 free")) {
+        if (
+          deal.toLocaleLowerCase().includes("buy 1 get 1 free")
+        ) {
           newBuyingOption.push({
             buyingOptionId: _id,
             qty,
