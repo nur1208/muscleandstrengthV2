@@ -10,7 +10,12 @@ export const Card = () => {
     <MainWrapper>
       <Link to="/store/checkout/cart">
         <div class="counter">
-          {userData ? userData.cart.length : 0}
+          {userData
+            ? userData.cart.reduce(
+                (preValue, { qty }) => preValue + qty,
+                0
+              )
+            : 0}
         </div>
         <svg viewBox="0 0 100 100">
           <g fill="#FFF">
