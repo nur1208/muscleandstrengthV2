@@ -5,20 +5,22 @@ import { Button } from "../button/Button";
 export const OrderTotals = () => {
   const { userData } = useSelector((state) => state.user_store);
   const initialValue = 0;
-  const totalPrice = userData?.cart.reduce(
+  let totalPrice = userData?.cart.reduce(
     (
       previousValue,
-      { buyingOptionId, product: { buyingOptions }, isFree }
+      { buyingOptionId, product: { buyingOptions }, isFree, qty }
     ) => {
       const buyingOption = buyingOptions?.find(
         ({ _id }) => _id === buyingOptionId
       );
       if (isFree) return previousValue + 0;
-      return previousValue + buyingOption.cost.regularPrice;
+      return (
+        previousValue + buyingOption.cost.regularPrice * qty
+      );
     },
     initialValue
   );
-  console.log({ totalPrice });
+  totalPrice = Number(totalPrice).toFixed(2);
   return (
     <>
       <div class="orderTotals" id="shopping-cart-totals-table">
