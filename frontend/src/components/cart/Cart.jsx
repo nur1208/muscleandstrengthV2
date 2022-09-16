@@ -11,7 +11,7 @@ import { MainWrapper } from "./cart.styles";
 import { Price } from "./Price";
 import { QtyWrapper } from "./QtyWrapper";
 
-export const Cart = () => {
+export const Cart = ({ isSimple }) => {
   const {
     product_store: { data },
     user_store: { userData, loading },
@@ -236,8 +236,12 @@ export const Cart = () => {
             )}
         </div>
       </form>
-      <h5 class="blue bordered">Limited Time Cart Offers</h5>
-      <StoreSectionSwiper {...trendingProps} />
+      {!isSimple && (
+        <>
+          <h5 class="blue bordered">Limited Time Cart Offers</h5>
+          <StoreSectionSwiper {...trendingProps} />
+        </>
+      )}
     </MainWrapper>
   );
 };

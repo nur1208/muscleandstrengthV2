@@ -26,10 +26,39 @@ export const MainWrapper = styled.div`
     font-family: nimbusnovus-medium, sans-serif;
     font-weight: 500;
     text-transform: uppercase;
+    font-size: 16px;
+  }
+
+  h4.complete {
+    background-color: #059;
+    color: #fff;
+  }
+
+  .checkoutProgressWrapper h4 svg {
+    margin-right: 10px;
+    height: 13px;
+    width: 13px;
+  }
+  .is-hidden {
+    display: none !important;
+  }
+
+  .checkoutProgressWrapper .complete_div {
+    padding: 12px;
+  }
+
+  .checkoutProgressWrapper .complete_div {
+    line-height: 1.4em;
+    font-size: 13px;
+    background-color: #fff;
+    padding-top: 10px;
   }
   @media (min-width: 840px) {
     h3.title {
       margin-bottom: 15px;
+    }
+    .checkoutProgressWrapper .complete_div {
+      padding: 15px;
     }
   } ;
 `;
