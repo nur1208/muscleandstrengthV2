@@ -402,10 +402,10 @@ export const IconSavedCards = ({ style }) => {
   );
 };
 
-export const IconPadlock = ({ style }) => {
+export const IconPadlock = ({ style, fill }) => {
   return (
     <svg style={style} id="icon-padlock" viewBox="0 0 71 100">
-      <g fill="#005599">
+      <g fill={fill || "#005599"}>
         <path d="m65.5 45v-15c0-16.542-13.458-30-30-30s-30 13.458-30 30v15h-5.5v55h71v-55h-5.5zm-52-15c0-12.131 9.869-22 22-22s22 9.869 22 22v15h-44v-15z" />
       </g>
     </svg>
@@ -837,6 +837,32 @@ export const IconGOOGLEPAY = ({ style }) => {
       <path
         d="M108.5,43c7.7-0.1,15.1,2.8,20.7,8.1l0,0l15.4-15.4c-9.8-9.2-22.7-14.2-36.1-14.1c-20.4,0-39.1,11.5-48.2,29.8l17.9,13.9C82.5,52.5,94.4,43,108.5,43z"
         fill="#EA4335"
+      />
+    </svg>
+  );
+};
+
+export const IconCheckMark = ({ style }) => {
+  return (
+    <svg
+      style={style}
+      id="icon-check-mark"
+      viewBox="0 0 100 100"
+    >
+      <path
+        fill="#3eb667"
+        d="M79.8 17.7L41.4 56.1 23.5 38.2 10.7 51l30.7 30.7 51.2-51.2-12.8-12.8z"
+      />
+    </svg>
+  );
+};
+
+export const IconEdit = ({ style }) => {
+  return (
+    <svg style={style} id="icon-edit" viewBox="0 0 100 100">
+      <path
+        fill="#059"
+        d="M91.3 75.3l-38.5-33c1.8-3.4 2.8-7.2 2.8-11.3 0-13.3-10.8-24.1-24.1-24.1-2.4 0-4.8.4-7 1l13.9 13.9c2.1 2.1 2.1 5.5 0 7.6L30 37.9c-2.1 2.1-5.5 2.1-7.6 0L8.5 24c-.7 2.2-1 4.6-1 7 0 13.3 10.8 24.1 24.1 24.1 4.1 0 7.9-1 11.3-2.8l33 38.5c1.9 2.2 5.2 2.4 7.3.3l8.5-8.5c2-2.1 1.9-5.4-.4-7.3z"
       />
     </svg>
   );

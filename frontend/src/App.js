@@ -7,6 +7,7 @@ import {
   Brand,
   Categories,
   Category,
+  Checkout,
   Home,
   Login,
   LogoutSuccess,
@@ -48,6 +49,7 @@ function App() {
           </Route>
           <Route path="checkout">
             <Route path="cart" element={<ShoppingCart />} />
+            <Route path="onpage" element={<Checkout />} />
           </Route>
           <Route path="customer/account">
             <Route path="login" element={<Login />} />

@@ -9,13 +9,13 @@ import { Button } from "../button/Button";
 import { MainWrapper } from "./emailSignUp.styles";
 
 export const EmailSignUp = () => {
-  // const cookieIsStack = getCookie(
-  //   COOKIES_CONSTANTS.IS_STICK,
-  //   true
-  // );
-  const [isSticky, setIsSticky] = useState(
-    // cookieIsStack === "" ? true : cookieIsStack
+  const cookieIsStack = getCookie(
+    COOKIES_CONSTANTS.IS_STICK,
     true
+  );
+  const [isSticky, setIsSticky] = useState(
+    cookieIsStack === "" ? true : cookieIsStack
+    // true
   );
   const handleClick = () => {
     setIsSticky(false);

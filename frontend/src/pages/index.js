@@ -11,3 +11,4 @@ export { Categories } from "./categories/Categories";
 export { Category } from "./category/Category";
 export { Brand } from "./brand/Brand";
 export { ShoppingCart } from "./shoppingCart/ShoppingCart";
+export { Checkout } from "./checkout/Checkout";

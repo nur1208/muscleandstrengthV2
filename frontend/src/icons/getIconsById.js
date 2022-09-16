@@ -1,4 +1,6 @@
 import {
+  IconEdit,
+  IconCheckMark,
   IconGOOGLEPAY,
   IconAPPLEPAY,
   IconPAYPAL,
@@ -151,10 +153,10 @@ export const getIconById = (iconId, style, fill) => {
       return <IconSavedCards style={style} />;
 
     case "icon-padlock":
-      return <IconPadlock style={style} />;
+      return <IconPadlock style={style} fill={fill} />;
 
     case "icon-create-blue":
-      return <IconCreateBlue style={style} />;
+      return <IconCreateBlue style={style} fill={fill} />;
 
     case "icon-create":
       return <IconCreate style={style} />;
@@ -227,6 +229,12 @@ export const getIconById = (iconId, style, fill) => {
 
     case "icon-GOOGLEPAY":
       return <IconGOOGLEPAY style={style} />;
+
+    case "icon-check-mark":
+      return <IconCheckMark style={style} />;
+
+    case "icon-edit":
+      return <IconEdit style={style} />;
 
     default:
       return <IconQuestionMark style={style} />;

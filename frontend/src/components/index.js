@@ -58,3 +58,6 @@ export { BrandHeader } from "./brandHeader/BrandHeader";
 export { CartHeader } from "./cartHeader/CartHeader";
 export { Cart } from "./cart/Cart";
 export { CartTools } from "./cartTools/CartTools";
+export { CheckoutHeader } from "./checkoutHeader/CheckoutHeader";
+export { CheckoutProgress } from "./checkoutProgress/CheckoutProgress";
+export { CheckoutSteps } from "./checkoutSteps/CheckoutSteps";
