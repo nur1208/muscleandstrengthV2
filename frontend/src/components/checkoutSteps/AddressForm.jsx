@@ -17,9 +17,7 @@ export const AddressForm = ({ isShipping }) => {
     e.preventDefault();
     let nextIndex;
     if (!isShipping)
-      nextIndex = checkout.addressBilling.use_for_shipping
-        ? 3
-        : 2;
+      nextIndex = checkout.use_for_shipping ? 3 : 2;
     else nextIndex = 3;
     updateStep((item, index) =>
       index === nextIndex
@@ -29,8 +27,7 @@ export const AddressForm = ({ isShipping }) => {
             isActive: false,
             isAllow:
               // if nextIndex === 3 so update isAllow for index 2
-              checkout.addressBilling.use_for_shipping &&
-              index === 2
+              checkout.use_for_shipping && index === 2
                 ? true
                 : item.isAllow,
           }
@@ -41,12 +38,16 @@ export const AddressForm = ({ isShipping }) => {
   const handleOnChange = (e, customValue) => {
     const { name, value } = e.target;
     const updateObj = {};
-    updateObj[formType] = checkout[formType];
-    updateObj[formType][name] =
-      customValue === undefined ? value : customValue;
+    if (name === "use_for_shipping") {
+      updateObj.use_for_shipping = customValue;
+    } else {
+      updateObj[formType] = checkout[formType];
+      updateObj[formType][name] = value;
+    }
+
     // if (!isShipping)
-    //   updateObj[formType]["checkout.addressBilling.use_for_shipping"] =
-    //     checkout.addressBilling.use_for_shipping;
+    //   updateObj[formType]["checkout.use_for_shipping"] =
+    //     checkout.use_for_shipping;
     localStorage.setItem(
       LOCAL_STORAGE_KEYS.CHECKOUT,
       JSON.stringify({
@@ -55,8 +56,19 @@ export const AddressForm = ({ isShipping }) => {
         steps: undefined,
       })
     );
+    // debugger;
+    if (checkout.use_for_shipping)
+      updateObj["addressShipping"] = !isShipping
+        ? {
+            ...updateObj["addressBilling"],
+          }
+        : { ...checkout["addressBilling"] };
     updateField({ checkout: { ...checkout, ...updateObj } });
   };
+
+  const toggleSameAsBilling = (e) =>
+    handleOnChange(e, !checkout.use_for_shipping);
+
   return (
     <form
       id="co-billing-form"
@@ -782,9 +794,11 @@ export const AddressForm = ({ isShipping }) => {
                   <li>
                     <input
                       type="checkbox"
-                      name="shipping_same_as_billing"
+                      name="use_for_shipping"
                       id="shipping:same_as_billing"
-                      value="1"
+                      // value="1"
+                      onClick={toggleSameAsBilling}
+                      checked={checkout.use_for_shipping}
                       onclick="shipping.setSameAsBilling(this.checked)"
                       className="checkbox"
                     />
@@ -812,7 +826,7 @@ export const AddressForm = ({ isShipping }) => {
                   handleOnChange(e, true);
                 }}
                 checked={
-                  checkout.addressBilling.use_for_shipping
+                  checkout.use_for_shipping
                     ? "checked"
                     : undefined
                 }
@@ -831,7 +845,7 @@ export const AddressForm = ({ isShipping }) => {
                   handleOnChange(e, false);
                 }}
                 checked={
-                  checkout.addressBilling.use_for_shipping
+                  checkout.use_for_shipping
                     ? undefined
                     : "checked"
                 }

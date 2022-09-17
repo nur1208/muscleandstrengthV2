@@ -10,8 +10,9 @@ const checkout = localStorage.getItem(
       steps: [],
     }
   : {
+      use_for_shipping: true,
       steps: [],
-      addressBilling: { use_for_shipping: true },
+      addressBilling: {},
       addressShipping: {},
     };
 const initialState = {
