@@ -1,12 +1,26 @@
-import { USER_ACTIONS } from "../constants";
+import { LOCAL_STORAGE_KEYS, USER_ACTIONS } from "../constants";
 
+const checkout = localStorage.getItem(
+  LOCAL_STORAGE_KEYS.CHECKOUT
+)
+  ? {
+      ...JSON.parse(
+        localStorage.getItem(LOCAL_STORAGE_KEYS.CHECKOUT)
+      ),
+      steps: [],
+    }
+  : {
+      steps: [],
+      addressBilling: { use_for_shipping: true },
+      addressShipping: {},
+    };
 const initialState = {
   loading: false,
   userData: null,
   error: null,
   success: null,
   userInput: {
-    checkout: { steps: [] },
+    checkout,
     signUp: { isNotified: true },
     login: {},
   },

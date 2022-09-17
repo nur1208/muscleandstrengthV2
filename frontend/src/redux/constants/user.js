@@ -28,3 +28,4 @@ export const USER_ACTIONS = {
 };
 
 export const CURRENT_ACTIONS = { ADD_TO_CART: "ADD_TO_CART" };
+export const LOCAL_STORAGE_KEYS = { CHECKOUT: "CHECKOUT" };

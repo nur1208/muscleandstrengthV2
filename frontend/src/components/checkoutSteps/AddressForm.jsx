@@ -1,15 +1,25 @@
 import React, { useState } from "react";
-import { useUpdateSteps } from "../../hooks";
+import { useSelector } from "react-redux";
+import { useReduxActions, useUpdateSteps } from "../../hooks";
+import { LOCAL_STORAGE_KEYS } from "../../redux/constants";
 import { Button } from "../button/Button";
 
 export const AddressForm = ({ isShipping }) => {
-  const [isSameAddressShipping, setIsSameAddressShipping] =
-    useState(true);
+  const formType = isShipping
+    ? "addressShipping"
+    : "addressBilling";
+  const {
+    userInput: { checkout },
+  } = useSelector((state) => state.user_store);
+
   const [updateStep] = useUpdateSteps();
   const handleNextStep = (e) => {
     e.preventDefault();
     let nextIndex;
-    if (!isShipping) nextIndex = isSameAddressShipping ? 3 : 2;
+    if (!isShipping)
+      nextIndex = checkout.addressBilling.use_for_shipping
+        ? 3
+        : 2;
     else nextIndex = 3;
     updateStep((item, index) =>
       index === nextIndex
@@ -19,11 +29,33 @@ export const AddressForm = ({ isShipping }) => {
             isActive: false,
             isAllow:
               // if nextIndex === 3 so update isAllow for index 2
-              isSameAddressShipping && index === 2
+              checkout.addressBilling.use_for_shipping &&
+              index === 2
                 ? true
                 : item.isAllow,
           }
     );
+  };
+
+  const { updateField } = useReduxActions();
+  const handleOnChange = (e, customValue) => {
+    const { name, value } = e.target;
+    const updateObj = {};
+    updateObj[formType] = checkout[formType];
+    updateObj[formType][name] =
+      customValue === undefined ? value : customValue;
+    // if (!isShipping)
+    //   updateObj[formType]["checkout.addressBilling.use_for_shipping"] =
+    //     checkout.addressBilling.use_for_shipping;
+    localStorage.setItem(
+      LOCAL_STORAGE_KEYS.CHECKOUT,
+      JSON.stringify({
+        ...checkout,
+        ...updateObj,
+        steps: undefined,
+      })
+    );
+    updateField({ checkout: { ...checkout, ...updateObj } });
   };
   return (
     <form
@@ -47,7 +79,8 @@ export const AddressForm = ({ isShipping }) => {
                 <li>
                   <div className="customer-name">
                     <div className="input-box name-firstname col-left">
-                      <div className="fl-wrap fl-wrap-input fl-is-active fl-is-required">
+                      {/* fl-has-focus */}
+                      <div className="fl-wrap fl-wrap-input fl-is-active  fl-is-required">
                         <label
                           for="billing:firstname"
                           className="required fl-label"
@@ -57,8 +90,9 @@ export const AddressForm = ({ isShipping }) => {
                         <input
                           type="text"
                           id="billing:firstname"
-                          name="billing[firstname]"
-                          value="md"
+                          name="firstName"
+                          onChange={handleOnChange}
+                          value={checkout[formType]["firstName"]}
                           title="First Name"
                           className="input-text required-entry fl-input validation-passed"
                           autocomplete="given-name"
@@ -76,10 +110,11 @@ export const AddressForm = ({ isShipping }) => {
                           Last Name
                         </label>
                         <input
+                          onChange={handleOnChange}
                           type="text"
                           id="billing:lastname"
-                          name="billing[lastname]"
-                          value="nur"
+                          name="lastName"
+                          value={checkout[formType]["lastName"]}
                           title="Last Name"
                           className="input-text required-entry fl-input validation-passed"
                           autocomplete="family-name"
@@ -102,9 +137,10 @@ export const AddressForm = ({ isShipping }) => {
                       <input
                         type="text"
                         id="billing:company"
-                        name="billing[company]"
+                        name="company"
                         autocomplete="billing company"
-                        value="nur"
+                        onChange={handleOnChange}
+                        value={checkout[formType]["company"]}
                         title="Company"
                         className="input-text fl-input validation-passed"
                         placeholder="Company"
@@ -123,7 +159,9 @@ export const AddressForm = ({ isShipping }) => {
                         Country
                       </label>
                       <select
-                        name="billing[country_id]"
+                        name="country_id"
+                        onChange={handleOnChange}
+                        value={checkout[formType]["country_id"]}
                         id="billing:country_id"
                         className="validate-country validate-select fl-select validation-passed"
                         title="Country"
@@ -485,10 +523,11 @@ export const AddressForm = ({ isShipping }) => {
                     <input
                       type="text"
                       title="Street Address"
-                      name="billing[street][]"
+                      name="street"
+                      onChange={handleOnChange}
+                      value={checkout[formType]["street"]}
                       id="billing:street1"
                       autocomplete="off"
-                      value="Henry Ave"
                       className="input-text required-entry fl-input pac-target-input validation-passed"
                       aria-required="true"
                       placeholder="Address"
@@ -507,10 +546,11 @@ export const AddressForm = ({ isShipping }) => {
                     <input
                       type="text"
                       title="Street Address 2"
-                      name="billing[street][]"
+                      name="street_2"
                       autocomplete="billing street-address"
                       id="billing:street2"
-                      value="782 Rosewood St. Chicago Heights, IL 60411"
+                      onChange={handleOnChange}
+                      value={checkout[formType]["street_2"]}
                       className="input-text fl-input validation-passed"
                       placeholder="Address 2"
                       data-placeholder="Address 2"
@@ -529,8 +569,9 @@ export const AddressForm = ({ isShipping }) => {
                       <input
                         type="text"
                         title="City"
-                        name="billing[city]"
-                        value="Charlottesville"
+                        name="city"
+                        onChange={handleOnChange}
+                        value={checkout[formType]["city"]}
                         className="input-text required-entry fl-input validation-passed"
                         autocomplete="billing address-level2"
                         aria-required="true"
@@ -550,7 +591,9 @@ export const AddressForm = ({ isShipping }) => {
                       </label>
                       <select
                         id="billing:region_id"
-                        name="billing[region_id]"
+                        name="region_id"
+                        onChange={handleOnChange}
+                        value={checkout[formType]["region_id"]}
                         title="State/Province"
                         className="validate-select region_id required-entry fl-select validation-passed"
                         autocomplete="billing address-level1"
@@ -665,8 +708,9 @@ export const AddressForm = ({ isShipping }) => {
                       <input
                         type="text"
                         id="billing:region"
-                        name="billing[region]"
-                        value="Virginia"
+                        name="region"
+                        onChange={handleOnChange}
+                        value={checkout[formType]["region"]}
                         title="Province/Region"
                         autocomplete="billing address-level1"
                         className="input-text required-entry fl-input validation-passed"
@@ -690,10 +734,11 @@ export const AddressForm = ({ isShipping }) => {
                       <input
                         type="text"
                         title="Zip/Postal Code"
-                        name="billing[postcode]"
+                        name="postcode"
+                        onChange={handleOnChange}
+                        value={checkout[formType]["postcode"]}
                         id="billing:postcode"
                         autocomplete="billing postal-code"
-                        value="22903"
                         className="input-text validate-postcode validate-zip-international required-entry fl-input validation-passed"
                         aria-required="true"
                         placeholder="Zip/Postal Code"
@@ -713,8 +758,9 @@ export const AddressForm = ({ isShipping }) => {
                       </label>
                       <input
                         type="text"
-                        name="billing[telephone]"
-                        value="615-236-8032"
+                        name="telephone"
+                        onChange={handleOnChange}
+                        value={checkout[formType]["telephone"]}
                         title="Telephone"
                         className="input-text fl-input validation-passed"
                         autocomplete="billing tel"
@@ -736,7 +782,7 @@ export const AddressForm = ({ isShipping }) => {
                   <li>
                     <input
                       type="checkbox"
-                      name="shipping[same_as_billing]"
+                      name="shipping_same_as_billing"
                       id="shipping:same_as_billing"
                       value="1"
                       onclick="shipping.setSameAsBilling(this.checked)"
@@ -757,12 +803,18 @@ export const AddressForm = ({ isShipping }) => {
             <li className="shipto-choice">
               <input
                 type="radio"
-                name="billing[use_for_shipping]"
+                name="use_for_shipping"
+                // onChange={handleOnChange}
                 id="billing:use_for_shipping_yes"
-                value="1"
-                onClick={() => setIsSameAddressShipping(true)}
+                // value="1"
+                onClick={(e) => {
+                  // setIsSameAddressShipping(true);
+                  handleOnChange(e, true);
+                }}
                 checked={
-                  isSameAddressShipping ? "checked" : undefined
+                  checkout.addressBilling.use_for_shipping
+                    ? "checked"
+                    : undefined
                 }
                 className="radio validation-passed"
               />
@@ -771,12 +823,17 @@ export const AddressForm = ({ isShipping }) => {
               </label>
               <input
                 type="radio"
-                name="billing[use_for_shipping]"
+                name="use_for_shipping"
                 id="billing:use_for_shipping_no"
                 value="0"
-                onClick={() => setIsSameAddressShipping(false)}
+                onClick={(e) => {
+                  // setIsSameAddressShipping(false);
+                  handleOnChange(e, false);
+                }}
                 checked={
-                  isSameAddressShipping ? undefined : "checked"
+                  checkout.addressBilling.use_for_shipping
+                    ? undefined
+                    : "checked"
                 }
                 className="radio validation-passed"
               />

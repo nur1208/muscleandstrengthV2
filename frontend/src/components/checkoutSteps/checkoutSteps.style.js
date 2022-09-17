@@ -665,6 +665,29 @@ export const MainWrapper = styled.ol`
     text-align: center;
     font-size: 15px;
   }
+  .fl-form .fl-is-required:before {
+    opacity: 1;
+    content: "*";
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #d41313;
+    transition: 0.2s ease-in-out;
+    padding: 6px 0 0;
+    z-index: 1;
+  }
+  .fl-form .fl-has-focus label.fl-label {
+    color: #059;
+  }
+  .fl-form .fl-has-focus input.fl-input,
+  .fl-form .fl-has-focus select.fl-select,
+  .fl-form .fl-has-focus textarea.fl-textarea {
+    background-color: #fff;
+    border-color: #059;
+  }
   @media (min-width: 600px) {
     margin-left: 0;
     margin-right: 0;
