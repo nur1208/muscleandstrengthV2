@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { useReduxActions, useUpdateSteps } from "../../hooks";
 import { AddressForm } from "./AddressForm";
 import { CheckoutMethod } from "./CheckoutMethod";
 import { MainWrapper } from "./checkoutSteps.style";
@@ -8,26 +10,20 @@ import { ShippingMethod } from "./ShippingMethod";
 import { Step } from "./Step";
 
 export const CheckoutSteps = () => {
+  const {
+    userInput: { checkout },
+  } = useSelector((state) => state.user_store);
+
+  const [_, useInit] = useUpdateSteps();
+  useInit();
+
   return (
     <MainWrapper>
-      <Step title="1 Checkout Method">
-        <CheckoutMethod />
-      </Step>
-      <Step title="2 Billing Information">
-        <AddressForm />
-      </Step>
-      <Step title="3 Shipping Information">
-        <AddressForm isShipping />
-      </Step>
-      <Step title="4 Shipping Method">
-        <ShippingMethod />
-      </Step>
-      <Step title="5 Payment Information">
-        <PaymentInformation />
-      </Step>
-      <Step title="6 Order Review">
-        <OrderReview />
-      </Step>
+      {checkout.steps.map(({ child, ...other }, index) => (
+        <Step index={index} key={`${index + 1}-step`} {...other}>
+          {child}
+        </Step>
+      ))}
     </MainWrapper>
   );
 };

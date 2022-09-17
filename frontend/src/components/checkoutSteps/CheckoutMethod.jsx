@@ -1,8 +1,23 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { useReduxActions, useUpdateSteps } from "../../hooks";
 import { Button } from "../button/Button";
 import { Paypal } from "./checkoutSteps.style";
 
 export const CheckoutMethod = () => {
+  const { updateField } = useReduxActions();
+  const {
+    userInput: { checkout },
+  } = useSelector((state) => state.user_store);
+
+  const [updateSteps] = useUpdateSteps();
+  const handleContinue = () => {
+    updateSteps((item, index) =>
+      index === 1
+        ? { ...item, isActive: true, isAllow: true }
+        : { ...item, isActive: false }
+    );
+  };
   return (
     <div class="customerLogin">
       <div class="loggedInCustomer">
@@ -10,7 +25,8 @@ export const CheckoutMethod = () => {
           <Button
             text="Continue With M&amp;S Checkout"
             isGreen
-          ></Button>
+            onClick={handleContinue}
+          />
         </div>
       </div>
       <div class="express-checkout-options">

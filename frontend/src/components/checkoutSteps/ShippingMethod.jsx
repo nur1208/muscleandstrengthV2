@@ -1,7 +1,18 @@
 import React from "react";
+import { useUpdateSteps } from "../../hooks";
 import { Button } from "../button/Button";
 
 export const ShippingMethod = () => {
+  const [updateStep] = useUpdateSteps();
+  const handleNextStep = (e) => {
+    e.preventDefault();
+    updateStep((item, index) =>
+      index === 4
+        ? { ...item, isActive: true, isAllow: true }
+        : { ...item, isActive: false }
+    );
+  };
+
   return (
     <div>
       <form id="co-shipping-method-form" action="">
@@ -86,7 +97,11 @@ export const ShippingMethod = () => {
             class="buttons-set"
             id="shipping-method-buttons-container"
           >
-            <Button text="Next Step" isGreen />
+            <Button
+              text="Next Step"
+              isGreen
+              onClick={handleNextStep}
+            />
           </div>
         </fieldset>
         <input

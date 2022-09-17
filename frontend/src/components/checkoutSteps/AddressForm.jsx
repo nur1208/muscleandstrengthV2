@@ -1,15 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
+import { useUpdateSteps } from "../../hooks";
 import { Button } from "../button/Button";
 
 export const AddressForm = ({ isShipping }) => {
+  const [isSameAddressShipping, setIsSameAddressShipping] =
+    useState(true);
+  const [updateStep] = useUpdateSteps();
+  const handleNextStep = (e) => {
+    e.preventDefault();
+    let nextIndex;
+    if (!isShipping) nextIndex = isSameAddressShipping ? 3 : 2;
+    else nextIndex = 3;
+    updateStep((item, index) =>
+      index === nextIndex
+        ? { ...item, isActive: true, isAllow: true }
+        : {
+            ...item,
+            isActive: false,
+            isAllow:
+              // if nextIndex === 3 so update isAllow for index 2
+              isSameAddressShipping && index === 2
+                ? true
+                : item.isAllow,
+          }
+    );
+  };
   return (
     <form
       id="co-billing-form"
       action=""
       autocomplete="on"
-      class="fl-form fl-style-1"
+      className="fl-form fl-style-1"
     >
-      <fieldset class="group-select">
+      <fieldset className="group-select">
         <ul>
           <li id="billing-new-address-form">
             <fieldset>
@@ -22,12 +45,12 @@ export const AddressForm = ({ isShipping }) => {
               />
               <ul>
                 <li>
-                  <div class="customer-name">
-                    <div class="input-box name-firstname col-left">
-                      <div class="fl-wrap fl-wrap-input fl-is-active fl-is-required">
+                  <div className="customer-name">
+                    <div className="input-box name-firstname col-left">
+                      <div className="fl-wrap fl-wrap-input fl-is-active fl-is-required">
                         <label
                           for="billing:firstname"
-                          class="required fl-label"
+                          className="required fl-label"
                         >
                           First Name
                         </label>
@@ -37,18 +60,18 @@ export const AddressForm = ({ isShipping }) => {
                           name="billing[firstname]"
                           value="md"
                           title="First Name"
-                          class="input-text required-entry fl-input validation-passed"
+                          className="input-text required-entry fl-input validation-passed"
                           autocomplete="given-name"
                           placeholder="First Name"
                           data-placeholder="First Name"
                         />
                       </div>
                     </div>
-                    <div class="input-box name-lastname col-right">
-                      <div class="fl-wrap fl-wrap-input fl-is-active fl-is-required">
+                    <div className="input-box name-lastname col-right">
+                      <div className="fl-wrap fl-wrap-input fl-is-active fl-is-required">
                         <label
                           for="billing:lastname"
-                          class="required fl-label"
+                          className="required fl-label"
                         >
                           Last Name
                         </label>
@@ -58,7 +81,7 @@ export const AddressForm = ({ isShipping }) => {
                           name="billing[lastname]"
                           value="nur"
                           title="Last Name"
-                          class="input-text required-entry fl-input validation-passed"
+                          className="input-text required-entry fl-input validation-passed"
                           autocomplete="family-name"
                           placeholder="Last Name"
                           data-placeholder="Last Name"
@@ -68,11 +91,11 @@ export const AddressForm = ({ isShipping }) => {
                   </div>
                 </li>
                 <li>
-                  <div class="input-box">
-                    <div class="fl-wrap fl-wrap-input fl-is-active">
+                  <div className="input-box">
+                    <div className="fl-wrap fl-wrap-input fl-is-active">
                       <label
                         for="billing:company"
-                        class="fl-label"
+                        className="fl-label"
                       >
                         Company
                       </label>
@@ -83,7 +106,7 @@ export const AddressForm = ({ isShipping }) => {
                         autocomplete="billing company"
                         value="nur"
                         title="Company"
-                        class="input-text fl-input validation-passed"
+                        className="input-text fl-input validation-passed"
                         placeholder="Company"
                         data-placeholder="Company"
                       />
@@ -91,18 +114,18 @@ export const AddressForm = ({ isShipping }) => {
                   </div>
                 </li>
                 <li>
-                  <div class="input-box billing-country-block">
-                    <div class="fl-wrap fl-wrap-select fl-is-active">
+                  <div className="input-box billing-country-block">
+                    <div className="fl-wrap fl-wrap-select fl-is-active">
                       <label
                         for="billing:country_id"
-                        class="required fl-label"
+                        className="required fl-label"
                       >
                         Country
                       </label>
                       <select
                         name="billing[country_id]"
                         id="billing:country_id"
-                        class="validate-country validate-select fl-select validation-passed"
+                        className="validate-country validate-select fl-select validation-passed"
                         title="Country"
                       >
                         <option value=""> </option>
@@ -452,10 +475,10 @@ export const AddressForm = ({ isShipping }) => {
                   </div>
                 </li>
                 <li>
-                  <div class="fl-wrap fl-wrap-input fl-is-active fl-is-required">
+                  <div className="fl-wrap fl-wrap-input fl-is-active fl-is-required">
                     <label
                       for="billing:street1"
-                      class="required fl-label"
+                      className="required fl-label"
                     >
                       Address
                     </label>
@@ -466,7 +489,7 @@ export const AddressForm = ({ isShipping }) => {
                       id="billing:street1"
                       autocomplete="off"
                       value="Henry Ave"
-                      class="input-text required-entry fl-input pac-target-input validation-passed"
+                      className="input-text required-entry fl-input pac-target-input validation-passed"
                       aria-required="true"
                       placeholder="Address"
                       data-placeholder="Address"
@@ -474,10 +497,10 @@ export const AddressForm = ({ isShipping }) => {
                   </div>
                 </li>
                 <li>
-                  <div class="fl-wrap fl-wrap-input fl-is-active">
+                  <div className="fl-wrap fl-wrap-input fl-is-active">
                     <label
                       for="billing:street2"
-                      class="required fl-label"
+                      className="required fl-label"
                     >
                       Address 2
                     </label>
@@ -488,18 +511,18 @@ export const AddressForm = ({ isShipping }) => {
                       autocomplete="billing street-address"
                       id="billing:street2"
                       value="782 Rosewood St. Chicago Heights, IL 60411"
-                      class="input-text fl-input validation-passed"
+                      className="input-text fl-input validation-passed"
                       placeholder="Address 2"
                       data-placeholder="Address 2"
                     />
                   </div>
                 </li>
                 <li>
-                  <div class="input-box">
-                    <div class="fl-wrap fl-wrap-input fl-is-active fl-is-required">
+                  <div className="input-box">
+                    <div className="fl-wrap fl-wrap-input fl-is-active fl-is-required">
                       <label
                         for="billing:city"
-                        class="required fl-label"
+                        className="required fl-label"
                       >
                         City
                       </label>
@@ -508,7 +531,7 @@ export const AddressForm = ({ isShipping }) => {
                         title="City"
                         name="billing[city]"
                         value="Charlottesville"
-                        class="input-text required-entry fl-input validation-passed"
+                        className="input-text required-entry fl-input validation-passed"
                         autocomplete="billing address-level2"
                         aria-required="true"
                         id="billing:city"
@@ -517,11 +540,11 @@ export const AddressForm = ({ isShipping }) => {
                       />
                     </div>
                   </div>
-                  <div class="input-box watch-child">
-                    <div class="fl-wrap fl-wrap-select fl-is-active fl-is-required">
+                  <div className="input-box watch-child">
+                    <div className="fl-wrap fl-wrap-select fl-is-active fl-is-required">
                       <label
                         for="billing:region_id"
-                        class="required fl-label"
+                        className="required fl-label"
                       >
                         State/Province
                       </label>
@@ -529,7 +552,7 @@ export const AddressForm = ({ isShipping }) => {
                         id="billing:region_id"
                         name="billing[region_id]"
                         title="State/Province"
-                        class="validate-select region_id required-entry fl-select validation-passed"
+                        className="validate-select region_id required-entry fl-select validation-passed"
                         autocomplete="billing address-level1"
                         aria-required="true"
                         // style=""
@@ -631,11 +654,11 @@ export const AddressForm = ({ isShipping }) => {
                       </select>
                     </div>
                   </div>
-                  <div class="input-box watch-child">
-                    <div class="fl-wrap fl-wrap-input fl-is-required">
+                  <div className="input-box watch-child">
+                    <div className="fl-wrap fl-wrap-input fl-is-required">
                       <label
                         for="billing:region"
-                        class="required fl-label"
+                        className="required fl-label"
                       >
                         Province/Region
                       </label>
@@ -646,7 +669,7 @@ export const AddressForm = ({ isShipping }) => {
                         value="Virginia"
                         title="Province/Region"
                         autocomplete="billing address-level1"
-                        class="input-text required-entry fl-input validation-passed"
+                        className="input-text required-entry fl-input validation-passed"
                         aria-required="true"
                         placeholder="Province/Region"
                         style={{ display: "none" }}
@@ -656,11 +679,11 @@ export const AddressForm = ({ isShipping }) => {
                   </div>
                 </li>
                 <li>
-                  <div class="input-box">
-                    <div class="fl-wrap fl-wrap-input fl-is-active fl-is-required">
+                  <div className="input-box">
+                    <div className="fl-wrap fl-wrap-input fl-is-active fl-is-required">
                       <label
                         for="billing:postcode"
-                        class="required fl-label"
+                        className="required fl-label"
                       >
                         Zip/Postal Code
                       </label>
@@ -671,7 +694,7 @@ export const AddressForm = ({ isShipping }) => {
                         id="billing:postcode"
                         autocomplete="billing postal-code"
                         value="22903"
-                        class="input-text validate-postcode validate-zip-international required-entry fl-input validation-passed"
+                        className="input-text validate-postcode validate-zip-international required-entry fl-input validation-passed"
                         aria-required="true"
                         placeholder="Zip/Postal Code"
                         data-placeholder="Zip/Postal Code"
@@ -680,11 +703,11 @@ export const AddressForm = ({ isShipping }) => {
                   </div>
                 </li>
                 <li>
-                  <div class="input-box">
-                    <div class="fl-wrap fl-wrap-input fl-is-active">
+                  <div className="input-box">
+                    <div className="fl-wrap fl-wrap-input fl-is-active">
                       <label
                         for="billing:telephone"
-                        class="fl-label"
+                        className="fl-label"
                       >
                         Telephone
                       </label>
@@ -693,7 +716,7 @@ export const AddressForm = ({ isShipping }) => {
                         name="billing[telephone]"
                         value="615-236-8032"
                         title="Telephone"
-                        class="input-text fl-input validation-passed"
+                        className="input-text fl-input validation-passed"
                         autocomplete="billing tel"
                         id="billing:telephone"
                         placeholder="Telephone"
@@ -717,7 +740,7 @@ export const AddressForm = ({ isShipping }) => {
                       id="shipping:same_as_billing"
                       value="1"
                       onclick="shipping.setSameAsBilling(this.checked)"
-                      class="checkbox"
+                      className="checkbox"
                     />
                     <label for="shipping:same_as_billing">
                       Use Billing Address
@@ -728,17 +751,20 @@ export const AddressForm = ({ isShipping }) => {
             </fieldset>
           </li>
           <li>
-            <p class="required-label">* Required Fields</p>
+            <p className="required-label">* Required Fields</p>
           </li>
           {!isShipping && (
-            <li class="shipto-choice">
+            <li className="shipto-choice">
               <input
                 type="radio"
                 name="billing[use_for_shipping]"
                 id="billing:use_for_shipping_yes"
                 value="1"
-                onclick="$('shipping:same_as_billing').checked = true;"
-                class="radio validation-passed"
+                onClick={() => setIsSameAddressShipping(true)}
+                checked={
+                  isSameAddressShipping ? "checked" : undefined
+                }
+                className="radio validation-passed"
               />
               <label for="billing:use_for_shipping_yes">
                 Ship to this address
@@ -748,9 +774,11 @@ export const AddressForm = ({ isShipping }) => {
                 name="billing[use_for_shipping]"
                 id="billing:use_for_shipping_no"
                 value="0"
-                checked="checked"
-                onclick="$('shipping:same_as_billing').checked = false;"
-                class="radio validation-passed"
+                onClick={() => setIsSameAddressShipping(false)}
+                checked={
+                  isSameAddressShipping ? undefined : "checked"
+                }
+                className="radio validation-passed"
               />
               <label for="billing:use_for_shipping_no">
                 Ship to different address
@@ -758,8 +786,15 @@ export const AddressForm = ({ isShipping }) => {
             </li>
           )}
         </ul>
-        <div class="buttons-set" id="billing-buttons-container">
-          <Button text="Next Step" isGreen />
+        <div
+          className="buttons-set"
+          id="billing-buttons-container"
+        >
+          <Button
+            text="Next Step"
+            isGreen
+            onClick={handleNextStep}
+          />
         </div>
         <input
           name="form_key"

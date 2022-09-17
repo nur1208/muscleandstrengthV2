@@ -5,7 +5,11 @@ const initialState = {
   userData: null,
   error: null,
   success: null,
-  userInput: { signUp: { isNotified: true }, login: {} },
+  userInput: {
+    checkout: { steps: [] },
+    signUp: { isNotified: true },
+    login: {},
+  },
 };
 
 export const userReducer = (state = initialState, action) => {

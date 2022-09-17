@@ -1,7 +1,17 @@
 import React from "react";
+import { useUpdateSteps } from "../../hooks";
 import { Button } from "../button/Button";
 
 export const PaymentInformation = () => {
+  const [updateStep] = useUpdateSteps();
+  const handleNextStep = (e) => {
+    e.preventDefault();
+    updateStep((item, index) =>
+      index === 5
+        ? { ...item, isActive: true, isAllow: true }
+        : { ...item, isActive: false }
+    );
+  };
   return (
     <>
       <form action="" id="co-payment-form">
@@ -167,7 +177,11 @@ export const PaymentInformation = () => {
         />
       </form>
       <div class="buttons-set" id="payment-buttons-container">
-        <Button text="Next Step" isGreen />
+        <Button
+          text="Next Step"
+          isGreen
+          onClick={handleNextStep}
+        />
       </div>
     </>
   );
