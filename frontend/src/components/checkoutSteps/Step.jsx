@@ -12,13 +12,14 @@ export const Step = ({
   const [updateStep] = useUpdateSteps();
   const handleEdit = (e) => {
     e.preventDefault();
-    updateStep((item, index) =>
-      index > stepIndex
-        ? { ...item, isActive: false, isAllow: false }
-        : index === stepIndex
-        ? { ...item, isActive: true, isAllow: true }
-        : { ...item, isActive: false }
-    );
+    if (isAllow)
+      updateStep((item, index) =>
+        index > stepIndex
+          ? { ...item, isActive: false, isAllow: false }
+          : index === stepIndex
+          ? { ...item, isActive: true, isAllow: true }
+          : { ...item, isActive: false }
+      );
   };
   return (
     <li

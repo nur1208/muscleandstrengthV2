@@ -13,7 +13,7 @@ export const MainWrapper = styled.div`
   font-weight: 400;
   line-height: 1.5;
   color: #0a0a0a;
-  font: 16px;
+  font-size: 16px;
 
   #page {
     background-color: #f5f5f5;
