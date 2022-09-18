@@ -9,7 +9,9 @@ export const PaymentInformation = () => {
   const handleNextStep = (e) => {
     e.preventDefault();
     updateStep((item, index) =>
-      index === 5
+      index === 4
+        ? { ...item, isDone: true, isActive: false }
+        : index === 5
         ? { ...item, isActive: true, isAllow: true }
         : { ...item, isActive: false }
     );

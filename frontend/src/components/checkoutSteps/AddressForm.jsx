@@ -19,13 +19,22 @@ export const AddressForm = ({ isShipping }) => {
     if (!isShipping)
       nextIndex = checkout.use_for_shipping ? 3 : 2;
     else nextIndex = 3;
+    const currentStepIndex = isShipping ? 2 : 1;
     updateStep((item, index) =>
-      index === nextIndex
+      index === currentStepIndex
+        ? { ...item, isDone: true, isActive: false }
+        : index === nextIndex
         ? { ...item, isActive: true, isAllow: true }
         : {
             ...item,
             isActive: false,
             isAllow:
+              // if nextIndex === 3 so update isAllow for index 2
+              checkout.use_for_shipping && index === 2
+                ? true
+                : item.isAllow,
+
+            isDone:
               // if nextIndex === 3 so update isAllow for index 2
               checkout.use_for_shipping && index === 2
                 ? true
@@ -50,9 +59,10 @@ export const AddressForm = ({ isShipping }) => {
     //     checkout.use_for_shipping;
 
     // debugger;
-    if (checkout.use_for_shipping)
+    if (checkout.use_for_shipping || customValue)
       updateObj["addressShipping"] = !isShipping
         ? {
+            ...checkout["addressBilling"],
             ...updateObj["addressBilling"],
           }
         : { ...checkout["addressBilling"] };

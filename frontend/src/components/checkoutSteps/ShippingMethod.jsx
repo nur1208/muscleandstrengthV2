@@ -15,7 +15,9 @@ export const ShippingMethod = () => {
   const handleNextStep = (e) => {
     e.preventDefault();
     updateStep((item, index) =>
-      index === 4
+      index === 3
+        ? { ...item, isDone: true, isActive: false }
+        : index === 4
         ? { ...item, isActive: true, isAllow: true }
         : { ...item, isActive: false }
     );
