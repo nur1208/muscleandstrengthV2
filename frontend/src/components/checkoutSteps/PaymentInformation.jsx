@@ -1,5 +1,7 @@
 import React from "react";
-import { useUpdateSteps } from "../../hooks";
+import { useSelector } from "react-redux";
+import { useReduxActions, useUpdateSteps } from "../../hooks";
+import { LOCAL_STORAGE_KEYS } from "../../redux/constants";
 import { Button } from "../button/Button";
 
 export const PaymentInformation = () => {
@@ -12,53 +14,42 @@ export const PaymentInformation = () => {
         : { ...item, isActive: false }
     );
   };
+  const {
+    userInput: { checkout },
+  } = useSelector((state) => state.user_store);
+
+  const { updateField } = useReduxActions();
+
+  const handleOnChange = (e) => {
+    localStorage.setItem(
+      LOCAL_STORAGE_KEYS.CHECKOUT,
+      JSON.stringify({
+        ...checkout,
+        paymentMethod: e.target.value,
+        steps: undefined,
+      })
+    );
+    updateField({
+      checkout: {
+        ...checkout,
+        paymentMethod: e.target.value,
+      },
+    });
+  };
   return (
     <>
       <form action="" id="co-payment-form">
         <dl id="checkout-payment-method-load">
-          {/* <dt class="usaepay">
-            <input
-              id="p_method_usaepay"
-              value="usaepay"
-              type="radio"
-              name="payment[method]"
-              title="Credit Card"
-              onclick="payment.switchMethod('usaepay')"
-              class="radio"
-            />
-            <label for="p_method_usaepay">Credit Card</label>
-          </dt>
-          <dd>
-            <div
-              class="form-list"
-              id="payment_form_gene_braintree_paypal"
-              //   style={{ display: "none" }}
-            >
-              <div class="paypal-info">
-                <p>
-                  You will complete your payment via PayPal after
-                  the order review step.
-                </p>
-
-                <input
-                  type="hidden"
-                  name="payment[payment_method_nonce]"
-                  id="paypal-payment-nonce"
-                  disabled=""
-                />
-              </div>
-            </div>
-          </dd> */}
-          <dt class="gene_braintree_paypal">
+          <dt className="gene_braintree_paypal">
             <input
               id="p_method_gene_braintree_paypal"
-              value="gene_braintree_paypal"
+              value="PayPal"
               type="radio"
               name="payment[method]"
               title="PayPal"
-              onclick="payment.switchMethod('gene_braintree_paypal')"
-              checked="checked"
-              class="radio"
+              onChange={handleOnChange}
+              checked={checkout.paymentMethod === "PayPal"}
+              className="radio"
             />
             <label for="p_method_gene_braintree_paypal">
               PayPal
@@ -66,11 +57,16 @@ export const PaymentInformation = () => {
           </dt>
           <dd>
             <div
-              class="form-list"
+              className="form-list"
               id="payment_form_gene_braintree_paypal"
-              //   style={{ display: "none" }}
+              style={{
+                display:
+                  checkout.paymentMethod === "PayPal"
+                    ? "block"
+                    : "none",
+              }}
             >
-              <div class="paypal-info">
+              <div className="paypal-info">
                 <p>
                   You will complete your payment via PayPal after
                   the order review step.
@@ -85,18 +81,17 @@ export const PaymentInformation = () => {
               </div>
             </div>
           </dd>
-          <dt
-            class="gene_braintree_applepay"
-            style={{ display: "none" }}
+          {/* <dt className="gene_braintree_applepay" 
           >
             <input
               id="p_method_gene_braintree_applepay"
-              value="gene_braintree_applepay"
+              value="Apple Pay"
               type="radio"
               name="payment[method]"
               title="Apple Pay"
-              onclick="payment.switchMethod('gene_braintree_applepay')"
-              class="radio"
+              checked={checkout.paymentMethod === "Apple Pay"}
+              onChange={handleOnChange}
+              className="radio"
             />
             <label for="p_method_gene_braintree_applepay">
               Apple Pay
@@ -104,17 +99,22 @@ export const PaymentInformation = () => {
           </dt>
           <dd>
             <div
-              class="form-list"
+              className="form-list"
               id="payment_form_gene_braintree_applepay"
-              style={{ display: "none" }}
+              style={{
+                display:
+                  checkout.paymentMethod === "Apple Pay"
+                    ? "block"
+                    : "none",
+              }}
             >
-              <div class="applepay-info">
-                <img
+              <div className="applepay-info">
+                 <img
                   src="https://cdn.muscleandstrength.com/store/skin/frontend/base/default/images/gene/braintree/apple-pay-logo.png"
                   width="100"
                   style={{ margin: "12px 0 6px 0" }}
                   alt="ApplePay Logo"
-                />
+                /> 
                 <p>
                   You will be presented with Apple Pay at the end
                   of the checkout process.
@@ -127,16 +127,18 @@ export const PaymentInformation = () => {
                 />
               </div>
             </div>
-          </dd>
-          <dt class="gene_braintree_googlepay">
+          </dd> */}
+          <dt className="gene_braintree_googlepay">
             <input
               id="p_method_gene_braintree_googlepay"
-              value="gene_braintree_googlepay"
+              value="Google Pay"
               type="radio"
+              checked={checkout.paymentMethod === "Google Pay"}
+              onChange={handleOnChange}
               name="payment[method]"
               title="Google Pay"
               onclick="payment.switchMethod('gene_braintree_googlepay')"
-              class="radio"
+              className="radio"
             />
             <label for="p_method_gene_braintree_googlepay">
               Google Pay
@@ -144,11 +146,16 @@ export const PaymentInformation = () => {
           </dt>
           <dd>
             <div
-              class="form-list"
+              className="form-list"
               id="payment_form_gene_braintree_googlepay"
-              style={{ display: "none" }}
+              style={{
+                display:
+                  checkout.paymentMethod === "Google Pay"
+                    ? "block"
+                    : "none",
+              }}
             >
-              <div class="googlepay-info">
+              <div className="googlepay-info">
                 <p>
                   You will complete your payment via Google Pay
                   after the order review step.
@@ -176,7 +183,10 @@ export const PaymentInformation = () => {
           disabled=""
         />
       </form>
-      <div class="buttons-set" id="payment-buttons-container">
+      <div
+        className="buttons-set"
+        id="payment-buttons-container"
+      >
         <Button
           text="Next Step"
           isGreen

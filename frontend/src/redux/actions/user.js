@@ -8,7 +8,11 @@ const saveUserData = (userData, token) => {
     token,
   };
 
-  setCookie("userData", JSON.stringify(serverUserDate), 3);
+  setCookie(
+    "userData",
+    JSON.stringify({ ...serverUserDate, cart: [] }),
+    3
+  );
 
   return serverUserDate;
 };
@@ -65,7 +69,16 @@ export const autoLogin = (userDate) => async (dispatch) =>
 
 export const updateField = (data) => (dispatch) =>
   dispatch({ type: USER_ACTIONS.UPDATE_FIELD, payload: data });
-
+export const getMe = () => async (dispatch, getState) =>
+  fetchData(
+    "users",
+    USER_ACTIONS.GET_ME,
+    dispatch,
+    (data) => ({
+      cart: data.cart,
+    }),
+    getState().user_store.userData.token
+  );
 export const login =
   (userData, response) => async (dispatch, getState) => {
     try {
@@ -126,16 +139,7 @@ export const updateCurrentUserAction =
       type: USER_ACTIONS.CURRENT_ACTION,
       payload: data,
     });
-export const getMe = () => async (dispatch, getState) =>
-  fetchData(
-    "users",
-    USER_ACTIONS.GET_ME,
-    dispatch,
-    (data) => ({
-      cart: data.cart,
-    }),
-    getState().user_store.userData.token
-  );
+
 export const updateUserInfo =
   (userData, response) => async (dispatch, getState) => {
     try {
@@ -156,7 +160,7 @@ export const updateUserInfo =
         type: USER_ACTIONS.UPDATE_INFO.SUCCESS,
         payload: serverUserDate,
       });
-      getMe();
+      // getMe();
     } catch (error) {
       response && response("updating your info failed");
 

@@ -688,6 +688,23 @@ export const MainWrapper = styled.ol`
     background-color: #fff;
     border-color: #059;
   }
+  .shipping-methods
+    li
+    input:checked
+    + label.method-wrap
+    .method-radio-element {
+    border-color: #059;
+    background-color: #059;
+  }
+
+  .shipping-methods li input:checked + label.method-wrap {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    z-index: 1;
+    margin-bottom: 0;
+    position: relative;
+  }
   @media (min-width: 600px) {
     margin-left: 0;
     margin-right: 0;

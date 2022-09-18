@@ -48,6 +48,15 @@ export const AddressForm = ({ isShipping }) => {
     // if (!isShipping)
     //   updateObj[formType]["checkout.use_for_shipping"] =
     //     checkout.use_for_shipping;
+
+    // debugger;
+    if (checkout.use_for_shipping)
+      updateObj["addressShipping"] = !isShipping
+        ? {
+            ...updateObj["addressBilling"],
+          }
+        : { ...checkout["addressBilling"] };
+
     localStorage.setItem(
       LOCAL_STORAGE_KEYS.CHECKOUT,
       JSON.stringify({
@@ -56,13 +65,6 @@ export const AddressForm = ({ isShipping }) => {
         steps: undefined,
       })
     );
-    // debugger;
-    if (checkout.use_for_shipping)
-      updateObj["addressShipping"] = !isShipping
-        ? {
-            ...updateObj["addressBilling"],
-          }
-        : { ...checkout["addressBilling"] };
     updateField({ checkout: { ...checkout, ...updateObj } });
   };
 
