@@ -16,19 +16,37 @@ export const fetchStoreProducts = () => {
       "products?limit=12&type=topDeals",
       PRODUCT_ACTIONS.PRODUCT_FETCH_STORE,
       dispatch,
-      (data) => ({ topProducts: data.doc })
+      (data) => {
+        localStorage.setItem(
+          "topProducts",
+          JSON.stringify(data.doc)
+        );
+        return { topProducts: data.doc };
+      }
     );
     fetchData(
       "products?limit=12&type=topRated",
       PRODUCT_ACTIONS.PRODUCT_FETCH_STORE,
       dispatch,
-      (data) => ({ topRatedProducts: data.doc })
+      (data) => {
+        localStorage.setItem(
+          "topRatedProducts",
+          JSON.stringify(data.doc)
+        );
+        return { topRatedProducts: data.doc };
+      }
     );
     fetchData(
       "products?limit=12&type=trending",
       PRODUCT_ACTIONS.PRODUCT_FETCH_STORE,
       dispatch,
-      (data) => ({ trendingProducts: data.doc })
+      (data) => {
+        localStorage.setItem(
+          "trendingProducts",
+          JSON.stringify(data.doc)
+        );
+        return { trendingProducts: data.doc };
+      }
     );
   };
 };

@@ -31,7 +31,12 @@ export const Store = () => {
   const { topDealsProps, topRatedProps, trendingProps } =
     useStorProps();
   useEffect(() => {
-    fetchStoreProducts();
+    if (
+      !topDealsProps.length ||
+      !topRatedProps.length ||
+      !trendingProps.length
+    )
+      fetchStoreProducts();
   }, []);
 
   // if (loading) {

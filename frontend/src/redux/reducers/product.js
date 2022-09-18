@@ -1,12 +1,24 @@
 import { PRODUCT_ACTIONS } from "../constants";
 
+const topProducts = localStorage.getItem("topProducts")
+  ? JSON.parse(localStorage.getItem("topProducts"))
+  : [];
+
+const topRatedProducts = localStorage.getItem("topProducts")
+  ? JSON.parse(localStorage.getItem("topProducts"))
+  : [];
+
+const trendingProducts = localStorage.getItem("topProducts")
+  ? JSON.parse(localStorage.getItem("topProducts"))
+  : [];
+
 const initialState = {
   loading: false,
   data: {
-    topProducts: [],
+    topProducts,
     productSingle: {},
-    topRatedProducts: [],
-    trendingProducts: [],
+    topRatedProducts,
+    trendingProducts,
     categoryProducts: [],
     searchedProducts: [],
     brandProducts: [],
