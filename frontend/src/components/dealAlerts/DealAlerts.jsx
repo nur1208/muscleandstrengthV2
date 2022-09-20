@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { useReduxActions } from "../../hooks";
 import { getIconById, ICONS_ID, SvgWrapper } from "../../icons";
+import {
+  COOKIES_CONSTANTS,
+  getCookie,
+  setCookie,
+} from "../../utils";
 import { Button } from "../button/Button";
 import { MainWrapper } from "./dealAlerts.styles";
 
 export const DealAlerts = () => {
+  const {
+    userInput: { isDealAlert },
+  } = useSelector((state) => state.user_store);
+
+  const { updateField } = useReduxActions();
+  const handleClick = () => {
+    updateField({ isDealAlert: false });
+    setCookie(COOKIES_CONSTANTS.IS_DEAL_ALERT, false, 7);
+  };
   return (
-    <MainWrapper>
+    <MainWrapper isDealAlert={isDealAlert}>
       <div className="message-wrap">
         <div className="title">
           Deal{"  "}
@@ -48,7 +64,7 @@ export const DealAlerts = () => {
           <Button text="Get Alerts" isGreen />
         </form>
       </div>
-      <div className="close">
+      <div className="close" onClick={handleClick}>
         <SvgWrapper childStyle="width:1em;height:1em; margin-bottom: -0.2em;">
           {getIconById(ICONS_ID.IconClose, undefined, "#fff")}
         </SvgWrapper>

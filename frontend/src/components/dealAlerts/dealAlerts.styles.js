@@ -119,4 +119,11 @@ export const MainWrapper = styled.div`
       font-size: 1.3em;
     }
   }
+
+  ${({ isDealAlert }) =>
+    isDealAlert
+      ? ""
+      : `
+  display: none !important;
+  `}
 `;

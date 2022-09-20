@@ -26,4 +26,11 @@ export const MainWrapper = styled.div`
       flex: 0 0 200px;
     }
   }
+
+  ${({ isDealAlert }) =>
+    isDealAlert
+      ? ""
+      : `
+  display: none !important;
+  `}
 `;
