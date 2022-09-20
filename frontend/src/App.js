@@ -12,6 +12,7 @@ import {
   Login,
   LogoutSuccess,
   Product,
+  ProductsDeals,
   Review,
   Search,
   ShoppingCart,
@@ -29,6 +30,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/store">
           <Route index element={<Store />} />
+          <Route path="promos" element={<ProductsDeals />} />
           <Route path="search/*" element={<Search />} />
           <Route
             path="product/:name/:id"

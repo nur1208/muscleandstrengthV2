@@ -61,3 +61,5 @@ export { CartTools } from "./cartTools/CartTools";
 export { CheckoutHeader } from "./checkoutHeader/CheckoutHeader";
 export { CheckoutProgress } from "./checkoutProgress/CheckoutProgress";
 export { CheckoutSteps } from "./checkoutSteps/CheckoutSteps";
+export { DealAlertMobile } from "./dealAlertMobile/DealAlertMobile";
+export { DealAlerts } from "./dealAlerts/DealAlerts";

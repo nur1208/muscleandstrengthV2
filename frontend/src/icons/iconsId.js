@@ -44,4 +44,5 @@ export const ICONS_ID = {
   IconGOOGLEPAY: "icon-GOOGLEPAY",
   IconCheckMark: "icon-check-mark",
   IconEdit: "icon-edit",
+  IconDealAlert: "icon-deal-alert",
 };

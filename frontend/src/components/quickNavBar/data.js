@@ -1,11 +1,11 @@
 export const quickNavbarData = [
   {
-    href: "/store/promos.html",
+    href: "/store/promos",
     iconStyle: "specials",
     title: "Deals & Coupons",
   },
   {
-    href: "/store/category.html",
+    href: "/store/category",
     iconStyle: "categories",
     title: "Shop By Category",
   },
@@ -20,7 +20,7 @@ export const quickNavbarData = [
     title: "Top 50 Products",
   },
   {
-    href: "/store/category/clearance.html",
+    href: "/store/category/clearance",
     iconStyle: "clearance",
     title: "Clearance",
   },

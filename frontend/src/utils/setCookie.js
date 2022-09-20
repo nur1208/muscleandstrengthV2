@@ -7,7 +7,7 @@ export const setCookie = (cname, cvalue, exdays) => {
   document.cookie =
     cname +
     "=" +
-    cvalue.replace(/%/g, "~~pct~~") +
+    (cvalue + "").replace(/%/g, "~~pct~~") +
     ";" +
     expires +
     ";path=/";

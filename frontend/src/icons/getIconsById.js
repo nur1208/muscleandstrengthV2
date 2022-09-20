@@ -1,4 +1,5 @@
 import {
+  IconDealAlert,
   IconEdit,
   IconCheckMark,
   IconGOOGLEPAY,
@@ -100,7 +101,7 @@ export const getIconById = (iconId, style, fill) => {
     case "icon-nav-tools":
       return <IconNavTools style={style} />;
     case "icon-close":
-      return <IconClose style={style} />;
+      return <IconClose style={style} fill={fill} />;
     case "icon-youtube":
       return <IconYoutube style={style} />;
 
@@ -235,6 +236,9 @@ export const getIconById = (iconId, style, fill) => {
 
     case "icon-edit":
       return <IconEdit style={style} />;
+
+    case "icon-deal-alert":
+      return <IconDealAlert style={style} />;
 
     default:
       return <IconQuestionMark style={style} />;

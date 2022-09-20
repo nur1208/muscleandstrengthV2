@@ -1,3 +1,4 @@
+import { COOKIES_CONSTANTS, getCookie } from "../../utils";
 import { LOCAL_STORAGE_KEYS, USER_ACTIONS } from "../constants";
 
 const checkout = localStorage.getItem(
@@ -15,6 +16,15 @@ const checkout = localStorage.getItem(
       addressBilling: {},
       addressShipping: {},
     };
+
+const cookieIsDealAlert = getCookie(
+  COOKIES_CONSTANTS.IS_DEAL_ALERT,
+  false
+);
+
+const isDealAlert =
+  cookieIsDealAlert === "" ? true : cookieIsDealAlert === "true";
+
 const initialState = {
   loading: false,
   userData: null,
@@ -22,6 +32,7 @@ const initialState = {
   success: null,
   userInput: {
     checkout,
+    isDealAlert,
     signUp: { isNotified: true },
     login: {},
   },
