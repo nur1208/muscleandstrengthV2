@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import {
   AjaxErrors,
@@ -13,12 +14,30 @@ import {
   SearchInfoBar,
 } from "../../components";
 import { BANNER_BLOCK_12 } from "../../components/data";
+import { useReduxActions } from "../../hooks";
 import { MainWrapper } from "./productsDeals.styles";
 
 export const ProductsDeals = () => {
   const { data, loading } = useSelector(
     (state) => state.product_store
   );
+
+  const { fetchProducts } = useReduxActions();
+
+  useEffect(() => {
+    fetchProducts(`limit=20`, (data) => ({
+      dealProducts: data.doc,
+    }));
+
+    fetchProducts(
+      ``,
+      (data) => ({
+        dealProductsCount: data.count,
+      }),
+      true
+    );
+  }, []);
+
   return (
     <MainWrapper>
       {" "}
@@ -42,16 +61,16 @@ export const ProductsDeals = () => {
             <div className="result-content-wrap">
               <SearchInfoBar
                 hasSort
-                showNum={data.brandProducts.length}
-                countStore={data.brandProductsCount}
+                showNum={data.dealProducts.length}
+                countStore={data.dealProductsCount}
               />
               {false && <AjaxErrors />}
               <ProductsWrapper
                 hasAddCardBtn
                 showNext={20}
                 // handleShowNext={handleShowNext}
-                count={data.brandProductsCount}
-                products={data.brandProducts}
+                count={data.dealProductsCount}
+                products={data.dealProducts}
                 loading={loading}
               />
             </div>

@@ -19,6 +19,7 @@ const initialState = {
     productSingle: {},
     topRatedProducts,
     trendingProducts,
+    dealProducts: [],
     categoryProducts: [],
     searchedProducts: [],
     brandProducts: [],
