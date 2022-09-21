@@ -5,6 +5,7 @@ import { useAutoLogin } from "./hooks";
 import {
   Account,
   Brand,
+  Brands,
   Categories,
   Category,
   Checkout,
@@ -36,7 +37,10 @@ function App() {
             path="product/:name/:id"
             element={<Product />}
           />
-          <Route path="brands/:name" element={<Brand />} />
+          <Route path="brands">
+            <Route index element={<Brands />} />
+            <Route path=":name" element={<Brand />} />
+          </Route>
           <Route
             path="reviews/brands/:brand/:product/:id"
             element={<Review />}

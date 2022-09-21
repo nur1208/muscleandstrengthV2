@@ -13,3 +13,4 @@ export { Brand } from "./brand/Brand";
 export { ShoppingCart } from "./shoppingCart/ShoppingCart";
 export { Checkout } from "./checkout/Checkout";
 export { ProductsDeals } from "./ProductsDeals/ProductsDeals";
+export { Brands } from "./brands/Brands";
