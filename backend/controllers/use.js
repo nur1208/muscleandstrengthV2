@@ -3,6 +3,32 @@ import AppError from "../utils/appError.js";
 import catchAsync from "../utils/catchAsync.js";
 import { filterObj } from "../utils/filterObj.js";
 
+export const getMe = catchAsync(async (req, res, next) => {
+  let query = UserModel.findById(req.user.id);
+
+  query.populate({
+    path: "cart.product",
+    select: "imgUrl brand name buyingOptions",
+  });
+
+  const doc = await query;
+
+  if (!doc) {
+    return next(
+      new AppError(
+        `No document found with '${req.user.id}' ID`,
+        404
+      )
+    );
+  }
+
+  res.status(200).json({
+    status: "success",
+    data: {
+      cart: doc.cart,
+    },
+  });
+});
 export const updateMe = catchAsync(async (req, res, next) => {
   // 1) current error if the user posts password data
 
@@ -38,6 +64,7 @@ export const updateMe = catchAsync(async (req, res, next) => {
       user: {
         ...updatedUser._doc,
         id: updatedUser._doc._id,
+        // cart: undefined,
       },
     },
   });

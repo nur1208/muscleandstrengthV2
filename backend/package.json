@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "start-dev": "set NODE_ENV=development&&nodemon index.js",
+    "start-dev": "set NODE_ENV=development&&nodemon index.js --ignore 'test/*.js'",
     "start-pro": "set NODE_ENV=production&&nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "debug-pro": "set NODE_ENV=production&&nodemon --exec ndb --experimental-modules index.js"

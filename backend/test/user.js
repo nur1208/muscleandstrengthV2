@@ -10,7 +10,7 @@ const testTheServer = async () => {
 };
 
 const userToken =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDI1MDdjMjFlMzRlOWYzYWM3ZmEwYSIsImlhdCI6MTY2Mjg3Njk0MywiZXhwIjoxNjYzMTM2MTQzfQ.3Lxh2JJ8XDbjj00BQS630II6KaMiopaaR5bqoA2DXLE";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDI1MDdjMjFlMzRlOWYzYWM3ZmEwYSIsImlhdCI6MTY2MzEzOTAzMSwiZXhwIjoxNjYzMzk4MjMxfQ.fQtxe6AmR2KdBflzRSUV2f3rbd9wZZmHek8X8fXfM8g";
 const testLogin = async () => {
   const userInfo = {
     email: "test@test.com",
@@ -46,9 +46,18 @@ const testUpdateMe = async () => {
   console.log(data.data.user.cart);
 };
 
+const testGetMe = async () => {
+  const { data } = await axios.get(`${baseUrl}/${mainRoute}`, {
+    headers: { authorization: `Bearer ${userToken}` },
+  });
+
+  console.log(data);
+  console.log(data.data.cart);
+};
+
 const main = async () => {
   try {
-    await testUpdateMe();
+    await testGetMe();
   } catch (error) {
     console.log(error);
   }

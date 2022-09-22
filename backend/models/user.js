@@ -14,18 +14,21 @@ const userSchema = new mongoose.Schema(
     isNotified: { type: Boolean, default: false },
     gender: { type: String, enum: ["male", "female"] },
     password: { type: String, required: true, select: false },
-    cart: [
-      {
-        product: {
-          type: mongoose.Types.ObjectId,
-          ref: "Product",
+    cart: {
+      // select: false,
+      type: [
+        {
+          product: {
+            type: mongoose.Types.ObjectId,
+            ref: "Product",
+          },
+          qty: { type: Number, default: 1 },
+          buyingOptionId: { type: mongoose.Types.ObjectId },
+          selectedFlavor: { type: String },
+          isFree: { type: Boolean },
         },
-        qty: { type: Number, default: 1 },
-        buyingOptionId: { type: mongoose.Types.ObjectId },
-        selectedFlavor: { type: String },
-        isFree: { type: Boolean },
-      },
-    ],
+      ],
+    },
     passwordChangedAt: Date,
     passwordResetToken: String,
     passwordResetExpires: Date,

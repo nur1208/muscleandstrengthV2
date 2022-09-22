@@ -1,6 +1,6 @@
 import express from "express";
 import { login, protect, signUp } from "../controllers/auth.js";
-import { updateMe } from "../controllers/use.js";
+import { getMe, updateMe } from "../controllers/use.js";
 
 const userRouter = express.Router();
 
@@ -9,5 +9,5 @@ userRouter.post("/login", login);
 
 userRouter.use(protect);
 
-userRouter.route("/").put(updateMe);
+userRouter.route("/").put(updateMe).get(getMe);
 export default userRouter;

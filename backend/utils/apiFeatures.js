@@ -33,6 +33,8 @@ export default class APIFeatures {
       /\b(gte|gt|lte|lt)\b/g,
       (match) => `$${match}`
     );
+    console.log(JSON.parse(queryStr));
+
     if (this.isCount)
       this.query.countDocuments(JSON.parse(queryStr));
     else this.query.find(JSON.parse(queryStr));

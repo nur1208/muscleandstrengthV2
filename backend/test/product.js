@@ -10,7 +10,9 @@ const testTheServer = async () => {
 };
 
 const testGetProducts = async () => {
-  const { data } = await axios.get(`${baseUrl}/${mainRoute}?`);
+  const { data } = await axios.get(
+    `${baseUrl}/${mainRoute}?buyingOptions.deal=Buy 1 Get 1 FREE`
+  );
   console.log(data);
 
   data.data.doc.forEach((doc) => console.log(doc));

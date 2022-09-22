@@ -19,6 +19,7 @@ const schema = new mongoose.Schema(
     subCategory: [String],
     features: [String],
 
+    rank: Number,
     ratingPercentage: Number, //this field is temporary
     reviewsNum: Number, //this field is temporary
     type: [String],
