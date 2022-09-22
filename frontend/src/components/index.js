@@ -63,3 +63,8 @@ export { CheckoutProgress } from "./checkoutProgress/CheckoutProgress";
 export { CheckoutSteps } from "./checkoutSteps/CheckoutSteps";
 export { DealAlertMobile } from "./dealAlertMobile/DealAlertMobile";
 export { DealAlerts } from "./dealAlerts/DealAlerts";
+export { ProductFinderAside } from "./productFinderAside/ProductFinderAside";
+export { TopSellersAside } from "./topSellersAside/TopSellersAside";
+export { BulkAdAside } from "./bulkAdAside/BulkAdAside";
+export { FeatureHeader } from "./featureHeader/FeatureHeader";
+export { TopProducts } from "./topProducts/TopProducts";

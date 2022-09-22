@@ -19,6 +19,7 @@ import {
   ShoppingCart,
   SignUp,
   Store,
+  Top50Products,
 } from "./pages";
 
 function App() {
@@ -32,6 +33,10 @@ function App() {
         <Route path="/store">
           <Route index element={<Store />} />
           <Route path="promos" element={<ProductsDeals />} />
+          <Route
+            path="top-sellers"
+            element={<Top50Products />}
+          />
           <Route path="search/*" element={<Search />} />
           <Route
             path="product/:name/:id"
