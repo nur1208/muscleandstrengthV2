@@ -94,7 +94,7 @@ export const getProductReviews = async (url, productId) => {
   console.log(reviews.length);
 };
 
-const isScraped = async (url, type, withCategory) => {
+const isScraped = async (url, type, withCategory, rank) => {
   const { data } = await GenericEndpoints.get(
     `products?sourceUrl=${url}`
   );
@@ -104,6 +104,10 @@ const isScraped = async (url, type, withCategory) => {
 
     const body = {};
 
+    if (rank) {
+      body.rank = rank;
+      console.log("update rank");
+    }
     if (
       foundProduct.buyingOptions.some(
         ({ cost }) => !cost.regularPrice
@@ -171,9 +175,10 @@ const isScraped = async (url, type, withCategory) => {
 export const getProductData = async (
   url,
   type,
-  withCategory
+  withCategory,
+  rank
 ) => {
-  if (await isScraped(url, type, withCategory))
+  if (await isScraped(url, type, withCategory, rank))
     return console.log("This product scraped");
   const __filename = fileURLToPath(import.meta.url);
 
@@ -271,6 +276,8 @@ export const getProductData = async (
   let reviews = scrapReviews($(mainSelectorReviews).toString());
 
   productData.reviews = reviews;
+
+  if (rank) productData.rank = rank;
   console.log(reviews.length);
 
   try {

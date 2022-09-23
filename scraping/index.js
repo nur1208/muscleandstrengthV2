@@ -10,6 +10,9 @@ import {
   generalHealthCategories,
   clothingCategories,
   functionalFoodsCategories,
+  fatLossCategories,
+  accessoriesCategory,
+  top50Procuts,
 } from "./productData/data.js";
 import {
   getProductData,
@@ -19,10 +22,10 @@ import { scrapProductsByCategory } from "./productsByCategory/script.js";
 
 const main = async () => {
   console.log("start scraping... ⌛");
-  await scrapProductsByCategory(
-    "https://www.muscleandstrength.com/store/category/fat-loss.html"
-    // "https://www.muscleandstrength.com/store/category/general-health.html"
-  );
+  // await scrapProductsByCategory(
+  //   "https://www.muscleandstrength.com/store/category/accessories.html"
+  //   // "https://www.muscleandstrength.com/store/category/general-health.html"
+  // );
   // const url =
   //   "https://www.muscleandstrength.com/store/now-mega-d-3-and-mk-7.html";
   // // "https://www.muscleandstrength.com/store/combat-powder.html";
@@ -31,19 +34,24 @@ const main = async () => {
 
   // await getProductData(url, "topDeals");
 
+  for (let index = 0; index < top50Procuts.length; index++) {
+    const element = top50Procuts[index];
+    console.log(`current product ${index}... ⌛`);
+    await getProductData(element, null, null, index + 1);
+    console.log(`DONE scraping ${index} ✅`);
+  }
   // // re scrap { index: 7 }
   // console.log(preWorkoutCategories.subCategories.length);
   // 11 limit
   // const currentSubIndex = 0;
   // for (
-  //   let currentSubIndex = 2;
-  //   currentSubIndex <
-  //   functionalFoodsCategories.subCategories.length;
+  //   let currentSubIndex = 7;
+  //   currentSubIndex < accessoriesCategory.subCategories.length;
   //   currentSubIndex++
   // ) {
   //   console.log(`current subCategory ${currentSubIndex}`);
   //   const { products, title } =
-  //     functionalFoodsCategories.subCategories[currentSubIndex];
+  //     accessoriesCategory.subCategories[currentSubIndex];
   //   for (let index = 0; index < products.length; index++) {
   //     const href = products[index];
 
@@ -57,7 +65,7 @@ const main = async () => {
   //       `https://www.muscleandstrength.com${href}`,
   //       null,
   //       {
-  //         category: functionalFoodsCategories.title,
+  //         category: accessoriesCategory.title,
   //         subCategory: title,
   //       }
   //     );
