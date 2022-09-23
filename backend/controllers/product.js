@@ -29,6 +29,7 @@ const allowedFields = [
   "category",
   "subCategory",
   "buyingOptions",
+  "rank",
 ];
 export const updateProduct = updateOne(
   ProductModel,
