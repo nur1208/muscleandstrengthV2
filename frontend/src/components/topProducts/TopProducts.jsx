@@ -1,38 +1,69 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { useReduxActions } from "../../hooks";
 import { getIconById, ICONS_ID, SvgWrapper } from "../../icons";
 import { Button } from "../button/Button";
 import { MainWrapper } from "./topProducts.styles";
 
 export const TopProducts = () => {
+  const { fetchProducts } = useReduxActions();
+  const { data } = useSelector((state) => state.product_store);
+  useEffect(() => {
+    fetchProducts(`rank[gte]=1&limit=50&sort=rank`, (data) => ({
+      top50Products: data.doc,
+    }));
+  }, []);
+  const navigate = useNavigate();
+
   return (
     <MainWrapper>
       <ol class="reviewProductList">
-        {Array(50)
-          .fill(true)
-          .map((_, index) => (
+        {data.top50Products.map((product, index) => {
+          const buyOption =
+            product.buyingOptions &&
+            product.buyingOptions.length !== 0 &&
+            // select fist buying option with deal,
+            // If all buying options without deal than select the first option
+            (product.buyingOptions.find(({ deal }) => deal) ||
+              product.buyingOptions[0]);
+
+          const handleClick = () => {
+            navigate(
+              `/store/product/${product.name.replaceAll(
+                " ",
+                "-"
+              )}/${product._id}`.replace("%", ""),
+              {
+                state: { id: product._id, productData: product },
+              }
+            );
+          };
+
+          return (
             <li key={`product-${index}`}>
               <div class="prodRank">
                 <span class="rank">{1 + index}</span>
               </div>
               <div class="prodImg">
-                <a href="https://www.muscleandstrength.com/store/combat-powder.html">
+                <a onClick={handleClick}>
                   <img
                     class=" lazyloaded"
                     data-src="https://cdn.muscleandstrength.com/store/media/catalog/product/cache/all/small_image/200x/9df78eab33525d08d6e5fb8d27136e95/c/o/combat_protein_powder_4lbs_chocolate_milk_2.jpg"
-                    alt="Combat Protein Powder"
-                    src="https://cdn.muscleandstrength.com/store/media/catalog/product/cache/all/small_image/200x/9df78eab33525d08d6e5fb8d27136e95/c/o/combat_protein_powder_4lbs_chocolate_milk_2.jpg"
+                    src={product.imgUrl[400]?.split(" ")[0]}
+                    alt={product.title}
                   />
                 </a>
               </div>
               <h4 class="product-title">
                 <a
                   style={{ color: "#333" }}
-                  href="https://www.muscleandstrength.com/store/combat-powder.html"
+                  onClick={handleClick}
                 >
-                  MusclePharm Combat Protein Powder
+                  {`${product?.brand?.title} ${product?.name}`}
                 </a>
               </h4>
-              <div class="brand">
+              {/* <div class="brand">
                 <a
                   class="brand-img"
                   href="https://www.muscleandstrength.com/store/brands/musclepharm"
@@ -55,35 +86,40 @@ export const TopProducts = () => {
                   <span class="label-dsc">available</span>
                 </div>
                 <Button text="View Brand" isSmall isBlue />
-              </div>
+              </div> */}
               <div class="prodData">
                 <div class="font-s-small brand-label">
                   By:{" "}
                   <a href="https://www.muscleandstrength.com/store/brands/musclepharm">
-                    MusclePharm
+                    {product?.brand?.title}
                   </a>
                 </div>
-                <div class="tagline">
-                  Advanced Time Release Protein Feeds Muscles For
-                  8 Hours*
-                </div>
-                <a
-                  class="promo-label label success"
-                  href="/store/combat-powder.html"
-                  title="LIMITED TIME PRICE CUT"
-                >
-                  <SvgWrapper childStyle="width: 1em; height: 1em; margin-bottom: -0.1em; margin-right: 0.2em;">
-                    {getIconById(ICONS_ID.IconDealWhite)}
-                  </SvgWrapper>
-                  {/* <svg style=>
+                <div class="tagline">{product?.tagline}</div>
+                {buyOption.deal && (
+                  <a
+                    class="promo-label label success"
+                    href="/store/combat-powder.html"
+                    title="LIMITED TIME PRICE CUT"
+                  >
+                    <SvgWrapper childStyle="width: 1em; height: 1em; margin-bottom: -0.1em; margin-right: 0.2em;">
+                      {getIconById(ICONS_ID.IconDealWhite)}
+                    </SvgWrapper>
+                    {/* <svg style=>
                     <use href="/store/skin/frontend/mnsv4/default/images/svg-icons/icons.svg#icon-deal-white"></use>
                   </svg> */}
-                  LIMITED TIME PRICE CUT{" "}
-                </a>
-                <Button text="View Product" isSmall isBlue />
+                    {buyOption.deal}{" "}
+                  </a>
+                )}
+                <Button
+                  text="View Product"
+                  isSmall
+                  isBlue
+                  onClick={handleClick}
+                />
               </div>
             </li>
-          ))}
+          );
+        })}
       </ol>
     </MainWrapper>
   );

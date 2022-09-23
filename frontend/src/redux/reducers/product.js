@@ -15,6 +15,7 @@ const trendingProducts = localStorage.getItem("topProducts")
 const initialState = {
   loading: false,
   data: {
+    top50Products: [],
     topProducts,
     productSingle: {},
     topRatedProducts,
