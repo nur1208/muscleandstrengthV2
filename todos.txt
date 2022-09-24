@@ -309,19 +309,81 @@
 - finish in 60 minutes ❌, ❌, ❌, ✅
 - {DONE} add products without flavors to the cart
 - {DONE} PUSH a user to cart page after update user's cart successfully
-- start in 60 minutes ⌛
+- start in 60 minutes ⌛, ⌛ 
 - {DONE} add deals to cart items
 - {DONE} add before-deal-price to cart items
-- {TODO} create 'buy 1 get 1 free' functionality for Cart component
-- {TODO} calculate order total
-- {TODO} activate 'continue Shopping' btn
-- {TODO} show cart items number
-- finish in 60 minutes 
-- {TODO} set up 'Checkout' page
+- {DONE} create 'buy 1 get 1 free' functionality for Cart component
+- {DONE} calculate order total
+- {DONE} activate 'continue Shopping' btn
+- {DONE} show cart items number
+- finish in 60 minutes ❌, ✅
+- start in 20 minutes ⌛
+- {DONE} make sure to move a user to cart page when a user is in Product page only when adding product to a cart
+- {DONE} show actual rating and beforeDealPrice in Product component 
+- finish in 20 minutes ✅
+- start in 20 minutes ⌛
+- {DONE} show cart items number BY QTY 
+- {DONE} calculate order total by qty
+- finish in 20 minutes ✅
+- start in 30 minutes ⌛
+- {DONE} improve 'buy 1 get 1 free' functionality in Cart component
+- finish in 30 minutes ✅
+- start in 90 minutes ⌛, ⌛, ⌛ 
+- {DONE} create CheckoutHeader component
+- {DONE} make CartHeader component more dynamic
+- {DONE} create CheckoutProgress component
+- {DONE} create CheckoutSteps component
+- {DONE} set up 'Checkout' page
+- finish in 90 minutes ❌, ❌, ❌
+- {DONE} make CheckoutSteps component more dynamic
+- {DONE} make CheckoutSteps component more dynamic part 2
+- {DONE} let a user input his/her address
+- {DONE} create 'ship to same a address as billing address'
+- {DONE} let a user select shipping method and payment method and fix auto login problems
+- {DONE} change order review btn based on payment method
+- {DONE} make CheckoutProgress component more dynamic
+- {DONE} store 'store products' in localStorage
+- {DONE} create DealAlertMobile component
+- {DONE} create DealAlerts component
+- {DONE} let a user close DealAlerts component
+- {DONE} set up ProductsDeals page 
+- {DONE} fetch products with deals in ProductsDeals page
+- {DONE} set up Brands page
+- {DONE} create ProductFinderAside component
+- {DONE} create TopSellersAside component
+- {DONE} create BulkAdAside component
+- {DONE} create FeatureHeader component
+- {DONE} create TopProducts component
+- {DONE} set up Top50Products page
+
+- {DONE} scrap top products 
+- {DONE} make TopProducts component more dynamic
+- {DONE} test Top50Products page for responsive 
+
+- {TODO} make FrontHero component more dynamic
+- {TODO} create CategoryStats component
+- {TODO} add '.small-4' and '.text-center' to GridX styled component
+- {TODO} create TaxonomyHeading component
+        note: put subheading in TaxonomyHeading component
+- {TODO} create MainPageCategory component
+- {TODO} scrap MainPageCategory component data
+- {TODO} make  MainPageCategory component more dynamic
+- {TODO} use TaxonomyHeading component in Articles component
+- {TODO} scrap workout articles
+- {TODO} create MainPageQuestions component
+- {TODO} scrap MainPageQuestions component data
+- {TODO} make  MainPageQuestions component more dynamic
+- {TODO} set update Workout page
+
 - {TODO} scrap other Categories
 - {TODO} scrap proteinDeals 
 - {TODO} make sure updating exist element for array for "cart.array.qty"
+- {TODO} create cart modal and routs
+- {TODO} don't populate carts when login and signUp, create endpoint to populate it
+
 not important:
+- {TODO} add brand in TopProducts component
+- {TODO} improve AddressForm by Create Filed components  
 - {TODO} fix Selector up down keys when there are long list
 - {TODO} create LaberWithSvg component and make it dynamic
 - {TODO} make Submenu and SubSubmenu components as one component
