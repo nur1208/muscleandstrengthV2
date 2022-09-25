@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FRONT_HERO_TYPE } from "./utils";
 
 export const MainWrapper = styled.div`
   width: 100%;
@@ -6,7 +7,13 @@ export const MainWrapper = styled.div`
   position: relative;
   background-size: cover;
   background-position: 50% 50%;
-  background-image: url(/images/front-800.jpg);
+  /* background-image: url(/images/front-800.jpg); */
+  background-image: ${({ type }) =>
+    type === FRONT_HERO_TYPE.HOME
+      ? "url(/images/front-800.jpg)"
+      : type === FRONT_HERO_TYPE.WORKOUT
+      ? "url(/images/front-workouts-800.jpg)"
+      : ""};
 
   .overlay {
     position: absolute;
@@ -44,7 +51,13 @@ export const MainWrapper = styled.div`
   }
 
   @media screen and (min-width: 37.5em) {
-    background-image: url(/images/front.jpg);
+    background-image: ${({ type }) =>
+      type === FRONT_HERO_TYPE.HOME
+        ? "url(/images/front.jpg)"
+        : type === FRONT_HERO_TYPE.WORKOUT
+        ? "url(/images/front-workouts.jpg)"
+        : ""};
+
     min-height: 600px;
 
     .overlay {

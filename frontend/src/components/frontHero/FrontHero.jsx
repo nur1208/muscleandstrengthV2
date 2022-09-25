@@ -1,23 +1,20 @@
 import React from "react";
-import { Button } from "../button/Button";
 import { MainWrapper } from "./frontHero.styles";
+import { Home } from "./Home";
+import { FRONT_HERO_TYPE } from "./utils";
+import { Workout } from "./Workout";
 
-export const FrontHero = () => {
+export const FrontHero = ({ type }) => {
   return (
-    <MainWrapper>
+    <MainWrapper type={type}>
       <div class="overlay">
-        <h1>
-          Welcome to
-          <br />
-          Muscle &amp; Strength
-        </h1>
-        <p>
-          We provide the tools you need to build the body you
-          want. All Free.
-        </p>
-        <a href="/learn-more">
-          <Button isBlue isLarge text="Learn More" />
-        </a>
+        {type === FRONT_HERO_TYPE.HOME ? (
+          <Home />
+        ) : type === FRONT_HERO_TYPE.WORKOUT ? (
+          <Workout />
+        ) : (
+          <></>
+        )}
       </div>
     </MainWrapper>
   );
