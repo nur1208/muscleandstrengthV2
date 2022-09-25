@@ -13,6 +13,12 @@ export const GridX = styled.div`
     flex-basis: auto;
   }
 
+  .small-4 {
+    width: 33.3333333333%;
+  }
+  .grid-x > .small-4 {
+    width: 33.3333333333%;
+  }
   .grid-x > .small-12 {
     width: 100%;
   }
@@ -25,6 +31,9 @@ export const GridX = styled.div`
     width: calc(100% - 0.625rem);
   }
 
+  .text-center {
+    text-align: center;
+  }
   @media print, screen and (min-width: 37.5em) {
     .grid-x > .bp600-4 {
       width: 33.3333333333%;
