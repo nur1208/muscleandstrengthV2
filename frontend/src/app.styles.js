@@ -34,12 +34,41 @@ export const GridX = styled.div`
   .text-center {
     text-align: center;
   }
+
+  .grid-margin-y {
+    margin-top: -0.5555555556rem;
+    margin-bottom: -0.5555555556rem;
+  }
+
+  .grid-margin-y > .cell {
+    height: calc(100% - 1.1111111111rem);
+    margin-top: 0.5555555556rem;
+    margin-bottom: 0.5555555556rem;
+  }
+  .grid-margin-y:not(.grid-y) > .cell {
+    height: auto;
+  }
+
+  .small-up-2 > .cell {
+    width: 50%;
+  }
+  .grid-margin-x.small-up-2 > .cell {
+    width: calc(50% - 1.1111111111rem);
+  }
+
   @media print, screen and (min-width: 37.5em) {
     .grid-x > .bp600-4 {
       width: 33.3333333333%;
     }
     .grid-margin-x > .bp600-4 {
       width: calc(33.3333333333% - 0.625rem);
+    }
+
+    .bp600-up-3 > .cell {
+      width: 33.3333333333%;
+    }
+    .grid-margin-x.bp600-up-3 > .cell {
+      width: calc(33.3333333333% - 1.1111111111rem);
     }
   }
 
@@ -54,6 +83,28 @@ export const GridX = styled.div`
 
     .grid-margin-x > .bp600-4 {
       width: calc(33.3333333333% - 0.9375rem);
+    }
+
+    .grid-margin-y {
+      margin-top: -0.8333333333rem;
+      margin-bottom: -0.8333333333rem;
+    }
+
+    .grid-margin-y > .cell {
+      height: calc(100% - 1.6666666667rem);
+      margin-top: 0.8333333333rem;
+      margin-bottom: 0.8333333333rem;
+    }
+
+    .grid-margin-x.small-up-2 > .cell {
+      width: calc(50% - 1.6666666667rem);
+    }
+
+    .medium-up-2 > .cell {
+      width: 50%;
+    }
+    .grid-margin-x.medium-up-2 > .cell {
+      width: calc(50% - 1.6666666667rem);
     }
   }
 
