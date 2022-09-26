@@ -20,7 +20,12 @@ export const MainWrapper = styled.div`
   span {
     display: block;
     font-family: roboto-bold, sans-serif;
-    font-size: 18px;
+    font-size: 12px;
     text-transform: uppercase;
   }
+  @media print, screen and (min-width: 37.5em) {
+    span {
+      font-size: 18px;
+    }
+  } ;
 `;
