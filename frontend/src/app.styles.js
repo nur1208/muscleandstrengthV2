@@ -106,6 +106,10 @@ export const GridX = styled.div`
     .grid-margin-x.medium-up-2 > .cell {
       width: calc(50% - 1.6666666667rem);
     }
+
+    .grid-margin-x.medium-up-4 > .cell {
+      width: calc(25% - 1.6666666667rem);
+    }
   }
 
   @media print, screen and (min-width: 60em) {
