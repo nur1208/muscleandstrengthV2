@@ -312,3 +312,231 @@ export const articlesData = [
   },
 ];
 
+export const articlesWorkout = [
+  {
+    title: "Best Workouts",
+    subTitle:
+      "The most downloaded workouts in our database during the past 24 hours. You can also find top/trending workouts by choosing a category (above) and scrolling to the 'trending' view.",
+    articles: [
+      {
+        href: "https://www.muscleandstrength.com/workouts/10-week-mass-building-program.html",
+        imgUrl:
+          "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/10_week_mass_building_program_-_1200x630.jpg?itok=l2JIA-mt",
+        imgAlt: "10 Week Mass Building Program For Hardgainers",
+        title: "10 Week Mass Building Program",
+        shortSummary:
+          "This workout is designed to increase your\n                        muscle mass as much as possible in 10\n                        weeks. Works each muscle group hard once\n                        per week using mostly heavy compound\n                        exercises.",
+        reads: null,
+        comments: null,
+        type: "",
+        isWorkout: true,
+        level: "Advanced",
+        forGender: "Male",
+        time: "4 Days/Week",
+      },
+      {
+        href: "https://www.muscleandstrength.com/workouts/muscle-and-strength-womens-workout",
+        imgUrl:
+          "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/womens_12_week_workout_-_1200x630.jpg?itok=h85OGviC",
+        imgAlt:
+          "Muscle & Strength’s 12 Week Women’s Workout Program",
+        title:
+          "Muscle & Strength’s 12 Week\n                          Women’s Workout Program",
+        shortSummary:
+          "This 12 week women's specific training\n                        program is perfect for any healthy woman\n                        who is looking to transform her body\n                        through a good weight lifting program.",
+        reads: null,
+        comments: null,
+        type: "",
+        isWorkout: true,
+        level: "Beginner",
+        forGender: "Female",
+        time: "5 Days/Week",
+      },
+      {
+        href: "https://www.muscleandstrength.com/workouts/12-week-fat-destroyer",
+        imgUrl:
+          "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/12_week_fat_destroyer_-_1200x630.jpg?itok=ki1i9dcq",
+        imgAlt:
+          "12 Week Fat Destroyer: Complete Fat Loss Workout & Diet Program",
+        title:
+          "12 Week Fat Destroyer: Complete Fat\n                          Loss Workout & Diet Program",
+        shortSummary:
+          "This is a complete 12 week program to\n                        help you get ripped. Feature includes\n                        detailed diet plan and cardio schedule,\n                        along with a 4 day upper/lower muscle\n                        building split.",
+        reads: null,
+        comments: null,
+        type: "",
+        isWorkout: true,
+        level: "Beginner",
+        forGender: "Male & Female",
+        time: "4 Days/Week",
+      },
+      {
+        href: "https://www.muscleandstrength.com/workouts/phul-workout",
+        imgUrl:
+          "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/phul_-_1200x630.jpg?itok=LRC9qayO",
+        imgAlt:
+          "Power Hypertrophy Upper Lower (P.H.U.L.) Workout",
+        title:
+          "Power Hypertrophy Upper Lower\n                          (P.H.U.L.) Workout",
+        shortSummary:
+          "Build both size and strength in this 4\n                        day split based around basic compound\n                        movements. Get the best of both worlds\n                        with bodybuilding and powerlifting.",
+        reads: null,
+        comments: null,
+        type: "",
+        isWorkout: true,
+        level: "Intermediate",
+        forGender: "Male & Female",
+        time: "4 Days/Week",
+      },
+      {
+        href: "https://www.muscleandstrength.com/workouts/muscle-and-strength-30-day-womens-workout",
+        imgUrl:
+          "https://cdn.muscleandstrength.com/sites/default/files/styles/large/public/field/feature-image/workout/30-day-womens-workout-thumb.jpg?itok=ncfTjTXl",
+        imgAlt:
+          "Muscle & Strength's 30 Day Workout Plan For Women",
+        title:
+          "Muscle & Strength's 30 Day Workout\n                          Plan For Women",
+        shortSummary:
+          "Looking for the best place to start\n                        working towards a leaner, solid, and\n                        stronger body? This thorough workout\n                        routine is specifically designed to get\n                        you there!",
+        reads: null,
+        comments: null,
+        type: "",
+        isWorkout: true,
+        level: "Beginner",
+        forGender: "Female",
+        time: "6 Days/Week",
+      },
+      {
+        href: "https://www.muscleandstrength.com/workouts/dumbbell-only-home-or-gym-fullbody-workout.html",
+        imgUrl:
+          "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/dumbbell_only_full_body_-_1200x630.jpg?itok=7xYFFO9g",
+        imgAlt: "Dumbbell Only Home Or Gym Full Body Workout",
+        title:
+          "Dumbbell Only Home Or Gym Full Body\n                          Workout",
+        shortSummary:
+          "Short on equipment? No worries! This\n                        dumbbell only workout can be used at home\n                        or in the gym for building muscle mass.\n                        You can also use this as a muscle shock\n                        workout to mix things up.",
+        reads: null,
+        comments: null,
+        type: "",
+        isWorkout: true,
+        level: "Beginner",
+        forGender: "Male",
+        time: "3 Days/Week",
+      },
+    ],
+  },
+  {
+    title: "New Workouts",
+    subTitle:
+      "Just added to the database. To keep up with new workouts we add (and other articles, expert guides, tools etc.) be sure to  subscribe to our weekly newsletter",
+    articles: [
+      {
+        href: "https://www.muscleandstrength.com/workouts/45-minute-kettlebell-bodyweight-fat-loss-workout",
+        imgUrl:
+          "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/shirtless_muscular_man_doing_kettlebell_workout.jpg?itok=XhLCP2aJ",
+        imgAlt:
+          "Shirtless muscular man doing a kettlebell workout in the gym.",
+        title:
+          "45-Minute Kettlebell and Bodyweight\n                          Workout for Fat Loss",
+        shortSummary:
+          "This simple, yet effective full body\n                        workout maximizes fat loss and overall\n                        fitness performance. With very minimal\n                        equipment you can burn calories and start\n                        moving better.",
+        reads: null,
+        comments: null,
+        type: "",
+        isWorkout: true,
+        level: "Beginner",
+        forGender: "Male & Female",
+        time: "3 Days/Week",
+      },
+      {
+        href: "https://www.muscleandstrength.com/workouts/6-week-womens-strength-and-conditioning",
+        imgUrl:
+          "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/strong-brunette-doing-shoulder-press.jpg?itok=Nw6spkO0",
+        imgAlt:
+          "Strong brunette woman doing dumbbell shoulder presses in the gym.",
+        title:
+          "6-Week Women’s Full Body Strength and\n                          Conditioning Workout",
+        shortSummary:
+          "This circuit-style workout will help you\n                        torch calories and feel stronger, in a\n                        short amount of time. Try this 3-day full\n                        body workout for efficient lean muscle\n                        gains!",
+        reads: null,
+        comments: null,
+        type: "",
+        isWorkout: true,
+        level: "Beginner",
+        forGender: "Female",
+        time: "3 Days/Week",
+      },
+      {
+        href: "https://www.muscleandstrength.com/workouts/15-minute-core-conditioning-workout",
+        imgUrl:
+          "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/shirtless_male_doing_ab_workout_at_home.jpg?itok=Glbg5vTr",
+        imgAlt:
+          "Shirtless male doing abdominal plank in his living room at home",
+        title:
+          "15-Minute Core Conditioning Workout\n                          You Can Do Anywhere",
+        shortSummary:
+          "Train your abs effectively and\n                        efficiently! This versatile workout can\n                        be done with just your bodyweight and\n                        should be incorporated into your training\n                        plan 2-3 times per week.",
+        reads: null,
+        comments: null,
+        type: "",
+        isWorkout: true,
+        level: "Beginner",
+        forGender: "Male & Female",
+        time: "3 Days/Week",
+      },
+      {
+        href: "https://www.muscleandstrength.com/workouts/8-week-cannonball-delts",
+        imgUrl:
+          "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/lean-athlete-doing-barbell-shoulder-press.jpg?itok=zsNv5x2u",
+        imgAlt:
+          "Front shot of a lean shirtless african american man doing barbell shoulder press",
+        title:
+          "8-Week Shoulder Workout to Build\n                          Cannonball Delts",
+        shortSummary:
+          "Are you ready to step up your shoulder\n                        training? This intermediate program can\n                        be completed once every 5-7 days for 8\n                        weeks to help your delts reach their true\n                        potential.",
+        reads: null,
+        comments: null,
+        type: "",
+        isWorkout: true,
+        level: "Intermediate",
+        forGender: "Male & Female",
+        time: "1 Days/Week",
+      },
+      {
+        href: "https://www.muscleandstrength.com/workouts/8-week-knee-friendly-quad-workout",
+        imgUrl:
+          "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/cropped-image-of-dark-skinned-male-athlete-touching-knee-feeling-sore-muscles-after-injury-in-gym.jpg?itok=bFSROHAq",
+        imgAlt:
+          "Cropped image of dark skinned male athlete touching knee, feeling sore muscles after injury in gym.",
+        title: "8-Week Knee-Friendly Quad Workout",
+        shortSummary:
+          "This program can help you build bigger\n                        legs without taking a big toll on the\n                        knees. Incorporate this workout into your\n                        existing training plan once a week for\n                        massive gains.",
+        reads: null,
+        comments: null,
+        type: "",
+        isWorkout: true,
+        level: "Beginner",
+        forGender: "Male & Female",
+        time: "1 Days/Week",
+      },
+      {
+        href: "https://www.muscleandstrength.com/workouts/dumbbell-bodyweight-chest-workout",
+        imgUrl:
+          "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/man-doing-elevated-push-ups.jpg?itok=F1J8DCIc",
+        imgAlt:
+          "Shirtless brunette man doing feet elevated push up's at home",
+        title:
+          "3 Dumbbell and Bodyweight Chest\n                          Workouts (No Bench Needed!)",
+        shortSummary:
+          "No bench? No problem. You can still get a\n                        solid pec pump using just your bodyweight\n                        and dumbbells. Try one of these workouts\n                        on your next chest day.",
+        reads: null,
+        comments: null,
+        type: "",
+        isWorkout: true,
+        level: "Beginner",
+        forGender: "Male & Female",
+        time: "2 Days/Week",
+      },
+    ],
+  },
+];

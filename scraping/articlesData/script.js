@@ -122,6 +122,29 @@ export const getArticlesData = async () => {
         .split(" ")[1]
         .trim();
 
+      if ($(".node-meta.workout", $(articleInnerWrapper))) {
+        article.isWorkout = true;
+        article.level = $(
+          ".node-meta > span:nth-child(1)",
+          $(articleInnerWrapper)
+        )
+          .text()
+          .trim();
+
+        article.forGender = $(
+          ".node-meta > span:nth-child(2)",
+          $(articleInnerWrapper)
+        )
+          .text()
+          .trim();
+
+        article.time = $(
+          ".node-meta > span:nth-child(3)",
+          $(articleInnerWrapper)
+        )
+          .text()
+          .trim();
+      }
       articlesArray.push(article);
     }
     articleGroup.articles = articlesArray;
@@ -140,3 +163,5 @@ export const getArticlesData = async () => {
 
   //   await browser.close();
 };
+
+getArticlesData();
