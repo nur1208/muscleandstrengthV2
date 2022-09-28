@@ -10,6 +10,10 @@ export const Article = ({
   reads,
   comments,
   type,
+  isWorkout,
+  level,
+  forGender,
+  time,
 }) => {
   return (
     <MainWrapper>
@@ -32,13 +36,23 @@ export const Article = ({
       <div class="node-short-summary">{shortSummary}</div>
 
       <div class="node-meta">
-        <span>
-          {Intl.NumberFormat("en", {
-            notation: "compact",
-          }).format(reads)}{" "}
-          Reads
-        </span>
-        <span>{comments} Comments </span>
+        {isWorkout ? (
+          <>
+            <span>{level}</span>
+            <span>{forGender}</span>
+            <span>{time}</span>
+          </>
+        ) : (
+          <>
+            <span>
+              {Intl.NumberFormat("en", {
+                notation: "compact",
+              }).format(reads)}{" "}
+              Reads
+            </span>
+            <span>{comments} Comments </span>
+          </>
+        )}
       </div>
 
       <div class="view-content-button">
