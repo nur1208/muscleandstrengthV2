@@ -14,6 +14,7 @@ import {
   BANNER_BLOCK_12,
   BANNER_BLOCK_19,
 } from "../../components/data";
+import { FRONT_HERO_TYPE } from "../../components/frontHero/utils";
 
 import { MainWrapper } from "./home.styles";
 export const Home = () => {
@@ -23,7 +24,7 @@ export const Home = () => {
         <div id="screen">
           <Banner {...BANNER_BLOCK_12} />
           <Header />
-          <FrontHero />
+          <FrontHero type={FRONT_HERO_TYPE.HOME} />
           <InPageNav />
           <main id="main-wrap">
             <div style={{ marginBottom: "25px" }}>

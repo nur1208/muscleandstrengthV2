@@ -245,7 +245,7 @@ export const navbarData = [
   },
   {
     navbarItemTitle: "Workouts",
-    navbarItemHref: "/workout-routines",
+    navbarItemHref: "/workouts",
     navbarItemIconId: "icon-nav-workouts-white",
     hasSubmenu: true,
     groups: [
@@ -286,7 +286,7 @@ export const navbarData = [
           {
             hasSubSubmenu: false,
             subItemTitle: "View All",
-            subItemHref: "/workout-routines",
+            subItemHref: "/workouts",
             itemsOfSubSubItem: [],
           },
         ],

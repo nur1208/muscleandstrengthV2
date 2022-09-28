@@ -68,3 +68,7 @@ export { TopSellersAside } from "./topSellersAside/TopSellersAside";
 export { BulkAdAside } from "./bulkAdAside/BulkAdAside";
 export { FeatureHeader } from "./featureHeader/FeatureHeader";
 export { TopProducts } from "./topProducts/TopProducts";
+export { CategoryStats } from "./categoryStats/CategoryStats";
+export { TaxonomyHeading } from "./taxonomyHeading/TaxonomyHeading";
+export { MainPageCategory } from "./mainPageCategory/MainPageCategory";
+export { MainPageQuestions } from "./mainPageQuestions/MainPageQuestions";

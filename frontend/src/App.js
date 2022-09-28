@@ -20,6 +20,7 @@ import {
   SignUp,
   Store,
   Top50Products,
+  Workout,
 } from "./pages";
 
 function App() {
@@ -71,6 +72,10 @@ function App() {
             />
             <Route path=":navItem" element={<Account />} />
           </Route>
+        </Route>
+
+        <Route path="/workouts">
+          <Route index element={<Workout />} />
         </Route>
       </Routes>
       <LoginModal />
