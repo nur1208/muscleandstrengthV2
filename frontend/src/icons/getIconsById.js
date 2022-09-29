@@ -1,4 +1,8 @@
 import {
+  IconAlpha,
+  IconDiscussed,
+  IconDate,
+  IconPopularGray,
   IconDealAlert,
   IconEdit,
   IconCheckMark,
@@ -239,6 +243,18 @@ export const getIconById = (iconId, style, fill) => {
 
     case "icon-deal-alert":
       return <IconDealAlert style={style} />;
+
+    case "icon-popular-gray":
+      return <IconPopularGray style={style} fill={fill} />;
+
+    case "icon-date":
+      return <IconDate style={style} fill={fill} />;
+
+    case "icon-discussed":
+      return <IconDiscussed style={style} fill={fill} />;
+
+    case "icon-alpha":
+      return <IconAlpha style={style} fill={fill} />;
 
     default:
       return <IconQuestionMark style={style} />;

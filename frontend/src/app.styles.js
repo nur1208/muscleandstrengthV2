@@ -12,13 +12,20 @@ export const GridX = styled.div`
     width: 100%;
     flex-basis: auto;
   }
+  .small-3 {
+    width: 25%;
+  }
 
+  .grid-x > .small-3 {
+    width: 25%;
+  }
   .small-4 {
     width: 33.3333333333%;
   }
   .grid-x > .small-4 {
     width: 33.3333333333%;
   }
+
   .grid-x > .small-12 {
     width: 100%;
   }
@@ -70,6 +77,22 @@ export const GridX = styled.div`
     .grid-margin-x.bp600-up-3 > .cell {
       width: calc(33.3333333333% - 1.1111111111rem);
     }
+
+    .bp600-6 {
+      width: 50%;
+    }
+
+    .grid-x > .bp600-6 {
+      width: 50%;
+    }
+
+    .grid-margin-x > .bp600-6 {
+      width: calc(50% - 1.1111111111rem);
+    }
+
+    .grid-margin-y > .bp600-6 {
+      height: calc(50% - 1.1111111111rem);
+    }
   }
 
   @media print, screen and (min-width: 52.5em) {
@@ -109,6 +132,14 @@ export const GridX = styled.div`
 
     .grid-margin-x.medium-up-4 > .cell {
       width: calc(25% - 1.6666666667rem);
+    }
+
+    .grid-margin-x > .bp600-6 {
+      width: calc(50% - 1.6666666667rem);
+    }
+
+    .grid-margin-y > .bp600-6 {
+      height: calc(50% - 1.6666666667rem);
     }
   }
 

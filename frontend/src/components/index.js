@@ -72,3 +72,5 @@ export { CategoryStats } from "./categoryStats/CategoryStats";
 export { TaxonomyHeading } from "./taxonomyHeading/TaxonomyHeading";
 export { MainPageCategory } from "./mainPageCategory/MainPageCategory";
 export { MainPageQuestions } from "./mainPageQuestions/MainPageQuestions";
+export { TaxonomyFeatured } from "./taxonomyFeatured/TaxonomyFeatured";
+export { TaxonomyBody } from "./taxonomyBody/TaxonomyBody";

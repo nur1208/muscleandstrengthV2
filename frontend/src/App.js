@@ -21,6 +21,7 @@ import {
   Store,
   Top50Products,
   Workout,
+  WorkoutCategory,
 } from "./pages";
 
 function App() {
@@ -76,6 +77,7 @@ function App() {
 
         <Route path="/workouts">
           <Route index element={<Workout />} />
+          <Route path=":type" element={<WorkoutCategory />} />
         </Route>
       </Routes>
       <LoginModal />

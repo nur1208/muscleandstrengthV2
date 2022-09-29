@@ -45,4 +45,8 @@ export const ICONS_ID = {
   IconCheckMark: "icon-check-mark",
   IconEdit: "icon-edit",
   IconDealAlert: "icon-deal-alert",
+  IconPopularGray: "icon-popular-gray",
+  IconDate: "icon-date",
+  IconDiscussed: "icon-discussed",
+  IconAlpha: "icon-alpha",
 };
