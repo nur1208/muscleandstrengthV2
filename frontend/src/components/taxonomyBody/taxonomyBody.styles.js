@@ -53,4 +53,11 @@ export const MainWrapper = styled.div`
     /* gap: 20px; */
     justify-content: space-between;
   }
+
+  @media screen and (min-width: 37.5em) {
+    .cell {
+      position: relative;
+      border-bottom: 0;
+    }
+  }
 `;
