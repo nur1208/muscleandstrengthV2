@@ -34,19 +34,19 @@ export const ArticleHeader = () => {
             </div>
             <div className="cell small-12 bp600-8 category-info">
               <div className="categories">
-                Categories:
+                Categories:{" "}
                 <a
                   className="category-link"
                   href="/workout-routines"
                 >
                   Workouts
-                </a>
+                </a>{" "}
                 <a
                   className="category-link"
                   href="/workouts/men"
                 >
                   Workouts For Men
-                </a>
+                </a>{" "}
                 <a
                   className="category-link"
                   href="/workouts/muscle-building"
