@@ -10,6 +10,7 @@ import globalErrorHandler, {
 } from "./controllers/error.js";
 import reviewRouter from "./routes/review.js";
 import userRouter from "./routes/user.js";
+import articleRouter from "./routes/article.js";
 
 dotenv.config();
 
@@ -39,6 +40,7 @@ const main = async () => {
     app.use(router);
     app.use("/api/v1/products", productRouter);
     app.use("/api/v1/reviews", reviewRouter);
+    app.use("/api/v1/articles", articleRouter);
     app.use("/api/v1/users", userRouter);
 
     // global error handlers
