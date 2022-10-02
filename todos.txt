@@ -360,20 +360,54 @@
 - {DONE} make TopProducts component more dynamic
 - {DONE} test Top50Products page for responsive 
 
-- {TODO} make FrontHero component more dynamic
-- {TODO} create CategoryStats component
-- {TODO} add '.small-4' and '.text-center' to GridX styled component
-- {TODO} create TaxonomyHeading component
+- {DONE} make FrontHero component more dynamic
+- {DONE} add '.small-4' and '.text-center' to GridX styled component
+- {DONE} create CategoryStats component
+- {DONE} create TaxonomyHeading component
         note: put subheading in TaxonomyHeading component
-- {TODO} create MainPageCategory component
-- {TODO} scrap MainPageCategory component data
-- {TODO} make  MainPageCategory component more dynamic
-- {TODO} use TaxonomyHeading component in Articles component
-- {TODO} scrap workout articles
-- {TODO} create MainPageQuestions component
-- {TODO} scrap MainPageQuestions component data
-- {TODO} make  MainPageQuestions component more dynamic
-- {TODO} set update Workout page
+
+- {DONE} add 'grid-margin-y'  ,'bp600-up-3' ,'medium-up-2'and 'small-up-2' to GridX styled component
+- {DONE} fix responsive problems for CategoryStats component
+- {DONE} fix responsive problems for GridX component
+- {DONE} create MainPageCategory component
+- {DONE} scrap MainPageCategory component data
+- {DONE} make  MainPageCategory component more dynamic
+- {DONE} use TaxonomyHeading component in Articles component
+- {DONE} scrap workout articles
+- {DONE} make Article component more dynamic
+- {DONE} create MainPageQuestions component
+- {DONE} set Workout page
+- {DONE} create TaxonomyFeatured component
+- {DONE} create ViewSortSwitcher component
+- {DONE} create Pager component
+- {DONE} create TaxonomyBody component
+- {DONE} set WorkoutCategory page
+- {DONE} fix TaxonomyBody style problem
+- {DONE} create Article model in the backend
+        Article{
+                href: String,
+                imgUrl: String,
+                imgAlt: String,
+                title: String,
+                shortSummary: String,
+                reads: Number,
+                comments: Number,
+                type: String,
+                isWorkout: Boolean,
+                level: String,
+                forGender: String,
+                time: String
+        }
+- {DONE} create Article post and get routes
+- {DONE} create ArticleHeader component 
+- {DONE} fix ArticleHeader component style 
+- {DONE} create ArticleSummary component 
+- {DONE} create ArticleBody component 
+- {DONE} create ArticleFooter component 
+- {DONE} create ArticleFooter component part 2
+- {DONE} create ArticleComments component 
+- {DONE} set up Article page
+- {TODO} scrap workout for men articles and save them in the database
 
 - {TODO} scrap other Categories
 - {TODO} scrap proteinDeals 
@@ -382,6 +416,9 @@
 - {TODO} don't populate carts when login and signUp, create endpoint to populate it
 
 not important:
+- {TODO} ADD header-share-wrap to ArticleHeader component 
+- {TODO} scrap MainPageQuestions component data
+- {TODO} make  MainPageQuestions component more dynamic
 - {TODO} add brand in TopProducts component
 - {TODO} improve AddressForm by Create Filed components  
 - {TODO} fix Selector up down keys when there are long list

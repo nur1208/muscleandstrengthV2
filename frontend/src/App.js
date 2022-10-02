@@ -4,6 +4,7 @@ import { LoginModal } from "./components";
 import { useAutoLogin } from "./hooks";
 import {
   Account,
+  Article,
   Brand,
   Brands,
   Categories,
@@ -74,7 +75,9 @@ function App() {
             <Route path=":navItem" element={<Account />} />
           </Route>
         </Route>
-
+        <Route path="/articles">
+          <Route path=":title" element={<Article />} />
+        </Route>
         <Route path="/workouts">
           <Route index element={<Workout />} />
           <Route path=":type" element={<WorkoutCategory />} />

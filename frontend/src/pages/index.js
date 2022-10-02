@@ -17,3 +17,4 @@ export { Brands } from "./brands/Brands";
 export { Top50Products } from "./top50Products/Top50Products";
 export { Workout } from "./workout/Workout";
 export { WorkoutCategory } from "./workoutCategory/WorkoutCategory";
+export { Article } from "./article/Article";

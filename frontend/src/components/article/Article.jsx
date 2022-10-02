@@ -1,6 +1,7 @@
 import React from "react";
 import { MainWrapper } from "./article.styles";
 import { Button } from "../index";
+import { Link } from "react-router-dom";
 export const Article = ({
   href,
   imgUrl,
@@ -18,7 +19,7 @@ export const Article = ({
   return (
     <MainWrapper>
       <div class="node-image">
-        <a href={href}>
+        <Link to={href}>
           <img
             class=" ls-is-cached lazyloaded"
             width="800"
@@ -26,12 +27,12 @@ export const Article = ({
             alt={imgAlt}
             src={imgUrl}
           />
-        </a>
+        </Link>
       </div>
       <div class="node-title">
-        <a href={href} alt={title} title={href}>
+        <Link to={href} alt={title} title={href}>
           {title}
-        </a>
+        </Link>
       </div>
       <div class="node-short-summary">{shortSummary}</div>
 
@@ -56,9 +57,9 @@ export const Article = ({
       </div>
 
       <div class="view-content-button">
-        <a href={href} alt={title} title={title}>
+        <Link to={href} alt={title} title={title}>
           <Button text={`View ${type}`} isBlue />
-        </a>
+        </Link>
       </div>
     </MainWrapper>
   );

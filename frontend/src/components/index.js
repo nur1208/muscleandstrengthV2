@@ -74,3 +74,8 @@ export { MainPageCategory } from "./mainPageCategory/MainPageCategory";
 export { MainPageQuestions } from "./mainPageQuestions/MainPageQuestions";
 export { TaxonomyFeatured } from "./taxonomyFeatured/TaxonomyFeatured";
 export { TaxonomyBody } from "./taxonomyBody/TaxonomyBody";
+export { ArticleHeader } from "./articleHeader/ArticleHeader";
+export { ArticleSummary } from "./articleSummary/ArticleSummary";
+export { ArticleBody } from "./articleBody/ArticleBody";
+export { ArticleFooter } from "./articleFooter/ArticleFooter";
+export { ArticleComments } from "./articleComments/ArticleComments";

@@ -4,9 +4,12 @@ export const GridX = styled.div`
     display: flex;
     flex-flow: row wrap;
   }
-
+  .text-right {
+    text-align: right;
+  }
   .cell {
     flex: 0 0 auto;
+
     min-height: 0;
     min-width: 0;
     width: 100%;
@@ -26,6 +29,13 @@ export const GridX = styled.div`
     width: 33.3333333333%;
   }
 
+  .small-6 {
+    width: 50%;
+  }
+
+  .grid-x > .small-6 {
+    width: 50%;
+  }
   .grid-x > .small-12 {
     width: 100%;
   }
@@ -63,6 +73,18 @@ export const GridX = styled.div`
     width: calc(50% - 1.1111111111rem);
   }
 
+  .cell.shrink {
+    flex: 0 0 auto;
+  }
+
+  .grid-x > .auto,
+  .grid-x > .shrink {
+    width: auto;
+  }
+  .cell.auto {
+    flex: 1 1 0px;
+  }
+
   @media print, screen and (min-width: 37.5em) {
     .grid-x > .bp600-4 {
       width: 33.3333333333%;
@@ -92,6 +114,26 @@ export const GridX = styled.div`
 
     .grid-margin-y > .bp600-6 {
       height: calc(50% - 1.1111111111rem);
+    }
+
+    .bp600-8 {
+      width: 66.6666666667%;
+    }
+
+    .grid-x > .bp600-8 {
+      width: 66.6666666667%;
+    }
+    .grid-margin-x > .bp600-8 {
+      width: calc(66.6666666667% - 1.1111111111rem);
+    }
+
+    .grid-x > .bp600-shrink {
+      width: auto;
+    }
+
+    .grid-x > .bp600-auto {
+      flex: 1 1 0px;
+      width: auto;
     }
   }
 
@@ -141,6 +183,10 @@ export const GridX = styled.div`
     .grid-margin-y > .bp600-6 {
       height: calc(50% - 1.6666666667rem);
     }
+
+    .grid-margin-x > .bp600-8 {
+      width: calc(66.6666666667% - 1.6666666667rem);
+    }
   }
 
   @media print, screen and (min-width: 60em) {
@@ -150,6 +196,39 @@ export const GridX = styled.div`
 
     .grid-margin-x > .bp960-3 {
       width: calc(25% - 0.9375rem);
+    }
+
+    .bp960-4 {
+      width: 33.3333333333%;
+    }
+    .grid-x > .bp960-4 {
+      width: 33.3333333333%;
+    }
+    .grid-margin-x > .bp960-4 {
+      width: calc(33.3333333333% - 1.6666666667rem);
+    }
+    .bp960-6 {
+      width: 50%;
+    }
+
+    .grid-x > .bp960-6 {
+      width: 50%;
+    }
+    .grid-margin-x > .bp960-6 {
+      width: calc(50% - 1.6666666667rem);
+    }
+  }
+
+  @media print, screen and (min-width: 64em) {
+    .large-4 {
+      width: 33.3333333333%;
+    }
+
+    .grid-x > .large-4 {
+      width: 33.3333333333%;
+    }
+    .grid-margin-x > .large-4 {
+      width: calc(33.3333333333% - 1.6666666667rem);
     }
   }
 

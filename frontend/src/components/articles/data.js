@@ -3,7 +3,7 @@ export const articlesData = [
     title: "New at Muscle & Strength",
     articles: [
       {
-        href: "/workouts/6-week-womens-strength-and-conditioning",
+        href: "/articles/6-week-womens-strength-and-conditioning",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/strong-brunette-doing-shoulder-press.jpg?itok=Nw6spkO0",
         imgAlt:
@@ -17,7 +17,7 @@ export const articlesData = [
         type: "Workout",
       },
       {
-        href: "/workouts/15-minute-core-conditioning-workout",
+        href: "/articles/15-minute-core-conditioning-workout",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/shirtless_male_doing_ab_workout_at_home.jpg?itok=Glbg5vTr",
         imgAlt:
@@ -72,7 +72,7 @@ export const articlesData = [
         type: "Article",
       },
       {
-        href: "/workouts/8-week-cannonball-delts",
+        href: "/articles/8-week-cannonball-delts",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/lean-athlete-doing-barbell-shoulder-press.jpg?itok=zsNv5x2u",
         imgAlt:
@@ -91,7 +91,7 @@ export const articlesData = [
     title: "Trending in Workouts",
     articles: [
       {
-        href: "/workouts/insane-like-bane-training-program",
+        href: "/articles/insane-like-bane-training-program",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/field/feature-image/workout/bane-workout.jpg",
         imgAlt: "Insane Bane Workout",
@@ -103,7 +103,7 @@ export const articlesData = [
         type: "Workout",
       },
       {
-        href: "/workouts/triple-header-tricep-workout",
+        href: "/articles/triple-header-tricep-workout",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/field/feature-image/workout/triple-header-tricep-workout-thumb.jpg",
         imgAlt: "12 Week Triple Header Triceps Workout Program",
@@ -115,7 +115,7 @@ export const articlesData = [
         type: "Workout",
       },
       {
-        href: "/workouts/pause-reps",
+        href: "/articles/pause-reps",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/field/feature-image/workout/pause-reps-for-size-feature.jpg",
         imgAlt:
@@ -129,7 +129,7 @@ export const articlesData = [
         type: "Workout",
       },
       {
-        href: "/workouts/big-arms-fast-4-week-specialization-workout",
+        href: "/articles/big-arms-fast-4-week-specialization-workout",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/field/image/workout/big-arms-450.jpg?itok=Tr1M3DSa",
         imgAlt: "Big Arms Fast: 4 Week Specialization Workout",
@@ -141,7 +141,7 @@ export const articlesData = [
         type: "Workout",
       },
       {
-        href: "/workouts/23-doug--s-mega-cutting-routine.html",
+        href: "/articles/23-doug--s-mega-cutting-routine.html",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/doug_mega_cutting_-_1200x630.jpg?itok=KYmJJmdj",
         imgAlt: "Doug's 4 Day Mega Cutting Routine",
@@ -153,7 +153,7 @@ export const articlesData = [
         type: "Workout",
       },
       {
-        href: "/workouts/george-hackenschmidt-inspired-workout",
+        href: "/articles/george-hackenschmidt-inspired-workout",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/field/feature-image/workout/george-hackenschmidt-workout.jpg",
         imgAlt:
@@ -319,7 +319,7 @@ export const articlesWorkout = [
       "The most downloaded workouts in our database during the past 24 hours. You can also find top/trending workouts by choosing a category (above) and scrolling to the 'trending' view.",
     articles: [
       {
-        href: "https://www.muscleandstrength.com/workouts/10-week-mass-building-program.html",
+        href: "/articles/10-week-mass-building-program.html",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/10_week_mass_building_program_-_1200x630.jpg?itok=l2JIA-mt",
         imgAlt: "10 Week Mass Building Program For Hardgainers",
@@ -335,7 +335,7 @@ export const articlesWorkout = [
         time: "4 Days/Week",
       },
       {
-        href: "https://www.muscleandstrength.com/workouts/muscle-and-strength-womens-workout",
+        href: "/articles/muscle-and-strength-womens-workout",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/womens_12_week_workout_-_1200x630.jpg?itok=h85OGviC",
         imgAlt:
@@ -353,7 +353,7 @@ export const articlesWorkout = [
         time: "5 Days/Week",
       },
       {
-        href: "https://www.muscleandstrength.com/workouts/12-week-fat-destroyer",
+        href: "/articles/12-week-fat-destroyer",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/12_week_fat_destroyer_-_1200x630.jpg?itok=ki1i9dcq",
         imgAlt:
@@ -371,7 +371,7 @@ export const articlesWorkout = [
         time: "4 Days/Week",
       },
       {
-        href: "https://www.muscleandstrength.com/workouts/phul-workout",
+        href: "/articles/phul-workout",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/phul_-_1200x630.jpg?itok=LRC9qayO",
         imgAlt:
@@ -389,7 +389,7 @@ export const articlesWorkout = [
         time: "4 Days/Week",
       },
       {
-        href: "https://www.muscleandstrength.com/workouts/muscle-and-strength-30-day-womens-workout",
+        href: "/articles/muscle-and-strength-30-day-womens-workout",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/styles/large/public/field/feature-image/workout/30-day-womens-workout-thumb.jpg?itok=ncfTjTXl",
         imgAlt:
@@ -407,7 +407,7 @@ export const articlesWorkout = [
         time: "6 Days/Week",
       },
       {
-        href: "https://www.muscleandstrength.com/workouts/dumbbell-only-home-or-gym-fullbody-workout.html",
+        href: "/articles/dumbbell-only-home-or-gym-fullbody-workout.html",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/dumbbell_only_full_body_-_1200x630.jpg?itok=7xYFFO9g",
         imgAlt: "Dumbbell Only Home Or Gym Full Body Workout",
@@ -431,7 +431,7 @@ export const articlesWorkout = [
       "Just added to the database. To keep up with new workouts we add (and other articles, expert guides, tools etc.) be sure to  subscribe to our weekly newsletter",
     articles: [
       {
-        href: "https://www.muscleandstrength.com/workouts/45-minute-kettlebell-bodyweight-fat-loss-workout",
+        href: "/articles/45-minute-kettlebell-bodyweight-fat-loss-workout",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/shirtless_muscular_man_doing_kettlebell_workout.jpg?itok=XhLCP2aJ",
         imgAlt:
@@ -449,7 +449,7 @@ export const articlesWorkout = [
         time: "3 Days/Week",
       },
       {
-        href: "https://www.muscleandstrength.com/workouts/6-week-womens-strength-and-conditioning",
+        href: "/articles/6-week-womens-strength-and-conditioning",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/strong-brunette-doing-shoulder-press.jpg?itok=Nw6spkO0",
         imgAlt:
@@ -467,7 +467,7 @@ export const articlesWorkout = [
         time: "3 Days/Week",
       },
       {
-        href: "https://www.muscleandstrength.com/workouts/15-minute-core-conditioning-workout",
+        href: "/articles/15-minute-core-conditioning-workout",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/shirtless_male_doing_ab_workout_at_home.jpg?itok=Glbg5vTr",
         imgAlt:
@@ -485,7 +485,7 @@ export const articlesWorkout = [
         time: "3 Days/Week",
       },
       {
-        href: "https://www.muscleandstrength.com/workouts/8-week-cannonball-delts",
+        href: "/articles/8-week-cannonball-delts",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/lean-athlete-doing-barbell-shoulder-press.jpg?itok=zsNv5x2u",
         imgAlt:
@@ -503,7 +503,7 @@ export const articlesWorkout = [
         time: "1 Days/Week",
       },
       {
-        href: "https://www.muscleandstrength.com/workouts/8-week-knee-friendly-quad-workout",
+        href: "/articles/8-week-knee-friendly-quad-workout",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/cropped-image-of-dark-skinned-male-athlete-touching-knee-feeling-sore-muscles-after-injury-in-gym.jpg?itok=bFSROHAq",
         imgAlt:
@@ -520,7 +520,7 @@ export const articlesWorkout = [
         time: "1 Days/Week",
       },
       {
-        href: "https://www.muscleandstrength.com/workouts/dumbbell-bodyweight-chest-workout",
+        href: "/articles/dumbbell-bodyweight-chest-workout",
         imgUrl:
           "https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/man-doing-elevated-push-ups.jpg?itok=F1J8DCIc",
         imgAlt:
