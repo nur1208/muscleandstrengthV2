@@ -77,4 +77,46 @@ export const MainWrapper = styled.div`
     padding-top: 0;
     padding-bottom: 0;
   }
+  .text-center {
+    text-align: center;
+  }
+
+  .about-author {
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 2px;
+  }
+  img {
+    border-style: none;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+  }
+  .about-author img {
+    width: 200px;
+    margin: 0 0 15px;
+    border-radius: 50%;
+  }
+  .h5,
+  h5 {
+    font-size: 1.1111111111rem;
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  @media screen and (min-width: 37.5em) {
+    .about-author img {
+      margin: 0 15px 0 0;
+    }
+  }
+
+  @media print, screen and (min-width: 52.5em) {
+    .h5,
+    h5 {
+      font-size: 1.2222222222rem;
+    }
+  }
 `;

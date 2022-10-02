@@ -110,6 +110,161 @@ export const ArticleFooter = () => {
             </GridX>
           </div>
         </div>
+        <div class="relatedContent">
+          <div class="related-content">
+            <h4 class="text-center">Recommended For You</h4>
+            <GridX>
+              <div class="grid-x grid-margin-x grid-margin-y">
+                <div class="cell small-6 bp600-4">
+                  <div class="related-image">
+                    <a href="/workouts/8-week-hypertrophy-workout">
+                      <img
+                        class=" ls-is-cached lazyloaded"
+                        typeof="foaf:Image"
+                        data-src="https://cdn.muscleandstrength.com/sites/default/files/styles/400x400/public/muscular-guy-doing-cable-flys.jpg?itok=e5mNX4vR"
+                        alt="8 Week Mass Building Hypertrophy Workout"
+                        src="https://cdn.muscleandstrength.com/sites/default/files/styles/400x400/public/muscular-guy-doing-cable-flys.jpg?itok=e5mNX4vR"
+                      />
+                    </a>
+                  </div>
+                  <div class="related-title">
+                    <a href="/workouts/8-week-hypertrophy-workout">
+                      8 Week Mass Building Hypertrophy Workout
+                    </a>
+                  </div>
+                </div>
+                <div class="cell small-6 bp600-4">
+                  <div class="related-image">
+                    <a href="/workouts/build-wider-back">
+                      <img
+                        class=" ls-is-cached lazyloaded"
+                        typeof="foaf:Image"
+                        data-src="https://cdn.muscleandstrength.com/sites/default/files/styles/400x400/public/field/feature-image/workout/2-back-feature.jpg?itok=VhIG1jME"
+                        alt="RP-21 Muscle Building Workout Program (Back Focus)"
+                        src="https://cdn.muscleandstrength.com/sites/default/files/styles/400x400/public/field/feature-image/workout/2-back-feature.jpg?itok=VhIG1jME"
+                      />
+                    </a>
+                  </div>
+                  <div class="related-title">
+                    <a href="/workouts/build-wider-back">
+                      RP-21 Muscle Building Workout Program (Back
+                      Focus)
+                    </a>
+                  </div>
+                </div>
+                <div class="cell small-6 bp600-4">
+                  <div class="related-image">
+                    <a href="/workouts/6-week-workout-program-to-build-lean-muscle">
+                      <img
+                        class=" ls-is-cached lazyloaded"
+                        typeof="foaf:Image"
+                        data-src="https://cdn.muscleandstrength.com/sites/default/files/styles/400x400/public/lean_mass_-_1200x630.jpg?itok=5HQBgJ9-"
+                        alt="Lean Mass: 6 Week Workout Program to Build Lean Muscle"
+                        src="https://cdn.muscleandstrength.com/sites/default/files/styles/400x400/public/lean_mass_-_1200x630.jpg?itok=5HQBgJ9-"
+                      />
+                    </a>
+                  </div>
+                  <div class="related-title">
+                    <a href="/workouts/6-week-workout-program-to-build-lean-muscle">
+                      Lean Mass: 6 Week Workout Program to Build
+                      Lean Muscle
+                    </a>
+                  </div>
+                </div>
+                <div class="cell small-6 bp600-4">
+                  <div class="related-image">
+                    <a href="/workouts/4-day-workout-build-serious-mass">
+                      <img
+                        class=" ls-is-cached lazyloaded"
+                        typeof="foaf:Image"
+                        data-src="https://cdn.muscleandstrength.com/sites/default/files/styles/400x400/public/field/feature-image/workout/4-day-serious-mass-thumb.jpg?itok=lIMV-AP3"
+                        alt="4 Day Workout Program to Build Serious Mass"
+                        src="https://cdn.muscleandstrength.com/sites/default/files/styles/400x400/public/field/feature-image/workout/4-day-serious-mass-thumb.jpg?itok=lIMV-AP3"
+                      />
+                    </a>
+                  </div>
+                  <div class="related-title">
+                    <a href="/workouts/4-day-workout-build-serious-mass">
+                      4 Day Workout Program to Build Serious Mass
+                    </a>
+                  </div>
+                </div>
+                <div class="cell small-6 bp600-4">
+                  <div class="related-image">
+                    <a href="/workouts/4-day-advanced-upper-lower-workout-program-to-build-mass">
+                      <img
+                        class=" ls-is-cached lazyloaded"
+                        typeof="foaf:Image"
+                        data-src="https://cdn.muscleandstrength.com/sites/default/files/styles/400x400/public/field/feature-image/workout/upper-lower-workout-to-build-mass.jpg?itok=pyOMTAJH"
+                        alt="4 Day Advanced Upper/Lower Workout Program to Build Mass"
+                        src="https://cdn.muscleandstrength.com/sites/default/files/styles/400x400/public/field/feature-image/workout/upper-lower-workout-to-build-mass.jpg?itok=pyOMTAJH"
+                      />
+                    </a>
+                  </div>
+                  <div class="related-title">
+                    <a href="/workouts/4-day-advanced-upper-lower-workout-program-to-build-mass">
+                      4 Day Advanced Upper/Lower Workout Program
+                      to Build Mass
+                    </a>
+                  </div>
+                </div>
+                <div class="cell small-6 bp600-4">
+                  <div class="related-image">
+                    <a href="/workouts/the-next-step-6-week-intermediate-workout-program">
+                      <img
+                        class=" ls-is-cached lazyloaded"
+                        typeof="foaf:Image"
+                        data-src="https://cdn.muscleandstrength.com/sites/default/files/styles/400x400/public/field/feature-image/workout/intermediate-mass-building-workout-thumb.jpg?itok=MgRFXCOt"
+                        alt="The Next Step: 6 Week Intermediate Mass Building Workout"
+                        src="https://cdn.muscleandstrength.com/sites/default/files/styles/400x400/public/field/feature-image/workout/intermediate-mass-building-workout-thumb.jpg?itok=MgRFXCOt"
+                      />
+                    </a>
+                  </div>
+                  <div class="related-title">
+                    <a href="/workouts/the-next-step-6-week-intermediate-workout-program">
+                      The Next Step: 6 Week Intermediate Mass
+                      Building Workout
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </GridX>
+          </div>
+        </div>
+        <div class="about-author">
+          <GridX>
+            <div class="grid-x">
+              <div class="cell small-12 bp600-shrink text-center author-image">
+                <img
+                  class=" ls-is-cached lazyloaded"
+                  width="300"
+                  height="300"
+                  data-src="https://cdn.muscleandstrength.com/sites/default/files/styles/300x300/public/field/image/author/mns.jpg?itok=tn6rHaSt"
+                  alt="M&amp;S Writers"
+                  src="https://cdn.muscleandstrength.com/sites/default/files/styles/300x300/public/field/image/author/mns.jpg?itok=tn6rHaSt"
+                />
+              </div>
+              <div class="cell small-12 bp600-auto author-data">
+                <h5>
+                  <a href="/authors/mands-writer.html">
+                    M&amp;S Writers
+                  </a>
+                </h5>
+                <div>
+                  <div class="field field-name-field-summary field-type-text-long field-label-hidden">
+                    <div class="field-items">
+                      <div class="field-item even">
+                        M&amp;S writers is a collection of all
+                        the other writers that have published
+                        content on Muscle and Strength.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </GridX>
+        </div>
       </div>
     </MainWrapper>
   );
