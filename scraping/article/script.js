@@ -13,7 +13,16 @@ import {
 import { scrapFiled } from "../loginData/scrapFiled.js";
 import GenericEndpoints from "../services/generic.js";
 
+const isScraped = async (url) => {
+  const { data } = await GenericEndpoints.get(
+    `articles?sourceUrl=${url}`
+  );
+
+  return data.results;
+};
 export const getArticleData = async (url) => {
+  if (await isScraped(url))
+    return console.log("This Article scraped");
   const __filename = fileURLToPath(import.meta.url);
 
   const __dirname = path.dirname(__filename);
@@ -135,7 +144,7 @@ export const getArticleData = async (url) => {
   console.log("start scripting... ⌛");
 
   await getArticleData(
-    "https://www.muscleandstrength.com/workouts/10-week-mass-building-program.html"
+    "https://www.muscleandstrength.com/workouts/6-day-powerbuilding-split-meal-plan"
   );
 
   console.log("DONE SCRIPTING... ✅");
