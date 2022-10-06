@@ -5,6 +5,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import {
   getAttr,
+  getHref,
   getHtml,
   getIconId,
   getNumberFromString,
@@ -20,6 +21,9 @@ const isScraped = async (url) => {
 
   return data.results;
 };
+const timeout = 1000 * 60;
+const waitForSelector = "#main-wrap";
+
 export const getArticleData = async (url) => {
   if (await isScraped(url))
     return console.log("This Article scraped");
@@ -29,10 +33,14 @@ export const getArticleData = async (url) => {
   //   console.log("directory-name 👉️", __dirname);
   const mainPageHtml = `${__dirname}/pageHtml.html`;
   const mainDataJson = `${__dirname}/data.json`;
-  const timeout = 1000 * 60;
-  const waitForSelector = "#main-wrap";
 
-  const html = await getHtml(url, waitForSelector, timeout);
+  const html = await getHtml(
+    url,
+    waitForSelector,
+    timeout,
+    null,
+    true
+  );
 
   fs.writeFile(mainPageHtml, html, function (err) {
     if (err) throw err;
@@ -140,12 +148,43 @@ export const getArticleData = async (url) => {
   // );
 };
 
+const articlesByCategory = async (url) => {
+  const html = await getHtml(
+    url,
+    waitForSelector,
+    timeout,
+    null,
+    true
+  );
+
+  let $ = cheerio.load(html.toString());
+
+  const articlesHref = $("#mnsview-list .cell")
+    .toArray()
+    .map((cell) => getHref($("a", $(cell))));
+
+  for (let index = 0; index < articlesHref.length; index++) {
+    const href = articlesHref[index];
+    const currentArticle = `article ${index + 1} ${
+      url.split("/")[url.split("/").length - 1]
+    }`;
+    console.log(`start scripting  ${currentArticle}... ⌛`);
+
+    await getArticleData(
+      `https://www.muscleandstrength.com/${href}`
+    );
+    console.log(`DONE SCRIPTING ${currentArticle}... ✅`);
+  }
+};
 (async () => {
   console.log("start scripting... ⌛");
 
-  await getArticleData(
-    "https://www.muscleandstrength.com/workouts/6-day-powerbuilding-split-meal-plan"
-  );
+  // await getArticleData(
+  //   "https://www.muscleandstrength.com/workouts/6-day-powerbuilding-split-meal-plan"
+  // );
 
+  await articlesByCategory(
+    "https://www.muscleandstrength.com/workouts/men"
+  );
   console.log("DONE SCRIPTING... ✅");
 })();

@@ -7,7 +7,7 @@ export const getImgUrl = (element) =>
   element.attr("data-src").trim();
 
 export const getAttr = (element, attr) =>
-  element.attr(attr).trim();
+  element.attr(attr)?.trim();
 
 export const getNumberFromString = (element) => {
   let readsNum = element
