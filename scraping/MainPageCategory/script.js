@@ -46,6 +46,19 @@ export const getMainPageCategory = async () => {
       categoryName: getText($(".category-name", $(cell))),
     }));
 
+  for (let index = 0; index < data.length; index++) {
+    const { href } = data[index];
+
+    const html = await getHtml(
+      `https://www.muscleandstrength.com${href}`,
+      ".taxonomy-description",
+      timeout,
+      null,
+      true
+    );
+    let $ = cheerio.load(html.toString());
+    data[index].decs = getText($(".taxonomy-description"));
+  }
   fs.writeFile(
     mainDataJson,
     JSON.stringify(data),
