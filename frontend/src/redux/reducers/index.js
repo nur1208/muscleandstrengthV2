@@ -1,4 +1,5 @@
 import { combineReducers } from "redux";
+import { articleReducer } from "./article";
 import { modalReducer } from "./modal";
 import { navbarReducer } from "./navbar";
 import { productReducer } from "./product";
@@ -11,6 +12,7 @@ const reducers = combineReducers({
   product_store: productReducer,
   review_store: reviewReducer,
   user_store: userReducer,
+  article_store: articleReducer,
 });
 
 export default reducers;
