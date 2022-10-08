@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { GridX } from "../../app.styles";
 import { Article } from "../article/Article";
 import { articlesWorkout } from "../data";
@@ -7,6 +8,10 @@ import { ViewSortSwitcher } from "../viewSortSwitcher/ViewSortSwitcher";
 import { MainWrapper } from "./taxonomyBody.styles";
 
 export const TaxonomyBody = () => {
+  const {
+    data: { categoryArticles },
+  } = useSelector((state) => state.article_store);
+
   return (
     <MainWrapper>
       <ViewSortSwitcher />
@@ -18,9 +23,12 @@ export const TaxonomyBody = () => {
         </div>
         <GridX>
           <div class="grid-x grid-margin-x grid-margin-y">
-            {articlesWorkout[0].articles.map((article) => (
-              <div className="cell small-12 bp600-6">
-                <Article {...article} />
+            {categoryArticles.map((article) => (
+              <div
+                key={article._id}
+                className="cell small-12 bp600-6"
+              >
+                <Article {...article} isWorkout={false} />
               </div>
             ))}
           </div>

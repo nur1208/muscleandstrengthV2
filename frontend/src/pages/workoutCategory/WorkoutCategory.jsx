@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import {
   Banner,
   EmailSignUp,
@@ -8,10 +9,38 @@ import {
   TaxonomyFeatured,
   TaxonomyHeading,
 } from "../../components";
-import { BANNER_BLOCK_12 } from "../../components/data";
+import {
+  BANNER_BLOCK_12,
+  category,
+} from "../../components/data";
+import { useReduxActions } from "../../hooks";
 import { MainWrapper } from "./workoutCategory.styles";
 
 export const WorkoutCategory = () => {
+  const { type } = useParams();
+  const currentCategory = category.find(({ href }) => {
+    return href.split("/")[href.split("/").length - 1] === type;
+  });
+
+  const { fetchArticles } = useReduxActions();
+  useEffect(() => {
+    fetchArticles(
+      `category=${currentCategory?.categoryName}`,
+      (data) => ({
+        categoryArticles: data.doc,
+      })
+    );
+
+    fetchArticles(
+      `category=${currentCategory?.categoryName}&sort=-createdAt&limit=3`,
+      (data) => ({
+        categoryNewArticles: data.doc,
+      })
+    );
+
+    // createdAt;
+  }, [type]);
+
   return (
     <MainWrapper>
       {" "}
@@ -20,8 +49,8 @@ export const WorkoutCategory = () => {
       <div id="main-wrap">
         <div className="content">
           <TaxonomyHeading
-            heading="Workouts For Men"
-            subheading="We have a huge range of free downloadable workouts for men designed by fitness experts and trainers. Find the best workout for your goal, experience, desired training style and equipment access."
+            heading={currentCategory?.categoryName}
+            subheading={currentCategory?.decs}
           />
           <TaxonomyFeatured />
           <TaxonomyBody />

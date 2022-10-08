@@ -2,7 +2,10 @@ import { ARTICLE_ACTIONS } from "../constants";
 
 const initialState = {
   loading: false,
-  data: { categoryArticles: [] },
+  data: {
+    categoryArticles: [],
+    categoryNewArticles: [],
+  },
   error: null,
 };
 

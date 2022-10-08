@@ -31,7 +31,7 @@ export const MainWrapper = styled.div`
     list-style-type: disc;
   }
 
-  ul {
+  .node-stats-block ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -40,20 +40,20 @@ export const MainWrapper = styled.div`
   li {
     font-size: inherit;
   }
-  li {
+  .node-stats-block li {
     border-bottom: 1px solid #eee;
     padding: 10px 0;
     display: flex;
   }
 
-  li .row-label {
+  .node-stats-block li .row-label {
     display: inline-block;
     padding-right: 15px;
     color: #059;
     width: 40%;
   }
 
-  li .field-type-list-text {
+  .node-stats-block li .field-type-list-text {
     width: 60%;
     display: inline-block;
   }
