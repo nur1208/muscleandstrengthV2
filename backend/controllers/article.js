@@ -1,9 +1,20 @@
 import ArticleModel from "../models/Article.js";
+import catchAsync from "../utils/catchAsync.js";
 import {
   createMany,
   createOne,
   getAll,
 } from "./handlerFactory.js";
+
+export const limitBodyParam = catchAsync(
+  async (req, res, next) => {
+    if (req.query.fields)
+      req.query.fields = `${req.query.fields},-body`;
+    else req.query.fields = "-body";
+
+    next();
+  }
+);
 
 export const createArticle = createOne(ArticleModel);
 export const createArticles = createMany(ArticleModel);
