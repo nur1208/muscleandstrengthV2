@@ -9,3 +9,13 @@ export const fetchArticles =
       dispatch,
       payloadReturn
     );
+
+export const fetchSingleArticle = (id) => {
+  return (dispatch) =>
+    fetchData(
+      `articles/${id}`,
+      ARTICLE_ACTIONS.ARTICLE_FETCH_SINGLE,
+      dispatch,
+      (data) => ({ article: data.doc })
+    );
+};
