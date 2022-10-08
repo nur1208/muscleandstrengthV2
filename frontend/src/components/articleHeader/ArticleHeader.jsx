@@ -1,11 +1,16 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { GridX } from "../../app.styles";
 import { MainWrapper } from "./articleHeader.styles";
 
 export const ArticleHeader = () => {
+  const {
+    data: { article },
+  } = useSelector((state) => state.article_store);
+
   return (
     <MainWrapper>
-      <h1>10 Week Mass Building Program</h1>
+      <h1>{article.title}</h1>
       <div className="node-meta-wrapper">
         <GridX>
           <div className="grid-x grid-margin-x node-meta">
@@ -19,6 +24,11 @@ export const ArticleHeader = () => {
                     src="https://cdn.muscleandstrength.com/sites/default/files/styles/100x100/public/field/image/author/mns.jpg?itok=_9tNZRfe"
                     data-src="https://cdn.muscleandstrength.com/sites/default/files/styles/100x100/public/field/image/author/mns.jpg?itok=_9tNZRfe"
                     alt="M&amp;S Writers"
+                    // alt={article.imgAlt}
+                    // src={
+                    //   (article.imgUrl && article.imgUrl[0]) ||
+                    //   article.imgUrl[1]
+                    // }
                   />
                 </div>
                 <div className="cell auto author-meta">
@@ -35,26 +45,25 @@ export const ArticleHeader = () => {
             <div className="cell small-12 bp600-8 category-info">
               <div className="categories">
                 Categories:{" "}
-                <a
-                  className="category-link"
-                  href="/workout-routines"
-                >
-                  Workouts
-                </a>{" "}
-                <a
-                  className="category-link"
-                  href="/workouts/men"
-                >
-                  Workouts For Men
-                </a>{" "}
-                <a
-                  className="category-link"
-                  href="/workouts/muscle-building"
-                >
-                  Muscle Building
-                </a>
+                {article.category
+                  ? article.category.map((type) => (
+                      <>
+                        <a
+                          className="category-link"
+                          // href="/workout-routines"
+                        >
+                          {type}
+                        </a>{" "}
+                      </>
+                    ))
+                  : []}
               </div>
-              <div className="count">19.1M Reads </div>
+              <div className="count">
+                {Intl.NumberFormat("en", {
+                  notation: "compact",
+                }).format(article.reads || 0)}{" "}
+                Reads{" "}
+              </div>
             </div>
           </div>
         </GridX>
@@ -65,14 +74,14 @@ export const ArticleHeader = () => {
           <source
             width="800"
             height="500"
-            srcset="https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/10_week_mass_building_program_-_1200x630.jpg?itok=l2JIA-mt 800w"
+            srcset={article.imgUrl && article.imgUrl[0]}
             media="(max-width: 800px)"
           />
           <img
             width="1200"
             height="630"
-            src="https://cdn.muscleandstrength.com/sites/default/files/10_week_mass_building_program_-_1200x630.jpg"
-            alt="10 Week Mass Building Program For Hardgainers"
+            src={article.imgUrl && article.imgUrl[1]}
+            alt={article.title}
           />
         </picture>
       </div>

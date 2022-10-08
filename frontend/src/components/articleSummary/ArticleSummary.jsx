@@ -1,17 +1,19 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { MainWrapper } from "./articleSummary.styles";
 
 export const ArticleSummary = () => {
+  const {
+    data: { article },
+  } = useSelector((state) => state.article_store);
+
   return (
     <MainWrapper>
       <div class="node-summary-content">
         <div class="field field-name-field-summary field-type-text-long field-label-hidden">
           <div class="field-items">
             <div class="field-item even">
-              This workout is designed to increase your muscle
-              mass as much as possible in 10 weeks. Works each
-              muscle group hard once per week using mostly heavy
-              compound exercises.
+              {article.shortSummary}{" "}
             </div>
           </div>
         </div>{" "}

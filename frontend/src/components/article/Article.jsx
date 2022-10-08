@@ -20,7 +20,7 @@ export const Article = ({
   return (
     <MainWrapper>
       <div class="node-image">
-        <Link to={`articles/${_id}`}>
+        <Link to={`/articles/${_id}`}>
           <img
             class=" ls-is-cached lazyloaded"
             width="800"
@@ -31,7 +31,7 @@ export const Article = ({
         </Link>
       </div>
       <div class="node-title">
-        <Link to={`articles/${_id}`} alt={title} title={href}>
+        <Link to={`/articles/${_id}`} alt={title} title={href}>
           {title}
         </Link>
       </div>
@@ -58,7 +58,7 @@ export const Article = ({
       </div>
 
       <div class="view-content-button">
-        <Link to={`articles/${_id}`} alt={title} title={title}>
+        <Link to={`/articles/${_id}`} alt={title} title={title}>
           <Button text={`View ${type}`} isBlue />
         </Link>
       </div>

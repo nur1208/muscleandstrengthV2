@@ -25,7 +25,7 @@ export const TaxonomyFeatured = () => {
                   class="cell small-12 bp600-4"
                   key={`cell-${index}`}
                 >
-                  <Link to={`articles/${_id}`}>
+                  <Link to={`/articles/${_id}`}>
                     <img
                       //   data-src="https://cdn.muscleandstrength.com/sites/default/files/styles/800x500/public/muscular-guy-doing-cable-flys.jpg?itok=cSCNyLEj"
                       class=" lazyloaded"
@@ -35,11 +35,11 @@ export const TaxonomyFeatured = () => {
                       src={imgUrl[0] || imgUrl[1]}
                     />
                   </Link>
-                  <Link to={`articles/${_id}`}>
+                  <Link to={`/articles/${_id}`}>
                     <h5>{title}</h5>
                   </Link>
                   <p>{shortSummary}</p>
-                  <Link to={`articles/${_id}`}>
+                  <Link to={`/articles/${_id}`}>
                     <Button text="View Workout" isBlue />
                   </Link>
                 </div>

@@ -76,7 +76,7 @@ function App() {
           </Route>
         </Route>
         <Route path="/articles">
-          <Route path=":title" element={<Article />} />
+          <Route path=":id" element={<Article />} />
         </Route>
         <Route path="/workouts">
           <Route index element={<Workout />} />

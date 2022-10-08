@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import {
   ArticleBody,
   ArticleComments,
@@ -11,9 +12,19 @@ import {
   Header,
 } from "../../components";
 import { BANNER_BLOCK_12 } from "../../components/data";
+import { useReduxActions } from "../../hooks";
 import { MainWrapper } from "./article.styles";
 
 export const Article = () => {
+  const { id } = useParams();
+
+  const { fetchSingleArticle } = useReduxActions();
+  useEffect(() => {
+    fetchSingleArticle(id);
+
+    // createdAt;
+  }, [id]);
+
   return (
     <MainWrapper>
       {" "}
