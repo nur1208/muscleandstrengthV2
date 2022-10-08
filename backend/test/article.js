@@ -9,6 +9,13 @@ const testGetArticle = async () => {
   console.log(data);
 };
 
+const testGetArticleById = async () => {
+  const { data } = await axios.get(
+    `${baseUrl}/${mainRoute}/633ef7d802bc5ff7758ad77c`
+  );
+  console.log(data);
+};
+
 const testCreateArticle = async () => {
   const articles = [
     {
@@ -126,7 +133,7 @@ const testCreateArticle = async () => {
 
 const main = async () => {
   try {
-    await testGetArticle();
+    await testGetArticleById();
   } catch (error) {
     console.log(error);
   }

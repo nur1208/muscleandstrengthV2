@@ -4,6 +4,7 @@ import {
   createMany,
   createOne,
   getAll,
+  getOne,
 } from "./handlerFactory.js";
 
 export const limitBodyParam = catchAsync(
@@ -19,3 +20,4 @@ export const limitBodyParam = catchAsync(
 export const createArticle = createOne(ArticleModel);
 export const createArticles = createMany(ArticleModel);
 export const getArticles = getAll(ArticleModel);
+export const getArticle = getOne(ArticleModel);

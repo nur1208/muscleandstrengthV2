@@ -2,6 +2,7 @@ import express from "express";
 import {
   createArticle,
   createArticles,
+  getArticle,
   getArticles,
   limitBodyParam,
 } from "../controllers/article.js";
@@ -13,5 +14,6 @@ articleRouter
   .post(createArticle)
   .get(limitBodyParam, getArticles);
 articleRouter.route("/many").post(createArticles);
+articleRouter.route("/:id").get(getArticle);
 
 export default articleRouter;
