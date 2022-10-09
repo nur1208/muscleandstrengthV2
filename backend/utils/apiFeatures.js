@@ -29,13 +29,11 @@ export default class APIFeatures {
     // 1B) Advanced filtering
     //  object filter way
     let queryStr = JSON.stringify(queryObj);
-    console.log(queryObj);
 
     queryStr = queryStr.replace(
       /\b(gte|gt|lte|lt|all)\b/g,
       (match) => `$${match}`
     );
-    console.log(JSON.parse(queryStr));
 
     if (this.isCount)
       this.query.countDocuments(JSON.parse(queryStr));
