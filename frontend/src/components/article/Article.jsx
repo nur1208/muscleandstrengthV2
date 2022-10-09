@@ -26,7 +26,11 @@ export const Article = ({
             width="800"
             height="500"
             alt={imgAlt}
-            src={imgUrl[0] || imgUrl[1]}
+            src={
+              typeof imgUrl === "string"
+                ? imgUrl
+                : imgUrl[0] || imgUrl[1]
+            }
           />
         </Link>
       </div>
