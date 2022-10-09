@@ -13,8 +13,8 @@ export const ArticleBody = () => {
       <div
         dangerouslySetInnerHTML={{
           __html: article.body
-            .replaceAll("\n", "")
-            .replaceAll("data-src", "src"),
+            ?.replaceAll("\n", "")
+            ?.replaceAll("data-src", "src"),
         }}
       ></div>
     </MainWrapper>
