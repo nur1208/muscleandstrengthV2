@@ -29,7 +29,9 @@ export const Article = ({
             src={
               typeof imgUrl === "string"
                 ? imgUrl
-                : imgUrl[0] || imgUrl[1]
+                : imgUrl
+                ? imgUrl[0] || imgUrl[1]
+                : null
             }
           />
         </Link>

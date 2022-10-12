@@ -407,7 +407,36 @@
 - {DONE} create ArticleFooter component part 2
 - {DONE} create ArticleComments component 
 - {DONE} set up Article page
-- {TODO} scrap workout for men articles and save them in the database
+- {DONE} create script to scrap Article
+- {DONE} create 'don't have duplicate article in the database' functionality
+- {DONE} update Article model in the backend
+- {DONE} create script to scrap Articles by category
+
+- {DONE} scrap subheading parameter for WorkoutCategory
+- {DONE} create 'fetch articles' functionality in the frontend
+- {DONE} make WorkoutCategory component more dynamic
+- {DONE} don't fetch article body for multiple articles
+- {DONE} create 'fetch article by id' route
+- {DONE} create 'fetch article by id' functionality in the frontend
+- {DONE} make Article page more dynamic
+- {DONE} fix imgUrl parameter
+- {DONE} fix replaceAll undefine
+- {DONE} add '$all array functionality' for APIFeatures
+- {DONE} remove console.log
+
+- {DONE} create  Article type for FrontHero component
+- {DONE} make CategoryStats component more dynamic
+- {DONE} make MainPageCategory component more dynamic
+- {DONE} create script to scrap Articles in Article page
+- {DONE} create put route for Articles resource
+- {DONE} add 'type' parameter to Article modal
+- {DONE} set up Articles page
+not important:
+
+- {TODO} make recommender for you in article page more dynamic
+- {TODO} scrap writeBy , writeByImg, writeByDesc and publishedDate
+- {TODO} create comment modal and it's post ,get and put routes
+- {TODO} scrap article's comments
 
 - {TODO} scrap other Categories
 - {TODO} scrap proteinDeals 
@@ -415,7 +444,7 @@
 - {TODO} create cart modal and routs
 - {TODO} don't populate carts when login and signUp, create endpoint to populate it
 
-not important:
+
 - {TODO} ADD header-share-wrap to ArticleHeader component 
 - {TODO} scrap MainPageQuestions component data
 - {TODO} make  MainPageQuestions component more dynamic

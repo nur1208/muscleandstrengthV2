@@ -11,28 +11,28 @@ import {
 } from "../../components";
 import {
   BANNER_BLOCK_12,
-  category,
+  categoryWorkout,
 } from "../../components/data";
 import { useReduxActions } from "../../hooks";
 import { MainWrapper } from "./workoutCategory.styles";
 
 export const WorkoutCategory = () => {
   const { type } = useParams();
-  const currentCategory = category.find(({ href }) => {
+  const currentCategory = categoryWorkout.find(({ href }) => {
     return href.split("/")[href.split("/").length - 1] === type;
   });
 
   const { fetchArticles } = useReduxActions();
   useEffect(() => {
     fetchArticles(
-      `category=${currentCategory?.categoryName}`,
+      `category[all]=${currentCategory?.categoryName}&category[all]=Workouts`,
       (data) => ({
         categoryArticles: data.doc,
       })
     );
 
     fetchArticles(
-      `category=${currentCategory?.categoryName}&sort=-createdAt&limit=3`,
+      `category[all]=${currentCategory?.categoryName}&category[all]=Workouts&sort=-createdAt&limit=3`,
       (data) => ({
         categoryNewArticles: data.doc,
       })

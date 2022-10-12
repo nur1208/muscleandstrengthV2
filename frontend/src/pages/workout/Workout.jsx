@@ -14,6 +14,8 @@ import {
 import {
   articlesWorkout,
   BANNER_BLOCK_12,
+  categoryWorkout,
+  workoutStats,
 } from "../../components/data";
 import { FRONT_HERO_TYPE } from "../../components/frontHero/utils";
 import { MainWrapper } from "./workout.styles";
@@ -25,7 +27,7 @@ export const Workout = () => {
       <Banner {...BANNER_BLOCK_12} />
       <Header />
       <FrontHero type={FRONT_HERO_TYPE.WORKOUT} />
-      <CategoryStats />
+      <CategoryStats stats={workoutStats} />
       <div id="main-wrap">
         <div className="main-content">
           <div className="content">
@@ -36,7 +38,7 @@ export const Workout = () => {
         filter options to find the right workout for your
         experience and goals."
             />
-            <MainPageCategory />
+            <MainPageCategory category={categoryWorkout} />
             {articlesWorkout.map((data) => (
               <Articles {...data} />
             ))}

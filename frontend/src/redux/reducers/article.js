@@ -6,6 +6,8 @@ const initialState = {
     article: {},
     categoryArticles: [],
     categoryNewArticles: [],
+    mostPopularArticles: [],
+    newArticles: [],
   },
   error: null,
 };
