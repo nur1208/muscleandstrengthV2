@@ -14,26 +14,43 @@ import {
 import { scrapFiled } from "../loginData/scrapFiled.js";
 import GenericEndpoints from "../services/generic.js";
 
-const isScraped = async (url) => {
+const isScraped = async (url, type) => {
   const { data } = await GenericEndpoints.get(
     `articles?sourceUrl=${url}`
   );
+  if (data.results) {
+    const foundProduct = data.data.doc[0];
+    const body = {};
+    if (type && !foundProduct.type.includes(type)) {
+      body.type = { operation: "push", value: type };
+    }
+
+    try {
+      await GenericEndpoints.put(
+        `articles/${foundProduct._id}`,
+        body
+      );
+      console.log("article update successfully");
+    } catch (error) {
+      console.log(error);
+      throw "error";
+    }
+  }
 
   return data.results;
 };
 const timeout = 1000 * 60;
 const waitForSelector = "#main-wrap";
+const __filename = fileURLToPath(import.meta.url);
 
-export const getArticleData = async (url) => {
-  if (await isScraped(url))
+const __dirname = path.dirname(__filename);
+//   console.log("directory-name 👉️", __dirname);
+const mainPageHtml = `${__dirname}/pageHtml.html`;
+const mainDataJson = `${__dirname}/data.json`;
+
+export const getArticleData = async (url, type) => {
+  if (await isScraped(url, type))
     return console.log("This Article scraped");
-  const __filename = fileURLToPath(import.meta.url);
-
-  const __dirname = path.dirname(__filename);
-  //   console.log("directory-name 👉️", __dirname);
-  const mainPageHtml = `${__dirname}/pageHtml.html`;
-  const mainDataJson = `${__dirname}/data.json`;
-
   const html = await getHtml(
     url,
     waitForSelector,
@@ -42,10 +59,10 @@ export const getArticleData = async (url) => {
     true
   );
 
-  fs.writeFile(mainPageHtml, html, function (err) {
-    if (err) throw err;
-    console.log("Saved!");
-  });
+  // fs.writeFile(mainPageHtml, html, function (err) {
+  //   if (err) throw err;
+  //   console.log("Saved!");
+  // });
 
   // read the html body from the file system (this is very faster then reading it from the internet)
   // const html = await promisify(fs.readFile)(mainPageHtml);
@@ -55,6 +72,7 @@ export const getArticleData = async (url) => {
   const articleData = {};
   articleData.sourceUrl = url;
   articleData.title = getText($("div.node-header > h1"));
+  if (type) articleData.type = [type];
   articleData.imgUrl = [];
   articleData.imgUrl.push(
     getAttr($(".node-header .feature-image source"), "srcset")
@@ -148,6 +166,26 @@ export const getArticleData = async (url) => {
   // );
 };
 
+const scrapByHref = async (articlesHref, option) => {
+  const { url, type } = option;
+  for (let index = 0; index < articlesHref.length; index++) {
+    const href = articlesHref[index];
+    const currentArticle = url
+      ? `article ${index + 1} ${
+          url.split("/")[url.split("/").length - 1]
+        }`
+      : `article ${index + 1} ${type}`;
+    console.log(`start scripting  ${currentArticle}... ⌛`);
+
+    await getArticleData(
+      href.includes("www.muscleandstrength.com")
+        ? href
+        : `https://www.muscleandstrength.com/${href}`,
+      type
+    );
+    console.log(`DONE SCRIPTING ${currentArticle}... ✅`);
+  }
+};
 const articlesByCategory = async (url) => {
   const html = await getHtml(
     url,
@@ -163,18 +201,24 @@ const articlesByCategory = async (url) => {
     .toArray()
     .map((cell) => getHref($("a", $(cell))));
 
-  for (let index = 0; index < articlesHref.length; index++) {
-    const href = articlesHref[index];
-    const currentArticle = `article ${index + 1} ${
-      url.split("/")[url.split("/").length - 1]
-    }`;
-    console.log(`start scripting  ${currentArticle}... ⌛`);
+  scrapByHref(articlesHref, { url });
+};
 
-    await getArticleData(
-      `https://www.muscleandstrength.com/${href}`
-    );
-    console.log(`DONE SCRIPTING ${currentArticle}... ✅`);
-  }
+const articlesByType = async (type) => {
+  // read the html body from the file system (this is very faster then reading it from the internet)
+  const html = await promisify(fs.readFile)(mainPageHtml);
+  let $ = cheerio.load(html.toString());
+  const articlesHref = $(
+    "#block-system-main > div > div:nth-child(9) .cell"
+  )
+    .toArray()
+    .map((cell) => getHref($("a", $(cell))));
+
+  await scrapByHref(articlesHref, {
+    type,
+  });
+
+  //
 };
 (async () => {
   console.log("start scripting... ⌛");
@@ -183,8 +227,6 @@ const articlesByCategory = async (url) => {
   //   "https://www.muscleandstrength.com/workouts/6-day-powerbuilding-split-meal-plan"
   // );
 
-  await articlesByCategory(
-    "https://www.muscleandstrength.com/workouts/men"
-  );
+  await articlesByType("New Articles");
   console.log("DONE SCRIPTING... ✅");
 })();
