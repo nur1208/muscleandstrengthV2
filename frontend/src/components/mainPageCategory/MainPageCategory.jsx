@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { GridX } from "../../app.styles";
-import { category } from "./data";
 import { MainWrapper } from "./mainPageCategory.styles";
 
-export const MainPageCategory = () => {
+export const MainPageCategory = ({ category }) => {
   return (
     <MainWrapper>
       <GridX>
