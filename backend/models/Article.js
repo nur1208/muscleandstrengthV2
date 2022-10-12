@@ -10,7 +10,7 @@ const schema = new mongoose.Schema(
     reads: Number,
     comments: Number,
     category: [String],
-    type: String,
+    type: [String],
     isWorkout: Boolean,
     level: String,
     forGender: String,
