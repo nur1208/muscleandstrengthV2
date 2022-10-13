@@ -11,6 +11,7 @@ import {
   Categories,
   Category,
   Checkout,
+  Diet,
   Home,
   Login,
   LogoutSuccess,
@@ -87,6 +88,10 @@ function App() {
         <Route path="/workouts">
           <Route index element={<Workout />} />
           <Route path=":type" element={<WorkoutCategory />} />
+        </Route>
+
+        <Route path="/diet-plans">
+          <Route index element={<Diet />} />
         </Route>
       </Routes>
       <LoginModal />

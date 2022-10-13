@@ -19,3 +19,4 @@ export { Workout } from "./workout/Workout";
 export { WorkoutCategory } from "./workoutCategory/WorkoutCategory";
 export { Article } from "./article/Article";
 export { Articles } from "./articles/Articles";
+export { Diet } from "./diet/Diet";
