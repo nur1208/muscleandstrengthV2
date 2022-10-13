@@ -7,6 +7,8 @@ const initialState = {
     categoryArticles: [],
     categoryNewArticles: [],
     mostPopularArticles: [],
+    dietGuidesArticles: [],
+    trendingNutritionArticles: [],
     newArticles: [],
   },
   error: null,
