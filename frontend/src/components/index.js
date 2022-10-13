@@ -38,7 +38,7 @@ export { SortingFiltering } from "./sortingFiltering/SortingFiltering";
 export { AccountNav } from "./accountNav/AccountNav";
 export { SimpleAccountInfo } from "./simpleAccountInfo/SimpleAccountInfo";
 export { AddressBox } from "./adressBox/AddressBox";
-export { MyPoints } from "./MyPoints/MyPoints";
+export { MyPoints } from "./myPoints/MyPoints";
 export { MyReferrals } from "./myReferrals/MyReferrals";
 export { SavedCards } from "./savedCards/SavedCards";
 export { AddEditAddress } from "./addEditAddress/AddEditAddress";
