@@ -227,3 +227,76 @@ export const categoryArticle = [
     decs: "Get an inside look at some of the biggest athletes in the fitness industry.",
   },
 ];
+
+export const categoryDiet = [
+  {
+    href: "/recipes/protein-shakes",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/recipes/proteinshakes_0.jpg?itok=FniZo1eI",
+    categoryName: "Protein Shakes",
+    decs: "Hitting your protein goals has never been easier! Explore our huge variety of quick and easy high-protein shake and smoothie recipes.",
+  },
+  {
+    href: "/recipes/protein-bars",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/recipes/proteinbars_0.jpg?itok=zPS6e9SM",
+    categoryName: "Protein Bars",
+    decs: "Learn how to make your own protein bars at home with these easy-to-follow recipes. Each recipe comes with a list of ingredients as well as nutritional information.",
+  },
+  {
+    href: "/recipes/high-protein",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/recipes/highprotein_0.jpg?itok=pOPTD9Gr",
+    categoryName: "High Protein",
+    decs: "Increase your daily protein intake to meet your nutrition goals with these high-protein recipes. Choose from a huge variety of high-protein desserts, lunches, snacks, and more.",
+  },
+  {
+    href: "/recipes/low-carb",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/recipes/lowcarb_0.jpg?itok=7ThYVBGS",
+    categoryName: "Low Carb",
+    decs: "Low carb doesn't mean low flavor. We have a wide variety of healthy and appetizing low-carb meals, snacks, desserts, and more for you to choose from.",
+  },
+  {
+    href: "/recipes/snacks",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/recipes/snacks_0.jpg?itok=8NkSxG4s",
+    categoryName: "Snacks",
+    decs: "These healthy snack recipes are an easy and delicious way to help you power through the day. Find tons of snack recipes that are packed with nutrition and flavor.",
+  },
+  {
+    href: "/recipes/vegetarian",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/recipes/vegetarian_0.jpg?itok=D4zWnzHV",
+    categoryName: "Vegetarian",
+    decs: "Our easy-to-make vegetarian recipe are high in protein and packed with flavor. Each recipe comes with a list of ingredients to make the dish as well as nutritional information.",
+  },
+  {
+    href: "/recipes/breakfast",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/recipes/breakfast_0.jpg?itok=KvArrkhQ",
+    categoryName: "Breakfast",
+    decs: "Start your morning off right with these healthy breakfast recipes. Packed with nutrients and easy to make, these recipes are designed to help fuel your day.",
+  },
+  {
+    href: "/recipes/lunch",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/recipes/lunch_0.jpg?itok=D-wI3v-0",
+    categoryName: "Lunch",
+    decs: "Learn how to make healthy, easy lunches that fit your lifestyle. These quick meal ideas are easy to make and packed with nutrients to keep you fuller, longer.",
+  },
+  {
+    href: "/recipes/dinner",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/recipes/dinner_0.jpg?itok=eBH0tcc-",
+    categoryName: "Dinner",
+    decs: "Learn how to make easy and healthy dinner ideas that align with your fitness goals. These dinner recipes are delicious and nutritious, making them perfect for you or the whole family.",
+  },
+  {
+    href: "/recipes/bbq",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/recipes/bbqgrill.jpg?itok=b1qPOXQ8",
+    categoryName: "BBQ/Grill",
+    decs: "Grilling doesn't have to be unhealthy. Expand your healthy grilling options with these easy-to-make barbecue and grill recipes. Packed with flavor and perfect for you or the whole family.",
+  },
+];
