@@ -12,34 +12,49 @@ import {
 import {
   BANNER_BLOCK_12,
   categoryWorkout,
+  categoryArticle,
 } from "../../components/data";
 import { useReduxActions } from "../../hooks";
 import { MainWrapper } from "./workoutCategory.styles";
 
-export const WorkoutCategory = () => {
+export const WorkoutCategory = ({ isArticle }) => {
   const { type } = useParams();
-  const currentCategory = categoryWorkout.find(({ href }) => {
+  let currentCategory;
+
+  const findCurrentCategory = ({ href }) => {
     return href.split("/")[href.split("/").length - 1] === type;
-  });
+  };
+  if (isArticle) {
+    currentCategory = categoryArticle.find(findCurrentCategory);
+  } else {
+    currentCategory = categoryWorkout.find(findCurrentCategory);
+  }
 
   const { fetchArticles } = useReduxActions();
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetchArticles(
-      `category[all]=${currentCategory?.categoryName}&category[all]=Workouts`,
+      `category[all]=${
+        currentCategory?.categoryName
+      }&category[all]=${isArticle ? "Articles" : "Workouts"}`,
       (data) => ({
         categoryArticles: data.doc,
       })
     );
 
     fetchArticles(
-      `category[all]=${currentCategory?.categoryName}&category[all]=Workouts&sort=-createdAt&limit=3`,
+      `category[all]=${
+        currentCategory?.categoryName
+      }&category[all]=${
+        isArticle ? "Articles" : "Workouts"
+      }&sort=-createdAt&limit=3`,
       (data) => ({
         categoryNewArticles: data.doc,
       })
     );
 
     // createdAt;
-  }, [type]);
+  }, [type, isArticle]);
 
   return (
     <MainWrapper>

@@ -431,6 +431,7 @@
 - {DONE} create put route for Articles resource
 - {DONE} add 'type' parameter to Article modal
 - {DONE} set up Articles page
+- {DONE} make WorkoutCategory page more dynamic to fit Article Category too
 not important:
 
 - {TODO} make recommender for you in article page more dynamic

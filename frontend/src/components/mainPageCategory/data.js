@@ -143,84 +143,84 @@ export const categoryWorkout = [
 
 export const categoryArticle = [
   {
-    href: "/articles/muscle-building",
+    href: "/articles/category/muscle-building",
     imgUrl:
       "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/articles/musclebuilding.jpg?itok=28jhCanc",
     categoryName: "Muscle Building",
     decs: "Want to build muscle? You're in the right place. These articles will teach you how to build muscle by developing the right nutrition and workout plans for your lifestyle and goals. If you're a beginner we recommend reading our how to build muscle expert guide first.",
   },
   {
-    href: "/articles/fat-loss",
+    href: "/articles/category/fat-loss",
     imgUrl:
       "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/articles/fatloss.jpg?itok=WvTzd4DQ",
     categoryName: "Fat Loss",
     decs: "Get the techniques you need to effectively burn body fat and maintain muscle.",
   },
   {
-    href: "/articles/training",
+    href: "/articles/category/training",
     imgUrl:
       "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/articles/training_0.jpg?itok=KC5xIEWM",
     categoryName: "Training",
     decs: "Training tips and advice from fitness industry experts. Get the most out of every workout.",
   },
   {
-    href: "/articles/nutrition",
+    href: "/articles/category/nutrition",
     imgUrl:
       "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/articles/nutrition_1.jpg?itok=XF3Bu37M",
     categoryName: "Nutrition",
     decs: "Learn how to provide your body with the fuel it needs to reach your goals faster.",
   },
   {
-    href: "/articles/supplements",
+    href: "/articles/category/supplements",
     imgUrl:
       "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/articles/supplements.jpg?itok=UnEZMw8E",
     categoryName: "Supplements",
     decs: "Expert information about how to choose the right supplements for your goals.",
   },
   {
-    href: "/articles/women",
+    href: "/articles/category/women",
     imgUrl:
       "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/articles/forwomen.jpg?itok=4wGdKlSw",
     categoryName: "For Women",
     decs: "Women-specific fitness guides covering all aspects of training and nutrition.",
   },
   {
-    href: "/articles/motivation",
+    href: "/articles/category/motivation",
     imgUrl:
       "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/articles/motivation.jpg?itok=HQv8fCYq",
     categoryName: "Motivation",
     decs: "Consistency is key to getting long term results. Learn how to get (and stay) motivated.",
   },
   {
-    href: "/articles/recovery",
+    href: "/articles/category/recovery",
     imgUrl:
       "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/articles/recovery.jpg?itok=hW9R-ZJ3",
     categoryName: "Recovery",
     decs: "Recover from intense workouts faster with the advice in these guides.",
   },
   {
-    href: "/articles/sport",
+    href: "/articles/category/sport",
     imgUrl:
       "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/articles/sportsperformance.jpg?itok=IXtGPY1i",
     categoryName: "Sports Performance",
     decs: "Get the edge on your competitors by increasing your muscle and strength.",
   },
   {
-    href: "/articles/injury",
+    href: "/articles/category/injury",
     imgUrl:
       "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/articles/injuryprevention.jpg?itok=DR1vrzwq",
     categoryName: "Injury Prevention",
     decs: "You can't progress if you can't workout. These articles teach you how to prevent injuries.",
   },
   {
-    href: "/articles/lifestyle",
+    href: "/articles/category/lifestyle",
     imgUrl:
       "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/articles/fitlife.jpg?itok=Jju94L0w",
     categoryName: "Fitness Lifestyle",
     decs: "Fitness is about more than just working out. Find fitness lifestyle articles here.",
   },
   {
-    href: "/articles/interviews",
+    href: "/articles/category/interviews",
     imgUrl:
       "https://cdn.muscleandstrength.com/sites/default/files/styles/400x250/public/taxonomy/image/articles/athleteprofilesinterviews.jpg?itok=l3CTw2xz",
     categoryName: "Athlete Profiles & Interviews",

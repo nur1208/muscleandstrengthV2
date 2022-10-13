@@ -78,6 +78,10 @@ function App() {
         </Route>
         <Route path="/articles">
           <Route index element={<Articles />} />
+          <Route
+            path="category/:type"
+            element={<WorkoutCategory isArticle />}
+          />
           <Route path=":id" element={<Article />} />
         </Route>
         <Route path="/workouts">
