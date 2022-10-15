@@ -26,6 +26,7 @@ import {
   Workout,
   WorkoutCategory,
 } from "./pages";
+import { CATEGORY_TYPE_PAGE } from "./pages/workoutCategory/utils";
 
 function App() {
   useAutoLogin();
@@ -81,7 +82,11 @@ function App() {
           <Route index element={<Articles />} />
           <Route
             path="category/:type"
-            element={<WorkoutCategory isArticle />}
+            element={
+              <WorkoutCategory
+                categoryType={CATEGORY_TYPE_PAGE.ARTICLE}
+              />
+            }
           />
           <Route path=":id" element={<Article />} />
         </Route>
@@ -93,6 +98,14 @@ function App() {
         <Route path="/diet-plans">
           <Route index element={<Diet />} />
         </Route>
+        <Route
+          path="/recipes/:type"
+          element={
+            <WorkoutCategory
+              categoryType={CATEGORY_TYPE_PAGE.DIET}
+            />
+          }
+        />
       </Routes>
       <LoginModal />
     </>

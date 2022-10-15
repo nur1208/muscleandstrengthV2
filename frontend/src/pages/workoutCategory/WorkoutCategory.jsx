@@ -13,19 +13,23 @@ import {
   BANNER_BLOCK_12,
   categoryWorkout,
   categoryArticle,
+  categoryDiet,
 } from "../../components/data";
 import { useReduxActions } from "../../hooks";
+import { CATEGORY_TYPE_PAGE } from "./utils";
 import { MainWrapper } from "./workoutCategory.styles";
 
-export const WorkoutCategory = ({ isArticle }) => {
+export const WorkoutCategory = ({ categoryType }) => {
   const { type } = useParams();
   let currentCategory;
 
   const findCurrentCategory = ({ href }) => {
     return href.split("/")[href.split("/").length - 1] === type;
   };
-  if (isArticle) {
+  if (categoryType === CATEGORY_TYPE_PAGE.ARTICLE) {
     currentCategory = categoryArticle.find(findCurrentCategory);
+  } else if (categoryType === CATEGORY_TYPE_PAGE.DIET) {
+    currentCategory = categoryDiet.find(findCurrentCategory);
   } else {
     currentCategory = categoryWorkout.find(findCurrentCategory);
   }
@@ -36,7 +40,9 @@ export const WorkoutCategory = ({ isArticle }) => {
     fetchArticles(
       `category[all]=${
         currentCategory?.categoryName
-      }&category[all]=${isArticle ? "Articles" : "Workouts"}`,
+      }&category[all]=${
+        categoryType ? categoryType : "Workouts"
+      }`,
       (data) => ({
         categoryArticles: data.doc,
       })
@@ -46,7 +52,7 @@ export const WorkoutCategory = ({ isArticle }) => {
       `category[all]=${
         currentCategory?.categoryName
       }&category[all]=${
-        isArticle ? "Articles" : "Workouts"
+        categoryType ? categoryType : "Workouts"
       }&sort=-createdAt&limit=3`,
       (data) => ({
         categoryNewArticles: data.doc,
@@ -54,7 +60,7 @@ export const WorkoutCategory = ({ isArticle }) => {
     );
 
     // createdAt;
-  }, [type, isArticle]);
+  }, [type, categoryType]);
 
   return (
     <MainWrapper>

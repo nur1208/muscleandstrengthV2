@@ -438,11 +438,12 @@
 - {DONE} scrap Articles in Diet page 
 - {DONE} scrap dietCategory 
 - {DONE} set up Diet page
-- {TODO} make WorkoutCategory page more dynamic to fit Article and Diet Category too
-
 - {DONE} create script to scrap articlesByMultipleCategory 
-not important:
+- {DONE} fix scraping duplicate article  
+- {DONE} make WorkoutCategory page more dynamic to fit Article and Diet Category too
 
+not important:
+- {TODO} create script to clean up duplicate article
 - {TODO} make recommender for you in article page more dynamic
 - {TODO} scrap writeBy , writeByImg, writeByDesc and publishedDate
 - {TODO} create comment modal and it's post ,get and put routes
