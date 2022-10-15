@@ -440,7 +440,7 @@
 - {DONE} set up Diet page
 - {TODO} make WorkoutCategory page more dynamic to fit Article and Diet Category too
 
-- {TODO} create script to scrap articlesByMultipleCategory 
+- {DONE} create script to scrap articlesByMultipleCategory 
 not important:
 
 - {TODO} make recommender for you in article page more dynamic

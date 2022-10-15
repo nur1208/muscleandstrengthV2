@@ -13,6 +13,7 @@ import {
 } from "../utils/index.js";
 import { scrapFiled } from "../loginData/scrapFiled.js";
 import GenericEndpoints from "../services/generic.js";
+import { categoryArticle } from "./data.js";
 
 const isScraped = async (url, type) => {
   const { data } = await GenericEndpoints.get(
@@ -39,7 +40,7 @@ const isScraped = async (url, type) => {
 
   return data.results;
 };
-const timeout = 1000 * 60;
+const timeout = 1000 * 60 * 2;
 const waitForSelector = "#main-wrap";
 const __filename = fileURLToPath(import.meta.url);
 
@@ -51,6 +52,8 @@ const mainDataJson = `${__dirname}/data.json`;
 export const getArticleData = async (url, type) => {
   if (await isScraped(url, type))
     return console.log("This Article scraped");
+  console.log(url);
+
   const html = await getHtml(
     url,
     waitForSelector,
@@ -201,9 +204,24 @@ const articlesByCategory = async (url) => {
     .toArray()
     .map((cell) => getHref($("a", $(cell))));
 
-  scrapByHref(articlesHref, { url });
+  await scrapByHref(articlesHref, { url });
 };
 
+const articlesByMultipleCategory = async (
+  list,
+  startIndex = 0
+) => {
+  for (let index = startIndex; index < list.length; index++) {
+    const { categoryName, href } = list[index];
+    console.log(`start scraping ${categoryName} category⌛`);
+    await articlesByCategory(
+      `https://cdn.muscleandstrength.com${href}`
+    );
+    console.log(
+      `DONE scraping ${categoryName} category ${index}✅`
+    );
+  }
+};
 const articlesByType = async (type) => {
   // read the html body from the file system (this is very faster then reading it from the internet)
   const html = await promisify(fs.readFile)(mainPageHtml);
@@ -227,6 +245,7 @@ const articlesByType = async (type) => {
   //   "https://www.muscleandstrength.com/workouts/6-day-powerbuilding-split-meal-plan"
   // );
 
-  await articlesByType("New Articles");
+  await articlesByMultipleCategory(categoryArticle, 11);
+  // await articlesByType("Trending Nutrition Articles");
   console.log("DONE SCRIPTING... ✅");
 })();
