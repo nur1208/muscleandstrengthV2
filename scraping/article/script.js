@@ -183,7 +183,7 @@ const scrapByHref = async (articlesHref, option) => {
     await getArticleData(
       href.includes("www.muscleandstrength.com")
         ? href
-        : `https://www.muscleandstrength.com/${href}`,
+        : `https://www.muscleandstrength.com${href}`,
       type
     );
     console.log(`DONE SCRIPTING ${currentArticle}... ✅`);
