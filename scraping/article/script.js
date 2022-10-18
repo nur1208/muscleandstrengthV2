@@ -13,7 +13,7 @@ import {
 } from "../utils/index.js";
 import { scrapFiled } from "../loginData/scrapFiled.js";
 import GenericEndpoints from "../services/generic.js";
-import { categoryArticle } from "./data.js";
+import { categoryArticle, categoryDiet } from "./data.js";
 
 const isScraped = async (url, type) => {
   const { data } = await GenericEndpoints.get(
@@ -245,7 +245,7 @@ const articlesByType = async (type) => {
   //   "https://www.muscleandstrength.com/workouts/6-day-powerbuilding-split-meal-plan"
   // );
 
-  await articlesByMultipleCategory(categoryArticle, 11);
+  await articlesByMultipleCategory(categoryDiet);
   // await articlesByType("Trending Nutrition Articles");
   console.log("DONE SCRIPTING... ✅");
 })();
