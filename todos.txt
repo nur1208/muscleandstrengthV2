@@ -442,10 +442,10 @@
 - {DONE} fix scraping duplicate article  
 - {DONE} make WorkoutCategory page more dynamic to fit Article and Diet Category too
 - {DONE} scrap recipes article by category 
+- {DONE} scrap exercisesCategory 
+- {DONE} scrap exercisesByEquCategory 
 - {TODO} create Exercises type for FrontHero component
-- {TODO} scrap exercisesCategory 
 - {TODO} scrap Articles in Exercises page 
-- {TODO} scrap exercisesByEquCategory 
 - {TODO} scrap exercisesByMachCategory 
 - {TODO} set up Exercises page
 

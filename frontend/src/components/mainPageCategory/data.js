@@ -301,7 +301,6 @@ export const categoryDiet = [
   },
 ];
 
-
 export const exercisesCategory = [
   {
     href: "/exercises/abductors.html",
@@ -518,6 +517,58 @@ export const exercisesCategory = [
     imgUrl:
       "https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/taxonomy/exercises/mechanics/isolation.jpg",
     categoryName: "Isolation Exercises",
+    decs: "",
+  },
+];
+
+export const exercisesByEquCategory = [
+  {
+    href: "/exercises/dumbbell",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/taxonomy/exercises/equip/dumbbells.jpg",
+    categoryName: "Dumbbell Exercises",
+    decs: "",
+  },
+  {
+    href: "/exercises/barbell",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/taxonomy/exercises/equip/barbell.jpg",
+    categoryName: "Barbell Exercises",
+    decs: "",
+  },
+  {
+    href: "/exercises/bodyweight",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/taxonomy/exercises/equip/bodyweight.jpg",
+    categoryName: "Bodyweight Exercises",
+    decs: "",
+  },
+  {
+    href: "/exercises/cable",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/taxonomy/exercises/equip/cables.jpg",
+    categoryName: "Cable Exercises",
+    decs: "",
+  },
+  {
+    href: "/exercises/machine",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/taxonomy/exercises/equip/machine.jpg",
+    categoryName: "Machine Exercises",
+    decs: "",
+  },
+  {
+    href: "/exercises/exercise-ball",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/taxonomy/exercises/equip/exerciseball.jpg",
+    categoryName: "Exercise Ball Exercises",
+    decs: "",
+  },
+  {
+    href: "/exercises/ez-bar",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/taxonomy/exercises/equip/ezbar.jpg",
+    categoryName: "EZ Bar Exercises",
     decs: "",
   },
 ];

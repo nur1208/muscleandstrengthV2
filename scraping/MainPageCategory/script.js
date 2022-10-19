@@ -36,8 +36,10 @@ export const getMainPageCategory = async () => {
 
   let $ = cheerio.load(html.toString());
 
-  const mainSelector = ".mainpage-category-list .cell";
-
+  // const mainSelector = ".mainpage-category-list .cell";
+  const mainSelector =
+    "#block-system-main > div > div:nth-child(9) .cell";
+  //
   const data = $(mainSelector)
     .toArray()
     .map((cell) => ({
