@@ -1,6 +1,7 @@
 import React from "react";
 import { Article } from "./Article";
 import { Diet } from "./Diet";
+import { Exercises } from "./Exercises";
 import { MainWrapper } from "./frontHero.styles";
 import { Home } from "./Home";
 import { FRONT_HERO_TYPE } from "./utils";
@@ -18,6 +19,8 @@ export const FrontHero = ({ type }) => {
           <Article />
         ) : type === FRONT_HERO_TYPE.DIET ? (
           <Diet />
+        ) : type === FRONT_HERO_TYPE.EXERCISE ? (
+          <Exercises />
         ) : (
           <></>
         )}

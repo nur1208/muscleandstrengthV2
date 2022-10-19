@@ -3,4 +3,5 @@ export const FRONT_HERO_TYPE = {
   WORKOUT: "WORKOUT",
   ARTICLE: "ARTICLE",
   DIET: "DIET",
+  EXERCISE: "EXERCISE",
 };
