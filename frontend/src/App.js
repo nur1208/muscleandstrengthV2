@@ -97,6 +97,14 @@ function App() {
         </Route>
         <Route path="/exercises">
           <Route index element={<Exercises />} />
+          <Route
+            path="category/:type"
+            element={
+              <WorkoutCategory
+                categoryType={CATEGORY_TYPE_PAGE.EXERCISE}
+              />
+            }
+          />
         </Route>
         <Route path="/diet-plans">
           <Route index element={<Diet />} />

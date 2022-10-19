@@ -449,7 +449,7 @@
 - {DONE} create Exercises type for FrontHero component
 - {DONE} set up Exercises page
 
-- {TODO} make WorkoutCategory page more dynamic to fit exercisesCategory , exercisesByEquCategory  and exercisesByMachCategory
+- {DONE} make WorkoutCategory page more dynamic to fit exercisesCategory , exercisesByEquCategory  and exercisesByMachCategory
 
 
 not important:

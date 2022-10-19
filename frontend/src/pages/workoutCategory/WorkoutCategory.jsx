@@ -14,6 +14,9 @@ import {
   categoryWorkout,
   categoryArticle,
   categoryDiet,
+  exercisesCategory,
+  exercisesByEquCategory,
+  exercisesByMachCategory,
 } from "../../components/data";
 import { useReduxActions } from "../../hooks";
 import { CATEGORY_TYPE_PAGE } from "./utils";
@@ -30,6 +33,20 @@ export const WorkoutCategory = ({ categoryType }) => {
     currentCategory = categoryArticle.find(findCurrentCategory);
   } else if (categoryType === CATEGORY_TYPE_PAGE.DIET) {
     currentCategory = categoryDiet.find(findCurrentCategory);
+  } else if (categoryType === CATEGORY_TYPE_PAGE.EXERCISE) {
+    currentCategory = exercisesCategory.find(
+      findCurrentCategory
+    );
+
+    if (!currentCategory)
+      currentCategory = exercisesByEquCategory.find(
+        findCurrentCategory
+      );
+
+    if (!currentCategory)
+      currentCategory = exercisesByMachCategory.find(
+        findCurrentCategory
+      );
   } else {
     currentCategory = categoryWorkout.find(findCurrentCategory);
   }
