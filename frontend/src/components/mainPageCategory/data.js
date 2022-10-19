@@ -572,3 +572,20 @@ export const exercisesByEquCategory = [
     decs: "",
   },
 ];
+
+export const exercisesByMachCategory = [
+  {
+    href: "/exercises/compound",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/taxonomy/exercises/mechanics/compound.jpg",
+    categoryName: "Compound Exercises",
+    decs: "",
+  },
+  {
+    href: "/exercises/isolation",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/taxonomy/exercises/mechanics/isolation.jpg",
+    categoryName: "Isolation Exercises",
+    decs: "",
+  },
+];
