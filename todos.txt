@@ -444,9 +444,9 @@
 - {DONE} scrap recipes article by category 
 - {DONE} scrap exercisesCategory 
 - {DONE} scrap exercisesByEquCategory 
+- {DONE} scrap exercisesByMachCategory 
+- {DONE} scrap Articles in Exercises page 
 - {TODO} create Exercises type for FrontHero component
-- {TODO} scrap Articles in Exercises page 
-- {TODO} scrap exercisesByMachCategory 
 - {TODO} set up Exercises page
 
 not important:

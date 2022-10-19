@@ -227,7 +227,7 @@ const articlesByType = async (type) => {
   const html = await promisify(fs.readFile)(mainPageHtml);
   let $ = cheerio.load(html.toString());
   const articlesHref = $(
-    "#block-system-main > div > div:nth-child(9) .cell"
+    "#block-system-main > div > div.base-content-grid .cell"
   )
     .toArray()
     .map((cell) => getHref($("a", $(cell))));
@@ -245,7 +245,7 @@ const articlesByType = async (type) => {
   //   "https://www.muscleandstrength.com/workouts/6-day-powerbuilding-split-meal-plan"
   // );
 
-  await articlesByMultipleCategory(categoryDiet);
-  // await articlesByType("Trending Nutrition Articles");
+  // await articlesByMultipleCategory(categoryDiet);
+  await articlesByType("Most Popular Exercises");
   console.log("DONE SCRIPTING... ✅");
 })();

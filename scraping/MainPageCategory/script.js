@@ -38,7 +38,7 @@ export const getMainPageCategory = async () => {
 
   // const mainSelector = ".mainpage-category-list .cell";
   const mainSelector =
-    "#block-system-main > div > div:nth-child(9) .cell";
+    "#block-system-main > div > div:nth-child(12) .cell";
   //
   const data = $(mainSelector)
     .toArray()
