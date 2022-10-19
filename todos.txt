@@ -446,10 +446,14 @@
 - {DONE} scrap exercisesByEquCategory 
 - {DONE} scrap exercisesByMachCategory 
 - {DONE} scrap Articles in Exercises page 
-- {TODO} create Exercises type for FrontHero component
-- {TODO} set up Exercises page
+- {DONE} create Exercises type for FrontHero component
+- {DONE} set up Exercises page
+
+- {TODO} make WorkoutCategory page more dynamic to fit exercisesCategory , exercisesByEquCategory  and exercisesByMachCategory
+
 
 not important:
+- {TODO} scrap Most Popular Exercises article images
 - {TODO} create script to clean up duplicate article
 - {TODO} make recommender for you in article page more dynamic
 - {TODO} scrap writeBy , writeByImg, writeByDesc and publishedDate

@@ -9,3 +9,9 @@ export const articleState = [
   { text: "Reads", number: "132M" },
   { text: "Experts", number: "100+" },
 ];
+
+export const exercisesState = [
+  { text: "Exercises", number: "1500+" },
+  { text: "Video Views", number: "248M" },
+  { text: "Categories", number: "100+" },
+];

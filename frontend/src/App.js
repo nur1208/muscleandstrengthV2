@@ -12,6 +12,7 @@ import {
   Category,
   Checkout,
   Diet,
+  Exercises,
   Home,
   Login,
   LogoutSuccess,
@@ -94,7 +95,9 @@ function App() {
           <Route index element={<Workout />} />
           <Route path=":type" element={<WorkoutCategory />} />
         </Route>
-
+        <Route path="/exercises">
+          <Route index element={<Exercises />} />
+        </Route>
         <Route path="/diet-plans">
           <Route index element={<Diet />} />
         </Route>

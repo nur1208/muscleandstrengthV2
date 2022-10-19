@@ -3,11 +3,15 @@ import { Link } from "react-router-dom";
 import { GridX } from "../../app.styles";
 import { MainWrapper } from "./mainPageCategory.styles";
 
-export const MainPageCategory = ({ category }) => {
+export const MainPageCategory = ({ category, isSmall }) => {
   return (
     <MainWrapper>
       <GridX>
-        <div class="grid-x grid-margin-x grid-margin-y small-up-2 bp600-up-3 medium-up-4">
+        <div
+          class={`grid-x grid-margin-x grid-margin-y small-up-2 ${
+            isSmall ? "" : "bp600-up-3 medium-up-4"
+          }`}
+        >
           {category.map(({ href, imgUrl, categoryName }) => (
             <div class="cell">
               <Link to={href}>

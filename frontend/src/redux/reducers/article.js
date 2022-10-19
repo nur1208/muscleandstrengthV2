@@ -9,6 +9,7 @@ const initialState = {
     mostPopularArticles: [],
     dietGuidesArticles: [],
     trendingNutritionArticles: [],
+    mostPopularExercises: [],
     newArticles: [],
   },
   error: null,
