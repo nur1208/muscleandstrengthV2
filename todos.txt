@@ -450,7 +450,7 @@
 - {DONE} set up Exercises page
 
 - {DONE} make WorkoutCategory page more dynamic to fit exercisesCategory , exercisesByEquCategory  and exercisesByMachCategory
-
+- {DONE} scrap Exercises article
 
 not important:
 - {TODO} scrap Most Popular Exercises article images

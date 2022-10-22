@@ -13,7 +13,11 @@ import {
 } from "../utils/index.js";
 import { scrapFiled } from "../loginData/scrapFiled.js";
 import GenericEndpoints from "../services/generic.js";
-import { categoryArticle, categoryDiet } from "./data.js";
+import {
+  categoryArticle,
+  categoryDiet,
+  exercisesCategory,
+} from "./data.js";
 
 const isScraped = async (url, type) => {
   const { data } = await GenericEndpoints.get(
@@ -190,6 +194,8 @@ const scrapByHref = async (articlesHref, option) => {
   }
 };
 const articlesByCategory = async (url) => {
+  console.log({ url });
+
   const html = await getHtml(
     url,
     waitForSelector,
@@ -200,7 +206,7 @@ const articlesByCategory = async (url) => {
 
   let $ = cheerio.load(html.toString());
 
-  const articlesHref = $("#mnsview-list .cell")
+  const articlesHref = $("#mnsview-list .cell.small-12")
     .toArray()
     .map((cell) => getHref($("a", $(cell))));
 
@@ -214,8 +220,9 @@ const articlesByMultipleCategory = async (
   for (let index = startIndex; index < list.length; index++) {
     const { categoryName, href } = list[index];
     console.log(`start scraping ${categoryName} category⌛`);
+
     await articlesByCategory(
-      `https://cdn.muscleandstrength.com${href}`
+      `https://www.muscleandstrength.com${href}`
     );
     console.log(
       `DONE scraping ${categoryName} category ${index}✅`
@@ -244,8 +251,8 @@ const articlesByType = async (type) => {
   // await getArticleData(
   //   "https://www.muscleandstrength.com/workouts/6-day-powerbuilding-split-meal-plan"
   // );
-
-  // await articlesByMultipleCategory(categoryDiet);
-  await articlesByType("Most Popular Exercises");
+  //#mnsview-list > div.view.view-exercise-term-list.view-id-exercise_term_list.view-display-id-block_1.view-dom-id-2e3704aceda762217e21c0f3fd4e56ba > div > div:nth-child(1)
+  await articlesByMultipleCategory(exercisesCategory, 21);
+  // await articlesByType("Most Popular Exercises");
   console.log("DONE SCRIPTING... ✅");
 })();

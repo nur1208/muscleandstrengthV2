@@ -300,3 +300,229 @@ export const categoryDiet = [
     decs: "Grilling doesn't have to be unhealthy. Expand your healthy grilling options with these easy-to-make barbecue and grill recipes. Packed with flavor and perfect for you or the whole family.",
   },
 ];
+
+export const exercisesCategory = [
+  {
+    href: "/exercises/abductors.html",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/abductors.jpg",
+    categoryName: "Abductors",
+    decs: "Abductors exercises. Target your abductors with these movements.",
+  },
+  {
+    href: "/exercises/abs",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/abs_0.jpg",
+    categoryName: "Abs",
+    decs: 'Ab exercises. Build impressive "6-pack abs" with these movements.',
+  },
+  {
+    href: "/exercises/abductors.html",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/adductors.jpg",
+    categoryName: "Adductors",
+    decs: "Adductors exercises. Target your adductors with these movements.",
+  },
+  {
+    href: "/exercises/biceps",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/biceps_0.jpg",
+    categoryName: "Biceps",
+    decs: "Biceps exercises. Build sleeve-splitting guns with these exercises.",
+  },
+  {
+    href: "/exercises/calves",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/calves_0.jpg",
+    categoryName: "Calves",
+    decs: "Calf exercises. Essential exercises for developing calf muscle size.",
+  },
+  {
+    href: "/exercises/chest",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/chest_0.jpg",
+    categoryName: "Chest",
+    decs: "Chest exercises. Learn how to build a big, strong and muscular chest.",
+  },
+  {
+    href: "/exercises/forearms",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/forearms_0.jpg",
+    categoryName: "Forearms",
+    decs: 'Forearm exercises. Build "Popeye Forearms" with these exercises.',
+  },
+  {
+    href: "/exercises/glutes",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/glutes_0.jpg",
+    categoryName: "Glutes",
+    decs: "Glute exercises. Target your glutes with these movements.",
+  },
+  {
+    href: "/exercises/hamstrings",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/hamstrings_0.jpg",
+    categoryName: "Hamstrings",
+    decs: "Hamstring exercises. Build strength and flexibility in your hamstrings.",
+  },
+  {
+    href: "/exercises/hip-flexors",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/hipflexors.jpg",
+    categoryName: "Hip Flexors",
+    decs: "Hip flexor exercises. Target your hip flexors with these exercises.",
+  },
+  {
+    href: "/exercises/it-band",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/itband.jpg",
+    categoryName: "IT Band",
+    decs: "IT band exercises. Build strength and stability in your IT band.",
+  },
+  {
+    href: "/exercises/lats",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/lats_0.jpg",
+    categoryName: "Lats",
+    decs: "Lats exercises. Develop back width with these movements.",
+  },
+  {
+    href: "/exercises/lower-back",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/lowerback.jpg",
+    categoryName: "Lower Back",
+    decs: "Lower back exercises. Learn how to increase lower back strength.",
+  },
+  {
+    href: "/exercises/middle-back",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/upperback.jpg",
+    categoryName: "Upper Back",
+    decs: "Upper bank exercises. Essential exercises for a thick upper back.",
+  },
+  {
+    href: "/exercises/neck.html",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/neck.jpg",
+    categoryName: "Neck",
+    decs: "Neck exercises. How to strengthen the muscles around your neck.",
+  },
+  {
+    href: "/exercises/obliques",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/obliques.jpg",
+    categoryName: "Obliques",
+    decs: "Obliques exercises. Build your obliques for an impressive core.",
+  },
+  {
+    href: "/exercises/palmar-fascia",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/palmarfacsia.jpg",
+    categoryName: "Palmar Fascia",
+    decs: "Palmar Fascia exercises. Target the muscles in your hands.",
+  },
+  {
+    href: "/exercises/plantar-fascia",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/plantarfascia.jpg",
+    categoryName: "Plantar Fascia",
+    decs: "Plantar Fascia exercises. Target the muscles in your feet.",
+  },
+  {
+    href: "/exercises/quads",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/quads_1.jpg",
+    categoryName: "Quads",
+    decs: "Quads exercises. Build size and strength in this big muscle group.",
+  },
+  {
+    href: "/exercises/shoulders",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/shoulders_0.jpg",
+    categoryName: "Shoulders",
+    decs: 'Shoulder exercises. Use these to build "coconut shoulders".',
+  },
+  {
+    href: "/exercises/traps",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/traps_0.jpg",
+    categoryName: "Traps",
+    decs: "Traps exercises. Movements to build strong, thick traps muscles.",
+  },
+  {
+    href: "/exercises/triceps",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/triceps_0.jpg",
+    categoryName: "Triceps",
+    decs: "Triceps exercises. Target the long, medial and lateral triceps heads.",
+  },
+];
+
+export const exercisesByEquCategory = [
+  {
+    href: "/exercises/dumbbell",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/taxonomy/exercises/equip/dumbbells.jpg",
+    categoryName: "Dumbbell Exercises",
+    decs: "",
+  },
+  {
+    href: "/exercises/barbell",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/taxonomy/exercises/equip/barbell.jpg",
+    categoryName: "Barbell Exercises",
+    decs: "",
+  },
+  {
+    href: "/exercises/bodyweight",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/taxonomy/exercises/equip/bodyweight.jpg",
+    categoryName: "Bodyweight Exercises",
+    decs: "",
+  },
+  {
+    href: "/exercises/cable",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/taxonomy/exercises/equip/cables.jpg",
+    categoryName: "Cable Exercises",
+    decs: "",
+  },
+  {
+    href: "/exercises/machine",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/taxonomy/exercises/equip/machine.jpg",
+    categoryName: "Machine Exercises",
+    decs: "",
+  },
+  {
+    href: "/exercises/exercise-ball",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/taxonomy/exercises/equip/exerciseball.jpg",
+    categoryName: "Exercise Ball Exercises",
+    decs: "",
+  },
+  {
+    href: "/exercises/ez-bar",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/taxonomy/exercises/equip/ezbar.jpg",
+    categoryName: "EZ Bar Exercises",
+    decs: "",
+  },
+];
+
+export const exercisesByMachCategory = [
+  {
+    href: "/exercises/compound",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/taxonomy/exercises/mechanics/compound.jpg",
+    categoryName: "Compound Exercises",
+    decs: "",
+  },
+  {
+    href: "/exercises/isolation",
+    imgUrl:
+      "https://cdn.muscleandstrength.com/sites/all/themes/mnsnew/images/taxonomy/exercises/mechanics/isolation.jpg",
+    categoryName: "Isolation Exercises",
+    decs: "",
+  },
+];
