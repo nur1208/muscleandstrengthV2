@@ -19,6 +19,8 @@ export const MainWrapper = styled.div`
       ? "url(/images/mealplans-800.jpg)"
       : type === FRONT_HERO_TYPE.EXERCISE
       ? "url(/images/exercises-800.jpg)"
+      : type === FRONT_HERO_TYPE.RECIPES
+      ? "url(/images/recipes-800.jpg)"
       : ""};
 
   .overlay {
@@ -68,6 +70,8 @@ export const MainWrapper = styled.div`
         ? "url(/images/mealplans.jpg)"
         : type === FRONT_HERO_TYPE.EXERCISE
         ? "url(/images/exercises.jpg)"
+        : type === FRONT_HERO_TYPE.RECIPES
+        ? "url(/images/recipes.jpg)"
         : ""};
 
     min-height: 600px;

@@ -4,6 +4,7 @@ import { Diet } from "./Diet";
 import { Exercises } from "./Exercises";
 import { MainWrapper } from "./frontHero.styles";
 import { Home } from "./Home";
+import { Recipes } from "./Recipes";
 import { FRONT_HERO_TYPE } from "./utils";
 import { Workout } from "./Workout";
 
@@ -21,6 +22,8 @@ export const FrontHero = ({ type }) => {
           <Diet />
         ) : type === FRONT_HERO_TYPE.EXERCISE ? (
           <Exercises />
+        ) : type === FRONT_HERO_TYPE.RECIPES ? (
+          <Recipes />
         ) : (
           <></>
         )}

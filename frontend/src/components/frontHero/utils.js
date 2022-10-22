@@ -4,4 +4,5 @@ export const FRONT_HERO_TYPE = {
   ARTICLE: "ARTICLE",
   DIET: "DIET",
   EXERCISE: "EXERCISE",
+  RECIPES: "RECIPES",
 };
