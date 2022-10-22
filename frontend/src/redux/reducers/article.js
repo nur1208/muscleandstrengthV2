@@ -10,6 +10,8 @@ const initialState = {
     dietGuidesArticles: [],
     trendingNutritionArticles: [],
     mostPopularExercises: [],
+    newRecipesArticles: [],
+    trendingRecipesArticles: [],
     newArticles: [],
   },
   error: null,

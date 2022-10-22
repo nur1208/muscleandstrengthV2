@@ -229,13 +229,11 @@ const articlesByMultipleCategory = async (
     );
   }
 };
-const articlesByType = async (type) => {
+const articlesByType = async (type, selector) => {
   // read the html body from the file system (this is very faster then reading it from the internet)
   const html = await promisify(fs.readFile)(mainPageHtml);
   let $ = cheerio.load(html.toString());
-  const articlesHref = $(
-    "#block-system-main > div > div.base-content-grid .cell"
-  )
+  const articlesHref = $(selector)
     .toArray()
     .map((cell) => getHref($("a", $(cell))));
 
@@ -252,7 +250,10 @@ const articlesByType = async (type) => {
   //   "https://www.muscleandstrength.com/workouts/6-day-powerbuilding-split-meal-plan"
   // );
   //#mnsview-list > div.view.view-exercise-term-list.view-id-exercise_term_list.view-display-id-block_1.view-dom-id-2e3704aceda762217e21c0f3fd4e56ba > div > div:nth-child(1)
-  await articlesByMultipleCategory(exercisesCategory, 21);
-  // await articlesByType("Most Popular Exercises");
+  // await articlesByMultipleCategory(exercisesCategory, 21);
+  await articlesByType(
+    "Trending Recipes",
+    "#block-system-main > div > div:nth-child(9) .cell"
+  );
   console.log("DONE SCRIPTING... ✅");
 })();

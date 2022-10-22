@@ -21,3 +21,4 @@ export { Article } from "./article/Article";
 export { Articles } from "./articles/Articles";
 export { Diet } from "./diet/Diet";
 export { Exercises } from "./exercises/Exercises";
+export { Recipes } from "./recipes/Recipes";

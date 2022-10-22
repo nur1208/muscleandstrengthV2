@@ -18,6 +18,7 @@ import {
   LogoutSuccess,
   Product,
   ProductsDeals,
+  Recipes,
   Review,
   Search,
   ShoppingCart,
@@ -109,14 +110,17 @@ function App() {
         <Route path="/diet-plans">
           <Route index element={<Diet />} />
         </Route>
-        <Route
-          path="/recipes/:type"
-          element={
-            <WorkoutCategory
-              categoryType={CATEGORY_TYPE_PAGE.DIET}
-            />
-          }
-        />
+        <Route path="/recipes">
+          <Route index element={<Recipes />} />
+          <Route
+            path=":type"
+            element={
+              <WorkoutCategory
+                categoryType={CATEGORY_TYPE_PAGE.DIET}
+              />
+            }
+          />
+        </Route>
       </Routes>
       <LoginModal />
     </>

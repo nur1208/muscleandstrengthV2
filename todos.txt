@@ -452,6 +452,21 @@
 - {DONE} make WorkoutCategory page more dynamic to fit exercisesCategory , exercisesByEquCategory  and exercisesByMachCategory
 - {DONE} scrap Exercises article
 
+- {DONE} create  Recipes type for FrontHero component
+- {DONE} scrap Recipes page articles
+- {DONE} set up Recipes page
+
+- {TODO} create  Tools type for FrontHero component
+- {TODO} scrap Tools page articles
+- {TODO} set up Tools page
+
+- {TODO} scrap Home page articles
+- {TODO} scrap Workout page articles
+
+- {TODO} fix pushing a user to wrong page after login from Login page
+
+- {TODO} change API url in the frontend 
+- {TODO} text the website 
 not important:
 - {TODO} scrap Most Popular Exercises article images
 - {TODO} create script to clean up duplicate article
