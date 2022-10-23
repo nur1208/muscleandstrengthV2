@@ -12,6 +12,7 @@ const initialState = {
     mostPopularExercises: [],
     newRecipesArticles: [],
     trendingRecipesArticles: [],
+    fitnessToolsArticles: [],
     newArticles: [],
   },
   error: null,

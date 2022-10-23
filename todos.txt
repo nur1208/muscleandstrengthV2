@@ -456,9 +456,9 @@
 - {DONE} scrap Recipes page articles
 - {DONE} set up Recipes page
 
-- {TODO} create  Tools type for FrontHero component
-- {TODO} scrap Tools page articles
-- {TODO} set up Tools page
+- {DONE} create  Tools type for FrontHero component
+- {DONE} scrap Tools page articles
+- {DONE} set up Tools page
 
 - {TODO} scrap Home page articles
 - {TODO} scrap Workout page articles
@@ -468,6 +468,8 @@
 - {TODO} change API url in the frontend 
 - {TODO} text the website 
 not important:
+- {TODO} fix body for tools articles
+- {TODO} make FrontHero component dynamic
 - {TODO} scrap Most Popular Exercises article images
 - {TODO} create script to clean up duplicate article
 - {TODO} make recommender for you in article page more dynamic

@@ -24,6 +24,7 @@ import {
   ShoppingCart,
   SignUp,
   Store,
+  Tools,
   Top50Products,
   Workout,
   WorkoutCategory,
@@ -109,6 +110,9 @@ function App() {
         </Route>
         <Route path="/diet-plans">
           <Route index element={<Diet />} />
+        </Route>
+        <Route path="/tools">
+          <Route index element={<Tools />} />
         </Route>
         <Route path="/recipes">
           <Route index element={<Recipes />} />
