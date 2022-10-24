@@ -21,7 +21,12 @@ import { useReduxActions } from "../../hooks";
 import { MainWrapper } from "./home.styles";
 export const Home = () => {
   const {
-    data: { newAtMSArticles },
+    data: {
+      trendingInArticles,
+      newAtMSArticles,
+      trendingInWorkoutsArticles,
+      mostViewedExerciseGuides,
+    },
   } = useSelector((state) => state.article_store);
 
   const { fetchArticles } = useReduxActions();
@@ -32,6 +37,28 @@ export const Home = () => {
         newAtMSArticles: data.doc,
       })
     );
+    fetchArticles(
+      `type=Trending in Workouts&limit=6`,
+      (data) => ({
+        trendingInWorkoutsArticles: data.doc,
+      })
+    );
+
+    fetchArticles(
+      `type=Trending in Articles&limit=6`,
+      (data) => ({
+        trendingInArticles: data.doc,
+      })
+    );
+
+    fetchArticles(
+      `type=Most Viewed Exercise Guides&limit=6`,
+      (data) => ({
+        mostViewedExerciseGuides: data.doc,
+      })
+    );
+
+    //
   }, []);
 
   return (
@@ -50,10 +77,18 @@ export const Home = () => {
               title="New at Muscle & Strength"
               articles={newAtMSArticles}
             />
-
-            {articlesData.map((articleData) => (
-              <Articles {...articleData} />
-            ))}
+            <Articles
+              title="Trending in Workouts"
+              articles={trendingInWorkoutsArticles}
+            />
+            <Articles
+              title="Trending in Articles"
+              articles={trendingInArticles}
+            />
+            <Articles
+              title="Most Viewed Exercise Guides"
+              articles={mostViewedExerciseGuides}
+            />
           </main>
         </div>
 

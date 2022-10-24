@@ -14,7 +14,10 @@ const initialState = {
     trendingRecipesArticles: [],
     fitnessToolsArticles: [],
     newAtMSArticles: [],
+    trendingInWorkoutsArticles: [],
+    trendingInArticles: [],
     newArticles: [],
+    mostViewedExerciseGuides: [],
   },
   error: null,
 };
