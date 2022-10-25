@@ -17,6 +17,8 @@ const initialState = {
     trendingInWorkoutsArticles: [],
     trendingInArticles: [],
     newArticles: [],
+    bestWorkoutsArticles: [],
+    newWorkoutsArticles: [],
     mostViewedExerciseGuides: [],
   },
   error: null,

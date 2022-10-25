@@ -462,7 +462,7 @@
 
 - {DONE} scrap Home page articles
 
-- {TODO} scrap Workout page articles
+- {DONE} scrap Workout page articles
 
 - {TODO} fix pushing a user to wrong page after login from Login page
 

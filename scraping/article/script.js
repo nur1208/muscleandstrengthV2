@@ -252,8 +252,8 @@ const articlesByType = async (type, selector) => {
   //#mnsview-list > div.view.view-exercise-term-list.view-id-exercise_term_list.view-display-id-block_1.view-dom-id-2e3704aceda762217e21c0f3fd4e56ba > div > div:nth-child(1)
   // await articlesByMultipleCategory(exercisesCategory, 21);
   await articlesByType(
-    "Most Viewed Exercise Guides",
-    "#main-wrap > div:nth-child(9) .cell"
+    "New Workouts",
+    "#block-system-main > div > div:nth-child(9) .cell"
   );
   console.log("DONE SCRIPTING... ✅");
 })();

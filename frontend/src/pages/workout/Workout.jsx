@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
 import {
   Articles,
   Banner,
@@ -18,9 +19,27 @@ import {
   workoutStats,
 } from "../../components/data";
 import { FRONT_HERO_TYPE } from "../../components/frontHero/utils";
+import { useReduxActions } from "../../hooks";
 import { MainWrapper } from "./workout.styles";
 
 export const Workout = () => {
+  const {
+    data: { bestWorkoutsArticles, newWorkoutsArticles },
+  } = useSelector((state) => state.article_store);
+
+  const { fetchArticles } = useReduxActions();
+  useEffect(() => {
+    fetchArticles(`type=Best Workouts&limit=6`, (data) => ({
+      bestWorkoutsArticles: data.doc,
+    }));
+
+    fetchArticles(`type=New Workouts&limit=6`, (data) => ({
+      newWorkoutsArticles: data.doc,
+    }));
+
+    //
+  }, []);
+
   return (
     <MainWrapper>
       {" "}
@@ -39,9 +58,17 @@ export const Workout = () => {
         experience and goals."
             />
             <MainPageCategory category={categoryWorkout} />
-            {articlesWorkout.map((data) => (
-              <Articles {...data} />
-            ))}
+            <Articles
+              title="Best Workouts"
+              subTitle='The most downloaded workouts in our database during the past 24 hours. You can also find top/trending workouts by choosing a category (above) and scrolling to the "trending" view.'
+              articles={bestWorkoutsArticles}
+            />
+            <Articles
+              title="New Workouts"
+              subTitle="Just added to the database. To keep up with new workouts we add (and other articles, expert guides, tools etc.) "
+              articles={newWorkoutsArticles}
+            />
+
             <TaxonomyHeading heading="Workout Tips & Advice" />
             <MainPageQuestions />
           </div>
