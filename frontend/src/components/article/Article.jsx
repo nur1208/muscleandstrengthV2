@@ -48,7 +48,7 @@ export const Article = ({
           <>
             <span>{level}</span>
             <span>{forGender}</span>
-            <span>{time}</span>
+            <span>{time} Days/Week</span>
           </>
         ) : (
           <>

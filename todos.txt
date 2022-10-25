@@ -463,6 +463,7 @@
 - {DONE} scrap Home page articles
 
 - {DONE} scrap Workout page articles
+- {DONE} fix showing days of workout
 
 - {TODO} fix pushing a user to wrong page after login from Login page
 
