@@ -6,6 +6,7 @@ import { MODAL_TYPES } from "../../redux/constants";
 import colors from "../../styles/colors";
 import { isValidEmail } from "../../utils";
 import { Button } from "../button/Button";
+import { ACCOUNT_NAV_OPTIONS } from "../data";
 import { useNotification } from "../Notification";
 import { FORM_TYPES, loginFields } from "./data";
 import { Field } from "./Field";
@@ -118,7 +119,9 @@ export const Form = ({ fields, title, type, sideInfoTitle }) => {
           closeModal();
         } else {
           handleSuccess();
-          navigate("/store/customer/account");
+          navigate(
+            `/store/customer/account/${ACCOUNT_NAV_OPTIONS.DASHBOARD_HOME}`
+          );
         }
       }
   }, [success]);
