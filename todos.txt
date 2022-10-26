@@ -468,7 +468,7 @@
 - {DONE} fix pushing a user to wrong page after login from Login page
 
 
-- {TODO} fix some articles doesn't have imgUrl
+- {DONE} fix some articles doesn't have imgUrl
         - {DONE} allow updating imgUrl parameter for Article model
 
 - {TODO} let article page start from the top of the page

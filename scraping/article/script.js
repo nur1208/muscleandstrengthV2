@@ -8,6 +8,7 @@ import {
   getHref,
   getHtml,
   getIconId,
+  getImgUrl,
   getNumberFromString,
   getText,
 } from "../utils/index.js";
@@ -19,7 +20,7 @@ import {
   exercisesCategory,
 } from "./data.js";
 
-const isScraped = async (url, type) => {
+const isScraped = async (url, type, extraImage) => {
   const { data } = await GenericEndpoints.get(
     `articles?sourceUrl=${url}`
   );
@@ -28,6 +29,21 @@ const isScraped = async (url, type) => {
     const body = {};
     if (type && !foundProduct.type.includes(type)) {
       body.type = { operation: "push", value: type };
+    }
+
+    // if extraImage defined
+    if (extraImage) {
+      // if imgUrl array has elements and the first element is null
+      if (
+        foundProduct.imgUrl.length &&
+        !foundProduct.imgUrl[0]
+      ) {
+        body.imgUrl = [extraImage, ...foundProduct.imgUrl];
+      }
+      // if imgUrl array empty
+      else if (!foundProduct.imgUrl.length) {
+        body.imgUrl = [extraImage];
+      }
     }
 
     try {
@@ -53,8 +69,11 @@ const __dirname = path.dirname(__filename);
 const mainPageHtml = `${__dirname}/pageHtml.html`;
 const mainDataJson = `${__dirname}/data.json`;
 
-export const getArticleData = async (url, type) => {
-  if (await isScraped(url, type))
+export const getArticleData = async (
+  url,
+  { type, extraImage }
+) => {
+  if (await isScraped(url, type, extraImage))
     return console.log("This Article scraped");
   console.log(url);
 
@@ -93,6 +112,17 @@ export const getArticleData = async (url, type) => {
     "alt"
   );
 
+  // if ImgUrl array is empty or it is not empty and first and second elements are not null
+  if (
+    !articleData.imgUrl.length ||
+    !(
+      articleData.imgUrl.length &&
+      articleData.imgUrl[0] &&
+      articleData.imgUrl[1]
+    )
+  ) {
+    articleData.imgUrl = [extraImage];
+  }
   articleData.shortSummary = getText($(".node-summary"));
   articleData.reads = getNumberFromString(
     $(".node-header .count")
@@ -174,7 +204,7 @@ export const getArticleData = async (url, type) => {
 };
 
 const scrapByHref = async (articlesHref, option) => {
-  const { url, type } = option;
+  const { url, type, articlesImgs } = option;
   for (let index = 0; index < articlesHref.length; index++) {
     const href = articlesHref[index];
     const currentArticle = url
@@ -184,11 +214,12 @@ const scrapByHref = async (articlesHref, option) => {
       : `article ${index + 1} ${type}`;
     console.log(`start scripting  ${currentArticle}... ⌛`);
 
+    const options = { type, extraImage: articlesImgs[index] };
     await getArticleData(
       href.includes("www.muscleandstrength.com")
         ? href
         : `https://www.muscleandstrength.com${href}`,
-      type
+      options
     );
     console.log(`DONE SCRIPTING ${currentArticle}... ✅`);
   }
@@ -237,8 +268,13 @@ const articlesByType = async (type, selector) => {
     .toArray()
     .map((cell) => getHref($("a", $(cell))));
 
+  const articlesImgs = $(selector)
+    .toArray()
+    .map((cell) => getImgUrl($("img", $(cell))));
+
   await scrapByHref(articlesHref, {
     type,
+    articlesImgs,
   });
 
   //
@@ -252,8 +288,8 @@ const articlesByType = async (type, selector) => {
   //#mnsview-list > div.view.view-exercise-term-list.view-id-exercise_term_list.view-display-id-block_1.view-dom-id-2e3704aceda762217e21c0f3fd4e56ba > div > div:nth-child(1)
   // await articlesByMultipleCategory(exercisesCategory, 21);
   await articlesByType(
-    "New Workouts",
-    "#block-system-main > div > div:nth-child(9) .cell"
+    "Most Viewed Exercise Guides",
+    "#main-wrap > div:nth-child(9) .cell"
   );
   console.log("DONE SCRIPTING... ✅");
 })();

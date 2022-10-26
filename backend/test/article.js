@@ -19,11 +19,11 @@ const testGetArticleById = async () => {
 const testUpdateArticleById = async () => {
   const body = {
     imgUrl: [
-      "https://cdn.muscleandstrength.com/sites/default/files/field/feature-image/videos/jerring-what-to-eat-preworkout-800-500.jpg",
+      "https://i.ytimg.com/vi_webp/dGqI0Z5ul4k/maxresdefault.webp",
     ],
   };
   const { data } = await axios.put(
-    `${baseUrl}/${mainRoute}/6356122b58144d12c644a4f5`,
+    `${baseUrl}/${mainRoute}/634fad3106bc6e2332aae17b`,
     body
   );
   console.log(data);
