@@ -18,7 +18,7 @@ export const SmallProduct = () => {
       `/store/product/${productSingle?.name.replaceAll(
         " ",
         "-"
-      )}`,
+      )}/${productSingle?._id}`.replace("%", ""),
       {
         state: {
           id: productSingle?._id,
@@ -27,6 +27,7 @@ export const SmallProduct = () => {
       }
     );
   };
+
   return (
     <MainWrapper>
       <div class="image-wrap">
