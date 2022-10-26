@@ -7,11 +7,14 @@ import { useParams } from "react-router-dom";
 import {
   AjaxErrors,
   Banner,
+  EmailSignUp,
+  Footer,
   Header,
   LayeredNavigation,
   MobileTabs,
   NavbarInfo,
   PageTitle,
+  PerksFooter,
   ProductsWrapper,
   SearchInfoBar,
   StoreSectionSwiper,
@@ -169,6 +172,9 @@ export const Category = () => {
           </section>
         </article>
       </main>
+      <PerksFooter />
+      <EmailSignUp />
+      <Footer />
     </MainWrapper>
   );
 };
