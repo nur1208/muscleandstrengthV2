@@ -20,6 +20,7 @@ export const Article = () => {
 
   const { fetchSingleArticle } = useReduxActions();
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetchSingleArticle(id);
 
     // createdAt;

@@ -471,7 +471,7 @@
 - {DONE} fix some articles doesn't have imgUrl
         - {DONE} allow updating imgUrl parameter for Article model
 
-- {TODO} let article page start from the top of the page
+- {DONE} let article page start from the top of the page
 
 - {TODO} fix navigating to Product page in Review page
 
