@@ -477,7 +477,7 @@
 
 - {DONE} add footer to shop by category pages 
 - {DONE} add Nutrition Facts style to Article page
-- {TODO} change API url in the frontend 
+- {DONE} change API url in the frontend 
 - {TODO} test the website 
 not important:
 - {TODO} fix body for tools articles
