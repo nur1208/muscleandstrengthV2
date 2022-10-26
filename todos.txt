@@ -476,9 +476,9 @@
 - {DONE} fix navigating to Product page in Review page
 
 - {DONE} add footer to shop by category pages 
-- {TODO} add Nutrition Facts style to Article page
+- {DONE} add Nutrition Facts style to Article page
 - {TODO} change API url in the frontend 
-- {TODO} text the website 
+- {TODO} test the website 
 not important:
 - {TODO} fix body for tools articles
 - {TODO} make FrontHero component dynamic
