@@ -16,6 +16,19 @@ const testGetArticleById = async () => {
   console.log(data);
 };
 
+const testUpdateArticleById = async () => {
+  const body = {
+    imgUrl: [
+      "https://cdn.muscleandstrength.com/sites/default/files/field/feature-image/videos/jerring-what-to-eat-preworkout-800-500.jpg",
+    ],
+  };
+  const { data } = await axios.put(
+    `${baseUrl}/${mainRoute}/6356122b58144d12c644a4f5`,
+    body
+  );
+  console.log(data);
+};
+
 const testCreateArticle = async () => {
   const articles = [
     {
@@ -133,7 +146,7 @@ const testCreateArticle = async () => {
 
 const main = async () => {
   try {
-    await testGetArticleById();
+    await testUpdateArticleById();
   } catch (error) {
     console.log(error);
   }
