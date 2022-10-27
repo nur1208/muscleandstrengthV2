@@ -31,6 +31,7 @@ export const Store = () => {
   const { topDealsProps, topRatedProps, trendingProps } =
     useStorProps();
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (
       !topDealsProps.length ||
       !topRatedProps.length ||
