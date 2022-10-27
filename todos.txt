@@ -482,7 +482,7 @@
 - {DONE} fix InPageNav component navigation problems
 - {DONE} let Store page start from the top of the page always
 - {DONE} fix navigating to Workout page from InPageNav component error
-- {TODO} let Store page start from the top of the page always
+- {DONE} let Workout , Articles, Diet, tools and Exercises page start from the top of the page always
 
 - {TODO} test the website 
 not important:

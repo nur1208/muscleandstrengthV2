@@ -20,6 +20,7 @@ export const Tools = () => {
 
   const { fetchArticles } = useReduxActions();
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetchArticles(`type=Fitness Tools&limit=5`, (data) => ({
       fitnessToolsArticles: data.doc,
     }));

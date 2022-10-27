@@ -29,6 +29,7 @@ export const Workout = () => {
 
   const { fetchArticles } = useReduxActions();
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetchArticles(`type=Best Workouts&limit=6`, (data) => ({
       bestWorkoutsArticles: data.doc,
     }));

@@ -25,6 +25,7 @@ export const Diet = () => {
 
   const { fetchArticles } = useReduxActions();
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetchArticles(`type=Diet Guides&limit=10`, (data) => ({
       dietGuidesArticles: data.doc,
     }));

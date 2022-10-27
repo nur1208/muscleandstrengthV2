@@ -29,6 +29,7 @@ export const Exercises = () => {
 
   const { fetchArticles } = useReduxActions();
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetchArticles(
       `type=Most Popular Exercises&limit=12`,
       (data) => ({

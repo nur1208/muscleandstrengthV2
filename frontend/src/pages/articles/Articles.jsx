@@ -27,6 +27,7 @@ export const Articles = () => {
 
   const { fetchArticles } = useReduxActions();
   useEffect(() => {
+    window.scrollTo(0, 0);
     fetchArticles(
       `type=Most Popular Articles&limit=6`,
       (data) => ({
