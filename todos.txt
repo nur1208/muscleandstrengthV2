@@ -479,6 +479,7 @@
 - {DONE} add Nutrition Facts style to Article page
 - {DONE} change API url in the frontend 
 - {DONE} fix responsive problems in Home page
+- {DONE} fix InPageNav component navigation problems
 - {TODO} test the website 
 not important:
 - {TODO} fix body for tools articles

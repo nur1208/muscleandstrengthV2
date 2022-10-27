@@ -1,19 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { getIconById } from "../../icons";
 import { InPageNavData } from "./data";
 import { MainWrapper } from "./inPageNav.styles";
 
-export const InPageNav = ({bgc}) => {
+export const InPageNav = ({ bgc }) => {
   return (
     <MainWrapper bgc={bgc}>
       <div class="inner">
         <div class="grid-x">
           {InPageNavData.map(({ title, href, iconId }) => (
             <div class="cell small-2 bp600-2 text-center">
-              <a href={href}>
+              <Link to={href}>
                 {getIconById(iconId)}
                 {title}
-              </a>
+              </Link>
             </div>
           ))}
         </div>
