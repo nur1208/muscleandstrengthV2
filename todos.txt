@@ -481,6 +481,9 @@
 - {DONE} fix responsive problems in Home page
 - {DONE} fix InPageNav component navigation problems
 - {DONE} let Store page start from the top of the page always
+- {DONE} fix navigating to Workout page from InPageNav component error
+- {TODO} let Store page start from the top of the page always
+
 - {TODO} test the website 
 not important:
 - {TODO} fix body for tools articles

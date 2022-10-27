@@ -4,9 +4,10 @@ export const InPageNavData = [
     href: "/store",
     iconId: "icon-nav-store",
   },
+
   {
     title: "Workouts",
-    href: "/workout-routines",
+    href: "/workouts",
     iconId: "icon-nav-workouts",
   },
   {
