@@ -15,6 +15,7 @@ export const Article = ({
   level,
   forGender,
   time,
+  category,
   _id,
 }) => {
   return (
@@ -65,7 +66,22 @@ export const Article = ({
 
       <div class="view-content-button">
         <Link to={`/articles/${_id}`} alt={title} title={title}>
-          <Button text={`View ${type}`} isBlue />
+          <Button
+            text={`View ${
+              category.length
+                ? // the following logic for removing  's' from workouts and articles
+                  category[0][
+                    category[0].length - 1
+                  ].toLocaleLowerCase() === "s"
+                  ? category[0].substring(
+                      0,
+                      category[0].length - 1
+                    )
+                  : category[0]
+                : ""
+            }`}
+            isBlue
+          />
         </Link>
       </div>
     </MainWrapper>

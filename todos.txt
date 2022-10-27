@@ -478,6 +478,7 @@
 - {DONE} add footer to shop by category pages 
 - {DONE} add Nutrition Facts style to Article page
 - {DONE} change API url in the frontend 
+- {DONE} fix responsive problems in Home page
 - {TODO} test the website 
 not important:
 - {TODO} fix body for tools articles
