@@ -205,7 +205,7 @@ export const MainWrapper = styled.div`
 
 }
     .dynamic-height {
-      padding-bottom: 176px !important;
+     
       grid-area: dynamicG;
     }
  .product-info{
