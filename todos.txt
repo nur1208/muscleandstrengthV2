@@ -483,6 +483,8 @@
 - {DONE} let Store page start from the top of the page always
 - {DONE} fix navigating to Workout page from InPageNav component error
 - {DONE} let Workout , Articles, Diet, tools and Exercises page start from the top of the page always
+- {DONE} navigate a user to Product page when clicking on Product's image
+- {DONE} fix product component style   
 
 - {TODO} test the website 
 not important:
