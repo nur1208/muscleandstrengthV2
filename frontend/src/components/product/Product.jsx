@@ -46,13 +46,16 @@ export const Product = (props) => {
   return (
     <MainWrapper hasRating={hasRating}>
       <div className="height-setter">
-        <div className="image-wrap">
-          <img
-            className="product-image lazyloaded"
-            src={imgUrl[400]?.split(" ")[0]}
-            alt={title}
-          />
-        </div>
+        <a onClick={handleClick}>
+          <div className="image-wrap">
+            <img
+              className="product-image lazyloaded"
+              src={imgUrl[400]?.split(" ")[0]}
+              alt={title}
+            />
+          </div>
+        </a>
+
         <div
           className="dynamic-height"
           style={{

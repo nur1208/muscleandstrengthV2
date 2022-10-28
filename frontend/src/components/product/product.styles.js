@@ -3,7 +3,15 @@ import styled from "styled-components";
 export const MainWrapper = styled.div`
   /* padding-bottom: 22px; */
   height: 100%;
+  a:hover {
+    color: #0687e6;
+  }
 
+  a:hover img,
+  a:hover p {
+    opacity: 0.9;
+    transition: opacity 0.3s ease-in-out;
+  }
   .height-setter {
     height: 100%;
   }
