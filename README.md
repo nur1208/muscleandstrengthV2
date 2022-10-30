@@ -10,7 +10,7 @@
 in order to be a good React and nodejs developer, I builded a large scale responsive website similar to [muscleandstrength](www.muscleandstrength.com). The website has more than 25 pages and more than 81 dynamic components.
 
 ## Screenshot
-
+<img style="display: block;-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 90%);" src="https://raw.githubusercontent.com/nur1208/muscleandstrengthV2/main/frontend/public/images/Screenshot/homePage.gif">
 ![alt text](https://raw.githubusercontent.com/nur1208/muscleandstrengthV2/main/frontend/public/images/Screenshot/homePage.gif)
 
 ## Built with
