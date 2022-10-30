@@ -486,6 +486,7 @@
 - {DONE} navigate a user to Product page when clicking on Product's image
 - {DONE} fix product component style   
 - {DONE} adding gif images part 1
+- {DONE} adding gif images part 2
 - {DONE} create readme file part 1
 
 - {TODO} test the website 
