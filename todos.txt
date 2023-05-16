@@ -488,10 +488,10 @@
 - {DONE} adding gif images part 1
 - {DONE} adding gif images part 2
 - {DONE} create readme file part 1
+- {DONE} test the website 
 
-- {TODO} test the website 
+- {DONE} show cart is empty
 not important:
-- {TODO} show cart is empty
 - {TODO} fix body for tools articles
 - {TODO} make FrontHero component dynamic
 - {TODO} scrap Most Popular Exercises article images

@@ -6,6 +6,7 @@ import {
   CartHeader,
   CartTools,
   EmailSignUp,
+  EmptyCart,
   Footer,
   Header,
   NavbarInfo,
@@ -14,10 +15,11 @@ import {
 import { BANNER_BLOCK_12 } from "../../components/data";
 import { useUpdateCustomNavInfo } from "../../hooks";
 import { MainWrapper } from "./shoppingCart.styles";
-
 export const ShoppingCart = () => {
   useUpdateCustomNavInfo(" > Store");
-
+  const { userData } = useSelector(
+    ({ user_store }) => user_store
+  );
   return (
     <MainWrapper>
       <div id="page">
@@ -27,9 +29,15 @@ export const ShoppingCart = () => {
         <NavbarInfo />
         <div id="main-wrap" class="wide-format">
           <div class="main-content wide-format">
-            <CartHeader />
-            <Cart />
-            <CartTools />
+            {userData && userData.cart.length ? (
+              <>
+                <CartHeader />
+                <Cart />
+                <CartTools />
+              </>
+            ) : (
+              <EmptyCart />
+            )}
           </div>
         </div>
       </div>

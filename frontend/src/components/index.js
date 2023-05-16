@@ -79,3 +79,4 @@ export { ArticleSummary } from "./articleSummary/ArticleSummary";
 export { ArticleBody } from "./articleBody/ArticleBody";
 export { ArticleFooter } from "./articleFooter/ArticleFooter";
 export { ArticleComments } from "./articleComments/ArticleComments";
+export { EmptyCart } from "./emptyCart/EmptyCart";
