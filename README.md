@@ -7,7 +7,7 @@
 
 ## Introduction
 
-in order to be a good React and nodejs developer, I builded a large scale responsive website similar to [muscleandstrength](www.muscleandstrength.com) using [MERN Stack](https://www.geeksforgeeks.org/mern-stack/). The website has more than 25 pages and more than 81 dynamic components.
+in order to master React and nodejs, I builded a large scale responsive website similar to [muscleandstrength](www.muscleandstrength.com) using [MERN Stack](https://www.geeksforgeeks.org/mern-stack/). The website has more than 25 pages and more than 81 React components.
 
 ## Screenshot
 #### laptop screen
@@ -23,9 +23,9 @@ in order to be a good React and nodejs developer, I builded a large scale respon
 
 ![6yv08e](https://user-images.githubusercontent.com/68324630/198882942-7b57a051-851d-4fb6-b384-a2cf99eb6069.gif)
 
-<h3 >
-vist [live dome](https://muscleandstrength-v2.vercel.app/) for more.
-</h3>
+
+vist [live Website](https://muscleandstrength-v2.vercel.app/) for more.
+
  
 ## Built with
 
