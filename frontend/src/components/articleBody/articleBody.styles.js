@@ -167,6 +167,93 @@ export const MainWrapper = styled.div`
     display: inline;
   }
 
+  .bench-tool {
+    max-width: 600px;
+    margin: 0 auto 15px;
+    background: #f5f5f5;
+    border-radius: 2px;
+  }
+
+  .bench-tool h3 {
+    padding: 10px;
+    background: #059;
+    color: #fefefe;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 2px 2px 0 0;
+  }
+
+  .bench-tool #bp-calculator-form {
+    padding: 15px;
+  }
+
+  .bench-tool .units,
+  .bench-tool .weight {
+    margin-bottom: 5px;
+  }
+
+  .visually-hidden {
+    display: none;
+  }
+
+  select {
+    box-sizing: border-box;
+    width: 100%;
+    height: 2.3333333333rem;
+    margin: 0 0 0.8888888889rem;
+    padding: 0.4444444444rem 1.3333333333rem 0.4444444444rem
+      0.4444444444rem;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #e6e7e8;
+    border-radius: 2px;
+    background-color: #fefefe;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #0a0a0a;
+    background-image: url(data:image/svg+xml;utf8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZlcnNpb249JzEuMScgd2lkdGg9JzMyJyBoZWlnaHQ9JzI0JyB2aWV3Qm94PScwIDAgMzIgMjQnPjxwb2x5Z29uIHBvaW50cz0nMCwwIDMyLDAgMTYsMjQnIHN0eWxlPSdmaWxsOiByZ2IoMTM4LCAxMzgsIDEzOCknPjwvcG9seWdvbj48L3N2Zz4=);
+    background-origin: content-box;
+    background-position: right -0.8888888889rem center;
+    background-repeat: no-repeat;
+    background-size: 9px 6px;
+    transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+  }
+
+  select:not([multiple]) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .tool-result {
+    display: none;
+    max-width: 600px;
+    margin: 0 auto 15px;
+    padding: 10px 25px;
+    background: #3adb76;
+    text-align: center;
+    font-family: roboto-bold, sans-serif;
+    border-radius: 2px;
+  }
+
+  .tool-result .value {
+    font-family: opensans-heavy;
+    font-size: 36px;
+  }
+  .tool-result span {
+    display: block;
+  }
+
+  .tool-result .share-result {
+    padding-top: 10px;
+    font-size: 13px;
+  }
+
+  #bp-result > span:nth-child(2) {
+    font-size: 1rem;
+  }
   @media screen and (min-width: 37.5em) {
     .node-stats-block {
       padding: 30px;

@@ -135,6 +135,13 @@ export const GridX = styled.div`
       flex: 1 1 0px;
       width: auto;
     }
+    .grid-x > .bp600-6 {
+      flex: 0 0 auto;
+    }
+
+    .bp600-offset-6 {
+      margin-left: 50%;
+    }
   }
 
   @media print, screen and (min-width: 52.5em) {

@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Button } from "../button/Button";
 import { MainWrapper } from "./articleBody.styles";
+import { BenchPressCal } from "./BenchPressCal";
 
 export const ArticleBody = () => {
   const {
@@ -10,6 +11,7 @@ export const ArticleBody = () => {
 
   return (
     <MainWrapper>
+      {article.hasBenchPressCal && <BenchPressCal />}
       <div
         dangerouslySetInnerHTML={{
           __html: article.body
