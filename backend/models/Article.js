@@ -12,6 +12,7 @@ const schema = new mongoose.Schema(
     category: [String],
     type: [String],
     isWorkout: Boolean,
+    hasHeaderVideo: String,
     level: String,
     forGender: String,
     time: String,

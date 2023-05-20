@@ -22,7 +22,7 @@ export const createArticle = createOne(ArticleModel);
 export const createArticles = createMany(ArticleModel);
 export const getArticles = getAll(ArticleModel);
 export const getArticle = getOne(ArticleModel);
-const allowedFields = ["type", "imgUrl"];
+const allowedFields = ["type", "imgUrl", "hasHeaderVideo"];
 export const updateArticle = updateOne(
   ArticleModel,
   allowedFields

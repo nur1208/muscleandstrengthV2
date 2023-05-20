@@ -20,7 +20,10 @@ import {
   exercisesCategory,
 } from "./data.js";
 
-const isScraped = async (url, type, extraImage) => {
+const isScraped = async (
+  url,
+  { type, extraImage, checkHasHeaderVideo }
+) => {
   const { data } = await GenericEndpoints.get(
     `articles?sourceUrl=${url}`
   );
@@ -43,6 +46,25 @@ const isScraped = async (url, type, extraImage) => {
       // if imgUrl array empty
       else if (!foundProduct.imgUrl.length) {
         body.imgUrl = [extraImage];
+      }
+    }
+
+    if (checkHasHeaderVideo) {
+      const html = await getHtml(
+        url,
+        waitForSelector,
+        timeout,
+        null,
+        true
+      );
+      let $ = cheerio.load(html.toString());
+      try {
+        body.hasHeaderVideo = getAttr(
+          $(".node-header .video-wrap iframe"),
+          "src"
+        );
+      } catch (error) {
+        console.log("has no header video");
       }
     }
 
@@ -71,9 +93,15 @@ const mainDataJson = `${__dirname}/data.json`;
 
 export const getArticleData = async (
   url,
-  { type, extraImage }
+  { type, extraImage, checkHasHeaderVideo }
 ) => {
-  if (await isScraped(url, type, extraImage))
+  if (
+    await isScraped(url, {
+      type,
+      extraImage,
+      checkHasHeaderVideo,
+    })
+  )
     return console.log("This Article scraped");
   console.log(url);
 
@@ -161,8 +189,8 @@ export const getArticleData = async (
     //   .toArray()
     //   .map((child) => {
     //     const item = {};
-    //     item.type = child.name;
 
+    //     item.type = child.name;
     //     if ($(child).children().length)
     //       item.children = $(child)
     //         .children()
@@ -279,17 +307,17 @@ const articlesByType = async (type, selector) => {
 
   //
 };
-(async () => {
-  console.log("start scripting... ⌛");
+// (async () => {
+//   console.log("start scripting... ⌛");
 
-  // await getArticleData(
-  //   "https://www.muscleandstrength.com/workouts/6-day-powerbuilding-split-meal-plan"
-  // );
-  //#mnsview-list > div.view.view-exercise-term-list.view-id-exercise_term_list.view-display-id-block_1.view-dom-id-2e3704aceda762217e21c0f3fd4e56ba > div > div:nth-child(1)
-  // await articlesByMultipleCategory(exercisesCategory, 21);
-  await articlesByType(
-    "Most Viewed Exercise Guides",
-    "#main-wrap > div:nth-child(9) .cell"
-  );
-  console.log("DONE SCRIPTING... ✅");
-})();
+//   // await getArticleData(
+//   //   "https://www.muscleandstrength.com/workouts/6-day-powerbuilding-split-meal-plan"
+//   // );
+//   //#mnsview-list > div.view.view-exercise-term-list.view-id-exercise_term_list.view-display-id-block_1.view-dom-id-2e3704aceda762217e21c0f3fd4e56ba > div > div:nth-child(1)
+//   // await articlesByMultipleCategory(exercisesCategory, 21);
+//   await articlesByType(
+//     "Most Viewed Exercise Guides",
+//     "#main-wrap > div:nth-child(9) .cell"
+//   );
+//   console.log("DONE SCRIPTING... ✅");
+// })();
