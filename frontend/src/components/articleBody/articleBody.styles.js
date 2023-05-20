@@ -416,6 +416,29 @@ export const MainWrapper = styled.div`
   .cell.auto {
     flex: 1 1 0px;
   }
+  .responsive-embed {
+    position: relative;
+    height: 0;
+    margin-bottom: 0.8888888889rem;
+    padding-bottom: 75%;
+    overflow: hidden;
+  }
+  .responsive-embed.widescreen {
+    padding-bottom: 56.25%;
+  }
+
+  .responsive-embed iframe,
+  .responsive-embed object,
+  .responsive-embed video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .page-node .node-body iframe {
+    margin: 0 auto 15px !important;
+  }
 
   @media print, screen and (min-width: 37.5em) {
     .grid-x > .bp600-4 {
