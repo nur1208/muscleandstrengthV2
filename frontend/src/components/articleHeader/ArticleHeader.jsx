@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { GridX } from "../../app.styles";
 import { MainWrapper } from "./articleHeader.styles";
-
+import { YoutubeVideo } from "../youtubeVideo/YoutubeVideo";
 export const ArticleHeader = () => {
   const {
     data: { article },
@@ -70,20 +70,24 @@ export const ArticleHeader = () => {
       </div>
 
       <div className="feature-image">
-        <picture>
-          <source
-            width="800"
-            height="500"
-            srcset={article.imgUrl && article.imgUrl[0]}
-            media="(max-width: 800px)"
-          />
-          <img
-            width="1200"
-            height="630"
-            src={article.imgUrl && article.imgUrl[1]}
-            alt={article.title}
-          />
-        </picture>
+        {article.hasHeaderVideo ? (
+          <YoutubeVideo videoId={article.hasHeaderVideo} />
+        ) : (
+          <picture>
+            <source
+              width="800"
+              height="500"
+              srcset={article.imgUrl && article.imgUrl[0]}
+              media="(max-width: 800px)"
+            />
+            <img
+              width="1200"
+              height="630"
+              src={article.imgUrl && article.imgUrl[1]}
+              alt={article.title}
+            />
+          </picture>
+        )}
       </div>
     </MainWrapper>
   );

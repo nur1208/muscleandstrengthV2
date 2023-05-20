@@ -500,6 +500,7 @@
 - {TODO} scrap Most Popular Exercises article images
         - {DONE} check hasHeaderVideo felid when scraping an article
                 add don't check hasHeaderVideo logic if article already has it
+        - {DONE} show article's header video in the frontend        
 not important:
 - {TODO} create script to clean up duplicate article
 - {TODO} make recommender for you in article page more dynamic
