@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { Button } from "../button/Button";
 import { MainWrapper } from "./articleBody.styles";
 import { BenchPressCal } from "./BenchPressCal";
+import { BenchPressMaxChart } from "./BenchPressMaxChart";
 import { BmrCalculator } from "./BmrCalculator";
 import { IdealBMCal } from "./IdealBMCal";
 
@@ -16,6 +17,7 @@ export const ArticleBody = () => {
       {article.hasBenchPressCal && <BenchPressCal />}
       {article.hasBmrCalculator && <BmrCalculator />}
       {article.hasIdealBMCal && <IdealBMCal />}
+      {article.isBenchPressMaxChart && <BenchPressMaxChart />}
 
       <div
         dangerouslySetInnerHTML={{

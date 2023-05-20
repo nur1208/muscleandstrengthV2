@@ -496,6 +496,7 @@
         - {DONE} create bench press calculator (hasBenchPressCal)
         - {DONE} create bmr calculator (hasBmrCalculator)
         - {DONE} CREATE IDEAL BODY MEASUREMENTS CALCULATOR (hasIdealBMCal)
+        - {DONE} fix bench press max chart article (isBenchPressMaxChart)
 not important:
 - {TODO} make FrontHero component dynamic
 - {TODO} scrap Most Popular Exercises article images
