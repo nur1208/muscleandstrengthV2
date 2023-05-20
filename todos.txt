@@ -497,7 +497,7 @@
         - {DONE} create bmr calculator (hasBmrCalculator)
         - {DONE} CREATE IDEAL BODY MEASUREMENTS CALCULATOR (hasIdealBMCal)
         - {DONE} fix bench press max chart article (isBenchPressMaxChart)
-- {TODO} scrap Most Popular Exercises article images
+- {DONE} scrap Most Popular Exercises article images
         - {DONE} check hasHeaderVideo felid when scraping an article
                 add don't check hasHeaderVideo logic if article already has it
         - {DONE} show article's header video in the frontend        

@@ -24,8 +24,12 @@ import { scrapProductsByCategory } from "./productsByCategory/script.js";
 const main = async () => {
   console.log("start scraping... ⌛");
   await getArticleData(
-    "https://www.muscleandstrength.com/exercises/tricep-extension.html",
-    { checkHasHeaderVideo: true }
+    "https://www.muscleandstrength.com/exercises/lat-pull-down.html",
+    {
+      checkHasHeaderVideo: true,
+      extraImage:
+        "https://cdn.muscleandstrength.com/sites/default/files/lat-pull-down.jpg",
+    }
   );
 
   console.log("DONE scraping ✔");
