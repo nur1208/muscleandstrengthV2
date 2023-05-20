@@ -49,7 +49,7 @@ const isScraped = async (
       }
     }
 
-    if (checkHasHeaderVideo) {
+    if (checkHasHeaderVideo && !body.hasHeaderVideo) {
       const html = await getHtml(
         url,
         waitForSelector,
