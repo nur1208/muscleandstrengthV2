@@ -290,6 +290,7 @@ export const MainWrapper = styled.div`
   #input-height-ft,
   #input-height-in,
   #input-height-cm,
+  .ideal-tool .input-group input,
   .bmr-tool #bmr-calculator-form .input-group > :first-child {
     margin: 0 !important;
   }
@@ -440,6 +441,30 @@ export const MainWrapper = styled.div`
     margin: 0 auto 15px !important;
   }
 
+  div.field-item.even > ol {
+    margin-inline-start: 2rem;
+  }
+
+  .ideal-tool {
+    max-width: 600px;
+    margin: 0 auto 15px;
+    background: #f5f5f5;
+    border-radius: 2px;
+  }
+
+  .ideal-tool h3 {
+    padding: 10px;
+    background: #059;
+    color: #fefefe;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 2px 2px 0 0;
+  }
+
+  .ideal-tool form {
+    padding: 15px;
+  }
   @media print, screen and (min-width: 37.5em) {
     .grid-x > .bp600-4 {
       width: 33.3333333333%;

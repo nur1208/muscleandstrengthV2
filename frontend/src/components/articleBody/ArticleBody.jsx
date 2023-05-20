@@ -4,6 +4,7 @@ import { Button } from "../button/Button";
 import { MainWrapper } from "./articleBody.styles";
 import { BenchPressCal } from "./BenchPressCal";
 import { BmrCalculator } from "./BmrCalculator";
+import { IdealBMCal } from "./IdealBMCal";
 
 export const ArticleBody = () => {
   const {
@@ -14,6 +15,8 @@ export const ArticleBody = () => {
     <MainWrapper>
       {article.hasBenchPressCal && <BenchPressCal />}
       {article.hasBmrCalculator && <BmrCalculator />}
+      {article.hasIdealBMCal && <IdealBMCal />}
+
       <div
         dangerouslySetInnerHTML={{
           __html: article.body
