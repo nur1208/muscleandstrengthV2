@@ -493,6 +493,7 @@
 - {DONE} show cart is empty
 - {TODO} fix body for tools articles
         - {DONE} create bench press calculator (hasBenchPressCal)
+        - {TODO} create bmr calculator (hasBmrCalculator)
 not important:
 - {TODO} make FrontHero component dynamic
 - {TODO} scrap Most Popular Exercises article images

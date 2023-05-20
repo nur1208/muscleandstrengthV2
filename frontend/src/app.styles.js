@@ -139,6 +139,9 @@ export const GridX = styled.div`
       flex: 0 0 auto;
     }
 
+    .bp600-offset-4 {
+      margin-left: 33.3333333333%;
+    }
     .bp600-offset-6 {
       margin-left: 50%;
     }

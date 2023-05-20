@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { Button } from "../button/Button";
 import { MainWrapper } from "./articleBody.styles";
 import { BenchPressCal } from "./BenchPressCal";
+import { BmrCalculator } from "./BmrCalculator";
 
 export const ArticleBody = () => {
   const {
@@ -12,6 +13,7 @@ export const ArticleBody = () => {
   return (
     <MainWrapper>
       {article.hasBenchPressCal && <BenchPressCal />}
+      {article.hasBmrCalculator && <BmrCalculator />}
       <div
         dangerouslySetInnerHTML={{
           __html: article.body

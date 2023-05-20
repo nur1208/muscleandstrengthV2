@@ -254,6 +254,71 @@ export const MainWrapper = styled.div`
   #bp-result > span:nth-child(2) {
     font-size: 1rem;
   }
+
+  .bmr-tool {
+    max-width: 700px;
+    margin: 0 auto 15px;
+    background: #f5f5f5;
+    border-radius: 2px;
+  }
+
+  .bmr-tool h3 {
+    padding: 10px;
+    background: #059;
+    color: #fefefe;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 2px 2px 0 0;
+  }
+
+  .bmr-tool #bmr-calculator-form {
+    padding: 15px;
+  }
+
+  .input-group {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0.8888888889rem;
+    align-items: stretch;
+  }
+  .input-group-field {
+    border-radius: 0;
+    flex: 1 1 0px;
+    min-width: 0;
+  }
+  #input-height-ft,
+  #input-height-in,
+  #input-height-cm,
+  .bmr-tool #bmr-calculator-form .input-group > :first-child {
+    margin: 0 !important;
+  }
+  .input-group > :first-child,
+  .input-group > :first-child.input-group-button > * {
+    border-radius: 2px 0 0 2px;
+  }
+  .input-group-label {
+    padding: 0 1rem;
+    border: 1px solid #e6e7e8;
+    background: #f6f6f6;
+    color: #0a0a0a;
+    text-align: center;
+    white-space: nowrap;
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+  }
+  .input-group > :last-child,
+  .input-group > :last-child.input-group-button > * {
+    border-radius: 0 2px 2px 0;
+  }
+
+  .input-group-label:last-child {
+    border-left: 0;
+  }
+  .bmr-tool .left-group {
+    padding-right: 8px;
+  }
   @media screen and (min-width: 37.5em) {
     .node-stats-block {
       padding: 30px;
