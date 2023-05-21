@@ -20,6 +20,15 @@ import {
   exercisesCategory,
 } from "./data.js";
 
+const updateArticle = async (id, body) => {
+  try {
+    await GenericEndpoints.put(`articles/${id}`, body);
+    console.log("article update successfully");
+  } catch (error) {
+    console.log(error);
+    throw "error";
+  }
+};
 const isScraped = async (
   url,
   { type, extraImage, checkHasHeaderVideo }
@@ -68,16 +77,17 @@ const isScraped = async (
       }
     }
 
-    try {
-      await GenericEndpoints.put(
-        `articles/${foundProduct._id}`,
-        body
-      );
-      console.log("article update successfully");
-    } catch (error) {
-      console.log(error);
-      throw "error";
-    }
+    // try {
+    //   await GenericEndpoints.put(
+    //     `articles/${foundProduct._id}`,
+    //    c
+    //   );
+    //   console.log("article update successfully");
+    // } catch (error) {
+    //   console.log(error);
+    //   throw "error";
+    // }
+    await updateArticle(foundProduct._id, body);
   }
 
   return data.results;
@@ -306,6 +316,74 @@ const articlesByType = async (type, selector) => {
   });
 
   //
+};
+const checkArrayEleExitInArray2 = async (
+  array1,
+  array2,
+  { name, id }
+) => {
+  for (let index = 0; index < array1.length; index++) {
+    const ele = array1[index];
+    if (!array2.includes(ele)) {
+      console.log("found not exist element in array2");
+      const body = {};
+      body[name] = { operation: "push", value: ele };
+      await updateArticle(id, body);
+    }
+  }
+};
+export const removeDuplicateArticle = async (page = 1) => {
+  const { data } = await GenericEndpoints.get(
+    `articles?limit=500&&page${page}`
+  );
+
+  for (let index = 0; index < data.data.doc.length; index++) {
+    const { sourceUrl } = data.data.doc[index];
+    const dataSplit = sourceUrl.split("/");
+
+    const { data: dataS } = await GenericEndpoints.get(
+      `articles?q=${`${dataSplit[dataSplit.length - 2]}/${
+        dataSplit[dataSplit.length - 1]
+      }`}`
+    );
+    if (dataS.results > 1) {
+      console.log("found duplicate article");
+
+      for (
+        let index = 1;
+        index < dataS.data.doc.length;
+        index++
+      ) {
+        const { category, type, _id } = dataS.data.doc[index];
+        const {
+          category: categoryF,
+          type: typeF,
+          _id: idF,
+        } = dataS.data.doc[0];
+        // first move all type and category to the first element
+        // before deleting the element
+        await checkArrayEleExitInArray2(category, categoryF, {
+          name: "category",
+          id: idF,
+        });
+        await checkArrayEleExitInArray2(type, typeF, {
+          name: "type",
+          id: idF,
+        });
+
+        // delete the duplicate element
+        try {
+          await GenericEndpoints.delete(`articles`, _id);
+          console.log(
+            `article with id {${_id}} deleted successfully`
+          );
+        } catch (error) {
+          console.log(error);
+          throw "error";
+        }
+      }
+    }
+  }
 };
 // (async () => {
 //   console.log("start scripting... ⌛");
