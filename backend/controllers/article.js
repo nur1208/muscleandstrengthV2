@@ -3,6 +3,7 @@ import catchAsync from "../utils/catchAsync.js";
 import {
   createMany,
   createOne,
+  deleteOne,
   getAll,
   getOne,
   updateOne,
@@ -20,10 +21,13 @@ export const limitBodyParam = catchAsync(
 
 export const createArticle = createOne(ArticleModel);
 export const createArticles = createMany(ArticleModel);
-export const getArticles = getAll(ArticleModel);
+const searchBy = ["sourceUrl"];
+export const getArticles = getAll(ArticleModel, searchBy);
 export const getArticle = getOne(ArticleModel);
 const allowedFields = ["type", "imgUrl", "hasHeaderVideo"];
 export const updateArticle = updateOne(
   ArticleModel,
   allowedFields
 );
+
+export const deleteArticle = deleteOne(ArticleModel);

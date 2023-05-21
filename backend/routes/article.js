@@ -2,6 +2,7 @@ import express from "express";
 import {
   createArticle,
   createArticles,
+  deleteArticle,
   getArticle,
   getArticles,
   limitBodyParam,
@@ -15,6 +16,10 @@ articleRouter
   .post(createArticle)
   .get(limitBodyParam, getArticles);
 articleRouter.route("/many").post(createArticles);
-articleRouter.route("/:id").get(getArticle).put(updateArticle);
+articleRouter
+  .route("/:id")
+  .get(getArticle)
+  .put(updateArticle)
+  .delete(deleteArticle);
 
 export default articleRouter;
