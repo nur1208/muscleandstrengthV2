@@ -29,6 +29,13 @@ const testUpdateArticleById = async () => {
   console.log(data);
 };
 
+const testDeleteArticleById = async () => {
+  const { data } = await axios.delete(
+    `${baseUrl}/${mainRoute}/63569ac558144d12c644a511`
+  );
+  console.log(data);
+};
+
 const testCreateArticle = async () => {
   const articles = [
     {
@@ -146,7 +153,7 @@ const testCreateArticle = async () => {
 
 const main = async () => {
   try {
-    await testUpdateArticleById();
+    await testDeleteArticleById();
   } catch (error) {
     console.log(error);
   }
