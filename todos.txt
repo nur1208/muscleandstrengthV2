@@ -505,7 +505,7 @@
         - {DONE} create delete article endpoint
         - {DONE} test delete article endpoint
 - {DONE} make recommender [for you] in article page more dynamic
-- {TODO} scrap writeBy , writeByImg, writeByDesc and publishedDate
+- {DONE} scrap writeBy , writeByImg, writeByDesc and publishedDate
 - {TODO} scrap other Categories
 - {TODO} make sure updating exist element for array for "cart.array.qty"
         couldn't add the same product and the same flavor

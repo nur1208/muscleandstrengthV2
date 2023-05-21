@@ -17,6 +17,11 @@ const schema = new mongoose.Schema(
     forGender: String,
     time: String,
     body: String,
+    writeBy: String,
+    publishedDate: String,
+    Updated: String,
+    writeByImg: String,
+    writeByDesc: String,
   },
   {
     timestamps: true,

@@ -31,7 +31,7 @@ const updateArticle = async (id, body) => {
 };
 const isScraped = async (
   url,
-  { type, extraImage, checkHasHeaderVideo }
+  { type, extraImage, checkHasHeaderVideo, scrapWriter }
 ) => {
   const { data } = await GenericEndpoints.get(
     `articles?sourceUrl=${url}`
@@ -58,7 +58,7 @@ const isScraped = async (
       }
     }
 
-    if (checkHasHeaderVideo && !body.hasHeaderVideo) {
+    if (checkHasHeaderVideo || scrapWriter) {
       const html = await getHtml(
         url,
         waitForSelector,
@@ -67,26 +67,34 @@ const isScraped = async (
         true
       );
       let $ = cheerio.load(html.toString());
-      try {
-        body.hasHeaderVideo = getAttr(
-          $(".node-header .video-wrap iframe"),
-          "src"
-        );
-      } catch (error) {
-        console.log("has no header video");
+
+      if (checkHasHeaderVideo && !body.hasHeaderVideo) {
+        try {
+          body.hasHeaderVideo = getAttr(
+            $(".node-header .video-wrap iframe"),
+            "src"
+          );
+        } catch (error) {
+          console.log("has no header video");
+        }
+      }
+
+      if (scrapWriter) {
+        body.writeBy = getText($(".author-info a"));
+        body.publishedDate = $(".author-info")
+          .toString()
+          .split("<br>")[1]
+          .trim();
+        body.Updated = $(".author-info")
+          .toString()
+          .split("<br>")[2]
+          ?.split("</div")[0]
+          ?.trim();
+        body.writeByImg = getImgUrl($(".author-info img"));
+        body.writeByDesc = getText($(".author-data > div"));
       }
     }
 
-    // try {
-    //   await GenericEndpoints.put(
-    //     `articles/${foundProduct._id}`,
-    //    c
-    //   );
-    //   console.log("article update successfully");
-    // } catch (error) {
-    //   console.log(error);
-    //   throw "error";
-    // }
     await updateArticle(foundProduct._id, body);
   }
 
@@ -103,13 +111,14 @@ const mainDataJson = `${__dirname}/data.json`;
 
 export const getArticleData = async (
   url,
-  { type, extraImage, checkHasHeaderVideo }
+  { scrapWriter, type, extraImage, checkHasHeaderVideo }
 ) => {
   if (
     await isScraped(url, {
       type,
       extraImage,
       checkHasHeaderVideo,
+      scrapWriter,
     })
   )
     return console.log("This Article scraped");
@@ -145,6 +154,14 @@ export const getArticleData = async (
     getAttr($(".node-header .feature-image img"), "src")
   );
 
+  try {
+    body.hasHeaderVideo = getAttr(
+      $(".node-header .video-wrap iframe"),
+      "src"
+    );
+  } catch (error) {
+    console.log("has no header video");
+  }
   articleData.imgAlt = getAttr(
     $(".node-header .feature-image img"),
     "alt"

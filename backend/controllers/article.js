@@ -24,7 +24,16 @@ export const createArticles = createMany(ArticleModel);
 const searchBy = ["sourceUrl"];
 export const getArticles = getAll(ArticleModel, searchBy);
 export const getArticle = getOne(ArticleModel);
-const allowedFields = ["type", "imgUrl", "hasHeaderVideo"];
+const allowedFields = [
+  "type",
+  "imgUrl",
+  "hasHeaderVideo",
+  "writeBy",
+  "publishedDate",
+  "Updated",
+  "writeByImg",
+  "writeByDesc",
+];
 export const updateArticle = updateOne(
   ArticleModel,
   allowedFields

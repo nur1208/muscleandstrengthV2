@@ -27,13 +27,20 @@ import GenericEndpoints from "./services/generic.js";
 
 const main = async () => {
   console.log("start scraping... ⌛");
-  await getArticleData(
-    "https://www.muscleandstrength.com//articles/snatch-grip-deadlifts-muscle-growth",
-    {
-      extraImage:
-        "https://cdn.muscleandstrength.com/sites/default/files/images/articles/snatch-grip-1.jpg",
-    }
+  const { data } = await GenericEndpoints.get(
+    `articles?limit=100&&page${2}`
   );
+
+  for (let index = 16; index < data.data.doc.length; index++) {
+    console.log("current:" + index);
+
+    const { sourceUrl } = data.data.doc[index];
+    await getArticleData(sourceUrl, {
+      scrapWriter: true,
+      checkHasHeaderVideo: true,
+    });
+  }
+
   console.log("DONE scraping ✔");
 };
 
