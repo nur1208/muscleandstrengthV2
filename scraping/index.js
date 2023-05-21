@@ -27,15 +27,13 @@ import GenericEndpoints from "./services/generic.js";
 
 const main = async () => {
   console.log("start scraping... ⌛");
-  // await getArticleData(
-  //   "https://www.muscleandstrength.com/exercises/lat-pull-down.html",
-  //   {
-  //     checkHasHeaderVideo: true,
-  //     extraImage:
-  //       "https://cdn.muscleandstrength.com/sites/default/files/lat-pull-down.jpg",
-  //   }
-  // );
-  await removeDuplicateArticle(1);
+  await getArticleData(
+    "https://www.muscleandstrength.com//articles/snatch-grip-deadlifts-muscle-growth",
+    {
+      extraImage:
+        "https://cdn.muscleandstrength.com/sites/default/files/images/articles/snatch-grip-1.jpg",
+    }
+  );
   console.log("DONE scraping ✔");
 };
 

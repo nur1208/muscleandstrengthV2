@@ -504,16 +504,12 @@
 - {DONE} create script to clean up duplicate article removeDuplicateArticle
         - {DONE} create delete article endpoint
         - {DONE} test delete article endpoint
-
-not important:
-- {TODO} make recommender for you in article page more dynamic
+- {DONE} make recommender [for you] in article page more dynamic
 - {TODO} scrap writeBy , writeByImg, writeByDesc and publishedDate
-- {TODO} create comment modal and it's post ,get and put routes
-- {TODO} scrap article's comments
-
 - {TODO} scrap other Categories
-- {TODO} scrap proteinDeals 
 - {TODO} make sure updating exist element for array for "cart.array.qty"
+        couldn't add the same product and the same flavor
+not important:
 - {TODO} create cart modal and routs
 - {TODO} don't populate carts when login and signUp, create endpoint to populate it
 
@@ -536,3 +532,6 @@ not important:
 - {TODO} fix your repo show html instead of javascript
 - {TODO} add , for reviews in Product page if it is bigger than 1000
 - {TODO} make Nutrition component more readable
+- {TODO} create comment modal and it's post ,get and put routes
+- {TODO} scrap article's comments
+- {TODO} scrap proteinDeals 

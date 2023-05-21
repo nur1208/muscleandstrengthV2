@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { GridX } from "../../app.styles";
+import { useReduxActions } from "../../hooks";
 import { Button } from "../button/Button";
 import { MainWrapper } from "./articleFooter.styles";
 
 export const ArticleFooter = () => {
+  const {
+    data: {
+      article: { category, _id: currentId },
+      recommenderArticles,
+    },
+  } = useSelector((state) => state.article_store);
+  const { fetchArticles } = useReduxActions();
+
+  useEffect(() => {
+    const q = "&category=" + category?.join("&category=");
+    fetchArticles(`${q}&limit=7`, (data) => ({
+      recommenderArticles: data.doc,
+    }));
+  }, [category]);
+
   return (
     <MainWrapper>
       <div className="node-footer-content">
@@ -115,7 +133,30 @@ export const ArticleFooter = () => {
             <h4 class="text-center">Recommended For You</h4>
             <GridX>
               <div class="grid-x grid-margin-x grid-margin-y">
-                <div class="cell small-6 bp600-4">
+                {recommenderArticles.map(
+                  ({ _id, title, imgUrl }) =>
+                    currentId !== _id && (
+                      <div class="cell small-6 bp600-4">
+                        <div class="related-image">
+                          <Link to={`/articles/${_id}`}>
+                            <img
+                              class=" ls-is-cached lazyloaded"
+                              typeof="foaf:Image"
+                              data-src="https://cdn.muscleandstrength.com/sites/default/files/styles/400x400/public/muscular-guy-doing-cable-flys.jpg?itok=e5mNX4vR"
+                              alt="8 Week Mass Building Hypertrophy Workout"
+                              src={imgUrl[0] || imgUrl[1]}
+                            />
+                          </Link>
+                        </div>
+                        <div class="related-title">
+                          <Link to={`/articles/${_id}`}>
+                            {title}
+                          </Link>
+                        </div>
+                      </div>
+                    )
+                )}
+                {/* <div class="cell small-6 bp600-4">
                   <div class="related-image">
                     <a href="/workouts/8-week-hypertrophy-workout">
                       <img
@@ -226,7 +267,7 @@ export const ArticleFooter = () => {
                       Building Workout
                     </a>
                   </div>
-                </div>
+                </div> */}
               </div>
             </GridX>
           </div>

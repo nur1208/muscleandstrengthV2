@@ -20,6 +20,7 @@ const initialState = {
     bestWorkoutsArticles: [],
     newWorkoutsArticles: [],
     mostViewedExerciseGuides: [],
+    recommenderArticles: [],
   },
   error: null,
 };
