@@ -506,17 +506,14 @@
         - {DONE} test delete article endpoint
 - {DONE} make recommender [for you] in article page more dynamic
 - {DONE} scrap writeBy , writeByImg, writeByDesc and publishedDate
-- {TODO} scrap other Categories
 - {TODO} make sure updating exist element for array for "cart.array.qty"
         couldn't add the same product and the same flavor
-not important:
-- {TODO} create cart modal and routs
-- {TODO} don't populate carts when login and signUp, create endpoint to populate it
-
-
-- {TODO} ADD header-share-wrap to ArticleHeader component 
+        fix couldn't update cart's qty 
+- {TODO} scrap other Categories
+- {TODO} fix t-shirts, l-carnitine subCategories
 - {TODO} scrap MainPageQuestions component data
 - {TODO} make  MainPageQuestions component more dynamic
+not important:
 - {TODO} add brand in TopProducts component
 - {TODO} improve AddressForm by Create Filed components  
 - {TODO} fix Selector up down keys when there are long list
@@ -534,4 +531,7 @@ not important:
 - {TODO} make Nutrition component more readable
 - {TODO} create comment modal and it's post ,get and put routes
 - {TODO} scrap article's comments
+- {TODO} create cart modal and routs
+- {TODO} don't populate carts when login and signUp, create endpoint to populate it
 - {TODO} scrap proteinDeals 
+- {TODO} ADD header-share-wrap to ArticleHeader component 

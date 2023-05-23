@@ -1,6 +1,8 @@
 import axios from "axios";
 
 const baseUrl = "http://127.0.0.1:4050";
+// const baseUrl =
+//   "https://muscleandstrength-v2-backend.vercel.app";
 
 const mainRoute = "api/v1/users";
 const testTheServer = async () => {
@@ -10,7 +12,7 @@ const testTheServer = async () => {
 };
 
 const userToken =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDI1MDdjMjFlMzRlOWYzYWM3ZmEwYSIsImlhdCI6MTY2MzEzOTAzMSwiZXhwIjoxNjYzMzk4MjMxfQ.fQtxe6AmR2KdBflzRSUV2f3rbd9wZZmHek8X8fXfM8g";
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDI1MDdjMjFlMzRlOWYzYWM3ZmEwYSIsImlhdCI6MTY4NDgyNDY0MywiZXhwIjoxNjg1MDgzODQzfQ.2EnCAhDBSBkJp5BDcbP5QwsSnNVbe-_e3Vl16M55WJE";
 const testLogin = async () => {
   const userInfo = {
     email: "test@test.com",
@@ -34,7 +36,7 @@ const testUpdateMe = async () => {
     //     buyingOptionId: "6312b453666da3bdd551a7e6",
     //   },
     // },
-    "cart.<index>0.qty": 11,
+    "cart.<index>0.qty": "12",
   };
   const { data } = await axios.put(
     `${baseUrl}/${mainRoute}`,
@@ -57,7 +59,7 @@ const testGetMe = async () => {
 
 const main = async () => {
   try {
-    await testGetMe();
+    await testUpdateMe();
   } catch (error) {
     console.log(error);
   }
