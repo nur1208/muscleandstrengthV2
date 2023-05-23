@@ -7,16 +7,14 @@ export const SubCategories = ({ categories, category }) => {
   return (
     <MainWrapper>
       <div class="grey-stripe">
-        <h2>Protein Categories</h2>
+        <h2>{category.replace("-", " ")} Categories</h2>
       </div>
       <GridX>
         <div className="grid-x grid-margin-x">
           {categories.map((title) => (
             <Link
               class="cell small-12 bp600-4 bp960-3 bp1280-3"
-              to={`/store/category/${category}/${title
-                .replace(" ", "-")
-                .toLowerCase()}`}
+              to={`/store/category/${category}/${title}`}
             >
               <div class="inner-wrap">
                 <div class="title">{title}</div>

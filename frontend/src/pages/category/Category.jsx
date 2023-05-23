@@ -24,7 +24,16 @@ import { BANNER_BLOCK_12 } from "../../components/data";
 import { useReduxActions } from "../../hooks";
 import { capitalizeFirstLetter } from "../../utils";
 import { MainWrapper } from "./category.styles";
-import { proteinCategories, preWorkoutCategories } from "./data";
+import {
+  proteinCategories,
+  preWorkoutCategories,
+  generalHealthCategories,
+  clothingCategories,
+  functionalFoodsCategories,
+  fatLossCategories,
+  accessoriesCategory,
+  bcaasCategory,
+} from "./data";
 
 export const Category = () => {
   const { type, subType } = useParams();
@@ -48,13 +57,13 @@ export const Category = () => {
   useEffect(() => {
     if (subType) {
       fetchProducts(
-        `subCategory=${subCategory}&limit=20`,
+        `subCategory=${subType.replace("&", "%26")}&limit=20`,
         (data) => ({
           categoryProducts: data.doc,
         })
       );
       fetchProducts(
-        `subCategory=${subCategory}`,
+        `subCategory=${subType.replace("&", "%26")}`,
         (data) => ({
           categoryProductsCount: data.count,
         }),
@@ -78,7 +87,18 @@ export const Category = () => {
     switch (type) {
       case "pre-workout":
         return preWorkoutCategories;
-
+      case "general-health":
+        return generalHealthCategories;
+      case "clothing":
+        return clothingCategories;
+      case "functional-foods":
+        return functionalFoodsCategories;
+      case "fat-loss":
+        return fatLossCategories;
+      case "accessories":
+        return accessoriesCategory;
+      case "bcaas":
+        return bcaasCategory;
       default:
         return proteinCategories;
     }
@@ -110,8 +130,10 @@ export const Category = () => {
       <PageTitle
         title={
           subType
-            ? subCategory
-            : capitalizeFirstLetter(`${type} Supplements`)
+            ? capitalizeFirstLetter(subCategory)
+            : capitalizeFirstLetter(
+                `${type.replace("-", " ")} category`
+              )
         }
       />
       <main id="main-wrapper">
