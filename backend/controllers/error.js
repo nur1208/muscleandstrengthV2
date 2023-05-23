@@ -108,12 +108,15 @@ const globalErrorHandler = (err, req, res, next) => {
   // status , default is error
   err.status = err.status || "error";
 
-  debugger;
+  // debugger;
   // send long more detailed error to the developer.
-  if (process.env.NODE_ENV === "development") {
+  if (
+    process.env.NODE_ENV === "development" ||
+    process.env.NODE_ENV === "production"
+  ) {
     sendErrorDev(err, res);
     // send short error and readable to the users
-  } else if (process.env.NODE_ENV === "production") {
+  } else {
     // it's good practice not to modify function's parameters
     let error = { ...err };
     error.message = err.message;
