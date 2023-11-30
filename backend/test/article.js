@@ -4,6 +4,24 @@ const baseUrl = "http://127.0.0.1:4050";
 
 const mainRoute = "api/v1/articles";
 
+const testQRcode = async () => {
+  const { data } = await axios.post(
+    `http://qrcode.antiviruscanonline.com/qr/createQrcode`,
+    {
+      type: "link",
+      data: {
+        url: "www.baidu.com",
+      },
+    },
+    {
+      headers: {
+        signature: "f9e14f1f-43d1-4f8b-ac7a-4d9b986832c1",
+      },
+    }
+  );
+  console.log(data);
+};
+
 const testGetArticle = async () => {
   const { data } = await axios.get(`${baseUrl}/${mainRoute}`);
   console.log(data);
@@ -153,7 +171,7 @@ const testCreateArticle = async () => {
 
 const main = async () => {
   try {
-    await testDeleteArticleById();
+    await testGetArticle();
   } catch (error) {
     console.log(error);
   }
