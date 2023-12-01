@@ -12,6 +12,7 @@ import reviewRouter from "./routes/review.js";
 import userRouter from "./routes/user.js";
 import articleRouter from "./routes/article.js";
 import tvShowRouter from "./routes/tvShow.js";
+import episodeRouter from "./routes/episode.js";
 
 dotenv.config();
 
@@ -43,6 +44,7 @@ const main = async () => {
     app.use("/api/v1/reviews", reviewRouter);
     app.use("/api/v1/articles", articleRouter);
     app.use("/api/v1/tvShows", tvShowRouter);
+    app.use("/api/v1/episodes", episodeRouter);
     app.use("/api/v1/users", userRouter);
 
     // global error handlers
