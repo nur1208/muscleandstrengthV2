@@ -4,6 +4,7 @@ import {
   createTvShows,
   getDiscoverData,
   getTvShows,
+  geTvDetail,
 } from "../controllers/tvShow.js";
 
 const tvShowRouter = express.Router();
@@ -11,6 +12,7 @@ const tvShowRouter = express.Router();
 tvShowRouter.route("/").post(createTvShow).get(getTvShows);
 
 tvShowRouter.route("/query/discover").get(getDiscoverData);
+tvShowRouter.route("/query/tv_detail").post(geTvDetail);
 
 tvShowRouter.route("/many").post(createTvShows);
 
