@@ -2,9 +2,12 @@ import mongoose from "mongoose";
 
 const schema = new mongoose.Schema(
   {
-    imgurl: String,
+    coverUrl: String,
     title: String,
-    episode: { current: Number, total: Number },
+    episodesCount: Number,
+    publishTime: String,
+    type: String,
+    desc: String,
   },
   {
     timestamps: true,
