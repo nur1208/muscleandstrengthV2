@@ -27,6 +27,19 @@ const testGetTvDetail = async () => {
     episodesInfos: data.dataResult.tvInfo.episodesInfos,
   });
 };
+
+const testGetTvCollect = async () => {
+  const { data } = await axios.post(
+    `${baseUrl}/${mainRoute}/query/tv_collect`
+  );
+  console.log({
+    data,
+  });
+
+  data.dataResult.collectTvInfos.map((data) =>
+    console.log(data)
+  );
+};
 const testCreateTvShows = async () => {
   const tvShows = [
     {
@@ -84,7 +97,7 @@ const testCreateTvShows = async () => {
 
 const main = async () => {
   try {
-    await testGetTvDetail();
+    await testGetTvCollect();
   } catch (error) {
     console.log(error);
   }
